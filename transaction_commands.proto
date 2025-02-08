@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ast;
+
+option go_package = "github.com/mburbidg/gkit-ast/go/ast";
+
+message StartTransactionCommand {
+  // Todo
+}
+
+message EndTransactionCommand {
+  // Todo
+}

@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package ast;
+
+option go_package = "github.com/mburbidg/gkit-ast/go/ast";
+
+import "session_commands.proto";
+import "transaction_commands.proto";
+import "procedure_specification.proto";
+
+message ProgramActivity {
+  oneof type {
+    SessionActivity session_activity = 1;
+    TransactionActivity transaction_activity = 2;
+  }
+}
+
+message SessionActivity {
+  repeated SessionSetCommand session_set_commands = 1;
+  repeated SessionResetCommand session_reset_commands = 2;
+}
+
+message TransactionActivity {
+  optional StartTransactionCommand startTransactionCommand = 1;
+  optional ProcedureSpecification procedureSpecification = 2;
+  optional EndTransactionCommand endTransactionCommand = 3;
+}
+
+

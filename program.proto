@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package ast;
+
+option go_package = "github.com/mburbidg/gkit-ast/go/ast";
+
+import "program_activity.proto";
+import "session_commands.proto";
+
+message Program {
+  ProgramActivity program_activity = 1;
+  optional SessionCloseCommand session_close_command = 2;
+}
