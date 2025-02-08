@@ -4,6 +4,8 @@ package ast;
 
 option go_package = "github.com/mburbidg/gkit-ast/go/ast";
 
+import "procedure_body.proto";
+
 message ProcedureSpecification {
-  // Todo
+  ProcedureBody procedure_body = 1;
 }

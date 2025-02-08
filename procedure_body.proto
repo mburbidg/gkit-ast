@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package ast;
+
+option go_package = "github.com/mburbidg/gkit-ast/go/ast";
+
+import "binding_variable_definition_block.proto";
+import "statement.proto";
+
+message ProcedureBody {
+  optional AtSchemaClause at_schema_clause = 1;
+  optional BindingVariableDefinitionBlock binding_variable_definition_block = 2;
+  repeated Statement statements = 3;
+}
+
+message AtSchemaClause {
+  // Todo
+}

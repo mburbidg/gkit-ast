@@ -28,12 +28,23 @@ public final class ProcedureSpecificationOuterClass {
   public interface ProcedureSpecificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ast.ProcedureSpecification)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ast.ProcedureBody procedure_body = 1;</code>
+     * @return Whether the procedureBody field is set.
+     */
+    boolean hasProcedureBody();
+    /**
+     * <code>.ast.ProcedureBody procedure_body = 1;</code>
+     * @return The procedureBody.
+     */
+    ast.ProcedureBodyOuterClass.ProcedureBody getProcedureBody();
+    /**
+     * <code>.ast.ProcedureBody procedure_body = 1;</code>
+     */
+    ast.ProcedureBodyOuterClass.ProcedureBodyOrBuilder getProcedureBodyOrBuilder();
   }
   /**
-   * <pre>
-   * Todo
-   * </pre>
-   *
    * Protobuf type {@code ast.ProcedureSpecification}
    */
   public static final class ProcedureSpecification extends
@@ -70,6 +81,33 @@ public final class ProcedureSpecificationOuterClass {
               ast.ProcedureSpecificationOuterClass.ProcedureSpecification.class, ast.ProcedureSpecificationOuterClass.ProcedureSpecification.Builder.class);
     }
 
+    private int bitField0_;
+    public static final int PROCEDURE_BODY_FIELD_NUMBER = 1;
+    private ast.ProcedureBodyOuterClass.ProcedureBody procedureBody_;
+    /**
+     * <code>.ast.ProcedureBody procedure_body = 1;</code>
+     * @return Whether the procedureBody field is set.
+     */
+    @java.lang.Override
+    public boolean hasProcedureBody() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.ast.ProcedureBody procedure_body = 1;</code>
+     * @return The procedureBody.
+     */
+    @java.lang.Override
+    public ast.ProcedureBodyOuterClass.ProcedureBody getProcedureBody() {
+      return procedureBody_ == null ? ast.ProcedureBodyOuterClass.ProcedureBody.getDefaultInstance() : procedureBody_;
+    }
+    /**
+     * <code>.ast.ProcedureBody procedure_body = 1;</code>
+     */
+    @java.lang.Override
+    public ast.ProcedureBodyOuterClass.ProcedureBodyOrBuilder getProcedureBodyOrBuilder() {
+      return procedureBody_ == null ? ast.ProcedureBodyOuterClass.ProcedureBody.getDefaultInstance() : procedureBody_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -84,6 +122,9 @@ public final class ProcedureSpecificationOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getProcedureBody());
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -93,6 +134,10 @@ public final class ProcedureSpecificationOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getProcedureBody());
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -108,6 +153,11 @@ public final class ProcedureSpecificationOuterClass {
       }
       ast.ProcedureSpecificationOuterClass.ProcedureSpecification other = (ast.ProcedureSpecificationOuterClass.ProcedureSpecification) obj;
 
+      if (hasProcedureBody() != other.hasProcedureBody()) return false;
+      if (hasProcedureBody()) {
+        if (!getProcedureBody()
+            .equals(other.getProcedureBody())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -119,6 +169,10 @@ public final class ProcedureSpecificationOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasProcedureBody()) {
+        hash = (37 * hash) + PROCEDURE_BODY_FIELD_NUMBER;
+        hash = (53 * hash) + getProcedureBody().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -217,10 +271,6 @@ public final class ProcedureSpecificationOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Todo
-     * </pre>
-     *
      * Protobuf type {@code ast.ProcedureSpecification}
      */
     public static final class Builder extends
@@ -242,17 +292,29 @@ public final class ProcedureSpecificationOuterClass {
 
       // Construct using ast.ProcedureSpecificationOuterClass.ProcedureSpecification.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getProcedureBodyFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        procedureBody_ = null;
+        if (procedureBodyBuilder_ != null) {
+          procedureBodyBuilder_.dispose();
+          procedureBodyBuilder_ = null;
+        }
         return this;
       }
 
@@ -279,8 +341,21 @@ public final class ProcedureSpecificationOuterClass {
       @java.lang.Override
       public ast.ProcedureSpecificationOuterClass.ProcedureSpecification buildPartial() {
         ast.ProcedureSpecificationOuterClass.ProcedureSpecification result = new ast.ProcedureSpecificationOuterClass.ProcedureSpecification(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ast.ProcedureSpecificationOuterClass.ProcedureSpecification result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.procedureBody_ = procedureBodyBuilder_ == null
+              ? procedureBody_
+              : procedureBodyBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -295,6 +370,9 @@ public final class ProcedureSpecificationOuterClass {
 
       public Builder mergeFrom(ast.ProcedureSpecificationOuterClass.ProcedureSpecification other) {
         if (other == ast.ProcedureSpecificationOuterClass.ProcedureSpecification.getDefaultInstance()) return this;
+        if (other.hasProcedureBody()) {
+          mergeProcedureBody(other.getProcedureBody());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -321,6 +399,13 @@ public final class ProcedureSpecificationOuterClass {
               case 0:
                 done = true;
                 break;
+              case 10: {
+                input.readMessage(
+                    getProcedureBodyFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -335,6 +420,128 @@ public final class ProcedureSpecificationOuterClass {
           onChanged();
         } // finally
         return this;
+      }
+      private int bitField0_;
+
+      private ast.ProcedureBodyOuterClass.ProcedureBody procedureBody_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.ProcedureBodyOuterClass.ProcedureBody, ast.ProcedureBodyOuterClass.ProcedureBody.Builder, ast.ProcedureBodyOuterClass.ProcedureBodyOrBuilder> procedureBodyBuilder_;
+      /**
+       * <code>.ast.ProcedureBody procedure_body = 1;</code>
+       * @return Whether the procedureBody field is set.
+       */
+      public boolean hasProcedureBody() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ast.ProcedureBody procedure_body = 1;</code>
+       * @return The procedureBody.
+       */
+      public ast.ProcedureBodyOuterClass.ProcedureBody getProcedureBody() {
+        if (procedureBodyBuilder_ == null) {
+          return procedureBody_ == null ? ast.ProcedureBodyOuterClass.ProcedureBody.getDefaultInstance() : procedureBody_;
+        } else {
+          return procedureBodyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ast.ProcedureBody procedure_body = 1;</code>
+       */
+      public Builder setProcedureBody(ast.ProcedureBodyOuterClass.ProcedureBody value) {
+        if (procedureBodyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          procedureBody_ = value;
+        } else {
+          procedureBodyBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.ProcedureBody procedure_body = 1;</code>
+       */
+      public Builder setProcedureBody(
+          ast.ProcedureBodyOuterClass.ProcedureBody.Builder builderForValue) {
+        if (procedureBodyBuilder_ == null) {
+          procedureBody_ = builderForValue.build();
+        } else {
+          procedureBodyBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.ProcedureBody procedure_body = 1;</code>
+       */
+      public Builder mergeProcedureBody(ast.ProcedureBodyOuterClass.ProcedureBody value) {
+        if (procedureBodyBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            procedureBody_ != null &&
+            procedureBody_ != ast.ProcedureBodyOuterClass.ProcedureBody.getDefaultInstance()) {
+            getProcedureBodyBuilder().mergeFrom(value);
+          } else {
+            procedureBody_ = value;
+          }
+        } else {
+          procedureBodyBuilder_.mergeFrom(value);
+        }
+        if (procedureBody_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.ProcedureBody procedure_body = 1;</code>
+       */
+      public Builder clearProcedureBody() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        procedureBody_ = null;
+        if (procedureBodyBuilder_ != null) {
+          procedureBodyBuilder_.dispose();
+          procedureBodyBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.ProcedureBody procedure_body = 1;</code>
+       */
+      public ast.ProcedureBodyOuterClass.ProcedureBody.Builder getProcedureBodyBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getProcedureBodyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.ProcedureBody procedure_body = 1;</code>
+       */
+      public ast.ProcedureBodyOuterClass.ProcedureBodyOrBuilder getProcedureBodyOrBuilder() {
+        if (procedureBodyBuilder_ != null) {
+          return procedureBodyBuilder_.getMessageOrBuilder();
+        } else {
+          return procedureBody_ == null ?
+              ast.ProcedureBodyOuterClass.ProcedureBody.getDefaultInstance() : procedureBody_;
+        }
+      }
+      /**
+       * <code>.ast.ProcedureBody procedure_body = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.ProcedureBodyOuterClass.ProcedureBody, ast.ProcedureBodyOuterClass.ProcedureBody.Builder, ast.ProcedureBodyOuterClass.ProcedureBodyOrBuilder> 
+          getProcedureBodyFieldBuilder() {
+        if (procedureBodyBuilder_ == null) {
+          procedureBodyBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.ProcedureBodyOuterClass.ProcedureBody, ast.ProcedureBodyOuterClass.ProcedureBody.Builder, ast.ProcedureBodyOuterClass.ProcedureBodyOrBuilder>(
+                  getProcedureBody(),
+                  getParentForChildren(),
+                  isClean());
+          procedureBody_ = null;
+        }
+        return procedureBodyBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:ast.ProcedureSpecification)
@@ -402,21 +609,25 @@ public final class ProcedureSpecificationOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035procedure_specification.proto\022\003ast\"\030\n\026" +
-      "ProcedureSpecificationB%Z#github.com/mbu" +
-      "rbidg/gkit-ast/go/astb\006proto3"
+      "\n\035procedure_specification.proto\022\003ast\032\024pr" +
+      "ocedure_body.proto\"D\n\026ProcedureSpecifica" +
+      "tion\022*\n\016procedure_body\030\001 \001(\0132\022.ast.Proce" +
+      "dureBodyB%Z#github.com/mburbidg/gkit-ast" +
+      "/go/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          ast.ProcedureBodyOuterClass.getDescriptor(),
         });
     internal_static_ast_ProcedureSpecification_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ast_ProcedureSpecification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_ProcedureSpecification_descriptor,
-        new java.lang.String[] { });
+        new java.lang.String[] { "ProcedureBody", });
     descriptor.resolveAllFeaturesImmutable();
+    ast.ProcedureBodyOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
