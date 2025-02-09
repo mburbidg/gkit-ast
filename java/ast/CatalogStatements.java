@@ -30,16 +30,71 @@ public final class CatalogStatements {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
-     * @return The name.
+     * <code>optional bool if_not_exists = 1;</code>
+     * @return Whether the ifNotExists field is set.
      */
-    java.lang.String getName();
+    boolean hasIfNotExists();
     /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
+     * <code>optional bool if_not_exists = 1;</code>
+     * @return The ifNotExists.
      */
-    com.google.protobuf.ByteString
-        getNameBytes();
+    boolean getIfNotExists();
+
+    /**
+     * <code>optional bool replace_graph = 2;</code>
+     * @return Whether the replaceGraph field is set.
+     */
+    boolean hasReplaceGraph();
+    /**
+     * <code>optional bool replace_graph = 2;</code>
+     * @return The replaceGraph.
+     */
+    boolean getReplaceGraph();
+
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+     * @return Whether the parentAndName field is set.
+     */
+    boolean hasParentAndName();
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+     * @return The parentAndName.
+     */
+    ast.Catalog.CatalogParentAndName getParentAndName();
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+     */
+    ast.Catalog.CatalogParentAndNameOrBuilder getParentAndNameOrBuilder();
+
+    /**
+     * <code>optional .ast.GraphType graph_type = 4;</code>
+     * @return Whether the graphType field is set.
+     */
+    boolean hasGraphType();
+    /**
+     * <code>optional .ast.GraphType graph_type = 4;</code>
+     * @return The graphType.
+     */
+    ast.GraphTypeOuterClass.GraphType getGraphType();
+    /**
+     * <code>optional .ast.GraphType graph_type = 4;</code>
+     */
+    ast.GraphTypeOuterClass.GraphTypeOrBuilder getGraphTypeOrBuilder();
+
+    /**
+     * <code>optional .ast.GraphExpression graph_source = 5;</code>
+     * @return Whether the graphSource field is set.
+     */
+    boolean hasGraphSource();
+    /**
+     * <code>optional .ast.GraphExpression graph_source = 5;</code>
+     * @return The graphSource.
+     */
+    ast.GraphExpressionOuterClass.GraphExpression getGraphSource();
+    /**
+     * <code>optional .ast.GraphExpression graph_source = 5;</code>
+     */
+    ast.GraphExpressionOuterClass.GraphExpressionOrBuilder getGraphSourceOrBuilder();
   }
   /**
    * Protobuf type {@code ast.CreateGraphStatement}
@@ -63,7 +118,6 @@ public final class CatalogStatements {
       super(builder);
     }
     private CreateGraphStatement() {
-      name_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -79,43 +133,121 @@ public final class CatalogStatements {
               ast.CatalogStatements.CreateGraphStatement.class, ast.CatalogStatements.CreateGraphStatement.Builder.class);
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private int bitField0_;
+    public static final int IF_NOT_EXISTS_FIELD_NUMBER = 1;
+    private boolean ifNotExists_ = false;
     /**
-     * <code>string name = 1;</code>
-     * @return The name.
+     * <code>optional bool if_not_exists = 1;</code>
+     * @return Whether the ifNotExists field is set.
      */
     @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+    public boolean hasIfNotExists() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
+     * <code>optional bool if_not_exists = 1;</code>
+     * @return The ifNotExists.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public boolean getIfNotExists() {
+      return ifNotExists_;
+    }
+
+    public static final int REPLACE_GRAPH_FIELD_NUMBER = 2;
+    private boolean replaceGraph_ = false;
+    /**
+     * <code>optional bool replace_graph = 2;</code>
+     * @return Whether the replaceGraph field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplaceGraph() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>optional bool replace_graph = 2;</code>
+     * @return The replaceGraph.
+     */
+    @java.lang.Override
+    public boolean getReplaceGraph() {
+      return replaceGraph_;
+    }
+
+    public static final int PARENT_AND_NAME_FIELD_NUMBER = 3;
+    private ast.Catalog.CatalogParentAndName parentAndName_;
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+     * @return Whether the parentAndName field is set.
+     */
+    @java.lang.Override
+    public boolean hasParentAndName() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+     * @return The parentAndName.
+     */
+    @java.lang.Override
+    public ast.Catalog.CatalogParentAndName getParentAndName() {
+      return parentAndName_ == null ? ast.Catalog.CatalogParentAndName.getDefaultInstance() : parentAndName_;
+    }
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+     */
+    @java.lang.Override
+    public ast.Catalog.CatalogParentAndNameOrBuilder getParentAndNameOrBuilder() {
+      return parentAndName_ == null ? ast.Catalog.CatalogParentAndName.getDefaultInstance() : parentAndName_;
+    }
+
+    public static final int GRAPH_TYPE_FIELD_NUMBER = 4;
+    private ast.GraphTypeOuterClass.GraphType graphType_;
+    /**
+     * <code>optional .ast.GraphType graph_type = 4;</code>
+     * @return Whether the graphType field is set.
+     */
+    @java.lang.Override
+    public boolean hasGraphType() {
+      return ((bitField0_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>optional .ast.GraphType graph_type = 4;</code>
+     * @return The graphType.
+     */
+    @java.lang.Override
+    public ast.GraphTypeOuterClass.GraphType getGraphType() {
+      return graphType_ == null ? ast.GraphTypeOuterClass.GraphType.getDefaultInstance() : graphType_;
+    }
+    /**
+     * <code>optional .ast.GraphType graph_type = 4;</code>
+     */
+    @java.lang.Override
+    public ast.GraphTypeOuterClass.GraphTypeOrBuilder getGraphTypeOrBuilder() {
+      return graphType_ == null ? ast.GraphTypeOuterClass.GraphType.getDefaultInstance() : graphType_;
+    }
+
+    public static final int GRAPH_SOURCE_FIELD_NUMBER = 5;
+    private ast.GraphExpressionOuterClass.GraphExpression graphSource_;
+    /**
+     * <code>optional .ast.GraphExpression graph_source = 5;</code>
+     * @return Whether the graphSource field is set.
+     */
+    @java.lang.Override
+    public boolean hasGraphSource() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional .ast.GraphExpression graph_source = 5;</code>
+     * @return The graphSource.
+     */
+    @java.lang.Override
+    public ast.GraphExpressionOuterClass.GraphExpression getGraphSource() {
+      return graphSource_ == null ? ast.GraphExpressionOuterClass.GraphExpression.getDefaultInstance() : graphSource_;
+    }
+    /**
+     * <code>optional .ast.GraphExpression graph_source = 5;</code>
+     */
+    @java.lang.Override
+    public ast.GraphExpressionOuterClass.GraphExpressionOrBuilder getGraphSourceOrBuilder() {
+      return graphSource_ == null ? ast.GraphExpressionOuterClass.GraphExpression.getDefaultInstance() : graphSource_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -132,8 +264,20 @@ public final class CatalogStatements {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, ifNotExists_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeBool(2, replaceGraph_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getParentAndName());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        output.writeMessage(4, getGraphType());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        output.writeMessage(5, getGraphSource());
       }
       getUnknownFields().writeTo(output);
     }
@@ -144,8 +288,25 @@ public final class CatalogStatements {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, ifNotExists_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(2, replaceGraph_);
+      }
+      if (((bitField0_ & 0x00000004) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getParentAndName());
+      }
+      if (((bitField0_ & 0x00000008) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getGraphType());
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getGraphSource());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -162,8 +323,31 @@ public final class CatalogStatements {
       }
       ast.CatalogStatements.CreateGraphStatement other = (ast.CatalogStatements.CreateGraphStatement) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
+      if (hasIfNotExists() != other.hasIfNotExists()) return false;
+      if (hasIfNotExists()) {
+        if (getIfNotExists()
+            != other.getIfNotExists()) return false;
+      }
+      if (hasReplaceGraph() != other.hasReplaceGraph()) return false;
+      if (hasReplaceGraph()) {
+        if (getReplaceGraph()
+            != other.getReplaceGraph()) return false;
+      }
+      if (hasParentAndName() != other.hasParentAndName()) return false;
+      if (hasParentAndName()) {
+        if (!getParentAndName()
+            .equals(other.getParentAndName())) return false;
+      }
+      if (hasGraphType() != other.hasGraphType()) return false;
+      if (hasGraphType()) {
+        if (!getGraphType()
+            .equals(other.getGraphType())) return false;
+      }
+      if (hasGraphSource() != other.hasGraphSource()) return false;
+      if (hasGraphSource()) {
+        if (!getGraphSource()
+            .equals(other.getGraphSource())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -175,8 +359,28 @@ public final class CatalogStatements {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
+      if (hasIfNotExists()) {
+        hash = (37 * hash) + IF_NOT_EXISTS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIfNotExists());
+      }
+      if (hasReplaceGraph()) {
+        hash = (37 * hash) + REPLACE_GRAPH_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getReplaceGraph());
+      }
+      if (hasParentAndName()) {
+        hash = (37 * hash) + PARENT_AND_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getParentAndName().hashCode();
+      }
+      if (hasGraphType()) {
+        hash = (37 * hash) + GRAPH_TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + getGraphType().hashCode();
+      }
+      if (hasGraphSource()) {
+        hash = (37 * hash) + GRAPH_SOURCE_FIELD_NUMBER;
+        hash = (53 * hash) + getGraphSource().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -296,19 +500,43 @@ public final class CatalogStatements {
 
       // Construct using ast.CatalogStatements.CreateGraphStatement.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getParentAndNameFieldBuilder();
+          getGraphTypeFieldBuilder();
+          getGraphSourceFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        name_ = "";
+        ifNotExists_ = false;
+        replaceGraph_ = false;
+        parentAndName_ = null;
+        if (parentAndNameBuilder_ != null) {
+          parentAndNameBuilder_.dispose();
+          parentAndNameBuilder_ = null;
+        }
+        graphType_ = null;
+        if (graphTypeBuilder_ != null) {
+          graphTypeBuilder_.dispose();
+          graphTypeBuilder_ = null;
+        }
+        graphSource_ = null;
+        if (graphSourceBuilder_ != null) {
+          graphSourceBuilder_.dispose();
+          graphSourceBuilder_ = null;
+        }
         return this;
       }
 
@@ -342,9 +570,34 @@ public final class CatalogStatements {
 
       private void buildPartial0(ast.CatalogStatements.CreateGraphStatement result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
+          result.ifNotExists_ = ifNotExists_;
+          to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.replaceGraph_ = replaceGraph_;
+          to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.parentAndName_ = parentAndNameBuilder_ == null
+              ? parentAndName_
+              : parentAndNameBuilder_.build();
+          to_bitField0_ |= 0x00000004;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.graphType_ = graphTypeBuilder_ == null
+              ? graphType_
+              : graphTypeBuilder_.build();
+          to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.graphSource_ = graphSourceBuilder_ == null
+              ? graphSource_
+              : graphSourceBuilder_.build();
+          to_bitField0_ |= 0x00000010;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -359,10 +612,20 @@ public final class CatalogStatements {
 
       public Builder mergeFrom(ast.CatalogStatements.CreateGraphStatement other) {
         if (other == ast.CatalogStatements.CreateGraphStatement.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
+        if (other.hasIfNotExists()) {
+          setIfNotExists(other.getIfNotExists());
+        }
+        if (other.hasReplaceGraph()) {
+          setReplaceGraph(other.getReplaceGraph());
+        }
+        if (other.hasParentAndName()) {
+          mergeParentAndName(other.getParentAndName());
+        }
+        if (other.hasGraphType()) {
+          mergeGraphType(other.getGraphType());
+        }
+        if (other.hasGraphSource()) {
+          mergeGraphSource(other.getGraphSource());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -390,11 +653,37 @@ public final class CatalogStatements {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
+              case 8: {
+                ifNotExists_ = input.readBool();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 10
+              } // case 8
+              case 16: {
+                replaceGraph_ = input.readBool();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 16
+              case 26: {
+                input.readMessage(
+                    getParentAndNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              case 34: {
+                input.readMessage(
+                    getGraphTypeFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 34
+              case 42: {
+                input.readMessage(
+                    getGraphSourceFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 42
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -412,76 +701,447 @@ public final class CatalogStatements {
       }
       private int bitField0_;
 
-      private java.lang.Object name_ = "";
+      private boolean ifNotExists_ ;
       /**
-       * <code>string name = 1;</code>
-       * @return The name.
+       * <code>optional bool if_not_exists = 1;</code>
+       * @return Whether the ifNotExists field is set.
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public boolean hasIfNotExists() {
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>string name = 1;</code>
-       * @return The bytes for name.
+       * <code>optional bool if_not_exists = 1;</code>
+       * @return The ifNotExists.
        */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      @java.lang.Override
+      public boolean getIfNotExists() {
+        return ifNotExists_;
       }
       /**
-       * <code>string name = 1;</code>
-       * @param value The name to set.
+       * <code>optional bool if_not_exists = 1;</code>
+       * @param value The ifNotExists to set.
        * @return This builder for chaining.
        */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
+      public Builder setIfNotExists(boolean value) {
+
+        ifNotExists_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>optional bool if_not_exists = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearName() {
-        name_ = getDefaultInstance().getName();
+      public Builder clearIfNotExists() {
         bitField0_ = (bitField0_ & ~0x00000001);
+        ifNotExists_ = false;
+        onChanged();
+        return this;
+      }
+
+      private boolean replaceGraph_ ;
+      /**
+       * <code>optional bool replace_graph = 2;</code>
+       * @return Whether the replaceGraph field is set.
+       */
+      @java.lang.Override
+      public boolean hasReplaceGraph() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>optional bool replace_graph = 2;</code>
+       * @return The replaceGraph.
+       */
+      @java.lang.Override
+      public boolean getReplaceGraph() {
+        return replaceGraph_;
+      }
+      /**
+       * <code>optional bool replace_graph = 2;</code>
+       * @param value The replaceGraph to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReplaceGraph(boolean value) {
+
+        replaceGraph_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
+       * <code>optional bool replace_graph = 2;</code>
        * @return This builder for chaining.
        */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
+      public Builder clearReplaceGraph() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        replaceGraph_ = false;
         onChanged();
         return this;
+      }
+
+      private ast.Catalog.CatalogParentAndName parentAndName_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.CatalogParentAndName, ast.Catalog.CatalogParentAndName.Builder, ast.Catalog.CatalogParentAndNameOrBuilder> parentAndNameBuilder_;
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+       * @return Whether the parentAndName field is set.
+       */
+      public boolean hasParentAndName() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+       * @return The parentAndName.
+       */
+      public ast.Catalog.CatalogParentAndName getParentAndName() {
+        if (parentAndNameBuilder_ == null) {
+          return parentAndName_ == null ? ast.Catalog.CatalogParentAndName.getDefaultInstance() : parentAndName_;
+        } else {
+          return parentAndNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+       */
+      public Builder setParentAndName(ast.Catalog.CatalogParentAndName value) {
+        if (parentAndNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parentAndName_ = value;
+        } else {
+          parentAndNameBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+       */
+      public Builder setParentAndName(
+          ast.Catalog.CatalogParentAndName.Builder builderForValue) {
+        if (parentAndNameBuilder_ == null) {
+          parentAndName_ = builderForValue.build();
+        } else {
+          parentAndNameBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+       */
+      public Builder mergeParentAndName(ast.Catalog.CatalogParentAndName value) {
+        if (parentAndNameBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            parentAndName_ != null &&
+            parentAndName_ != ast.Catalog.CatalogParentAndName.getDefaultInstance()) {
+            getParentAndNameBuilder().mergeFrom(value);
+          } else {
+            parentAndName_ = value;
+          }
+        } else {
+          parentAndNameBuilder_.mergeFrom(value);
+        }
+        if (parentAndName_ != null) {
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+       */
+      public Builder clearParentAndName() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        parentAndName_ = null;
+        if (parentAndNameBuilder_ != null) {
+          parentAndNameBuilder_.dispose();
+          parentAndNameBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+       */
+      public ast.Catalog.CatalogParentAndName.Builder getParentAndNameBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getParentAndNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+       */
+      public ast.Catalog.CatalogParentAndNameOrBuilder getParentAndNameOrBuilder() {
+        if (parentAndNameBuilder_ != null) {
+          return parentAndNameBuilder_.getMessageOrBuilder();
+        } else {
+          return parentAndName_ == null ?
+              ast.Catalog.CatalogParentAndName.getDefaultInstance() : parentAndName_;
+        }
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.CatalogParentAndName, ast.Catalog.CatalogParentAndName.Builder, ast.Catalog.CatalogParentAndNameOrBuilder> 
+          getParentAndNameFieldBuilder() {
+        if (parentAndNameBuilder_ == null) {
+          parentAndNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Catalog.CatalogParentAndName, ast.Catalog.CatalogParentAndName.Builder, ast.Catalog.CatalogParentAndNameOrBuilder>(
+                  getParentAndName(),
+                  getParentForChildren(),
+                  isClean());
+          parentAndName_ = null;
+        }
+        return parentAndNameBuilder_;
+      }
+
+      private ast.GraphTypeOuterClass.GraphType graphType_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.GraphTypeOuterClass.GraphType, ast.GraphTypeOuterClass.GraphType.Builder, ast.GraphTypeOuterClass.GraphTypeOrBuilder> graphTypeBuilder_;
+      /**
+       * <code>optional .ast.GraphType graph_type = 4;</code>
+       * @return Whether the graphType field is set.
+       */
+      public boolean hasGraphType() {
+        return ((bitField0_ & 0x00000008) != 0);
+      }
+      /**
+       * <code>optional .ast.GraphType graph_type = 4;</code>
+       * @return The graphType.
+       */
+      public ast.GraphTypeOuterClass.GraphType getGraphType() {
+        if (graphTypeBuilder_ == null) {
+          return graphType_ == null ? ast.GraphTypeOuterClass.GraphType.getDefaultInstance() : graphType_;
+        } else {
+          return graphTypeBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .ast.GraphType graph_type = 4;</code>
+       */
+      public Builder setGraphType(ast.GraphTypeOuterClass.GraphType value) {
+        if (graphTypeBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          graphType_ = value;
+        } else {
+          graphTypeBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .ast.GraphType graph_type = 4;</code>
+       */
+      public Builder setGraphType(
+          ast.GraphTypeOuterClass.GraphType.Builder builderForValue) {
+        if (graphTypeBuilder_ == null) {
+          graphType_ = builderForValue.build();
+        } else {
+          graphTypeBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .ast.GraphType graph_type = 4;</code>
+       */
+      public Builder mergeGraphType(ast.GraphTypeOuterClass.GraphType value) {
+        if (graphTypeBuilder_ == null) {
+          if (((bitField0_ & 0x00000008) != 0) &&
+            graphType_ != null &&
+            graphType_ != ast.GraphTypeOuterClass.GraphType.getDefaultInstance()) {
+            getGraphTypeBuilder().mergeFrom(value);
+          } else {
+            graphType_ = value;
+          }
+        } else {
+          graphTypeBuilder_.mergeFrom(value);
+        }
+        if (graphType_ != null) {
+          bitField0_ |= 0x00000008;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .ast.GraphType graph_type = 4;</code>
+       */
+      public Builder clearGraphType() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        graphType_ = null;
+        if (graphTypeBuilder_ != null) {
+          graphTypeBuilder_.dispose();
+          graphTypeBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .ast.GraphType graph_type = 4;</code>
+       */
+      public ast.GraphTypeOuterClass.GraphType.Builder getGraphTypeBuilder() {
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return getGraphTypeFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .ast.GraphType graph_type = 4;</code>
+       */
+      public ast.GraphTypeOuterClass.GraphTypeOrBuilder getGraphTypeOrBuilder() {
+        if (graphTypeBuilder_ != null) {
+          return graphTypeBuilder_.getMessageOrBuilder();
+        } else {
+          return graphType_ == null ?
+              ast.GraphTypeOuterClass.GraphType.getDefaultInstance() : graphType_;
+        }
+      }
+      /**
+       * <code>optional .ast.GraphType graph_type = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.GraphTypeOuterClass.GraphType, ast.GraphTypeOuterClass.GraphType.Builder, ast.GraphTypeOuterClass.GraphTypeOrBuilder> 
+          getGraphTypeFieldBuilder() {
+        if (graphTypeBuilder_ == null) {
+          graphTypeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.GraphTypeOuterClass.GraphType, ast.GraphTypeOuterClass.GraphType.Builder, ast.GraphTypeOuterClass.GraphTypeOrBuilder>(
+                  getGraphType(),
+                  getParentForChildren(),
+                  isClean());
+          graphType_ = null;
+        }
+        return graphTypeBuilder_;
+      }
+
+      private ast.GraphExpressionOuterClass.GraphExpression graphSource_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.GraphExpressionOuterClass.GraphExpression, ast.GraphExpressionOuterClass.GraphExpression.Builder, ast.GraphExpressionOuterClass.GraphExpressionOrBuilder> graphSourceBuilder_;
+      /**
+       * <code>optional .ast.GraphExpression graph_source = 5;</code>
+       * @return Whether the graphSource field is set.
+       */
+      public boolean hasGraphSource() {
+        return ((bitField0_ & 0x00000010) != 0);
+      }
+      /**
+       * <code>optional .ast.GraphExpression graph_source = 5;</code>
+       * @return The graphSource.
+       */
+      public ast.GraphExpressionOuterClass.GraphExpression getGraphSource() {
+        if (graphSourceBuilder_ == null) {
+          return graphSource_ == null ? ast.GraphExpressionOuterClass.GraphExpression.getDefaultInstance() : graphSource_;
+        } else {
+          return graphSourceBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>optional .ast.GraphExpression graph_source = 5;</code>
+       */
+      public Builder setGraphSource(ast.GraphExpressionOuterClass.GraphExpression value) {
+        if (graphSourceBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          graphSource_ = value;
+        } else {
+          graphSourceBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .ast.GraphExpression graph_source = 5;</code>
+       */
+      public Builder setGraphSource(
+          ast.GraphExpressionOuterClass.GraphExpression.Builder builderForValue) {
+        if (graphSourceBuilder_ == null) {
+          graphSource_ = builderForValue.build();
+        } else {
+          graphSourceBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .ast.GraphExpression graph_source = 5;</code>
+       */
+      public Builder mergeGraphSource(ast.GraphExpressionOuterClass.GraphExpression value) {
+        if (graphSourceBuilder_ == null) {
+          if (((bitField0_ & 0x00000010) != 0) &&
+            graphSource_ != null &&
+            graphSource_ != ast.GraphExpressionOuterClass.GraphExpression.getDefaultInstance()) {
+            getGraphSourceBuilder().mergeFrom(value);
+          } else {
+            graphSource_ = value;
+          }
+        } else {
+          graphSourceBuilder_.mergeFrom(value);
+        }
+        if (graphSource_ != null) {
+          bitField0_ |= 0x00000010;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>optional .ast.GraphExpression graph_source = 5;</code>
+       */
+      public Builder clearGraphSource() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        graphSource_ = null;
+        if (graphSourceBuilder_ != null) {
+          graphSourceBuilder_.dispose();
+          graphSourceBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional .ast.GraphExpression graph_source = 5;</code>
+       */
+      public ast.GraphExpressionOuterClass.GraphExpression.Builder getGraphSourceBuilder() {
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return getGraphSourceFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>optional .ast.GraphExpression graph_source = 5;</code>
+       */
+      public ast.GraphExpressionOuterClass.GraphExpressionOrBuilder getGraphSourceOrBuilder() {
+        if (graphSourceBuilder_ != null) {
+          return graphSourceBuilder_.getMessageOrBuilder();
+        } else {
+          return graphSource_ == null ?
+              ast.GraphExpressionOuterClass.GraphExpression.getDefaultInstance() : graphSource_;
+        }
+      }
+      /**
+       * <code>optional .ast.GraphExpression graph_source = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.GraphExpressionOuterClass.GraphExpression, ast.GraphExpressionOuterClass.GraphExpression.Builder, ast.GraphExpressionOuterClass.GraphExpressionOrBuilder> 
+          getGraphSourceFieldBuilder() {
+        if (graphSourceBuilder_ == null) {
+          graphSourceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.GraphExpressionOuterClass.GraphExpression, ast.GraphExpressionOuterClass.GraphExpression.Builder, ast.GraphExpressionOuterClass.GraphExpressionOrBuilder>(
+                  getGraphSource(),
+                  getParentForChildren(),
+                  isClean());
+          graphSource_ = null;
+        }
+        return graphSourceBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:ast.CreateGraphStatement)
@@ -1064,21 +1724,32 @@ public final class CatalogStatements {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030catalog_statements.proto\022\003ast\"$\n\024Creat" +
-      "eGraphStatement\022\014\n\004name\030\001 \001(\t\"\"\n\022DropGra" +
-      "phStatement\022\014\n\004name\030\001 \001(\tB%Z#github.com/" +
-      "mburbidg/gkit-ast/go/astb\006proto3"
+      "\n\030catalog_statements.proto\022\003ast\032\rcatalog" +
+      ".proto\032\020graph_type.proto\032\026graph_expressi" +
+      "on.proto\"\240\002\n\024CreateGraphStatement\022\032\n\rif_" +
+      "not_exists\030\001 \001(\010H\000\210\001\001\022\032\n\rreplace_graph\030\002" +
+      " \001(\010H\001\210\001\001\0222\n\017parent_and_name\030\003 \001(\0132\031.ast" +
+      ".CatalogParentAndName\022\'\n\ngraph_type\030\004 \001(" +
+      "\0132\016.ast.GraphTypeH\002\210\001\001\022/\n\014graph_source\030\005" +
+      " \001(\0132\024.ast.GraphExpressionH\003\210\001\001B\020\n\016_if_n" +
+      "ot_existsB\020\n\016_replace_graphB\r\n\013_graph_ty" +
+      "peB\017\n\r_graph_source\"\"\n\022DropGraphStatemen" +
+      "t\022\014\n\004name\030\001 \001(\tB%Z#github.com/mburbidg/g" +
+      "kit-ast/go/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          ast.Catalog.getDescriptor(),
+          ast.GraphTypeOuterClass.getDescriptor(),
+          ast.GraphExpressionOuterClass.getDescriptor(),
         });
     internal_static_ast_CreateGraphStatement_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ast_CreateGraphStatement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_CreateGraphStatement_descriptor,
-        new java.lang.String[] { "Name", });
+        new java.lang.String[] { "IfNotExists", "ReplaceGraph", "ParentAndName", "GraphType", "GraphSource", });
     internal_static_ast_DropGraphStatement_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ast_DropGraphStatement_fieldAccessorTable = new
@@ -1086,6 +1757,9 @@ public final class CatalogStatements {
         internal_static_ast_DropGraphStatement_descriptor,
         new java.lang.String[] { "Name", });
     descriptor.resolveAllFeaturesImmutable();
+    ast.Catalog.getDescriptor();
+    ast.GraphTypeOuterClass.getDescriptor();
+    ast.GraphExpressionOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package ast;
+
+option go_package = "github.com/mburbidg/gkit-ast/go/ast";
+
+import "graph_reference.proto";
+import "todo.proto";
+import "literals.proto";
+
+message GraphExpression {
+  oneof type {
+    GraphReference graph_reference = 1;
+    Todo expression = 2;
+    Identifier object_name_or_binding_variable = 3;
+    CurrentGraph current_graph = 4;
+  }
+}
+
+message CurrentGraph {
+}

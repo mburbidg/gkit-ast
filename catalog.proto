@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package ast;
+
+option go_package = "github.com/mburbidg/gkit-ast/go/ast";
+
+import "literals.proto";
+
+enum CatalogParentAndNameType {
+  GRAPH = 0;
+  GRAPH_TYPE = 1;
+}
+
+message CatalogParentAndName {
+  CatalogParentAndNameType type = 1;
+  optional CatalogObjectParentReference parent = 2;
+  Identifier name = 3;
+}
+
+message CatalogObjectParentReference {
+  SchemaReference schemaReference = 1;
+  repeated Identifier object_name = 2;
+}
+
+message SchemaReference {
+  oneof type {
+    AbsoluteCatalogPath absolute_catalog_path = 1;
+    RelativeCatalogPath relative_catalog_path = 2;
+    ReferenceParameterSpecification reference_parameter_specification = 3;
+  }
+}
+
+message AbsoluteCatalogPath {
+  string value = 1;
+}
+
+message RelativeCatalogPath {
+  string value = 1;
+}

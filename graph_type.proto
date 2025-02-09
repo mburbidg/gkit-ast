@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package ast;
+
+option go_package = "github.com/mburbidg/gkit-ast/go/ast";
+
+import "catalog.proto";
+import "literals.proto";
+import "graph_expression.proto";
+
+message GraphType {
+  oneof type {
+    GraphTypeLikeGraph graph_type_like_graph = 1;
+    GraphTypeReference graph_type_reference = 2;
+    NestedGraphTypeSpecification nested_graph_type_specification = 3;
+  }
+}
+
+message GraphTypeLikeGraph {
+  GraphExpression graph_expression = 1;
+}
+
+message NestedGraphTypeSpecification {
+  // Todo
+}
+
+message GraphTypeReference {
+  oneof type {
+    CatalogParentAndName parent_and_name = 1;
+    ReferenceParameterSpecification reference_parameter_specification = 2;
+  }
+}

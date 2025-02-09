@@ -4,8 +4,16 @@ package ast;
 
 option go_package = "github.com/mburbidg/gkit-ast/go/ast";
 
+import "catalog.proto";
+import "graph_type.proto";
+import "graph_expression.proto";
+
 message CreateGraphStatement {
-    string name = 1;
+    optional bool if_not_exists = 1;
+    optional bool replace_graph = 2;
+    CatalogParentAndName parent_and_name = 3;
+    optional GraphType graph_type = 4;
+    optional GraphExpression graph_source = 5;
 }
 
 message DropGraphStatement {
