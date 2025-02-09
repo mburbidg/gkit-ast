@@ -1200,16 +1200,30 @@ public final class CatalogStatements {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string name = 1;</code>
-     * @return The name.
+     * <code>optional bool if_exists = 1;</code>
+     * @return Whether the ifExists field is set.
      */
-    java.lang.String getName();
+    boolean hasIfExists();
     /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
+     * <code>optional bool if_exists = 1;</code>
+     * @return The ifExists.
      */
-    com.google.protobuf.ByteString
-        getNameBytes();
+    boolean getIfExists();
+
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+     * @return Whether the parentAndName field is set.
+     */
+    boolean hasParentAndName();
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+     * @return The parentAndName.
+     */
+    ast.Catalog.CatalogParentAndName getParentAndName();
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+     */
+    ast.Catalog.CatalogParentAndNameOrBuilder getParentAndNameOrBuilder();
   }
   /**
    * Protobuf type {@code ast.DropGraphStatement}
@@ -1233,7 +1247,6 @@ public final class CatalogStatements {
       super(builder);
     }
     private DropGraphStatement() {
-      name_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -1249,43 +1262,50 @@ public final class CatalogStatements {
               ast.CatalogStatements.DropGraphStatement.class, ast.CatalogStatements.DropGraphStatement.Builder.class);
     }
 
-    public static final int NAME_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object name_ = "";
+    private int bitField0_;
+    public static final int IF_EXISTS_FIELD_NUMBER = 1;
+    private boolean ifExists_ = false;
     /**
-     * <code>string name = 1;</code>
-     * @return The name.
+     * <code>optional bool if_exists = 1;</code>
+     * @return Whether the ifExists field is set.
      */
     @java.lang.Override
-    public java.lang.String getName() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        name_ = s;
-        return s;
-      }
+    public boolean hasIfExists() {
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>string name = 1;</code>
-     * @return The bytes for name.
+     * <code>optional bool if_exists = 1;</code>
+     * @return The ifExists.
      */
     @java.lang.Override
-    public com.google.protobuf.ByteString
-        getNameBytes() {
-      java.lang.Object ref = name_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        name_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
+    public boolean getIfExists() {
+      return ifExists_;
+    }
+
+    public static final int PARENT_AND_NAME_FIELD_NUMBER = 2;
+    private ast.Catalog.CatalogParentAndName parentAndName_;
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+     * @return Whether the parentAndName field is set.
+     */
+    @java.lang.Override
+    public boolean hasParentAndName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+     * @return The parentAndName.
+     */
+    @java.lang.Override
+    public ast.Catalog.CatalogParentAndName getParentAndName() {
+      return parentAndName_ == null ? ast.Catalog.CatalogParentAndName.getDefaultInstance() : parentAndName_;
+    }
+    /**
+     * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+     */
+    @java.lang.Override
+    public ast.Catalog.CatalogParentAndNameOrBuilder getParentAndNameOrBuilder() {
+      return parentAndName_ == null ? ast.Catalog.CatalogParentAndName.getDefaultInstance() : parentAndName_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1302,8 +1322,11 @@ public final class CatalogStatements {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeBool(1, ifExists_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getParentAndName());
       }
       getUnknownFields().writeTo(output);
     }
@@ -1314,8 +1337,13 @@ public final class CatalogStatements {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, ifExists_);
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getParentAndName());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1332,8 +1360,16 @@ public final class CatalogStatements {
       }
       ast.CatalogStatements.DropGraphStatement other = (ast.CatalogStatements.DropGraphStatement) obj;
 
-      if (!getName()
-          .equals(other.getName())) return false;
+      if (hasIfExists() != other.hasIfExists()) return false;
+      if (hasIfExists()) {
+        if (getIfExists()
+            != other.getIfExists()) return false;
+      }
+      if (hasParentAndName() != other.hasParentAndName()) return false;
+      if (hasParentAndName()) {
+        if (!getParentAndName()
+            .equals(other.getParentAndName())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1345,8 +1381,15 @@ public final class CatalogStatements {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + NAME_FIELD_NUMBER;
-      hash = (53 * hash) + getName().hashCode();
+      if (hasIfExists()) {
+        hash = (37 * hash) + IF_EXISTS_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getIfExists());
+      }
+      if (hasParentAndName()) {
+        hash = (37 * hash) + PARENT_AND_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getParentAndName().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1466,19 +1509,30 @@ public final class CatalogStatements {
 
       // Construct using ast.CatalogStatements.DropGraphStatement.newBuilder()
       private Builder() {
-
+        maybeForceBuilderInitialization();
       }
 
       private Builder(
           com.google.protobuf.GeneratedMessage.BuilderParent parent) {
         super(parent);
-
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getParentAndNameFieldBuilder();
+        }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        name_ = "";
+        ifExists_ = false;
+        parentAndName_ = null;
+        if (parentAndNameBuilder_ != null) {
+          parentAndNameBuilder_.dispose();
+          parentAndNameBuilder_ = null;
+        }
         return this;
       }
 
@@ -1512,9 +1566,18 @@ public final class CatalogStatements {
 
       private void buildPartial0(ast.CatalogStatements.DropGraphStatement result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.name_ = name_;
+          result.ifExists_ = ifExists_;
+          to_bitField0_ |= 0x00000001;
         }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.parentAndName_ = parentAndNameBuilder_ == null
+              ? parentAndName_
+              : parentAndNameBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -1529,10 +1592,11 @@ public final class CatalogStatements {
 
       public Builder mergeFrom(ast.CatalogStatements.DropGraphStatement other) {
         if (other == ast.CatalogStatements.DropGraphStatement.getDefaultInstance()) return this;
-        if (!other.getName().isEmpty()) {
-          name_ = other.name_;
-          bitField0_ |= 0x00000001;
-          onChanged();
+        if (other.hasIfExists()) {
+          setIfExists(other.getIfExists());
+        }
+        if (other.hasParentAndName()) {
+          mergeParentAndName(other.getParentAndName());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -1560,11 +1624,18 @@ public final class CatalogStatements {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                name_ = input.readStringRequireUtf8();
+              case 8: {
+                ifExists_ = input.readBool();
                 bitField0_ |= 0x00000001;
                 break;
-              } // case 10
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getParentAndNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1582,76 +1653,165 @@ public final class CatalogStatements {
       }
       private int bitField0_;
 
-      private java.lang.Object name_ = "";
+      private boolean ifExists_ ;
       /**
-       * <code>string name = 1;</code>
-       * @return The name.
+       * <code>optional bool if_exists = 1;</code>
+       * @return Whether the ifExists field is set.
        */
-      public java.lang.String getName() {
-        java.lang.Object ref = name_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          name_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
+      @java.lang.Override
+      public boolean hasIfExists() {
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>string name = 1;</code>
-       * @return The bytes for name.
+       * <code>optional bool if_exists = 1;</code>
+       * @return The ifExists.
        */
-      public com.google.protobuf.ByteString
-          getNameBytes() {
-        java.lang.Object ref = name_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          name_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
+      @java.lang.Override
+      public boolean getIfExists() {
+        return ifExists_;
       }
       /**
-       * <code>string name = 1;</code>
-       * @param value The name to set.
+       * <code>optional bool if_exists = 1;</code>
+       * @param value The ifExists to set.
        * @return This builder for chaining.
        */
-      public Builder setName(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        name_ = value;
+      public Builder setIfExists(boolean value) {
+
+        ifExists_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 1;</code>
+       * <code>optional bool if_exists = 1;</code>
        * @return This builder for chaining.
        */
-      public Builder clearName() {
-        name_ = getDefaultInstance().getName();
+      public Builder clearIfExists() {
         bitField0_ = (bitField0_ & ~0x00000001);
+        ifExists_ = false;
+        onChanged();
+        return this;
+      }
+
+      private ast.Catalog.CatalogParentAndName parentAndName_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.CatalogParentAndName, ast.Catalog.CatalogParentAndName.Builder, ast.Catalog.CatalogParentAndNameOrBuilder> parentAndNameBuilder_;
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+       * @return Whether the parentAndName field is set.
+       */
+      public boolean hasParentAndName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+       * @return The parentAndName.
+       */
+      public ast.Catalog.CatalogParentAndName getParentAndName() {
+        if (parentAndNameBuilder_ == null) {
+          return parentAndName_ == null ? ast.Catalog.CatalogParentAndName.getDefaultInstance() : parentAndName_;
+        } else {
+          return parentAndNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+       */
+      public Builder setParentAndName(ast.Catalog.CatalogParentAndName value) {
+        if (parentAndNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          parentAndName_ = value;
+        } else {
+          parentAndNameBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>string name = 1;</code>
-       * @param value The bytes for name to set.
-       * @return This builder for chaining.
+       * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
        */
-      public Builder setNameBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        name_ = value;
-        bitField0_ |= 0x00000001;
+      public Builder setParentAndName(
+          ast.Catalog.CatalogParentAndName.Builder builderForValue) {
+        if (parentAndNameBuilder_ == null) {
+          parentAndName_ = builderForValue.build();
+        } else {
+          parentAndNameBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+       */
+      public Builder mergeParentAndName(ast.Catalog.CatalogParentAndName value) {
+        if (parentAndNameBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            parentAndName_ != null &&
+            parentAndName_ != ast.Catalog.CatalogParentAndName.getDefaultInstance()) {
+            getParentAndNameBuilder().mergeFrom(value);
+          } else {
+            parentAndName_ = value;
+          }
+        } else {
+          parentAndNameBuilder_.mergeFrom(value);
+        }
+        if (parentAndName_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+       */
+      public Builder clearParentAndName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        parentAndName_ = null;
+        if (parentAndNameBuilder_ != null) {
+          parentAndNameBuilder_.dispose();
+          parentAndNameBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+       */
+      public ast.Catalog.CatalogParentAndName.Builder getParentAndNameBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getParentAndNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+       */
+      public ast.Catalog.CatalogParentAndNameOrBuilder getParentAndNameOrBuilder() {
+        if (parentAndNameBuilder_ != null) {
+          return parentAndNameBuilder_.getMessageOrBuilder();
+        } else {
+          return parentAndName_ == null ?
+              ast.Catalog.CatalogParentAndName.getDefaultInstance() : parentAndName_;
+        }
+      }
+      /**
+       * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.CatalogParentAndName, ast.Catalog.CatalogParentAndName.Builder, ast.Catalog.CatalogParentAndNameOrBuilder> 
+          getParentAndNameFieldBuilder() {
+        if (parentAndNameBuilder_ == null) {
+          parentAndNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Catalog.CatalogParentAndName, ast.Catalog.CatalogParentAndName.Builder, ast.Catalog.CatalogParentAndNameOrBuilder>(
+                  getParentAndName(),
+                  getParentForChildren(),
+                  isClean());
+          parentAndName_ = null;
+        }
+        return parentAndNameBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:ast.DropGraphStatement)
@@ -1733,9 +1893,11 @@ public final class CatalogStatements {
       "\0132\016.ast.GraphTypeH\002\210\001\001\022/\n\014graph_source\030\005" +
       " \001(\0132\024.ast.GraphExpressionH\003\210\001\001B\020\n\016_if_n" +
       "ot_existsB\020\n\016_replace_graphB\r\n\013_graph_ty" +
-      "peB\017\n\r_graph_source\"\"\n\022DropGraphStatemen" +
-      "t\022\014\n\004name\030\001 \001(\tB%Z#github.com/mburbidg/g" +
-      "kit-ast/go/astb\006proto3"
+      "peB\017\n\r_graph_source\"n\n\022DropGraphStatemen" +
+      "t\022\026\n\tif_exists\030\001 \001(\010H\000\210\001\001\0222\n\017parent_and_" +
+      "name\030\002 \001(\0132\031.ast.CatalogParentAndNameB\014\n" +
+      "\n_if_existsB%Z#github.com/mburbidg/gkit-" +
+      "ast/go/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1755,7 +1917,7 @@ public final class CatalogStatements {
     internal_static_ast_DropGraphStatement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_DropGraphStatement_descriptor,
-        new java.lang.String[] { "Name", });
+        new java.lang.String[] { "IfExists", "ParentAndName", });
     descriptor.resolveAllFeaturesImmutable();
     ast.Catalog.getDescriptor();
     ast.GraphTypeOuterClass.getDescriptor();

@@ -17,5 +17,6 @@ message CreateGraphStatement {
 }
 
 message DropGraphStatement {
-    string name = 1;
+    optional bool if_exists = 1;
+    CatalogParentAndName parent_and_name = 2;
 }
