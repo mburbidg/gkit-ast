@@ -612,8 +612,7 @@ public final class ProcedureSpecificationOuterClass {
       "\n\035procedure_specification.proto\022\003ast\032\024pr" +
       "ocedure_body.proto\"D\n\026ProcedureSpecifica" +
       "tion\022*\n\016procedure_body\030\001 \001(\0132\022.ast.Proce" +
-      "dureBodyB%Z#github.com/mburbidg/gkit-ast" +
-      "/go/astb\006proto3"
+      "dureBodyB\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

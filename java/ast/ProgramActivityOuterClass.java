@@ -3035,8 +3035,7 @@ public final class ProgramActivityOuterClass {
       "and\030\003 \001(\0132\032.ast.EndTransactionCommandH\002\210" +
       "\001\001B\032\n\030_startTransactionCommandB\031\n\027_proce" +
       "dureSpecificationB\030\n\026_endTransactionComm" +
-      "andB%Z#github.com/mburbidg/gkit-ast/go/a" +
-      "stb\006proto3"
+      "andB\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

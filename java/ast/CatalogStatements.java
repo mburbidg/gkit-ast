@@ -1896,8 +1896,7 @@ public final class CatalogStatements {
       "peB\017\n\r_graph_source\"n\n\022DropGraphStatemen" +
       "t\022\026\n\tif_exists\030\001 \001(\010H\000\210\001\001\0222\n\017parent_and_" +
       "name\030\002 \001(\0132\031.ast.CatalogParentAndNameB\014\n" +
-      "\n_if_existsB%Z#github.com/mburbidg/gkit-" +
-      "ast/go/astb\006proto3"
+      "\n_if_existsB\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

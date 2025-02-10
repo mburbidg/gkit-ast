@@ -814,8 +814,7 @@ public final class ProgramOuterClass {
       "\022.\n\020program_activity\030\001 \001(\0132\024.ast.Program" +
       "Activity\022<\n\025session_close_command\030\002 \001(\0132" +
       "\030.ast.SessionCloseCommandH\000\210\001\001B\030\n\026_sessi" +
-      "on_close_commandB%Z#github.com/mburbidg/" +
-      "gkit-ast/go/astb\006proto3"
+      "on_close_commandB\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

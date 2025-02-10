@@ -4145,8 +4145,7 @@ public final class Catalog {
       "teCatalogPath\022\r\n\005value\030\001 \001(\t\"$\n\023Relative" +
       "CatalogPath\022\r\n\005value\030\001 \001(\t*5\n\030CatalogPar" +
       "entAndNameType\022\t\n\005GRAPH\020\000\022\016\n\nGRAPH_TYPE\020" +
-      "\001B%Z#github.com/mburbidg/gkit-ast/go/ast" +
-      "b\006proto3"
+      "\001B\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

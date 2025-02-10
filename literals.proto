@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package ast;
 
-option go_package = "github.com/mburbidg/gkit-ast/go/ast";
+option go_package = "/ast";
 
 message Identifier {
   string value = 1;

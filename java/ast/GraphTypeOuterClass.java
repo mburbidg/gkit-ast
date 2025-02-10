@@ -2994,8 +2994,7 @@ public final class GraphTypeOuterClass {
       "\001(\0132\031.ast.CatalogParentAndNameH\000\022Q\n!refe" +
       "rence_parameter_specification\030\002 \001(\0132$.as" +
       "t.ReferenceParameterSpecificationH\000B\006\n\004t" +
-      "ypeB%Z#github.com/mburbidg/gkit-ast/go/a" +
-      "stb\006proto3"
+      "ypeB\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

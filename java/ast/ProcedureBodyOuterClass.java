@@ -1564,8 +1564,8 @@ public final class ProcedureBodyOuterClass {
       ".ast.BindingVariableDefinitionBlockH\001\210\001\001" +
       "\022\"\n\nstatements\030\003 \003(\0132\016.ast.StatementB\023\n\021" +
       "_at_schema_clauseB$\n\"_binding_variable_d" +
-      "efinition_block\"\020\n\016AtSchemaClauseB%Z#git" +
-      "hub.com/mburbidg/gkit-ast/go/astb\006proto3"
+      "efinition_block\"\020\n\016AtSchemaClauseB\006Z\004/as" +
+      "tb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -404,8 +404,7 @@ public final class BindingVariableDefinitionBlockOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'binding_variable_definition_block.prot" +
       "o\022\003ast\" \n\036BindingVariableDefinitionBlock" +
-      "B%Z#github.com/mburbidg/gkit-ast/go/astb" +
-      "\006proto3"
+      "B\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

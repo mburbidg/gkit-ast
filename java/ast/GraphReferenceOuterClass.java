@@ -1738,8 +1738,7 @@ public final class GraphReferenceOuterClass {
       "\0132\016.ast.HomeGraphH\000\022Q\n!reference_paramet" +
       "er_specification\030\004 \001(\0132$.ast.ReferencePa" +
       "rameterSpecificationH\000B\007\n\005which\"\013\n\tHomeG" +
-      "raphB%Z#github.com/mburbidg/gkit-ast/go/" +
-      "astb\006proto3"
+      "raphB\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

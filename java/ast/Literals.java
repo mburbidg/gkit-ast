@@ -1066,8 +1066,7 @@ public final class Literals {
     java.lang.String[] descriptorData = {
       "\n\016literals.proto\022\003ast\"\033\n\nIdentifier\022\r\n\005v" +
       "alue\030\001 \001(\t\"4\n\037ReferenceParameterSpecific" +
-      "ation\022\021\n\tparameter\030\001 \001(\tB%Z#github.com/m" +
-      "burbidg/gkit-ast/go/astb\006proto3"
+      "ation\022\021\n\tparameter\030\001 \001(\tB\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

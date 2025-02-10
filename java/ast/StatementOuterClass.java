@@ -928,8 +928,8 @@ public final class StatementOuterClass {
       "ts.proto\"\211\001\n\tStatement\022;\n\026create_graph_s" +
       "tatement\030\001 \001(\0132\031.ast.CreateGraphStatemen" +
       "tH\000\0227\n\024drop_graph_statement\030\002 \001(\0132\027.ast." +
-      "DropGraphStatementH\000B\006\n\004typeB%Z#github.c" +
-      "om/mburbidg/gkit-ast/go/astb\006proto3"
+      "DropGraphStatementH\000B\006\n\004typeB\006Z\004/astb\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

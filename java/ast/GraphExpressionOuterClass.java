@@ -1737,8 +1737,8 @@ public final class GraphExpressionOuterClass {
       "on\030\002 \001(\0132\t.ast.TodoH\000\022:\n\037object_name_or_" +
       "binding_variable\030\003 \001(\0132\017.ast.IdentifierH" +
       "\000\022*\n\rcurrent_graph\030\004 \001(\0132\021.ast.CurrentGr" +
-      "aphH\000B\006\n\004type\"\016\n\014CurrentGraphB%Z#github." +
-      "com/mburbidg/gkit-ast/go/astb\006proto3"
+      "aphH\000B\006\n\004type\"\016\n\014CurrentGraphB\006Z\004/astb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

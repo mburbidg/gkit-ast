@@ -772,8 +772,7 @@ public final class TransactionCommands {
     java.lang.String[] descriptorData = {
       "\n\032transaction_commands.proto\022\003ast\"\031\n\027Sta" +
       "rtTransactionCommand\"\027\n\025EndTransactionCo" +
-      "mmandB%Z#github.com/mburbidg/gkit-ast/go" +
-      "/astb\006proto3"
+      "mmandB\006Z\004/astb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
