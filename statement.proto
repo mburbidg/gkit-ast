@@ -13,10 +13,10 @@ message Statement {
     oneof type {
         CreateGraphStatement create_graph_statement = 1;
         DropGraphStatement drop_graph_statement = 2;
-        SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;
+        LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;
     }
 }
 
-message SimpleLinearCatalogModifyingStatement {
+message LinearCatalogModifyingStatement {
     repeated Statement statements = 1;
 }

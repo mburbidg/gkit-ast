@@ -60,19 +60,19 @@ public final class StatementOuterClass {
     ast.CatalogStatements.DropGraphStatementOrBuilder getDropGraphStatementOrBuilder();
 
     /**
-     * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
-     * @return Whether the simpleLinearCatalogModifyingStatement field is set.
+     * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
+     * @return Whether the linearCatalogModifyingStatement field is set.
      */
-    boolean hasSimpleLinearCatalogModifyingStatement();
+    boolean hasLinearCatalogModifyingStatement();
     /**
-     * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
-     * @return The simpleLinearCatalogModifyingStatement.
+     * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
+     * @return The linearCatalogModifyingStatement.
      */
-    ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement getSimpleLinearCatalogModifyingStatement();
+    ast.StatementOuterClass.LinearCatalogModifyingStatement getLinearCatalogModifyingStatement();
     /**
-     * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
+     * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
      */
-    ast.StatementOuterClass.SimpleLinearCatalogModifyingStatementOrBuilder getSimpleLinearCatalogModifyingStatementOrBuilder();
+    ast.StatementOuterClass.LinearCatalogModifyingStatementOrBuilder getLinearCatalogModifyingStatementOrBuilder();
 
     ast.StatementOuterClass.Statement.TypeCase getTypeCase();
   }
@@ -121,7 +121,7 @@ public final class StatementOuterClass {
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
       CREATE_GRAPH_STATEMENT(1),
       DROP_GRAPH_STATEMENT(2),
-      SIMPLE_LINEAR_CATALOG_MODIFYING_STATEMENT(3),
+      LINEAR_CATALOG_MODIFYING_STATEMENT(3),
       TYPE_NOT_SET(0);
       private final int value;
       private TypeCase(int value) {
@@ -141,7 +141,7 @@ public final class StatementOuterClass {
         switch (value) {
           case 1: return CREATE_GRAPH_STATEMENT;
           case 2: return DROP_GRAPH_STATEMENT;
-          case 3: return SIMPLE_LINEAR_CATALOG_MODIFYING_STATEMENT;
+          case 3: return LINEAR_CATALOG_MODIFYING_STATEMENT;
           case 0: return TYPE_NOT_SET;
           default: return null;
         }
@@ -219,35 +219,35 @@ public final class StatementOuterClass {
       return ast.CatalogStatements.DropGraphStatement.getDefaultInstance();
     }
 
-    public static final int SIMPLE_LINEAR_CATALOG_MODIFYING_STATEMENT_FIELD_NUMBER = 3;
+    public static final int LINEAR_CATALOG_MODIFYING_STATEMENT_FIELD_NUMBER = 3;
     /**
-     * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
-     * @return Whether the simpleLinearCatalogModifyingStatement field is set.
+     * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
+     * @return Whether the linearCatalogModifyingStatement field is set.
      */
     @java.lang.Override
-    public boolean hasSimpleLinearCatalogModifyingStatement() {
+    public boolean hasLinearCatalogModifyingStatement() {
       return typeCase_ == 3;
     }
     /**
-     * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
-     * @return The simpleLinearCatalogModifyingStatement.
+     * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
+     * @return The linearCatalogModifyingStatement.
      */
     @java.lang.Override
-    public ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement getSimpleLinearCatalogModifyingStatement() {
+    public ast.StatementOuterClass.LinearCatalogModifyingStatement getLinearCatalogModifyingStatement() {
       if (typeCase_ == 3) {
-         return (ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) type_;
+         return (ast.StatementOuterClass.LinearCatalogModifyingStatement) type_;
       }
-      return ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.getDefaultInstance();
+      return ast.StatementOuterClass.LinearCatalogModifyingStatement.getDefaultInstance();
     }
     /**
-     * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
+     * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
      */
     @java.lang.Override
-    public ast.StatementOuterClass.SimpleLinearCatalogModifyingStatementOrBuilder getSimpleLinearCatalogModifyingStatementOrBuilder() {
+    public ast.StatementOuterClass.LinearCatalogModifyingStatementOrBuilder getLinearCatalogModifyingStatementOrBuilder() {
       if (typeCase_ == 3) {
-         return (ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) type_;
+         return (ast.StatementOuterClass.LinearCatalogModifyingStatement) type_;
       }
-      return ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.getDefaultInstance();
+      return ast.StatementOuterClass.LinearCatalogModifyingStatement.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -271,7 +271,7 @@ public final class StatementOuterClass {
         output.writeMessage(2, (ast.CatalogStatements.DropGraphStatement) type_);
       }
       if (typeCase_ == 3) {
-        output.writeMessage(3, (ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) type_);
+        output.writeMessage(3, (ast.StatementOuterClass.LinearCatalogModifyingStatement) type_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -292,7 +292,7 @@ public final class StatementOuterClass {
       }
       if (typeCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) type_);
+          .computeMessageSize(3, (ast.StatementOuterClass.LinearCatalogModifyingStatement) type_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -320,8 +320,8 @@ public final class StatementOuterClass {
               .equals(other.getDropGraphStatement())) return false;
           break;
         case 3:
-          if (!getSimpleLinearCatalogModifyingStatement()
-              .equals(other.getSimpleLinearCatalogModifyingStatement())) return false;
+          if (!getLinearCatalogModifyingStatement()
+              .equals(other.getLinearCatalogModifyingStatement())) return false;
           break;
         case 0:
         default:
@@ -347,8 +347,8 @@ public final class StatementOuterClass {
           hash = (53 * hash) + getDropGraphStatement().hashCode();
           break;
         case 3:
-          hash = (37 * hash) + SIMPLE_LINEAR_CATALOG_MODIFYING_STATEMENT_FIELD_NUMBER;
-          hash = (53 * hash) + getSimpleLinearCatalogModifyingStatement().hashCode();
+          hash = (37 * hash) + LINEAR_CATALOG_MODIFYING_STATEMENT_FIELD_NUMBER;
+          hash = (53 * hash) + getLinearCatalogModifyingStatement().hashCode();
           break;
         case 0:
         default:
@@ -490,8 +490,8 @@ public final class StatementOuterClass {
         if (dropGraphStatementBuilder_ != null) {
           dropGraphStatementBuilder_.clear();
         }
-        if (simpleLinearCatalogModifyingStatementBuilder_ != null) {
-          simpleLinearCatalogModifyingStatementBuilder_.clear();
+        if (linearCatalogModifyingStatementBuilder_ != null) {
+          linearCatalogModifyingStatementBuilder_.clear();
         }
         typeCase_ = 0;
         type_ = null;
@@ -543,8 +543,8 @@ public final class StatementOuterClass {
           result.type_ = dropGraphStatementBuilder_.build();
         }
         if (typeCase_ == 3 &&
-            simpleLinearCatalogModifyingStatementBuilder_ != null) {
-          result.type_ = simpleLinearCatalogModifyingStatementBuilder_.build();
+            linearCatalogModifyingStatementBuilder_ != null) {
+          result.type_ = linearCatalogModifyingStatementBuilder_.build();
         }
       }
 
@@ -569,8 +569,8 @@ public final class StatementOuterClass {
             mergeDropGraphStatement(other.getDropGraphStatement());
             break;
           }
-          case SIMPLE_LINEAR_CATALOG_MODIFYING_STATEMENT: {
-            mergeSimpleLinearCatalogModifyingStatement(other.getSimpleLinearCatalogModifyingStatement());
+          case LINEAR_CATALOG_MODIFYING_STATEMENT: {
+            mergeLinearCatalogModifyingStatement(other.getLinearCatalogModifyingStatement());
             break;
           }
           case TYPE_NOT_SET: {
@@ -619,7 +619,7 @@ public final class StatementOuterClass {
               } // case 18
               case 26: {
                 input.readMessage(
-                    getSimpleLinearCatalogModifyingStatementFieldBuilder().getBuilder(),
+                    getLinearCatalogModifyingStatementFieldBuilder().getBuilder(),
                     extensionRegistry);
                 typeCase_ = 3;
                 break;
@@ -941,71 +941,71 @@ public final class StatementOuterClass {
       }
 
       private com.google.protobuf.SingleFieldBuilder<
-          ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement, ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.Builder, ast.StatementOuterClass.SimpleLinearCatalogModifyingStatementOrBuilder> simpleLinearCatalogModifyingStatementBuilder_;
+          ast.StatementOuterClass.LinearCatalogModifyingStatement, ast.StatementOuterClass.LinearCatalogModifyingStatement.Builder, ast.StatementOuterClass.LinearCatalogModifyingStatementOrBuilder> linearCatalogModifyingStatementBuilder_;
       /**
-       * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
-       * @return Whether the simpleLinearCatalogModifyingStatement field is set.
+       * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
+       * @return Whether the linearCatalogModifyingStatement field is set.
        */
       @java.lang.Override
-      public boolean hasSimpleLinearCatalogModifyingStatement() {
+      public boolean hasLinearCatalogModifyingStatement() {
         return typeCase_ == 3;
       }
       /**
-       * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
-       * @return The simpleLinearCatalogModifyingStatement.
+       * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
+       * @return The linearCatalogModifyingStatement.
        */
       @java.lang.Override
-      public ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement getSimpleLinearCatalogModifyingStatement() {
-        if (simpleLinearCatalogModifyingStatementBuilder_ == null) {
+      public ast.StatementOuterClass.LinearCatalogModifyingStatement getLinearCatalogModifyingStatement() {
+        if (linearCatalogModifyingStatementBuilder_ == null) {
           if (typeCase_ == 3) {
-            return (ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) type_;
+            return (ast.StatementOuterClass.LinearCatalogModifyingStatement) type_;
           }
-          return ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.getDefaultInstance();
+          return ast.StatementOuterClass.LinearCatalogModifyingStatement.getDefaultInstance();
         } else {
           if (typeCase_ == 3) {
-            return simpleLinearCatalogModifyingStatementBuilder_.getMessage();
+            return linearCatalogModifyingStatementBuilder_.getMessage();
           }
-          return ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.getDefaultInstance();
+          return ast.StatementOuterClass.LinearCatalogModifyingStatement.getDefaultInstance();
         }
       }
       /**
-       * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
+       * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
        */
-      public Builder setSimpleLinearCatalogModifyingStatement(ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement value) {
-        if (simpleLinearCatalogModifyingStatementBuilder_ == null) {
+      public Builder setLinearCatalogModifyingStatement(ast.StatementOuterClass.LinearCatalogModifyingStatement value) {
+        if (linearCatalogModifyingStatementBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           type_ = value;
           onChanged();
         } else {
-          simpleLinearCatalogModifyingStatementBuilder_.setMessage(value);
+          linearCatalogModifyingStatementBuilder_.setMessage(value);
         }
         typeCase_ = 3;
         return this;
       }
       /**
-       * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
+       * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
        */
-      public Builder setSimpleLinearCatalogModifyingStatement(
-          ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.Builder builderForValue) {
-        if (simpleLinearCatalogModifyingStatementBuilder_ == null) {
+      public Builder setLinearCatalogModifyingStatement(
+          ast.StatementOuterClass.LinearCatalogModifyingStatement.Builder builderForValue) {
+        if (linearCatalogModifyingStatementBuilder_ == null) {
           type_ = builderForValue.build();
           onChanged();
         } else {
-          simpleLinearCatalogModifyingStatementBuilder_.setMessage(builderForValue.build());
+          linearCatalogModifyingStatementBuilder_.setMessage(builderForValue.build());
         }
         typeCase_ = 3;
         return this;
       }
       /**
-       * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
+       * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
        */
-      public Builder mergeSimpleLinearCatalogModifyingStatement(ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement value) {
-        if (simpleLinearCatalogModifyingStatementBuilder_ == null) {
+      public Builder mergeLinearCatalogModifyingStatement(ast.StatementOuterClass.LinearCatalogModifyingStatement value) {
+        if (linearCatalogModifyingStatementBuilder_ == null) {
           if (typeCase_ == 3 &&
-              type_ != ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.getDefaultInstance()) {
-            type_ = ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.newBuilder((ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) type_)
+              type_ != ast.StatementOuterClass.LinearCatalogModifyingStatement.getDefaultInstance()) {
+            type_ = ast.StatementOuterClass.LinearCatalogModifyingStatement.newBuilder((ast.StatementOuterClass.LinearCatalogModifyingStatement) type_)
                 .mergeFrom(value).buildPartial();
           } else {
             type_ = value;
@@ -1013,19 +1013,19 @@ public final class StatementOuterClass {
           onChanged();
         } else {
           if (typeCase_ == 3) {
-            simpleLinearCatalogModifyingStatementBuilder_.mergeFrom(value);
+            linearCatalogModifyingStatementBuilder_.mergeFrom(value);
           } else {
-            simpleLinearCatalogModifyingStatementBuilder_.setMessage(value);
+            linearCatalogModifyingStatementBuilder_.setMessage(value);
           }
         }
         typeCase_ = 3;
         return this;
       }
       /**
-       * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
+       * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
        */
-      public Builder clearSimpleLinearCatalogModifyingStatement() {
-        if (simpleLinearCatalogModifyingStatementBuilder_ == null) {
+      public Builder clearLinearCatalogModifyingStatement() {
+        if (linearCatalogModifyingStatementBuilder_ == null) {
           if (typeCase_ == 3) {
             typeCase_ = 0;
             type_ = null;
@@ -1036,50 +1036,50 @@ public final class StatementOuterClass {
             typeCase_ = 0;
             type_ = null;
           }
-          simpleLinearCatalogModifyingStatementBuilder_.clear();
+          linearCatalogModifyingStatementBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
+       * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
        */
-      public ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.Builder getSimpleLinearCatalogModifyingStatementBuilder() {
-        return getSimpleLinearCatalogModifyingStatementFieldBuilder().getBuilder();
+      public ast.StatementOuterClass.LinearCatalogModifyingStatement.Builder getLinearCatalogModifyingStatementBuilder() {
+        return getLinearCatalogModifyingStatementFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
+       * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
        */
       @java.lang.Override
-      public ast.StatementOuterClass.SimpleLinearCatalogModifyingStatementOrBuilder getSimpleLinearCatalogModifyingStatementOrBuilder() {
-        if ((typeCase_ == 3) && (simpleLinearCatalogModifyingStatementBuilder_ != null)) {
-          return simpleLinearCatalogModifyingStatementBuilder_.getMessageOrBuilder();
+      public ast.StatementOuterClass.LinearCatalogModifyingStatementOrBuilder getLinearCatalogModifyingStatementOrBuilder() {
+        if ((typeCase_ == 3) && (linearCatalogModifyingStatementBuilder_ != null)) {
+          return linearCatalogModifyingStatementBuilder_.getMessageOrBuilder();
         } else {
           if (typeCase_ == 3) {
-            return (ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) type_;
+            return (ast.StatementOuterClass.LinearCatalogModifyingStatement) type_;
           }
-          return ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.getDefaultInstance();
+          return ast.StatementOuterClass.LinearCatalogModifyingStatement.getDefaultInstance();
         }
       }
       /**
-       * <code>.ast.SimpleLinearCatalogModifyingStatement simple_linear_catalog_modifying_statement = 3;</code>
+       * <code>.ast.LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement, ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.Builder, ast.StatementOuterClass.SimpleLinearCatalogModifyingStatementOrBuilder> 
-          getSimpleLinearCatalogModifyingStatementFieldBuilder() {
-        if (simpleLinearCatalogModifyingStatementBuilder_ == null) {
+          ast.StatementOuterClass.LinearCatalogModifyingStatement, ast.StatementOuterClass.LinearCatalogModifyingStatement.Builder, ast.StatementOuterClass.LinearCatalogModifyingStatementOrBuilder> 
+          getLinearCatalogModifyingStatementFieldBuilder() {
+        if (linearCatalogModifyingStatementBuilder_ == null) {
           if (!(typeCase_ == 3)) {
-            type_ = ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.getDefaultInstance();
+            type_ = ast.StatementOuterClass.LinearCatalogModifyingStatement.getDefaultInstance();
           }
-          simpleLinearCatalogModifyingStatementBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement, ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.Builder, ast.StatementOuterClass.SimpleLinearCatalogModifyingStatementOrBuilder>(
-                  (ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) type_,
+          linearCatalogModifyingStatementBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.StatementOuterClass.LinearCatalogModifyingStatement, ast.StatementOuterClass.LinearCatalogModifyingStatement.Builder, ast.StatementOuterClass.LinearCatalogModifyingStatementOrBuilder>(
+                  (ast.StatementOuterClass.LinearCatalogModifyingStatement) type_,
                   getParentForChildren(),
                   isClean());
           type_ = null;
         }
         typeCase_ = 3;
         onChanged();
-        return simpleLinearCatalogModifyingStatementBuilder_;
+        return linearCatalogModifyingStatementBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:ast.Statement)
@@ -1133,8 +1133,8 @@ public final class StatementOuterClass {
 
   }
 
-  public interface SimpleLinearCatalogModifyingStatementOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ast.SimpleLinearCatalogModifyingStatement)
+  public interface LinearCatalogModifyingStatementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.LinearCatalogModifyingStatement)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -1162,12 +1162,12 @@ public final class StatementOuterClass {
         int index);
   }
   /**
-   * Protobuf type {@code ast.SimpleLinearCatalogModifyingStatement}
+   * Protobuf type {@code ast.LinearCatalogModifyingStatement}
    */
-  public static final class SimpleLinearCatalogModifyingStatement extends
+  public static final class LinearCatalogModifyingStatement extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:ast.SimpleLinearCatalogModifyingStatement)
-      SimpleLinearCatalogModifyingStatementOrBuilder {
+      // @@protoc_insertion_point(message_implements:ast.LinearCatalogModifyingStatement)
+      LinearCatalogModifyingStatementOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -1176,27 +1176,27 @@ public final class StatementOuterClass {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        SimpleLinearCatalogModifyingStatement.class.getName());
+        LinearCatalogModifyingStatement.class.getName());
     }
-    // Use SimpleLinearCatalogModifyingStatement.newBuilder() to construct.
-    private SimpleLinearCatalogModifyingStatement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use LinearCatalogModifyingStatement.newBuilder() to construct.
+    private LinearCatalogModifyingStatement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private SimpleLinearCatalogModifyingStatement() {
+    private LinearCatalogModifyingStatement() {
       statements_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ast.StatementOuterClass.internal_static_ast_SimpleLinearCatalogModifyingStatement_descriptor;
+      return ast.StatementOuterClass.internal_static_ast_LinearCatalogModifyingStatement_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ast.StatementOuterClass.internal_static_ast_SimpleLinearCatalogModifyingStatement_fieldAccessorTable
+      return ast.StatementOuterClass.internal_static_ast_LinearCatalogModifyingStatement_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.class, ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.Builder.class);
+              ast.StatementOuterClass.LinearCatalogModifyingStatement.class, ast.StatementOuterClass.LinearCatalogModifyingStatement.Builder.class);
     }
 
     public static final int STATEMENTS_FIELD_NUMBER = 1;
@@ -1280,10 +1280,10 @@ public final class StatementOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement)) {
+      if (!(obj instanceof ast.StatementOuterClass.LinearCatalogModifyingStatement)) {
         return super.equals(obj);
       }
-      ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement other = (ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) obj;
+      ast.StatementOuterClass.LinearCatalogModifyingStatement other = (ast.StatementOuterClass.LinearCatalogModifyingStatement) obj;
 
       if (!getStatementsList()
           .equals(other.getStatementsList())) return false;
@@ -1307,44 +1307,44 @@ public final class StatementOuterClass {
       return hash;
     }
 
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(byte[] data)
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(java.io.InputStream input)
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1352,26 +1352,26 @@ public final class StatementOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseDelimitedFrom(java.io.InputStream input)
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseDelimitedFrom(
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement parseFrom(
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1384,7 +1384,7 @@ public final class StatementOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement prototype) {
+    public static Builder newBuilder(ast.StatementOuterClass.LinearCatalogModifyingStatement prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1400,26 +1400,26 @@ public final class StatementOuterClass {
       return builder;
     }
     /**
-     * Protobuf type {@code ast.SimpleLinearCatalogModifyingStatement}
+     * Protobuf type {@code ast.LinearCatalogModifyingStatement}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ast.SimpleLinearCatalogModifyingStatement)
-        ast.StatementOuterClass.SimpleLinearCatalogModifyingStatementOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ast.LinearCatalogModifyingStatement)
+        ast.StatementOuterClass.LinearCatalogModifyingStatementOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ast.StatementOuterClass.internal_static_ast_SimpleLinearCatalogModifyingStatement_descriptor;
+        return ast.StatementOuterClass.internal_static_ast_LinearCatalogModifyingStatement_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ast.StatementOuterClass.internal_static_ast_SimpleLinearCatalogModifyingStatement_fieldAccessorTable
+        return ast.StatementOuterClass.internal_static_ast_LinearCatalogModifyingStatement_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.class, ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.Builder.class);
+                ast.StatementOuterClass.LinearCatalogModifyingStatement.class, ast.StatementOuterClass.LinearCatalogModifyingStatement.Builder.class);
       }
 
-      // Construct using ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.newBuilder()
+      // Construct using ast.StatementOuterClass.LinearCatalogModifyingStatement.newBuilder()
       private Builder() {
 
       }
@@ -1446,17 +1446,17 @@ public final class StatementOuterClass {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ast.StatementOuterClass.internal_static_ast_SimpleLinearCatalogModifyingStatement_descriptor;
+        return ast.StatementOuterClass.internal_static_ast_LinearCatalogModifyingStatement_descriptor;
       }
 
       @java.lang.Override
-      public ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement getDefaultInstanceForType() {
-        return ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.getDefaultInstance();
+      public ast.StatementOuterClass.LinearCatalogModifyingStatement getDefaultInstanceForType() {
+        return ast.StatementOuterClass.LinearCatalogModifyingStatement.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement build() {
-        ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement result = buildPartial();
+      public ast.StatementOuterClass.LinearCatalogModifyingStatement build() {
+        ast.StatementOuterClass.LinearCatalogModifyingStatement result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1464,15 +1464,15 @@ public final class StatementOuterClass {
       }
 
       @java.lang.Override
-      public ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement buildPartial() {
-        ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement result = new ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement(this);
+      public ast.StatementOuterClass.LinearCatalogModifyingStatement buildPartial() {
+        ast.StatementOuterClass.LinearCatalogModifyingStatement result = new ast.StatementOuterClass.LinearCatalogModifyingStatement(this);
         buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement result) {
+      private void buildPartialRepeatedFields(ast.StatementOuterClass.LinearCatalogModifyingStatement result) {
         if (statementsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             statements_ = java.util.Collections.unmodifiableList(statements_);
@@ -1484,22 +1484,22 @@ public final class StatementOuterClass {
         }
       }
 
-      private void buildPartial0(ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement result) {
+      private void buildPartial0(ast.StatementOuterClass.LinearCatalogModifyingStatement result) {
         int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement) {
-          return mergeFrom((ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement)other);
+        if (other instanceof ast.StatementOuterClass.LinearCatalogModifyingStatement) {
+          return mergeFrom((ast.StatementOuterClass.LinearCatalogModifyingStatement)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement other) {
-        if (other == ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement.getDefaultInstance()) return this;
+      public Builder mergeFrom(ast.StatementOuterClass.LinearCatalogModifyingStatement other) {
+        if (other == ast.StatementOuterClass.LinearCatalogModifyingStatement.getDefaultInstance()) return this;
         if (statementsBuilder_ == null) {
           if (!other.statements_.isEmpty()) {
             if (statements_.isEmpty()) {
@@ -1822,23 +1822,23 @@ public final class StatementOuterClass {
         return statementsBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:ast.SimpleLinearCatalogModifyingStatement)
+      // @@protoc_insertion_point(builder_scope:ast.LinearCatalogModifyingStatement)
     }
 
-    // @@protoc_insertion_point(class_scope:ast.SimpleLinearCatalogModifyingStatement)
-    private static final ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ast.LinearCatalogModifyingStatement)
+    private static final ast.StatementOuterClass.LinearCatalogModifyingStatement DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement();
+      DEFAULT_INSTANCE = new ast.StatementOuterClass.LinearCatalogModifyingStatement();
     }
 
-    public static ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement getDefaultInstance() {
+    public static ast.StatementOuterClass.LinearCatalogModifyingStatement getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<SimpleLinearCatalogModifyingStatement>
-        PARSER = new com.google.protobuf.AbstractParser<SimpleLinearCatalogModifyingStatement>() {
+    private static final com.google.protobuf.Parser<LinearCatalogModifyingStatement>
+        PARSER = new com.google.protobuf.AbstractParser<LinearCatalogModifyingStatement>() {
       @java.lang.Override
-      public SimpleLinearCatalogModifyingStatement parsePartialFrom(
+      public LinearCatalogModifyingStatement parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1857,17 +1857,17 @@ public final class StatementOuterClass {
       }
     };
 
-    public static com.google.protobuf.Parser<SimpleLinearCatalogModifyingStatement> parser() {
+    public static com.google.protobuf.Parser<LinearCatalogModifyingStatement> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<SimpleLinearCatalogModifyingStatement> getParserForType() {
+    public com.google.protobuf.Parser<LinearCatalogModifyingStatement> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ast.StatementOuterClass.SimpleLinearCatalogModifyingStatement getDefaultInstanceForType() {
+    public ast.StatementOuterClass.LinearCatalogModifyingStatement getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1879,10 +1879,10 @@ public final class StatementOuterClass {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ast_Statement_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ast_SimpleLinearCatalogModifyingStatement_descriptor;
+    internal_static_ast_LinearCatalogModifyingStatement_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ast_SimpleLinearCatalogModifyingStatement_fieldAccessorTable;
+      internal_static_ast_LinearCatalogModifyingStatement_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1894,15 +1894,15 @@ public final class StatementOuterClass {
     java.lang.String[] descriptorData = {
       "\n\017statement.proto\022\003ast\032!google/protobuf/" +
       "go_features.proto\032\030catalog_statements.pr" +
-      "oto\"\352\001\n\tStatement\022;\n\026create_graph_statem" +
+      "oto\"\335\001\n\tStatement\022;\n\026create_graph_statem" +
       "ent\030\001 \001(\0132\031.ast.CreateGraphStatementH\000\0227" +
       "\n\024drop_graph_statement\030\002 \001(\0132\027.ast.DropG" +
-      "raphStatementH\000\022_\n)simple_linear_catalog" +
-      "_modifying_statement\030\003 \001(\0132*.ast.SimpleL" +
-      "inearCatalogModifyingStatementH\000B\006\n\004type" +
-      "\"K\n%SimpleLinearCatalogModifyingStatemen" +
-      "t\022\"\n\nstatements\030\001 \003(\0132\016.ast.StatementB\020Z" +
-      "\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
+      "raphStatementH\000\022R\n\"linear_catalog_modify" +
+      "ing_statement\030\003 \001(\0132$.ast.LinearCatalogM" +
+      "odifyingStatementH\000B\006\n\004type\"E\n\037LinearCat" +
+      "alogModifyingStatement\022\"\n\nstatements\030\001 \003" +
+      "(\0132\016.ast.StatementB\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010ed" +
+      "itionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1915,12 +1915,12 @@ public final class StatementOuterClass {
     internal_static_ast_Statement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_Statement_descriptor,
-        new java.lang.String[] { "CreateGraphStatement", "DropGraphStatement", "SimpleLinearCatalogModifyingStatement", "Type", });
-    internal_static_ast_SimpleLinearCatalogModifyingStatement_descriptor =
+        new java.lang.String[] { "CreateGraphStatement", "DropGraphStatement", "LinearCatalogModifyingStatement", "Type", });
+    internal_static_ast_LinearCatalogModifyingStatement_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_ast_SimpleLinearCatalogModifyingStatement_fieldAccessorTable = new
+    internal_static_ast_LinearCatalogModifyingStatement_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ast_SimpleLinearCatalogModifyingStatement_descriptor,
+        internal_static_ast_LinearCatalogModifyingStatement_descriptor,
         new java.lang.String[] { "Statements", });
     descriptor.resolveAllFeaturesImmutable();
     pb.GoFeaturesOuterClass.getDescriptor();
