@@ -4,12 +4,11 @@ package ast;
 
 import "google/protobuf/go_features.proto";
 import "program_activity.proto";
-import "session_commands.proto";
 
 option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 
 message Program {
   ProgramActivity program_activity = 1;
-  SessionCloseCommand session_close_command = 2;
+  bool close_session = 2;
 }

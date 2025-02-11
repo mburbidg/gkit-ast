@@ -21,49 +21,6 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
-type SessionCloseCommand struct {
-	state         protoimpl.MessageState `protogen:"opaque.v1"`
-	unknownFields protoimpl.UnknownFields
-	sizeCache     protoimpl.SizeCache
-}
-
-func (x *SessionCloseCommand) Reset() {
-	*x = SessionCloseCommand{}
-	mi := &file_session_commands_proto_msgTypes[0]
-	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-	ms.StoreMessageInfo(mi)
-}
-
-func (x *SessionCloseCommand) String() string {
-	return protoimpl.X.MessageStringOf(x)
-}
-
-func (*SessionCloseCommand) ProtoMessage() {}
-
-func (x *SessionCloseCommand) ProtoReflect() protoreflect.Message {
-	mi := &file_session_commands_proto_msgTypes[0]
-	if x != nil {
-		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
-		if ms.LoadMessageInfo() == nil {
-			ms.StoreMessageInfo(mi)
-		}
-		return ms
-	}
-	return mi.MessageOf(x)
-}
-
-type SessionCloseCommand_builder struct {
-	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
-
-}
-
-func (b0 SessionCloseCommand_builder) Build() *SessionCloseCommand {
-	m0 := &SessionCloseCommand{}
-	b, x := &b0, m0
-	_, _ = b, x
-	return m0
-}
-
 type SessionResetCommand struct {
 	state         protoimpl.MessageState `protogen:"opaque.v1"`
 	unknownFields protoimpl.UnknownFields
@@ -72,7 +29,7 @@ type SessionResetCommand struct {
 
 func (x *SessionResetCommand) Reset() {
 	*x = SessionResetCommand{}
-	mi := &file_session_commands_proto_msgTypes[1]
+	mi := &file_session_commands_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -84,7 +41,7 @@ func (x *SessionResetCommand) String() string {
 func (*SessionResetCommand) ProtoMessage() {}
 
 func (x *SessionResetCommand) ProtoReflect() protoreflect.Message {
-	mi := &file_session_commands_proto_msgTypes[1]
+	mi := &file_session_commands_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -115,7 +72,7 @@ type SessionSetCommand struct {
 
 func (x *SessionSetCommand) Reset() {
 	*x = SessionSetCommand{}
-	mi := &file_session_commands_proto_msgTypes[2]
+	mi := &file_session_commands_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -127,7 +84,7 @@ func (x *SessionSetCommand) String() string {
 func (*SessionSetCommand) ProtoMessage() {}
 
 func (x *SessionSetCommand) ProtoReflect() protoreflect.Message {
-	mi := &file_session_commands_proto_msgTypes[2]
+	mi := &file_session_commands_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -157,19 +114,17 @@ var file_session_commands_proto_rawDesc = string([]byte{
 	0x64, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x03, 0x61, 0x73, 0x74, 0x1a, 0x21, 0x67,
 	0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x67,
 	0x6f, 0x5f, 0x66, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x22, 0x15, 0x0a, 0x13, 0x53, 0x65, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x43, 0x6c, 0x6f, 0x73, 0x65,
-	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x22, 0x15, 0x0a, 0x13, 0x53, 0x65, 0x73, 0x73, 0x69,
-	0x6f, 0x6e, 0x52, 0x65, 0x73, 0x65, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x22, 0x13,
-	0x0a, 0x11, 0x53, 0x65, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x53, 0x65, 0x74, 0x43, 0x6f, 0x6d, 0x6d,
-	0x61, 0x6e, 0x64, 0x42, 0x0e, 0x5a, 0x04, 0x2f, 0x61, 0x73, 0x74, 0x92, 0x03, 0x05, 0xd2, 0x3e,
-	0x02, 0x10, 0x03, 0x62, 0x08, 0x65, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x70, 0xe8, 0x07,
+	0x22, 0x15, 0x0a, 0x13, 0x53, 0x65, 0x73, 0x73, 0x69, 0x6f, 0x6e, 0x52, 0x65, 0x73, 0x65, 0x74,
+	0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x22, 0x13, 0x0a, 0x11, 0x53, 0x65, 0x73, 0x73, 0x69,
+	0x6f, 0x6e, 0x53, 0x65, 0x74, 0x43, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x42, 0x0e, 0x5a, 0x04,
+	0x2f, 0x61, 0x73, 0x74, 0x92, 0x03, 0x05, 0xd2, 0x3e, 0x02, 0x10, 0x03, 0x62, 0x08, 0x65, 0x64,
+	0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x70, 0xe8, 0x07,
 })
 
-var file_session_commands_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_session_commands_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_session_commands_proto_goTypes = []any{
-	(*SessionCloseCommand)(nil), // 0: ast.SessionCloseCommand
-	(*SessionResetCommand)(nil), // 1: ast.SessionResetCommand
-	(*SessionSetCommand)(nil),   // 2: ast.SessionSetCommand
+	(*SessionResetCommand)(nil), // 0: ast.SessionResetCommand
+	(*SessionSetCommand)(nil),   // 1: ast.SessionSetCommand
 }
 var file_session_commands_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for method output_type
@@ -190,7 +145,7 @@ func file_session_commands_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_session_commands_proto_rawDesc), len(file_session_commands_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   3,
+			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},

@@ -45,19 +45,15 @@ public final class ProgramOuterClass {
     ast.ProgramActivityOuterClass.ProgramActivityOrBuilder getProgramActivityOrBuilder();
 
     /**
-     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-     * @return Whether the sessionCloseCommand field is set.
+     * <code>bool close_session = 2;</code>
+     * @return Whether the closeSession field is set.
      */
-    boolean hasSessionCloseCommand();
+    boolean hasCloseSession();
     /**
-     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-     * @return The sessionCloseCommand.
+     * <code>bool close_session = 2;</code>
+     * @return The closeSession.
      */
-    ast.SessionCommands.SessionCloseCommand getSessionCloseCommand();
-    /**
-     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-     */
-    ast.SessionCommands.SessionCloseCommandOrBuilder getSessionCloseCommandOrBuilder();
+    boolean getCloseSession();
   }
   /**
    * Protobuf type {@code ast.Program}
@@ -123,30 +119,23 @@ public final class ProgramOuterClass {
       return programActivity_ == null ? ast.ProgramActivityOuterClass.ProgramActivity.getDefaultInstance() : programActivity_;
     }
 
-    public static final int SESSION_CLOSE_COMMAND_FIELD_NUMBER = 2;
-    private ast.SessionCommands.SessionCloseCommand sessionCloseCommand_;
+    public static final int CLOSE_SESSION_FIELD_NUMBER = 2;
+    private boolean closeSession_ = false;
     /**
-     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-     * @return Whether the sessionCloseCommand field is set.
+     * <code>bool close_session = 2;</code>
+     * @return Whether the closeSession field is set.
      */
     @java.lang.Override
-    public boolean hasSessionCloseCommand() {
+    public boolean hasCloseSession() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-     * @return The sessionCloseCommand.
+     * <code>bool close_session = 2;</code>
+     * @return The closeSession.
      */
     @java.lang.Override
-    public ast.SessionCommands.SessionCloseCommand getSessionCloseCommand() {
-      return sessionCloseCommand_ == null ? ast.SessionCommands.SessionCloseCommand.getDefaultInstance() : sessionCloseCommand_;
-    }
-    /**
-     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-     */
-    @java.lang.Override
-    public ast.SessionCommands.SessionCloseCommandOrBuilder getSessionCloseCommandOrBuilder() {
-      return sessionCloseCommand_ == null ? ast.SessionCommands.SessionCloseCommand.getDefaultInstance() : sessionCloseCommand_;
+    public boolean getCloseSession() {
+      return closeSession_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -167,7 +156,7 @@ public final class ProgramOuterClass {
         output.writeMessage(1, getProgramActivity());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getSessionCloseCommand());
+        output.writeBool(2, closeSession_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -184,7 +173,7 @@ public final class ProgramOuterClass {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getSessionCloseCommand());
+          .computeBoolSize(2, closeSession_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -206,10 +195,10 @@ public final class ProgramOuterClass {
         if (!getProgramActivity()
             .equals(other.getProgramActivity())) return false;
       }
-      if (hasSessionCloseCommand() != other.hasSessionCloseCommand()) return false;
-      if (hasSessionCloseCommand()) {
-        if (!getSessionCloseCommand()
-            .equals(other.getSessionCloseCommand())) return false;
+      if (hasCloseSession() != other.hasCloseSession()) return false;
+      if (hasCloseSession()) {
+        if (getCloseSession()
+            != other.getCloseSession()) return false;
       }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
@@ -226,9 +215,10 @@ public final class ProgramOuterClass {
         hash = (37 * hash) + PROGRAM_ACTIVITY_FIELD_NUMBER;
         hash = (53 * hash) + getProgramActivity().hashCode();
       }
-      if (hasSessionCloseCommand()) {
-        hash = (37 * hash) + SESSION_CLOSE_COMMAND_FIELD_NUMBER;
-        hash = (53 * hash) + getSessionCloseCommand().hashCode();
+      if (hasCloseSession()) {
+        hash = (37 * hash) + CLOSE_SESSION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+            getCloseSession());
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -361,7 +351,6 @@ public final class ProgramOuterClass {
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
           getProgramActivityFieldBuilder();
-          getSessionCloseCommandFieldBuilder();
         }
       }
       @java.lang.Override
@@ -373,11 +362,7 @@ public final class ProgramOuterClass {
           programActivityBuilder_.dispose();
           programActivityBuilder_ = null;
         }
-        sessionCloseCommand_ = null;
-        if (sessionCloseCommandBuilder_ != null) {
-          sessionCloseCommandBuilder_.dispose();
-          sessionCloseCommandBuilder_ = null;
-        }
+        closeSession_ = false;
         return this;
       }
 
@@ -419,9 +404,7 @@ public final class ProgramOuterClass {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.sessionCloseCommand_ = sessionCloseCommandBuilder_ == null
-              ? sessionCloseCommand_
-              : sessionCloseCommandBuilder_.build();
+          result.closeSession_ = closeSession_;
           to_bitField0_ |= 0x00000002;
         }
         result.bitField0_ |= to_bitField0_;
@@ -442,8 +425,8 @@ public final class ProgramOuterClass {
         if (other.hasProgramActivity()) {
           mergeProgramActivity(other.getProgramActivity());
         }
-        if (other.hasSessionCloseCommand()) {
-          mergeSessionCloseCommand(other.getSessionCloseCommand());
+        if (other.hasCloseSession()) {
+          setCloseSession(other.getCloseSession());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -478,13 +461,11 @@ public final class ProgramOuterClass {
                 bitField0_ |= 0x00000001;
                 break;
               } // case 10
-              case 18: {
-                input.readMessage(
-                    getSessionCloseCommandFieldBuilder().getBuilder(),
-                    extensionRegistry);
+              case 16: {
+                closeSession_ = input.readBool();
                 bitField0_ |= 0x00000002;
                 break;
-              } // case 18
+              } // case 16
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -623,125 +604,44 @@ public final class ProgramOuterClass {
         return programActivityBuilder_;
       }
 
-      private ast.SessionCommands.SessionCloseCommand sessionCloseCommand_;
-      private com.google.protobuf.SingleFieldBuilder<
-          ast.SessionCommands.SessionCloseCommand, ast.SessionCommands.SessionCloseCommand.Builder, ast.SessionCommands.SessionCloseCommandOrBuilder> sessionCloseCommandBuilder_;
+      private boolean closeSession_ ;
       /**
-       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-       * @return Whether the sessionCloseCommand field is set.
+       * <code>bool close_session = 2;</code>
+       * @return Whether the closeSession field is set.
        */
-      public boolean hasSessionCloseCommand() {
+      @java.lang.Override
+      public boolean hasCloseSession() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-       * @return The sessionCloseCommand.
+       * <code>bool close_session = 2;</code>
+       * @return The closeSession.
        */
-      public ast.SessionCommands.SessionCloseCommand getSessionCloseCommand() {
-        if (sessionCloseCommandBuilder_ == null) {
-          return sessionCloseCommand_ == null ? ast.SessionCommands.SessionCloseCommand.getDefaultInstance() : sessionCloseCommand_;
-        } else {
-          return sessionCloseCommandBuilder_.getMessage();
-        }
+      @java.lang.Override
+      public boolean getCloseSession() {
+        return closeSession_;
       }
       /**
-       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>bool close_session = 2;</code>
+       * @param value The closeSession to set.
+       * @return This builder for chaining.
        */
-      public Builder setSessionCloseCommand(ast.SessionCommands.SessionCloseCommand value) {
-        if (sessionCloseCommandBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          sessionCloseCommand_ = value;
-        } else {
-          sessionCloseCommandBuilder_.setMessage(value);
-        }
+      public Builder setCloseSession(boolean value) {
+
+        closeSession_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>bool close_session = 2;</code>
+       * @return This builder for chaining.
        */
-      public Builder setSessionCloseCommand(
-          ast.SessionCommands.SessionCloseCommand.Builder builderForValue) {
-        if (sessionCloseCommandBuilder_ == null) {
-          sessionCloseCommand_ = builderForValue.build();
-        } else {
-          sessionCloseCommandBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-       */
-      public Builder mergeSessionCloseCommand(ast.SessionCommands.SessionCloseCommand value) {
-        if (sessionCloseCommandBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0) &&
-            sessionCloseCommand_ != null &&
-            sessionCloseCommand_ != ast.SessionCommands.SessionCloseCommand.getDefaultInstance()) {
-            getSessionCloseCommandBuilder().mergeFrom(value);
-          } else {
-            sessionCloseCommand_ = value;
-          }
-        } else {
-          sessionCloseCommandBuilder_.mergeFrom(value);
-        }
-        if (sessionCloseCommand_ != null) {
-          bitField0_ |= 0x00000002;
-          onChanged();
-        }
-        return this;
-      }
-      /**
-       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-       */
-      public Builder clearSessionCloseCommand() {
+      public Builder clearCloseSession() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        sessionCloseCommand_ = null;
-        if (sessionCloseCommandBuilder_ != null) {
-          sessionCloseCommandBuilder_.dispose();
-          sessionCloseCommandBuilder_ = null;
-        }
+        closeSession_ = false;
         onChanged();
         return this;
-      }
-      /**
-       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-       */
-      public ast.SessionCommands.SessionCloseCommand.Builder getSessionCloseCommandBuilder() {
-        bitField0_ |= 0x00000002;
-        onChanged();
-        return getSessionCloseCommandFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-       */
-      public ast.SessionCommands.SessionCloseCommandOrBuilder getSessionCloseCommandOrBuilder() {
-        if (sessionCloseCommandBuilder_ != null) {
-          return sessionCloseCommandBuilder_.getMessageOrBuilder();
-        } else {
-          return sessionCloseCommand_ == null ?
-              ast.SessionCommands.SessionCloseCommand.getDefaultInstance() : sessionCloseCommand_;
-        }
-      }
-      /**
-       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilder<
-          ast.SessionCommands.SessionCloseCommand, ast.SessionCommands.SessionCloseCommand.Builder, ast.SessionCommands.SessionCloseCommandOrBuilder> 
-          getSessionCloseCommandFieldBuilder() {
-        if (sessionCloseCommandBuilder_ == null) {
-          sessionCloseCommandBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              ast.SessionCommands.SessionCloseCommand, ast.SessionCommands.SessionCloseCommand.Builder, ast.SessionCommands.SessionCloseCommandOrBuilder>(
-                  getSessionCloseCommand(),
-                  getParentForChildren(),
-                  isClean());
-          sessionCloseCommand_ = null;
-        }
-        return sessionCloseCommandBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:ast.Program)
@@ -810,30 +710,26 @@ public final class ProgramOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\rprogram.proto\022\003ast\032!google/protobuf/go" +
-      "_features.proto\032\026program_activity.proto\032" +
-      "\026session_commands.proto\"r\n\007Program\022.\n\020pr" +
-      "ogram_activity\030\001 \001(\0132\024.ast.ProgramActivi" +
-      "ty\0227\n\025session_close_command\030\002 \001(\0132\030.ast." +
-      "SessionCloseCommandB\016Z\004/ast\222\003\005\322>\002\020\003b\010edi" +
-      "tionsp\350\007"
+      "_features.proto\032\026program_activity.proto\"" +
+      "P\n\007Program\022.\n\020program_activity\030\001 \001(\0132\024.a" +
+      "st.ProgramActivity\022\025\n\rclose_session\030\002 \001(" +
+      "\010B\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           pb.GoFeaturesOuterClass.getDescriptor(),
           ast.ProgramActivityOuterClass.getDescriptor(),
-          ast.SessionCommands.getDescriptor(),
         });
     internal_static_ast_Program_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ast_Program_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_Program_descriptor,
-        new java.lang.String[] { "ProgramActivity", "SessionCloseCommand", });
+        new java.lang.String[] { "ProgramActivity", "CloseSession", });
     descriptor.resolveAllFeaturesImmutable();
     pb.GoFeaturesOuterClass.getDescriptor();
     ast.ProgramActivityOuterClass.getDescriptor();
-    ast.SessionCommands.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(pb.GoFeaturesOuterClass.go);
