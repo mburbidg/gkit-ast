@@ -71,6 +71,15 @@ func (x *Statement) GetDropGraphStatement() *DropGraphStatement {
 	return nil
 }
 
+func (x *Statement) GetSimpleLinearCatalogModifyingStatement() *SimpleLinearCatalogModifyingStatement {
+	if x != nil {
+		if x, ok := x.xxx_hidden_Type.(*statement_SimpleLinearCatalogModifyingStatement); ok {
+			return x.SimpleLinearCatalogModifyingStatement
+		}
+	}
+	return nil
+}
+
 func (x *Statement) SetCreateGraphStatement(v *CreateGraphStatement) {
 	if v == nil {
 		x.xxx_hidden_Type = nil
@@ -85,6 +94,14 @@ func (x *Statement) SetDropGraphStatement(v *DropGraphStatement) {
 		return
 	}
 	x.xxx_hidden_Type = &statement_DropGraphStatement{v}
+}
+
+func (x *Statement) SetSimpleLinearCatalogModifyingStatement(v *SimpleLinearCatalogModifyingStatement) {
+	if v == nil {
+		x.xxx_hidden_Type = nil
+		return
+	}
+	x.xxx_hidden_Type = &statement_SimpleLinearCatalogModifyingStatement{v}
 }
 
 func (x *Statement) HasType() bool {
@@ -110,6 +127,14 @@ func (x *Statement) HasDropGraphStatement() bool {
 	return ok
 }
 
+func (x *Statement) HasSimpleLinearCatalogModifyingStatement() bool {
+	if x == nil {
+		return false
+	}
+	_, ok := x.xxx_hidden_Type.(*statement_SimpleLinearCatalogModifyingStatement)
+	return ok
+}
+
 func (x *Statement) ClearType() {
 	x.xxx_hidden_Type = nil
 }
@@ -126,9 +151,16 @@ func (x *Statement) ClearDropGraphStatement() {
 	}
 }
 
+func (x *Statement) ClearSimpleLinearCatalogModifyingStatement() {
+	if _, ok := x.xxx_hidden_Type.(*statement_SimpleLinearCatalogModifyingStatement); ok {
+		x.xxx_hidden_Type = nil
+	}
+}
+
 const Statement_Type_not_set_case case_Statement_Type = 0
 const Statement_CreateGraphStatement_case case_Statement_Type = 1
 const Statement_DropGraphStatement_case case_Statement_Type = 2
+const Statement_SimpleLinearCatalogModifyingStatement_case case_Statement_Type = 3
 
 func (x *Statement) WhichType() case_Statement_Type {
 	if x == nil {
@@ -139,6 +171,8 @@ func (x *Statement) WhichType() case_Statement_Type {
 		return Statement_CreateGraphStatement_case
 	case *statement_DropGraphStatement:
 		return Statement_DropGraphStatement_case
+	case *statement_SimpleLinearCatalogModifyingStatement:
+		return Statement_SimpleLinearCatalogModifyingStatement_case
 	default:
 		return Statement_Type_not_set_case
 	}
@@ -148,8 +182,9 @@ type Statement_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
 	// Fields of oneof xxx_hidden_Type:
-	CreateGraphStatement *CreateGraphStatement
-	DropGraphStatement   *DropGraphStatement
+	CreateGraphStatement                  *CreateGraphStatement
+	DropGraphStatement                    *DropGraphStatement
+	SimpleLinearCatalogModifyingStatement *SimpleLinearCatalogModifyingStatement
 	// -- end of xxx_hidden_Type
 }
 
@@ -162,6 +197,9 @@ func (b0 Statement_builder) Build() *Statement {
 	}
 	if b.DropGraphStatement != nil {
 		x.xxx_hidden_Type = &statement_DropGraphStatement{b.DropGraphStatement}
+	}
+	if b.SimpleLinearCatalogModifyingStatement != nil {
+		x.xxx_hidden_Type = &statement_SimpleLinearCatalogModifyingStatement{b.SimpleLinearCatalogModifyingStatement}
 	}
 	return m0
 }
@@ -188,9 +226,74 @@ type statement_DropGraphStatement struct {
 	DropGraphStatement *DropGraphStatement `protobuf:"bytes,2,opt,name=drop_graph_statement,json=dropGraphStatement,oneof"`
 }
 
+type statement_SimpleLinearCatalogModifyingStatement struct {
+	SimpleLinearCatalogModifyingStatement *SimpleLinearCatalogModifyingStatement `protobuf:"bytes,3,opt,name=simple_linear_catalog_modifying_statement,json=simpleLinearCatalogModifyingStatement,oneof"`
+}
+
 func (*statement_CreateGraphStatement) isStatement_Type() {}
 
 func (*statement_DropGraphStatement) isStatement_Type() {}
+
+func (*statement_SimpleLinearCatalogModifyingStatement) isStatement_Type() {}
+
+type SimpleLinearCatalogModifyingStatement struct {
+	state                 protoimpl.MessageState `protogen:"opaque.v1"`
+	xxx_hidden_Statements *[]*Statement          `protobuf:"bytes,1,rep,name=statements"`
+	unknownFields         protoimpl.UnknownFields
+	sizeCache             protoimpl.SizeCache
+}
+
+func (x *SimpleLinearCatalogModifyingStatement) Reset() {
+	*x = SimpleLinearCatalogModifyingStatement{}
+	mi := &file_statement_proto_msgTypes[1]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *SimpleLinearCatalogModifyingStatement) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*SimpleLinearCatalogModifyingStatement) ProtoMessage() {}
+
+func (x *SimpleLinearCatalogModifyingStatement) ProtoReflect() protoreflect.Message {
+	mi := &file_statement_proto_msgTypes[1]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+func (x *SimpleLinearCatalogModifyingStatement) GetStatements() []*Statement {
+	if x != nil {
+		if x.xxx_hidden_Statements != nil {
+			return *x.xxx_hidden_Statements
+		}
+	}
+	return nil
+}
+
+func (x *SimpleLinearCatalogModifyingStatement) SetStatements(v []*Statement) {
+	x.xxx_hidden_Statements = &v
+}
+
+type SimpleLinearCatalogModifyingStatement_builder struct {
+	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
+
+	Statements []*Statement
+}
+
+func (b0 SimpleLinearCatalogModifyingStatement_builder) Build() *SimpleLinearCatalogModifyingStatement {
+	m0 := &SimpleLinearCatalogModifyingStatement{}
+	b, x := &b0, m0
+	_, _ = b, x
+	x.xxx_hidden_Statements = &b.Statements
+	return m0
+}
 
 var File_statement_proto protoreflect.FileDescriptor
 
@@ -200,7 +303,7 @@ var file_statement_proto_rawDesc = string([]byte{
 	0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x67, 0x6f, 0x5f, 0x66, 0x65, 0x61, 0x74, 0x75,
 	0x72, 0x65, 0x73, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x18, 0x63, 0x61, 0x74, 0x61, 0x6c,
 	0x6f, 0x67, 0x5f, 0x73, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x2e, 0x70, 0x72,
-	0x6f, 0x74, 0x6f, 0x22, 0xb3, 0x01, 0x0a, 0x09, 0x53, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e,
+	0x6f, 0x74, 0x6f, 0x22, 0xbc, 0x02, 0x0a, 0x09, 0x53, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e,
 	0x74, 0x12, 0x51, 0x0a, 0x16, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x5f, 0x67, 0x72, 0x61, 0x70,
 	0x68, 0x5f, 0x73, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28,
 	0x0b, 0x32, 0x19, 0x2e, 0x61, 0x73, 0x74, 0x2e, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x47, 0x72,
@@ -211,25 +314,42 @@ var file_statement_proto_rawDesc = string([]byte{
 	0x28, 0x0b, 0x32, 0x17, 0x2e, 0x61, 0x73, 0x74, 0x2e, 0x44, 0x72, 0x6f, 0x70, 0x47, 0x72, 0x61,
 	0x70, 0x68, 0x53, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x48, 0x00, 0x52, 0x12, 0x64,
 	0x72, 0x6f, 0x70, 0x47, 0x72, 0x61, 0x70, 0x68, 0x53, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e,
-	0x74, 0x42, 0x06, 0x0a, 0x04, 0x74, 0x79, 0x70, 0x65, 0x42, 0x10, 0x5a, 0x04, 0x2f, 0x61, 0x73,
-	0x74, 0x92, 0x03, 0x07, 0xd2, 0x3e, 0x02, 0x10, 0x03, 0x08, 0x02, 0x62, 0x08, 0x65, 0x64, 0x69,
-	0x74, 0x69, 0x6f, 0x6e, 0x73, 0x70, 0xe8, 0x07,
+	0x74, 0x12, 0x86, 0x01, 0x0a, 0x29, 0x73, 0x69, 0x6d, 0x70, 0x6c, 0x65, 0x5f, 0x6c, 0x69, 0x6e,
+	0x65, 0x61, 0x72, 0x5f, 0x63, 0x61, 0x74, 0x61, 0x6c, 0x6f, 0x67, 0x5f, 0x6d, 0x6f, 0x64, 0x69,
+	0x66, 0x79, 0x69, 0x6e, 0x67, 0x5f, 0x73, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x18,
+	0x03, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x2a, 0x2e, 0x61, 0x73, 0x74, 0x2e, 0x53, 0x69, 0x6d, 0x70,
+	0x6c, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x61, 0x72, 0x43, 0x61, 0x74, 0x61, 0x6c, 0x6f, 0x67, 0x4d,
+	0x6f, 0x64, 0x69, 0x66, 0x79, 0x69, 0x6e, 0x67, 0x53, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e,
+	0x74, 0x48, 0x00, 0x52, 0x25, 0x73, 0x69, 0x6d, 0x70, 0x6c, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x61,
+	0x72, 0x43, 0x61, 0x74, 0x61, 0x6c, 0x6f, 0x67, 0x4d, 0x6f, 0x64, 0x69, 0x66, 0x79, 0x69, 0x6e,
+	0x67, 0x53, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x42, 0x06, 0x0a, 0x04, 0x74, 0x79,
+	0x70, 0x65, 0x22, 0x57, 0x0a, 0x25, 0x53, 0x69, 0x6d, 0x70, 0x6c, 0x65, 0x4c, 0x69, 0x6e, 0x65,
+	0x61, 0x72, 0x43, 0x61, 0x74, 0x61, 0x6c, 0x6f, 0x67, 0x4d, 0x6f, 0x64, 0x69, 0x66, 0x79, 0x69,
+	0x6e, 0x67, 0x53, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x12, 0x2e, 0x0a, 0x0a, 0x73,
+	0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32,
+	0x0e, 0x2e, 0x61, 0x73, 0x74, 0x2e, 0x53, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x52,
+	0x0a, 0x73, 0x74, 0x61, 0x74, 0x65, 0x6d, 0x65, 0x6e, 0x74, 0x73, 0x42, 0x10, 0x5a, 0x04, 0x2f,
+	0x61, 0x73, 0x74, 0x92, 0x03, 0x07, 0xd2, 0x3e, 0x02, 0x10, 0x03, 0x08, 0x02, 0x62, 0x08, 0x65,
+	0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x70, 0xe8, 0x07,
 })
 
-var file_statement_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_statement_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_statement_proto_goTypes = []any{
-	(*Statement)(nil),            // 0: ast.Statement
-	(*CreateGraphStatement)(nil), // 1: ast.CreateGraphStatement
-	(*DropGraphStatement)(nil),   // 2: ast.DropGraphStatement
+	(*Statement)(nil), // 0: ast.Statement
+	(*SimpleLinearCatalogModifyingStatement)(nil), // 1: ast.SimpleLinearCatalogModifyingStatement
+	(*CreateGraphStatement)(nil),                  // 2: ast.CreateGraphStatement
+	(*DropGraphStatement)(nil),                    // 3: ast.DropGraphStatement
 }
 var file_statement_proto_depIdxs = []int32{
-	1, // 0: ast.Statement.create_graph_statement:type_name -> ast.CreateGraphStatement
-	2, // 1: ast.Statement.drop_graph_statement:type_name -> ast.DropGraphStatement
-	2, // [2:2] is the sub-list for method output_type
-	2, // [2:2] is the sub-list for method input_type
-	2, // [2:2] is the sub-list for extension type_name
-	2, // [2:2] is the sub-list for extension extendee
-	0, // [0:2] is the sub-list for field type_name
+	2, // 0: ast.Statement.create_graph_statement:type_name -> ast.CreateGraphStatement
+	3, // 1: ast.Statement.drop_graph_statement:type_name -> ast.DropGraphStatement
+	1, // 2: ast.Statement.simple_linear_catalog_modifying_statement:type_name -> ast.SimpleLinearCatalogModifyingStatement
+	0, // 3: ast.SimpleLinearCatalogModifyingStatement.statements:type_name -> ast.Statement
+	4, // [4:4] is the sub-list for method output_type
+	4, // [4:4] is the sub-list for method input_type
+	4, // [4:4] is the sub-list for extension type_name
+	4, // [4:4] is the sub-list for extension extendee
+	0, // [0:4] is the sub-list for field type_name
 }
 
 func init() { file_statement_proto_init() }
@@ -241,6 +361,7 @@ func file_statement_proto_init() {
 	file_statement_proto_msgTypes[0].OneofWrappers = []any{
 		(*statement_CreateGraphStatement)(nil),
 		(*statement_DropGraphStatement)(nil),
+		(*statement_SimpleLinearCatalogModifyingStatement)(nil),
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -248,7 +369,7 @@ func file_statement_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_statement_proto_rawDesc), len(file_statement_proto_rawDesc)),
 			NumEnums:      0,
-			NumMessages:   1,
+			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
