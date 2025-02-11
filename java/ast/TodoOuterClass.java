@@ -395,8 +395,8 @@ public final class TodoOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\ntodo.proto\022\003ast\032!google/protobuf/go_fe" +
-      "atures.proto\"\006\n\004TodoB\016Z\004/ast\222\003\005\322>\002\020\003b\010ed" +
-      "itionsp\350\007"
+      "atures.proto\"\006\n\004TodoB\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010" +
+      "editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

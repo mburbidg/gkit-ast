@@ -2029,17 +2029,17 @@ public final class ProgramActivityOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+     * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
      * @return Whether the startTransactionCommand field is set.
      */
     boolean hasStartTransactionCommand();
     /**
-     * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+     * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
      * @return The startTransactionCommand.
      */
     ast.TransactionCommands.StartTransactionCommand getStartTransactionCommand();
     /**
-     * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+     * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
      */
     ast.TransactionCommands.StartTransactionCommandOrBuilder getStartTransactionCommandOrBuilder();
 
@@ -2059,17 +2059,17 @@ public final class ProgramActivityOuterClass {
     ast.ProcedureSpecificationOuterClass.ProcedureSpecificationOrBuilder getProcedureSpecificationOrBuilder();
 
     /**
-     * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+     * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
      * @return Whether the endTransactionCommand field is set.
      */
     boolean hasEndTransactionCommand();
     /**
-     * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+     * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
      * @return The endTransactionCommand.
      */
     ast.TransactionCommands.EndTransactionCommand getEndTransactionCommand();
     /**
-     * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+     * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
      */
     ast.TransactionCommands.EndTransactionCommandOrBuilder getEndTransactionCommandOrBuilder();
   }
@@ -2114,7 +2114,7 @@ public final class ProgramActivityOuterClass {
     public static final int STARTTRANSACTIONCOMMAND_FIELD_NUMBER = 1;
     private ast.TransactionCommands.StartTransactionCommand startTransactionCommand_;
     /**
-     * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+     * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
      * @return Whether the startTransactionCommand field is set.
      */
     @java.lang.Override
@@ -2122,7 +2122,7 @@ public final class ProgramActivityOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+     * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
      * @return The startTransactionCommand.
      */
     @java.lang.Override
@@ -2130,7 +2130,7 @@ public final class ProgramActivityOuterClass {
       return startTransactionCommand_ == null ? ast.TransactionCommands.StartTransactionCommand.getDefaultInstance() : startTransactionCommand_;
     }
     /**
-     * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+     * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
      */
     @java.lang.Override
     public ast.TransactionCommands.StartTransactionCommandOrBuilder getStartTransactionCommandOrBuilder() {
@@ -2166,7 +2166,7 @@ public final class ProgramActivityOuterClass {
     public static final int ENDTRANSACTIONCOMMAND_FIELD_NUMBER = 3;
     private ast.TransactionCommands.EndTransactionCommand endTransactionCommand_;
     /**
-     * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+     * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
      * @return Whether the endTransactionCommand field is set.
      */
     @java.lang.Override
@@ -2174,7 +2174,7 @@ public final class ProgramActivityOuterClass {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+     * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
      * @return The endTransactionCommand.
      */
     @java.lang.Override
@@ -2182,7 +2182,7 @@ public final class ProgramActivityOuterClass {
       return endTransactionCommand_ == null ? ast.TransactionCommands.EndTransactionCommand.getDefaultInstance() : endTransactionCommand_;
     }
     /**
-     * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+     * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
      */
     @java.lang.Override
     public ast.TransactionCommands.EndTransactionCommandOrBuilder getEndTransactionCommandOrBuilder() {
@@ -2584,14 +2584,14 @@ public final class ProgramActivityOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ast.TransactionCommands.StartTransactionCommand, ast.TransactionCommands.StartTransactionCommand.Builder, ast.TransactionCommands.StartTransactionCommandOrBuilder> startTransactionCommandBuilder_;
       /**
-       * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+       * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
        * @return Whether the startTransactionCommand field is set.
        */
       public boolean hasStartTransactionCommand() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+       * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
        * @return The startTransactionCommand.
        */
       public ast.TransactionCommands.StartTransactionCommand getStartTransactionCommand() {
@@ -2602,7 +2602,7 @@ public final class ProgramActivityOuterClass {
         }
       }
       /**
-       * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+       * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
        */
       public Builder setStartTransactionCommand(ast.TransactionCommands.StartTransactionCommand value) {
         if (startTransactionCommandBuilder_ == null) {
@@ -2618,7 +2618,7 @@ public final class ProgramActivityOuterClass {
         return this;
       }
       /**
-       * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+       * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
        */
       public Builder setStartTransactionCommand(
           ast.TransactionCommands.StartTransactionCommand.Builder builderForValue) {
@@ -2632,7 +2632,7 @@ public final class ProgramActivityOuterClass {
         return this;
       }
       /**
-       * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+       * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
        */
       public Builder mergeStartTransactionCommand(ast.TransactionCommands.StartTransactionCommand value) {
         if (startTransactionCommandBuilder_ == null) {
@@ -2653,7 +2653,7 @@ public final class ProgramActivityOuterClass {
         return this;
       }
       /**
-       * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+       * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
        */
       public Builder clearStartTransactionCommand() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -2666,7 +2666,7 @@ public final class ProgramActivityOuterClass {
         return this;
       }
       /**
-       * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+       * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
        */
       public ast.TransactionCommands.StartTransactionCommand.Builder getStartTransactionCommandBuilder() {
         bitField0_ |= 0x00000001;
@@ -2674,7 +2674,7 @@ public final class ProgramActivityOuterClass {
         return getStartTransactionCommandFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+       * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
        */
       public ast.TransactionCommands.StartTransactionCommandOrBuilder getStartTransactionCommandOrBuilder() {
         if (startTransactionCommandBuilder_ != null) {
@@ -2685,7 +2685,7 @@ public final class ProgramActivityOuterClass {
         }
       }
       /**
-       * <code>.ast.StartTransactionCommand startTransactionCommand = 1;</code>
+       * <code>.ast.StartTransactionCommand startTransactionCommand = 1 [features = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           ast.TransactionCommands.StartTransactionCommand, ast.TransactionCommands.StartTransactionCommand.Builder, ast.TransactionCommands.StartTransactionCommandOrBuilder> 
@@ -2826,14 +2826,14 @@ public final class ProgramActivityOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ast.TransactionCommands.EndTransactionCommand, ast.TransactionCommands.EndTransactionCommand.Builder, ast.TransactionCommands.EndTransactionCommandOrBuilder> endTransactionCommandBuilder_;
       /**
-       * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+       * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
        * @return Whether the endTransactionCommand field is set.
        */
       public boolean hasEndTransactionCommand() {
         return ((bitField0_ & 0x00000004) != 0);
       }
       /**
-       * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+       * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
        * @return The endTransactionCommand.
        */
       public ast.TransactionCommands.EndTransactionCommand getEndTransactionCommand() {
@@ -2844,7 +2844,7 @@ public final class ProgramActivityOuterClass {
         }
       }
       /**
-       * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+       * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
        */
       public Builder setEndTransactionCommand(ast.TransactionCommands.EndTransactionCommand value) {
         if (endTransactionCommandBuilder_ == null) {
@@ -2860,7 +2860,7 @@ public final class ProgramActivityOuterClass {
         return this;
       }
       /**
-       * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+       * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
        */
       public Builder setEndTransactionCommand(
           ast.TransactionCommands.EndTransactionCommand.Builder builderForValue) {
@@ -2874,7 +2874,7 @@ public final class ProgramActivityOuterClass {
         return this;
       }
       /**
-       * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+       * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
        */
       public Builder mergeEndTransactionCommand(ast.TransactionCommands.EndTransactionCommand value) {
         if (endTransactionCommandBuilder_ == null) {
@@ -2895,7 +2895,7 @@ public final class ProgramActivityOuterClass {
         return this;
       }
       /**
-       * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+       * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
        */
       public Builder clearEndTransactionCommand() {
         bitField0_ = (bitField0_ & ~0x00000004);
@@ -2908,7 +2908,7 @@ public final class ProgramActivityOuterClass {
         return this;
       }
       /**
-       * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+       * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
        */
       public ast.TransactionCommands.EndTransactionCommand.Builder getEndTransactionCommandBuilder() {
         bitField0_ |= 0x00000004;
@@ -2916,7 +2916,7 @@ public final class ProgramActivityOuterClass {
         return getEndTransactionCommandFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+       * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
        */
       public ast.TransactionCommands.EndTransactionCommandOrBuilder getEndTransactionCommandOrBuilder() {
         if (endTransactionCommandBuilder_ != null) {
@@ -2927,7 +2927,7 @@ public final class ProgramActivityOuterClass {
         }
       }
       /**
-       * <code>.ast.EndTransactionCommand endTransactionCommand = 3;</code>
+       * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           ast.TransactionCommands.EndTransactionCommand, ast.TransactionCommands.EndTransactionCommand.Builder, ast.TransactionCommands.EndTransactionCommandOrBuilder> 
@@ -3028,13 +3028,13 @@ public final class ProgramActivityOuterClass {
       "ype\"\201\001\n\017SessionActivity\0224\n\024session_set_c" +
       "ommands\030\001 \003(\0132\026.ast.SessionSetCommand\0228\n" +
       "\026session_reset_commands\030\002 \003(\0132\030.ast.Sess" +
-      "ionResetCommand\"\314\001\n\023TransactionActivity\022" +
-      "=\n\027startTransactionCommand\030\001 \001(\0132\034.ast.S" +
-      "tartTransactionCommand\022;\n\026procedureSpeci" +
-      "fication\030\002 \001(\0132\033.ast.ProcedureSpecificat" +
-      "ion\0229\n\025endTransactionCommand\030\003 \001(\0132\032.ast" +
-      ".EndTransactionCommandB\016Z\004/ast\222\003\005\322>\002\020\003b\010" +
-      "editionsp\350\007"
+      "ionResetCommand\"\332\001\n\023TransactionActivity\022" +
+      "D\n\027startTransactionCommand\030\001 \001(\0132\034.ast.S" +
+      "tartTransactionCommandB\005\252\001\002\010\001\022;\n\026procedu" +
+      "reSpecification\030\002 \001(\0132\033.ast.ProcedureSpe" +
+      "cification\022@\n\025endTransactionCommand\030\003 \001(" +
+      "\0132\032.ast.EndTransactionCommandB\005\252\001\002\010\001B\020Z\004" +
+      "/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

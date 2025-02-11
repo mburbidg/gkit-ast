@@ -5,6 +5,7 @@ package ast;
 import "google/protobuf/go_features.proto";
 import "procedure_body.proto";
 
+option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 

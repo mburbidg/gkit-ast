@@ -773,7 +773,7 @@ public final class TransactionCommands {
       "\n\032transaction_commands.proto\022\003ast\032!googl" +
       "e/protobuf/go_features.proto\"\031\n\027StartTra" +
       "nsactionCommand\"\027\n\025EndTransactionCommand" +
-      "B\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
+      "B\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

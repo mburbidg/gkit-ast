@@ -613,7 +613,7 @@ public final class ProcedureSpecificationOuterClass {
       "ogle/protobuf/go_features.proto\032\024procedu" +
       "re_body.proto\"D\n\026ProcedureSpecification\022" +
       "*\n\016procedure_body\030\001 \001(\0132\022.ast.ProcedureB" +
-      "odyB\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
+      "odyB\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

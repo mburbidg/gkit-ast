@@ -1738,8 +1738,8 @@ public final class GraphExpressionOuterClass {
       "\001(\0132\t.ast.TodoH\000\022:\n\037object_name_or_bindi" +
       "ng_variable\030\003 \001(\0132\017.ast.IdentifierH\000\022*\n\r" +
       "current_graph\030\004 \001(\0132\021.ast.CurrentGraphH\000" +
-      "B\006\n\004type\"\016\n\014CurrentGraphB\016Z\004/ast\222\003\005\322>\002\020\003" +
-      "b\010editionsp\350\007"
+      "B\006\n\004type\"\016\n\014CurrentGraphB\020Z\004/ast\222\003\007\010\002\322>\002" +
+      "\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

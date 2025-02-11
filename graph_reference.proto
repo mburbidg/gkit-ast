@@ -6,6 +6,7 @@ import "google/protobuf/go_features.proto";
 import "catalog.proto";
 import "literals.proto";
 
+option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 

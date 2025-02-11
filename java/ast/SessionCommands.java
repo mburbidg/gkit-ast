@@ -1133,7 +1133,8 @@ public final class SessionCommands {
       "\n\026session_commands.proto\022\003ast\032!google/pr" +
       "otobuf/go_features.proto\"\025\n\023SessionClose" +
       "Command\"\025\n\023SessionResetCommand\"\023\n\021Sessio" +
-      "nSetCommandB\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
+      "nSetCommandB\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp" +
+      "\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -5,6 +5,7 @@ package ast;
 import "google/protobuf/go_features.proto";
 import "literals.proto";
 
+option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 
@@ -15,7 +16,7 @@ enum CatalogParentAndNameType {
 
 message CatalogParentAndName {
   CatalogParentAndNameType type = 1;
-  CatalogObjectParentReference parent = 2;
+  CatalogObjectParentReference parent = 2 [features.field_presence = EXPLICIT];
   Identifier name = 3;
 }
 

@@ -929,8 +929,8 @@ public final class StatementOuterClass {
       "oto\"\211\001\n\tStatement\022;\n\026create_graph_statem" +
       "ent\030\001 \001(\0132\031.ast.CreateGraphStatementH\000\0227" +
       "\n\024drop_graph_statement\030\002 \001(\0132\027.ast.DropG" +
-      "raphStatementH\000B\006\n\004typeB\016Z\004/ast\222\003\005\322>\002\020\003b" +
-      "\010editionsp\350\007"
+      "raphStatementH\000B\006\n\004typeB\020Z\004/ast\222\003\007\010\002\322>\002\020" +
+      "\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -22,12 +22,10 @@ const (
 )
 
 type Identifier struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Value       *string                `protobuf:"bytes,1,opt,name=value"`
-	XXX_raceDetectHookData protoimpl.RaceDetectHookData
-	XXX_presence           [1]uint32
-	unknownFields          protoimpl.UnknownFields
-	sizeCache              protoimpl.SizeCache
+	state            protoimpl.MessageState `protogen:"opaque.v1"`
+	xxx_hidden_Value string                 `protobuf:"bytes,1,opt,name=value"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
 }
 
 func (x *Identifier) Reset() {
@@ -57,55 +55,34 @@ func (x *Identifier) ProtoReflect() protoreflect.Message {
 
 func (x *Identifier) GetValue() string {
 	if x != nil {
-		if x.xxx_hidden_Value != nil {
-			return *x.xxx_hidden_Value
-		}
-		return ""
+		return x.xxx_hidden_Value
 	}
 	return ""
 }
 
 func (x *Identifier) SetValue(v string) {
-	x.xxx_hidden_Value = &v
-	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 1)
-}
-
-func (x *Identifier) HasValue() bool {
-	if x == nil {
-		return false
-	}
-	return protoimpl.X.Present(&(x.XXX_presence[0]), 0)
-}
-
-func (x *Identifier) ClearValue() {
-	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Value = nil
+	x.xxx_hidden_Value = v
 }
 
 type Identifier_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
-	Value *string
+	Value string
 }
 
 func (b0 Identifier_builder) Build() *Identifier {
 	m0 := &Identifier{}
 	b, x := &b0, m0
 	_, _ = b, x
-	if b.Value != nil {
-		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 0, 1)
-		x.xxx_hidden_Value = b.Value
-	}
+	x.xxx_hidden_Value = b.Value
 	return m0
 }
 
 type ReferenceParameterSpecification struct {
-	state                  protoimpl.MessageState `protogen:"opaque.v1"`
-	xxx_hidden_Parameter   *string                `protobuf:"bytes,1,opt,name=parameter"`
-	XXX_raceDetectHookData protoimpl.RaceDetectHookData
-	XXX_presence           [1]uint32
-	unknownFields          protoimpl.UnknownFields
-	sizeCache              protoimpl.SizeCache
+	state                protoimpl.MessageState `protogen:"opaque.v1"`
+	xxx_hidden_Parameter string                 `protobuf:"bytes,1,opt,name=parameter"`
+	unknownFields        protoimpl.UnknownFields
+	sizeCache            protoimpl.SizeCache
 }
 
 func (x *ReferenceParameterSpecification) Reset() {
@@ -135,45 +112,26 @@ func (x *ReferenceParameterSpecification) ProtoReflect() protoreflect.Message {
 
 func (x *ReferenceParameterSpecification) GetParameter() string {
 	if x != nil {
-		if x.xxx_hidden_Parameter != nil {
-			return *x.xxx_hidden_Parameter
-		}
-		return ""
+		return x.xxx_hidden_Parameter
 	}
 	return ""
 }
 
 func (x *ReferenceParameterSpecification) SetParameter(v string) {
-	x.xxx_hidden_Parameter = &v
-	protoimpl.X.SetPresent(&(x.XXX_presence[0]), 0, 1)
-}
-
-func (x *ReferenceParameterSpecification) HasParameter() bool {
-	if x == nil {
-		return false
-	}
-	return protoimpl.X.Present(&(x.XXX_presence[0]), 0)
-}
-
-func (x *ReferenceParameterSpecification) ClearParameter() {
-	protoimpl.X.ClearPresent(&(x.XXX_presence[0]), 0)
-	x.xxx_hidden_Parameter = nil
+	x.xxx_hidden_Parameter = v
 }
 
 type ReferenceParameterSpecification_builder struct {
 	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
 
-	Parameter *string
+	Parameter string
 }
 
 func (b0 ReferenceParameterSpecification_builder) Build() *ReferenceParameterSpecification {
 	m0 := &ReferenceParameterSpecification{}
 	b, x := &b0, m0
 	_, _ = b, x
-	if b.Parameter != nil {
-		protoimpl.X.SetPresentNonAtomic(&(x.XXX_presence[0]), 0, 1)
-		x.xxx_hidden_Parameter = b.Parameter
-	}
+	x.xxx_hidden_Parameter = b.Parameter
 	return m0
 }
 
@@ -189,9 +147,9 @@ var file_literals_proto_rawDesc = string([]byte{
 	0x52, 0x65, 0x66, 0x65, 0x72, 0x65, 0x6e, 0x63, 0x65, 0x50, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74,
 	0x65, 0x72, 0x53, 0x70, 0x65, 0x63, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x12,
 	0x1c, 0x0a, 0x09, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74, 0x65, 0x72, 0x18, 0x01, 0x20, 0x01,
-	0x28, 0x09, 0x52, 0x09, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74, 0x65, 0x72, 0x42, 0x0e, 0x5a,
-	0x04, 0x2f, 0x61, 0x73, 0x74, 0x92, 0x03, 0x05, 0xd2, 0x3e, 0x02, 0x10, 0x03, 0x62, 0x08, 0x65,
-	0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x70, 0xe8, 0x07,
+	0x28, 0x09, 0x52, 0x09, 0x70, 0x61, 0x72, 0x61, 0x6d, 0x65, 0x74, 0x65, 0x72, 0x42, 0x10, 0x5a,
+	0x04, 0x2f, 0x61, 0x73, 0x74, 0x92, 0x03, 0x07, 0xd2, 0x3e, 0x02, 0x10, 0x03, 0x08, 0x02, 0x62,
+	0x08, 0x65, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x70, 0xe8, 0x07,
 })
 
 var file_literals_proto_msgTypes = make([]protoimpl.MessageInfo, 2)

@@ -1739,7 +1739,7 @@ public final class GraphReferenceOuterClass {
       "st.HomeGraphH\000\022Q\n!reference_parameter_sp" +
       "ecification\030\004 \001(\0132$.ast.ReferenceParamet" +
       "erSpecificationH\000B\007\n\005which\"\013\n\tHomeGraphB" +
-      "\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
+      "\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -2994,8 +2994,8 @@ public final class GraphTypeOuterClass {
       "TypeReference\0224\n\017parent_and_name\030\001 \001(\0132\031" +
       ".ast.CatalogParentAndNameH\000\022Q\n!reference" +
       "_parameter_specification\030\002 \001(\0132$.ast.Ref" +
-      "erenceParameterSpecificationH\000B\006\n\004typeB\016" +
-      "Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
+      "erenceParameterSpecificationH\000B\006\n\004typeB\020" +
+      "Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

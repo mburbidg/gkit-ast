@@ -30,23 +30,23 @@ public final class CatalogStatements {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool if_not_exists = 1;</code>
+     * <code>bool if_not_exists = 1 [features = { ... }</code>
      * @return Whether the ifNotExists field is set.
      */
     boolean hasIfNotExists();
     /**
-     * <code>bool if_not_exists = 1;</code>
+     * <code>bool if_not_exists = 1 [features = { ... }</code>
      * @return The ifNotExists.
      */
     boolean getIfNotExists();
 
     /**
-     * <code>bool replace_graph = 2;</code>
+     * <code>bool replace_graph = 2 [features = { ... }</code>
      * @return Whether the replaceGraph field is set.
      */
     boolean hasReplaceGraph();
     /**
-     * <code>bool replace_graph = 2;</code>
+     * <code>bool replace_graph = 2 [features = { ... }</code>
      * @return The replaceGraph.
      */
     boolean getReplaceGraph();
@@ -67,32 +67,32 @@ public final class CatalogStatements {
     ast.Catalog.CatalogParentAndNameOrBuilder getParentAndNameOrBuilder();
 
     /**
-     * <code>.ast.GraphType graph_type = 4;</code>
+     * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
      * @return Whether the graphType field is set.
      */
     boolean hasGraphType();
     /**
-     * <code>.ast.GraphType graph_type = 4;</code>
+     * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
      * @return The graphType.
      */
     ast.GraphTypeOuterClass.GraphType getGraphType();
     /**
-     * <code>.ast.GraphType graph_type = 4;</code>
+     * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
      */
     ast.GraphTypeOuterClass.GraphTypeOrBuilder getGraphTypeOrBuilder();
 
     /**
-     * <code>.ast.GraphExpression graph_source = 5;</code>
+     * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
      * @return Whether the graphSource field is set.
      */
     boolean hasGraphSource();
     /**
-     * <code>.ast.GraphExpression graph_source = 5;</code>
+     * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
      * @return The graphSource.
      */
     ast.GraphExpressionOuterClass.GraphExpression getGraphSource();
     /**
-     * <code>.ast.GraphExpression graph_source = 5;</code>
+     * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
      */
     ast.GraphExpressionOuterClass.GraphExpressionOrBuilder getGraphSourceOrBuilder();
   }
@@ -137,7 +137,7 @@ public final class CatalogStatements {
     public static final int IF_NOT_EXISTS_FIELD_NUMBER = 1;
     private boolean ifNotExists_ = false;
     /**
-     * <code>bool if_not_exists = 1;</code>
+     * <code>bool if_not_exists = 1 [features = { ... }</code>
      * @return Whether the ifNotExists field is set.
      */
     @java.lang.Override
@@ -145,7 +145,7 @@ public final class CatalogStatements {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>bool if_not_exists = 1;</code>
+     * <code>bool if_not_exists = 1 [features = { ... }</code>
      * @return The ifNotExists.
      */
     @java.lang.Override
@@ -156,7 +156,7 @@ public final class CatalogStatements {
     public static final int REPLACE_GRAPH_FIELD_NUMBER = 2;
     private boolean replaceGraph_ = false;
     /**
-     * <code>bool replace_graph = 2;</code>
+     * <code>bool replace_graph = 2 [features = { ... }</code>
      * @return Whether the replaceGraph field is set.
      */
     @java.lang.Override
@@ -164,7 +164,7 @@ public final class CatalogStatements {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>bool replace_graph = 2;</code>
+     * <code>bool replace_graph = 2 [features = { ... }</code>
      * @return The replaceGraph.
      */
     @java.lang.Override
@@ -201,7 +201,7 @@ public final class CatalogStatements {
     public static final int GRAPH_TYPE_FIELD_NUMBER = 4;
     private ast.GraphTypeOuterClass.GraphType graphType_;
     /**
-     * <code>.ast.GraphType graph_type = 4;</code>
+     * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
      * @return Whether the graphType field is set.
      */
     @java.lang.Override
@@ -209,7 +209,7 @@ public final class CatalogStatements {
       return ((bitField0_ & 0x00000008) != 0);
     }
     /**
-     * <code>.ast.GraphType graph_type = 4;</code>
+     * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
      * @return The graphType.
      */
     @java.lang.Override
@@ -217,7 +217,7 @@ public final class CatalogStatements {
       return graphType_ == null ? ast.GraphTypeOuterClass.GraphType.getDefaultInstance() : graphType_;
     }
     /**
-     * <code>.ast.GraphType graph_type = 4;</code>
+     * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
      */
     @java.lang.Override
     public ast.GraphTypeOuterClass.GraphTypeOrBuilder getGraphTypeOrBuilder() {
@@ -227,7 +227,7 @@ public final class CatalogStatements {
     public static final int GRAPH_SOURCE_FIELD_NUMBER = 5;
     private ast.GraphExpressionOuterClass.GraphExpression graphSource_;
     /**
-     * <code>.ast.GraphExpression graph_source = 5;</code>
+     * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
      * @return Whether the graphSource field is set.
      */
     @java.lang.Override
@@ -235,7 +235,7 @@ public final class CatalogStatements {
       return ((bitField0_ & 0x00000010) != 0);
     }
     /**
-     * <code>.ast.GraphExpression graph_source = 5;</code>
+     * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
      * @return The graphSource.
      */
     @java.lang.Override
@@ -243,7 +243,7 @@ public final class CatalogStatements {
       return graphSource_ == null ? ast.GraphExpressionOuterClass.GraphExpression.getDefaultInstance() : graphSource_;
     }
     /**
-     * <code>.ast.GraphExpression graph_source = 5;</code>
+     * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
      */
     @java.lang.Override
     public ast.GraphExpressionOuterClass.GraphExpressionOrBuilder getGraphSourceOrBuilder() {
@@ -703,7 +703,7 @@ public final class CatalogStatements {
 
       private boolean ifNotExists_ ;
       /**
-       * <code>bool if_not_exists = 1;</code>
+       * <code>bool if_not_exists = 1 [features = { ... }</code>
        * @return Whether the ifNotExists field is set.
        */
       @java.lang.Override
@@ -711,7 +711,7 @@ public final class CatalogStatements {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>bool if_not_exists = 1;</code>
+       * <code>bool if_not_exists = 1 [features = { ... }</code>
        * @return The ifNotExists.
        */
       @java.lang.Override
@@ -719,7 +719,7 @@ public final class CatalogStatements {
         return ifNotExists_;
       }
       /**
-       * <code>bool if_not_exists = 1;</code>
+       * <code>bool if_not_exists = 1 [features = { ... }</code>
        * @param value The ifNotExists to set.
        * @return This builder for chaining.
        */
@@ -731,7 +731,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>bool if_not_exists = 1;</code>
+       * <code>bool if_not_exists = 1 [features = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIfNotExists() {
@@ -743,7 +743,7 @@ public final class CatalogStatements {
 
       private boolean replaceGraph_ ;
       /**
-       * <code>bool replace_graph = 2;</code>
+       * <code>bool replace_graph = 2 [features = { ... }</code>
        * @return Whether the replaceGraph field is set.
        */
       @java.lang.Override
@@ -751,7 +751,7 @@ public final class CatalogStatements {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>bool replace_graph = 2;</code>
+       * <code>bool replace_graph = 2 [features = { ... }</code>
        * @return The replaceGraph.
        */
       @java.lang.Override
@@ -759,7 +759,7 @@ public final class CatalogStatements {
         return replaceGraph_;
       }
       /**
-       * <code>bool replace_graph = 2;</code>
+       * <code>bool replace_graph = 2 [features = { ... }</code>
        * @param value The replaceGraph to set.
        * @return This builder for chaining.
        */
@@ -771,7 +771,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>bool replace_graph = 2;</code>
+       * <code>bool replace_graph = 2 [features = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearReplaceGraph() {
@@ -906,14 +906,14 @@ public final class CatalogStatements {
       private com.google.protobuf.SingleFieldBuilder<
           ast.GraphTypeOuterClass.GraphType, ast.GraphTypeOuterClass.GraphType.Builder, ast.GraphTypeOuterClass.GraphTypeOrBuilder> graphTypeBuilder_;
       /**
-       * <code>.ast.GraphType graph_type = 4;</code>
+       * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
        * @return Whether the graphType field is set.
        */
       public boolean hasGraphType() {
         return ((bitField0_ & 0x00000008) != 0);
       }
       /**
-       * <code>.ast.GraphType graph_type = 4;</code>
+       * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
        * @return The graphType.
        */
       public ast.GraphTypeOuterClass.GraphType getGraphType() {
@@ -924,7 +924,7 @@ public final class CatalogStatements {
         }
       }
       /**
-       * <code>.ast.GraphType graph_type = 4;</code>
+       * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
        */
       public Builder setGraphType(ast.GraphTypeOuterClass.GraphType value) {
         if (graphTypeBuilder_ == null) {
@@ -940,7 +940,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>.ast.GraphType graph_type = 4;</code>
+       * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
        */
       public Builder setGraphType(
           ast.GraphTypeOuterClass.GraphType.Builder builderForValue) {
@@ -954,7 +954,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>.ast.GraphType graph_type = 4;</code>
+       * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
        */
       public Builder mergeGraphType(ast.GraphTypeOuterClass.GraphType value) {
         if (graphTypeBuilder_ == null) {
@@ -975,7 +975,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>.ast.GraphType graph_type = 4;</code>
+       * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
        */
       public Builder clearGraphType() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -988,7 +988,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>.ast.GraphType graph_type = 4;</code>
+       * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
        */
       public ast.GraphTypeOuterClass.GraphType.Builder getGraphTypeBuilder() {
         bitField0_ |= 0x00000008;
@@ -996,7 +996,7 @@ public final class CatalogStatements {
         return getGraphTypeFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.GraphType graph_type = 4;</code>
+       * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
        */
       public ast.GraphTypeOuterClass.GraphTypeOrBuilder getGraphTypeOrBuilder() {
         if (graphTypeBuilder_ != null) {
@@ -1007,7 +1007,7 @@ public final class CatalogStatements {
         }
       }
       /**
-       * <code>.ast.GraphType graph_type = 4;</code>
+       * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           ast.GraphTypeOuterClass.GraphType, ast.GraphTypeOuterClass.GraphType.Builder, ast.GraphTypeOuterClass.GraphTypeOrBuilder> 
@@ -1027,14 +1027,14 @@ public final class CatalogStatements {
       private com.google.protobuf.SingleFieldBuilder<
           ast.GraphExpressionOuterClass.GraphExpression, ast.GraphExpressionOuterClass.GraphExpression.Builder, ast.GraphExpressionOuterClass.GraphExpressionOrBuilder> graphSourceBuilder_;
       /**
-       * <code>.ast.GraphExpression graph_source = 5;</code>
+       * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
        * @return Whether the graphSource field is set.
        */
       public boolean hasGraphSource() {
         return ((bitField0_ & 0x00000010) != 0);
       }
       /**
-       * <code>.ast.GraphExpression graph_source = 5;</code>
+       * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
        * @return The graphSource.
        */
       public ast.GraphExpressionOuterClass.GraphExpression getGraphSource() {
@@ -1045,7 +1045,7 @@ public final class CatalogStatements {
         }
       }
       /**
-       * <code>.ast.GraphExpression graph_source = 5;</code>
+       * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
        */
       public Builder setGraphSource(ast.GraphExpressionOuterClass.GraphExpression value) {
         if (graphSourceBuilder_ == null) {
@@ -1061,7 +1061,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>.ast.GraphExpression graph_source = 5;</code>
+       * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
        */
       public Builder setGraphSource(
           ast.GraphExpressionOuterClass.GraphExpression.Builder builderForValue) {
@@ -1075,7 +1075,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>.ast.GraphExpression graph_source = 5;</code>
+       * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
        */
       public Builder mergeGraphSource(ast.GraphExpressionOuterClass.GraphExpression value) {
         if (graphSourceBuilder_ == null) {
@@ -1096,7 +1096,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>.ast.GraphExpression graph_source = 5;</code>
+       * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
        */
       public Builder clearGraphSource() {
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -1109,7 +1109,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>.ast.GraphExpression graph_source = 5;</code>
+       * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
        */
       public ast.GraphExpressionOuterClass.GraphExpression.Builder getGraphSourceBuilder() {
         bitField0_ |= 0x00000010;
@@ -1117,7 +1117,7 @@ public final class CatalogStatements {
         return getGraphSourceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.GraphExpression graph_source = 5;</code>
+       * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
        */
       public ast.GraphExpressionOuterClass.GraphExpressionOrBuilder getGraphSourceOrBuilder() {
         if (graphSourceBuilder_ != null) {
@@ -1128,7 +1128,7 @@ public final class CatalogStatements {
         }
       }
       /**
-       * <code>.ast.GraphExpression graph_source = 5;</code>
+       * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           ast.GraphExpressionOuterClass.GraphExpression, ast.GraphExpressionOuterClass.GraphExpression.Builder, ast.GraphExpressionOuterClass.GraphExpressionOrBuilder> 
@@ -1200,12 +1200,12 @@ public final class CatalogStatements {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool if_exists = 1;</code>
+     * <code>bool if_exists = 1 [features = { ... }</code>
      * @return Whether the ifExists field is set.
      */
     boolean hasIfExists();
     /**
-     * <code>bool if_exists = 1;</code>
+     * <code>bool if_exists = 1 [features = { ... }</code>
      * @return The ifExists.
      */
     boolean getIfExists();
@@ -1266,7 +1266,7 @@ public final class CatalogStatements {
     public static final int IF_EXISTS_FIELD_NUMBER = 1;
     private boolean ifExists_ = false;
     /**
-     * <code>bool if_exists = 1;</code>
+     * <code>bool if_exists = 1 [features = { ... }</code>
      * @return Whether the ifExists field is set.
      */
     @java.lang.Override
@@ -1274,7 +1274,7 @@ public final class CatalogStatements {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>bool if_exists = 1;</code>
+     * <code>bool if_exists = 1 [features = { ... }</code>
      * @return The ifExists.
      */
     @java.lang.Override
@@ -1655,7 +1655,7 @@ public final class CatalogStatements {
 
       private boolean ifExists_ ;
       /**
-       * <code>bool if_exists = 1;</code>
+       * <code>bool if_exists = 1 [features = { ... }</code>
        * @return Whether the ifExists field is set.
        */
       @java.lang.Override
@@ -1663,7 +1663,7 @@ public final class CatalogStatements {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>bool if_exists = 1;</code>
+       * <code>bool if_exists = 1 [features = { ... }</code>
        * @return The ifExists.
        */
       @java.lang.Override
@@ -1671,7 +1671,7 @@ public final class CatalogStatements {
         return ifExists_;
       }
       /**
-       * <code>bool if_exists = 1;</code>
+       * <code>bool if_exists = 1 [features = { ... }</code>
        * @param value The ifExists to set.
        * @return This builder for chaining.
        */
@@ -1683,7 +1683,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>bool if_exists = 1;</code>
+       * <code>bool if_exists = 1 [features = { ... }</code>
        * @return This builder for chaining.
        */
       public Builder clearIfExists() {
@@ -1887,15 +1887,16 @@ public final class CatalogStatements {
       "\n\030catalog_statements.proto\022\003ast\032!google/" +
       "protobuf/go_features.proto\032\rcatalog.prot" +
       "o\032\020graph_type.proto\032\026graph_expression.pr" +
-      "oto\"\310\001\n\024CreateGraphStatement\022\025\n\rif_not_e" +
-      "xists\030\001 \001(\010\022\025\n\rreplace_graph\030\002 \001(\010\0222\n\017pa" +
-      "rent_and_name\030\003 \001(\0132\031.ast.CatalogParentA" +
-      "ndName\022\"\n\ngraph_type\030\004 \001(\0132\016.ast.GraphTy" +
-      "pe\022*\n\014graph_source\030\005 \001(\0132\024.ast.GraphExpr" +
-      "ession\"[\n\022DropGraphStatement\022\021\n\tif_exist" +
-      "s\030\001 \001(\010\0222\n\017parent_and_name\030\002 \001(\0132\031.ast.C" +
-      "atalogParentAndNameB\016Z\004/ast\222\003\005\322>\002\020\003b\010edi" +
-      "tionsp\350\007"
+      "oto\"\344\001\n\024CreateGraphStatement\022\034\n\rif_not_e" +
+      "xists\030\001 \001(\010B\005\252\001\002\010\001\022\034\n\rreplace_graph\030\002 \001(" +
+      "\010B\005\252\001\002\010\001\0222\n\017parent_and_name\030\003 \001(\0132\031.ast." +
+      "CatalogParentAndName\022)\n\ngraph_type\030\004 \001(\013" +
+      "2\016.ast.GraphTypeB\005\252\001\002\010\001\0221\n\014graph_source\030" +
+      "\005 \001(\0132\024.ast.GraphExpressionB\005\252\001\002\010\001\"b\n\022Dr" +
+      "opGraphStatement\022\030\n\tif_exists\030\001 \001(\010B\005\252\001\002" +
+      "\010\001\0222\n\017parent_and_name\030\002 \001(\0132\031.ast.Catalo" +
+      "gParentAndNameB\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editio" +
+      "nsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
