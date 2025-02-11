@@ -30,23 +30,13 @@ public final class CatalogStatements {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool if_not_exists = 1 [features = { ... }</code>
-     * @return Whether the ifNotExists field is set.
-     */
-    boolean hasIfNotExists();
-    /**
-     * <code>bool if_not_exists = 1 [features = { ... }</code>
+     * <code>bool if_not_exists = 1;</code>
      * @return The ifNotExists.
      */
     boolean getIfNotExists();
 
     /**
-     * <code>bool replace_graph = 2 [features = { ... }</code>
-     * @return Whether the replaceGraph field is set.
-     */
-    boolean hasReplaceGraph();
-    /**
-     * <code>bool replace_graph = 2 [features = { ... }</code>
+     * <code>bool replace_graph = 2;</code>
      * @return The replaceGraph.
      */
     boolean getReplaceGraph();
@@ -137,15 +127,7 @@ public final class CatalogStatements {
     public static final int IF_NOT_EXISTS_FIELD_NUMBER = 1;
     private boolean ifNotExists_ = false;
     /**
-     * <code>bool if_not_exists = 1 [features = { ... }</code>
-     * @return Whether the ifNotExists field is set.
-     */
-    @java.lang.Override
-    public boolean hasIfNotExists() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>bool if_not_exists = 1 [features = { ... }</code>
+     * <code>bool if_not_exists = 1;</code>
      * @return The ifNotExists.
      */
     @java.lang.Override
@@ -156,15 +138,7 @@ public final class CatalogStatements {
     public static final int REPLACE_GRAPH_FIELD_NUMBER = 2;
     private boolean replaceGraph_ = false;
     /**
-     * <code>bool replace_graph = 2 [features = { ... }</code>
-     * @return Whether the replaceGraph field is set.
-     */
-    @java.lang.Override
-    public boolean hasReplaceGraph() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>bool replace_graph = 2 [features = { ... }</code>
+     * <code>bool replace_graph = 2;</code>
      * @return The replaceGraph.
      */
     @java.lang.Override
@@ -180,7 +154,7 @@ public final class CatalogStatements {
      */
     @java.lang.Override
     public boolean hasParentAndName() {
-      return ((bitField0_ & 0x00000004) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ast.CatalogParentAndName parent_and_name = 3;</code>
@@ -206,7 +180,7 @@ public final class CatalogStatements {
      */
     @java.lang.Override
     public boolean hasGraphType() {
-      return ((bitField0_ & 0x00000008) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
      * <code>.ast.GraphType graph_type = 4 [features = { ... }</code>
@@ -232,7 +206,7 @@ public final class CatalogStatements {
      */
     @java.lang.Override
     public boolean hasGraphSource() {
-      return ((bitField0_ & 0x00000010) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.ast.GraphExpression graph_source = 5 [features = { ... }</code>
@@ -264,19 +238,19 @@ public final class CatalogStatements {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (ifNotExists_ != false) {
         output.writeBool(1, ifNotExists_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (replaceGraph_ != false) {
         output.writeBool(2, replaceGraph_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(3, getParentAndName());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(4, getGraphType());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(5, getGraphSource());
       }
       getUnknownFields().writeTo(output);
@@ -288,23 +262,23 @@ public final class CatalogStatements {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (ifNotExists_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, ifNotExists_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (replaceGraph_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(2, replaceGraph_);
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getParentAndName());
       }
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(4, getGraphType());
       }
-      if (((bitField0_ & 0x00000010) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, getGraphSource());
       }
@@ -323,16 +297,10 @@ public final class CatalogStatements {
       }
       ast.CatalogStatements.CreateGraphStatement other = (ast.CatalogStatements.CreateGraphStatement) obj;
 
-      if (hasIfNotExists() != other.hasIfNotExists()) return false;
-      if (hasIfNotExists()) {
-        if (getIfNotExists()
-            != other.getIfNotExists()) return false;
-      }
-      if (hasReplaceGraph() != other.hasReplaceGraph()) return false;
-      if (hasReplaceGraph()) {
-        if (getReplaceGraph()
-            != other.getReplaceGraph()) return false;
-      }
+      if (getIfNotExists()
+          != other.getIfNotExists()) return false;
+      if (getReplaceGraph()
+          != other.getReplaceGraph()) return false;
       if (hasParentAndName() != other.hasParentAndName()) return false;
       if (hasParentAndName()) {
         if (!getParentAndName()
@@ -359,16 +327,12 @@ public final class CatalogStatements {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasIfNotExists()) {
-        hash = (37 * hash) + IF_NOT_EXISTS_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIfNotExists());
-      }
-      if (hasReplaceGraph()) {
-        hash = (37 * hash) + REPLACE_GRAPH_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getReplaceGraph());
-      }
+      hash = (37 * hash) + IF_NOT_EXISTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIfNotExists());
+      hash = (37 * hash) + REPLACE_GRAPH_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getReplaceGraph());
       if (hasParentAndName()) {
         hash = (37 * hash) + PARENT_AND_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getParentAndName().hashCode();
@@ -570,32 +534,30 @@ public final class CatalogStatements {
 
       private void buildPartial0(ast.CatalogStatements.CreateGraphStatement result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.ifNotExists_ = ifNotExists_;
-          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.replaceGraph_ = replaceGraph_;
-          to_bitField0_ |= 0x00000002;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.parentAndName_ = parentAndNameBuilder_ == null
               ? parentAndName_
               : parentAndNameBuilder_.build();
-          to_bitField0_ |= 0x00000004;
+          to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000008) != 0)) {
           result.graphType_ = graphTypeBuilder_ == null
               ? graphType_
               : graphTypeBuilder_.build();
-          to_bitField0_ |= 0x00000008;
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000010) != 0)) {
           result.graphSource_ = graphSourceBuilder_ == null
               ? graphSource_
               : graphSourceBuilder_.build();
-          to_bitField0_ |= 0x00000010;
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -612,10 +574,10 @@ public final class CatalogStatements {
 
       public Builder mergeFrom(ast.CatalogStatements.CreateGraphStatement other) {
         if (other == ast.CatalogStatements.CreateGraphStatement.getDefaultInstance()) return this;
-        if (other.hasIfNotExists()) {
+        if (other.getIfNotExists() != false) {
           setIfNotExists(other.getIfNotExists());
         }
-        if (other.hasReplaceGraph()) {
+        if (other.getReplaceGraph() != false) {
           setReplaceGraph(other.getReplaceGraph());
         }
         if (other.hasParentAndName()) {
@@ -703,15 +665,7 @@ public final class CatalogStatements {
 
       private boolean ifNotExists_ ;
       /**
-       * <code>bool if_not_exists = 1 [features = { ... }</code>
-       * @return Whether the ifNotExists field is set.
-       */
-      @java.lang.Override
-      public boolean hasIfNotExists() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>bool if_not_exists = 1 [features = { ... }</code>
+       * <code>bool if_not_exists = 1;</code>
        * @return The ifNotExists.
        */
       @java.lang.Override
@@ -719,7 +673,7 @@ public final class CatalogStatements {
         return ifNotExists_;
       }
       /**
-       * <code>bool if_not_exists = 1 [features = { ... }</code>
+       * <code>bool if_not_exists = 1;</code>
        * @param value The ifNotExists to set.
        * @return This builder for chaining.
        */
@@ -731,7 +685,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>bool if_not_exists = 1 [features = { ... }</code>
+       * <code>bool if_not_exists = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearIfNotExists() {
@@ -743,15 +697,7 @@ public final class CatalogStatements {
 
       private boolean replaceGraph_ ;
       /**
-       * <code>bool replace_graph = 2 [features = { ... }</code>
-       * @return Whether the replaceGraph field is set.
-       */
-      @java.lang.Override
-      public boolean hasReplaceGraph() {
-        return ((bitField0_ & 0x00000002) != 0);
-      }
-      /**
-       * <code>bool replace_graph = 2 [features = { ... }</code>
+       * <code>bool replace_graph = 2;</code>
        * @return The replaceGraph.
        */
       @java.lang.Override
@@ -759,7 +705,7 @@ public final class CatalogStatements {
         return replaceGraph_;
       }
       /**
-       * <code>bool replace_graph = 2 [features = { ... }</code>
+       * <code>bool replace_graph = 2;</code>
        * @param value The replaceGraph to set.
        * @return This builder for chaining.
        */
@@ -771,7 +717,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>bool replace_graph = 2 [features = { ... }</code>
+       * <code>bool replace_graph = 2;</code>
        * @return This builder for chaining.
        */
       public Builder clearReplaceGraph() {
@@ -1200,12 +1146,7 @@ public final class CatalogStatements {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>bool if_exists = 1 [features = { ... }</code>
-     * @return Whether the ifExists field is set.
-     */
-    boolean hasIfExists();
-    /**
-     * <code>bool if_exists = 1 [features = { ... }</code>
+     * <code>bool if_exists = 1;</code>
      * @return The ifExists.
      */
     boolean getIfExists();
@@ -1266,15 +1207,7 @@ public final class CatalogStatements {
     public static final int IF_EXISTS_FIELD_NUMBER = 1;
     private boolean ifExists_ = false;
     /**
-     * <code>bool if_exists = 1 [features = { ... }</code>
-     * @return Whether the ifExists field is set.
-     */
-    @java.lang.Override
-    public boolean hasIfExists() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>bool if_exists = 1 [features = { ... }</code>
+     * <code>bool if_exists = 1;</code>
      * @return The ifExists.
      */
     @java.lang.Override
@@ -1290,7 +1223,7 @@ public final class CatalogStatements {
      */
     @java.lang.Override
     public boolean hasParentAndName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.ast.CatalogParentAndName parent_and_name = 2;</code>
@@ -1322,10 +1255,10 @@ public final class CatalogStatements {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (ifExists_ != false) {
         output.writeBool(1, ifExists_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeMessage(2, getParentAndName());
       }
       getUnknownFields().writeTo(output);
@@ -1337,11 +1270,11 @@ public final class CatalogStatements {
       if (size != -1) return size;
 
       size = 0;
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (ifExists_ != false) {
         size += com.google.protobuf.CodedOutputStream
           .computeBoolSize(1, ifExists_);
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParentAndName());
       }
@@ -1360,11 +1293,8 @@ public final class CatalogStatements {
       }
       ast.CatalogStatements.DropGraphStatement other = (ast.CatalogStatements.DropGraphStatement) obj;
 
-      if (hasIfExists() != other.hasIfExists()) return false;
-      if (hasIfExists()) {
-        if (getIfExists()
-            != other.getIfExists()) return false;
-      }
+      if (getIfExists()
+          != other.getIfExists()) return false;
       if (hasParentAndName() != other.hasParentAndName()) return false;
       if (hasParentAndName()) {
         if (!getParentAndName()
@@ -1381,11 +1311,9 @@ public final class CatalogStatements {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasIfExists()) {
-        hash = (37 * hash) + IF_EXISTS_FIELD_NUMBER;
-        hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
-            getIfExists());
-      }
+      hash = (37 * hash) + IF_EXISTS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getIfExists());
       if (hasParentAndName()) {
         hash = (37 * hash) + PARENT_AND_NAME_FIELD_NUMBER;
         hash = (53 * hash) + getParentAndName().hashCode();
@@ -1566,16 +1494,15 @@ public final class CatalogStatements {
 
       private void buildPartial0(ast.CatalogStatements.DropGraphStatement result) {
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.ifExists_ = ifExists_;
-          to_bitField0_ |= 0x00000001;
         }
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.parentAndName_ = parentAndNameBuilder_ == null
               ? parentAndName_
               : parentAndNameBuilder_.build();
-          to_bitField0_ |= 0x00000002;
+          to_bitField0_ |= 0x00000001;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -1592,7 +1519,7 @@ public final class CatalogStatements {
 
       public Builder mergeFrom(ast.CatalogStatements.DropGraphStatement other) {
         if (other == ast.CatalogStatements.DropGraphStatement.getDefaultInstance()) return this;
-        if (other.hasIfExists()) {
+        if (other.getIfExists() != false) {
           setIfExists(other.getIfExists());
         }
         if (other.hasParentAndName()) {
@@ -1655,15 +1582,7 @@ public final class CatalogStatements {
 
       private boolean ifExists_ ;
       /**
-       * <code>bool if_exists = 1 [features = { ... }</code>
-       * @return Whether the ifExists field is set.
-       */
-      @java.lang.Override
-      public boolean hasIfExists() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>bool if_exists = 1 [features = { ... }</code>
+       * <code>bool if_exists = 1;</code>
        * @return The ifExists.
        */
       @java.lang.Override
@@ -1671,7 +1590,7 @@ public final class CatalogStatements {
         return ifExists_;
       }
       /**
-       * <code>bool if_exists = 1 [features = { ... }</code>
+       * <code>bool if_exists = 1;</code>
        * @param value The ifExists to set.
        * @return This builder for chaining.
        */
@@ -1683,7 +1602,7 @@ public final class CatalogStatements {
         return this;
       }
       /**
-       * <code>bool if_exists = 1 [features = { ... }</code>
+       * <code>bool if_exists = 1;</code>
        * @return This builder for chaining.
        */
       public Builder clearIfExists() {
@@ -1887,16 +1806,15 @@ public final class CatalogStatements {
       "\n\030catalog_statements.proto\022\003ast\032!google/" +
       "protobuf/go_features.proto\032\rcatalog.prot" +
       "o\032\020graph_type.proto\032\026graph_expression.pr" +
-      "oto\"\344\001\n\024CreateGraphStatement\022\034\n\rif_not_e" +
-      "xists\030\001 \001(\010B\005\252\001\002\010\001\022\034\n\rreplace_graph\030\002 \001(" +
-      "\010B\005\252\001\002\010\001\0222\n\017parent_and_name\030\003 \001(\0132\031.ast." +
-      "CatalogParentAndName\022)\n\ngraph_type\030\004 \001(\013" +
-      "2\016.ast.GraphTypeB\005\252\001\002\010\001\0221\n\014graph_source\030" +
-      "\005 \001(\0132\024.ast.GraphExpressionB\005\252\001\002\010\001\"b\n\022Dr" +
-      "opGraphStatement\022\030\n\tif_exists\030\001 \001(\010B\005\252\001\002" +
-      "\010\001\0222\n\017parent_and_name\030\002 \001(\0132\031.ast.Catalo" +
-      "gParentAndNameB\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editio" +
-      "nsp\350\007"
+      "oto\"\326\001\n\024CreateGraphStatement\022\025\n\rif_not_e" +
+      "xists\030\001 \001(\010\022\025\n\rreplace_graph\030\002 \001(\010\0222\n\017pa" +
+      "rent_and_name\030\003 \001(\0132\031.ast.CatalogParentA" +
+      "ndName\022)\n\ngraph_type\030\004 \001(\0132\016.ast.GraphTy" +
+      "peB\005\252\001\002\010\001\0221\n\014graph_source\030\005 \001(\0132\024.ast.Gr" +
+      "aphExpressionB\005\252\001\002\010\001\"[\n\022DropGraphStateme" +
+      "nt\022\021\n\tif_exists\030\001 \001(\010\0222\n\017parent_and_name" +
+      "\030\002 \001(\0132\031.ast.CatalogParentAndNameB\020Z\004/as" +
+      "t\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
