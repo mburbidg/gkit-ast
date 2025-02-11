@@ -1730,19 +1730,21 @@ public final class GraphReferenceOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025graph_reference.proto\022\003ast\032\rcatalog.pr" +
-      "oto\032\016literals.proto\"\371\001\n\016GraphReference\0224" +
-      "\n\017parent_and_name\030\001 \001(\0132\031.ast.CatalogPar" +
-      "entAndNameH\000\022/\n\024delimited_graph_name\030\002 \001" +
-      "(\0132\017.ast.IdentifierH\000\022$\n\nhome_graph\030\003 \001(" +
-      "\0132\016.ast.HomeGraphH\000\022Q\n!reference_paramet" +
-      "er_specification\030\004 \001(\0132$.ast.ReferencePa" +
-      "rameterSpecificationH\000B\007\n\005which\"\013\n\tHomeG" +
-      "raphB\006Z\004/astb\006proto3"
+      "\n\025graph_reference.proto\022\003ast\032!google/pro" +
+      "tobuf/go_features.proto\032\rcatalog.proto\032\016" +
+      "literals.proto\"\371\001\n\016GraphReference\0224\n\017par" +
+      "ent_and_name\030\001 \001(\0132\031.ast.CatalogParentAn" +
+      "dNameH\000\022/\n\024delimited_graph_name\030\002 \001(\0132\017." +
+      "ast.IdentifierH\000\022$\n\nhome_graph\030\003 \001(\0132\016.a" +
+      "st.HomeGraphH\000\022Q\n!reference_parameter_sp" +
+      "ecification\030\004 \001(\0132$.ast.ReferenceParamet" +
+      "erSpecificationH\000B\007\n\005which\"\013\n\tHomeGraphB" +
+      "\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
           ast.Catalog.getDescriptor(),
           ast.Literals.getDescriptor(),
         });
@@ -1759,8 +1761,14 @@ public final class GraphReferenceOuterClass {
         internal_static_ast_HomeGraph_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
     ast.Catalog.getDescriptor();
     ast.Literals.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

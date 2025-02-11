@@ -394,12 +394,14 @@ public final class TodoOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ntodo.proto\022\003ast\"\006\n\004TodoB\006Z\004/astb\006proto" +
-      "3"
+      "\n\ntodo.proto\022\003ast\032!google/protobuf/go_fe" +
+      "atures.proto\"\006\n\004TodoB\016Z\004/ast\222\003\005\322>\002\020\003b\010ed" +
+      "itionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
         });
     internal_static_ast_Todo_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -408,6 +410,12 @@ public final class TodoOuterClass {
         internal_static_ast_Todo_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

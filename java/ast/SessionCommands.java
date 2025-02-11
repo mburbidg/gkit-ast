@@ -1130,13 +1130,15 @@ public final class SessionCommands {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026session_commands.proto\022\003ast\"\025\n\023Session" +
-      "CloseCommand\"\025\n\023SessionResetCommand\"\023\n\021S" +
-      "essionSetCommandB\006Z\004/astb\006proto3"
+      "\n\026session_commands.proto\022\003ast\032!google/pr" +
+      "otobuf/go_features.proto\"\025\n\023SessionClose" +
+      "Command\"\025\n\023SessionResetCommand\"\023\n\021Sessio" +
+      "nSetCommandB\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
         });
     internal_static_ast_SessionCloseCommand_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1157,6 +1159,12 @@ public final class SessionCommands {
         internal_static_ast_SessionSetCommand_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

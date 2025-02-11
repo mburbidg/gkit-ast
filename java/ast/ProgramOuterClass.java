@@ -45,17 +45,17 @@ public final class ProgramOuterClass {
     ast.ProgramActivityOuterClass.ProgramActivityOrBuilder getProgramActivityOrBuilder();
 
     /**
-     * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
      * @return Whether the sessionCloseCommand field is set.
      */
     boolean hasSessionCloseCommand();
     /**
-     * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
      * @return The sessionCloseCommand.
      */
     ast.SessionCommands.SessionCloseCommand getSessionCloseCommand();
     /**
-     * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
      */
     ast.SessionCommands.SessionCloseCommandOrBuilder getSessionCloseCommandOrBuilder();
   }
@@ -126,7 +126,7 @@ public final class ProgramOuterClass {
     public static final int SESSION_CLOSE_COMMAND_FIELD_NUMBER = 2;
     private ast.SessionCommands.SessionCloseCommand sessionCloseCommand_;
     /**
-     * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
      * @return Whether the sessionCloseCommand field is set.
      */
     @java.lang.Override
@@ -134,7 +134,7 @@ public final class ProgramOuterClass {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
      * @return The sessionCloseCommand.
      */
     @java.lang.Override
@@ -142,7 +142,7 @@ public final class ProgramOuterClass {
       return sessionCloseCommand_ == null ? ast.SessionCommands.SessionCloseCommand.getDefaultInstance() : sessionCloseCommand_;
     }
     /**
-     * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+     * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
      */
     @java.lang.Override
     public ast.SessionCommands.SessionCloseCommandOrBuilder getSessionCloseCommandOrBuilder() {
@@ -627,14 +627,14 @@ public final class ProgramOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ast.SessionCommands.SessionCloseCommand, ast.SessionCommands.SessionCloseCommand.Builder, ast.SessionCommands.SessionCloseCommandOrBuilder> sessionCloseCommandBuilder_;
       /**
-       * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
        * @return Whether the sessionCloseCommand field is set.
        */
       public boolean hasSessionCloseCommand() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
        * @return The sessionCloseCommand.
        */
       public ast.SessionCommands.SessionCloseCommand getSessionCloseCommand() {
@@ -645,7 +645,7 @@ public final class ProgramOuterClass {
         }
       }
       /**
-       * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
        */
       public Builder setSessionCloseCommand(ast.SessionCommands.SessionCloseCommand value) {
         if (sessionCloseCommandBuilder_ == null) {
@@ -661,7 +661,7 @@ public final class ProgramOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
        */
       public Builder setSessionCloseCommand(
           ast.SessionCommands.SessionCloseCommand.Builder builderForValue) {
@@ -675,7 +675,7 @@ public final class ProgramOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
        */
       public Builder mergeSessionCloseCommand(ast.SessionCommands.SessionCloseCommand value) {
         if (sessionCloseCommandBuilder_ == null) {
@@ -696,7 +696,7 @@ public final class ProgramOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
        */
       public Builder clearSessionCloseCommand() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -709,7 +709,7 @@ public final class ProgramOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
        */
       public ast.SessionCommands.SessionCloseCommand.Builder getSessionCloseCommandBuilder() {
         bitField0_ |= 0x00000002;
@@ -717,7 +717,7 @@ public final class ProgramOuterClass {
         return getSessionCloseCommandFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
        */
       public ast.SessionCommands.SessionCloseCommandOrBuilder getSessionCloseCommandOrBuilder() {
         if (sessionCloseCommandBuilder_ != null) {
@@ -728,7 +728,7 @@ public final class ProgramOuterClass {
         }
       }
       /**
-       * <code>optional .ast.SessionCloseCommand session_close_command = 2;</code>
+       * <code>.ast.SessionCloseCommand session_close_command = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           ast.SessionCommands.SessionCloseCommand, ast.SessionCommands.SessionCloseCommand.Builder, ast.SessionCommands.SessionCloseCommandOrBuilder> 
@@ -809,16 +809,18 @@ public final class ProgramOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rprogram.proto\022\003ast\032\026program_activity.p" +
-      "roto\032\026session_commands.proto\"\221\001\n\007Program" +
-      "\022.\n\020program_activity\030\001 \001(\0132\024.ast.Program" +
-      "Activity\022<\n\025session_close_command\030\002 \001(\0132" +
-      "\030.ast.SessionCloseCommandH\000\210\001\001B\030\n\026_sessi" +
-      "on_close_commandB\006Z\004/astb\006proto3"
+      "\n\rprogram.proto\022\003ast\032!google/protobuf/go" +
+      "_features.proto\032\026program_activity.proto\032" +
+      "\026session_commands.proto\"r\n\007Program\022.\n\020pr" +
+      "ogram_activity\030\001 \001(\0132\024.ast.ProgramActivi" +
+      "ty\0227\n\025session_close_command\030\002 \001(\0132\030.ast." +
+      "SessionCloseCommandB\016Z\004/ast\222\003\005\322>\002\020\003b\010edi" +
+      "tionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
           ast.ProgramActivityOuterClass.getDescriptor(),
           ast.SessionCommands.getDescriptor(),
         });
@@ -829,8 +831,14 @@ public final class ProgramOuterClass {
         internal_static_ast_Program_descriptor,
         new java.lang.String[] { "ProgramActivity", "SessionCloseCommand", });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
     ast.ProgramActivityOuterClass.getDescriptor();
     ast.SessionCommands.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

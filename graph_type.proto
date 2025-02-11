@@ -1,12 +1,14 @@
-syntax = "proto3";
+edition = "2023";
 
 package ast;
 
-option go_package = "/ast";
-
+import "google/protobuf/go_features.proto";
 import "catalog.proto";
 import "literals.proto";
 import "graph_expression.proto";
+
+option features.(pb.go).api_level = API_OPAQUE;
+option go_package = "/ast";
 
 message GraphType {
   oneof type {

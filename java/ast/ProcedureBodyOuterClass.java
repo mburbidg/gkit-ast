@@ -30,32 +30,32 @@ public final class ProcedureBodyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+     * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
      * @return Whether the atSchemaClause field is set.
      */
     boolean hasAtSchemaClause();
     /**
-     * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+     * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
      * @return The atSchemaClause.
      */
     ast.ProcedureBodyOuterClass.AtSchemaClause getAtSchemaClause();
     /**
-     * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+     * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
      */
     ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder getAtSchemaClauseOrBuilder();
 
     /**
-     * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
      * @return Whether the bindingVariableDefinitionBlock field is set.
      */
     boolean hasBindingVariableDefinitionBlock();
     /**
-     * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
      * @return The bindingVariableDefinitionBlock.
      */
     ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock getBindingVariableDefinitionBlock();
     /**
-     * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
      */
     ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder getBindingVariableDefinitionBlockOrBuilder();
 
@@ -125,7 +125,7 @@ public final class ProcedureBodyOuterClass {
     public static final int AT_SCHEMA_CLAUSE_FIELD_NUMBER = 1;
     private ast.ProcedureBodyOuterClass.AtSchemaClause atSchemaClause_;
     /**
-     * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+     * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
      * @return Whether the atSchemaClause field is set.
      */
     @java.lang.Override
@@ -133,7 +133,7 @@ public final class ProcedureBodyOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+     * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
      * @return The atSchemaClause.
      */
     @java.lang.Override
@@ -141,7 +141,7 @@ public final class ProcedureBodyOuterClass {
       return atSchemaClause_ == null ? ast.ProcedureBodyOuterClass.AtSchemaClause.getDefaultInstance() : atSchemaClause_;
     }
     /**
-     * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+     * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
      */
     @java.lang.Override
     public ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder getAtSchemaClauseOrBuilder() {
@@ -151,7 +151,7 @@ public final class ProcedureBodyOuterClass {
     public static final int BINDING_VARIABLE_DEFINITION_BLOCK_FIELD_NUMBER = 2;
     private ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock bindingVariableDefinitionBlock_;
     /**
-     * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
      * @return Whether the bindingVariableDefinitionBlock field is set.
      */
     @java.lang.Override
@@ -159,7 +159,7 @@ public final class ProcedureBodyOuterClass {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
      * @return The bindingVariableDefinitionBlock.
      */
     @java.lang.Override
@@ -167,7 +167,7 @@ public final class ProcedureBodyOuterClass {
       return bindingVariableDefinitionBlock_ == null ? ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.getDefaultInstance() : bindingVariableDefinitionBlock_;
     }
     /**
-     * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
      */
     @java.lang.Override
     public ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder getBindingVariableDefinitionBlockOrBuilder() {
@@ -645,14 +645,14 @@ public final class ProcedureBodyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ast.ProcedureBodyOuterClass.AtSchemaClause, ast.ProcedureBodyOuterClass.AtSchemaClause.Builder, ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder> atSchemaClauseBuilder_;
       /**
-       * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+       * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
        * @return Whether the atSchemaClause field is set.
        */
       public boolean hasAtSchemaClause() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+       * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
        * @return The atSchemaClause.
        */
       public ast.ProcedureBodyOuterClass.AtSchemaClause getAtSchemaClause() {
@@ -663,7 +663,7 @@ public final class ProcedureBodyOuterClass {
         }
       }
       /**
-       * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+       * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
        */
       public Builder setAtSchemaClause(ast.ProcedureBodyOuterClass.AtSchemaClause value) {
         if (atSchemaClauseBuilder_ == null) {
@@ -679,7 +679,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+       * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
        */
       public Builder setAtSchemaClause(
           ast.ProcedureBodyOuterClass.AtSchemaClause.Builder builderForValue) {
@@ -693,7 +693,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+       * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
        */
       public Builder mergeAtSchemaClause(ast.ProcedureBodyOuterClass.AtSchemaClause value) {
         if (atSchemaClauseBuilder_ == null) {
@@ -714,7 +714,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+       * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
        */
       public Builder clearAtSchemaClause() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -727,7 +727,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+       * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
        */
       public ast.ProcedureBodyOuterClass.AtSchemaClause.Builder getAtSchemaClauseBuilder() {
         bitField0_ |= 0x00000001;
@@ -735,7 +735,7 @@ public final class ProcedureBodyOuterClass {
         return getAtSchemaClauseFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+       * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
        */
       public ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder getAtSchemaClauseOrBuilder() {
         if (atSchemaClauseBuilder_ != null) {
@@ -746,7 +746,7 @@ public final class ProcedureBodyOuterClass {
         }
       }
       /**
-       * <code>optional .ast.AtSchemaClause at_schema_clause = 1;</code>
+       * <code>.ast.AtSchemaClause at_schema_clause = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           ast.ProcedureBodyOuterClass.AtSchemaClause, ast.ProcedureBodyOuterClass.AtSchemaClause.Builder, ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder> 
@@ -766,14 +766,14 @@ public final class ProcedureBodyOuterClass {
       private com.google.protobuf.SingleFieldBuilder<
           ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.Builder, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder> bindingVariableDefinitionBlockBuilder_;
       /**
-       * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
        * @return Whether the bindingVariableDefinitionBlock field is set.
        */
       public boolean hasBindingVariableDefinitionBlock() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
        * @return The bindingVariableDefinitionBlock.
        */
       public ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock getBindingVariableDefinitionBlock() {
@@ -784,7 +784,7 @@ public final class ProcedureBodyOuterClass {
         }
       }
       /**
-       * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
        */
       public Builder setBindingVariableDefinitionBlock(ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock value) {
         if (bindingVariableDefinitionBlockBuilder_ == null) {
@@ -800,7 +800,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
        */
       public Builder setBindingVariableDefinitionBlock(
           ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.Builder builderForValue) {
@@ -814,7 +814,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
        */
       public Builder mergeBindingVariableDefinitionBlock(ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock value) {
         if (bindingVariableDefinitionBlockBuilder_ == null) {
@@ -835,7 +835,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
        */
       public Builder clearBindingVariableDefinitionBlock() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -848,7 +848,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
        */
       public ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.Builder getBindingVariableDefinitionBlockBuilder() {
         bitField0_ |= 0x00000002;
@@ -856,7 +856,7 @@ public final class ProcedureBodyOuterClass {
         return getBindingVariableDefinitionBlockFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
        */
       public ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder getBindingVariableDefinitionBlockOrBuilder() {
         if (bindingVariableDefinitionBlockBuilder_ != null) {
@@ -867,7 +867,7 @@ public final class ProcedureBodyOuterClass {
         }
       }
       /**
-       * <code>optional .ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
+       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.Builder, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder> 
@@ -1556,20 +1556,20 @@ public final class ProcedureBodyOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\024procedure_body.proto\022\003ast\032\'binding_var" +
-      "iable_definition_block.proto\032\017statement." +
-      "proto\"\367\001\n\rProcedureBody\0222\n\020at_schema_cla" +
-      "use\030\001 \001(\0132\023.ast.AtSchemaClauseH\000\210\001\001\022S\n!b" +
-      "inding_variable_definition_block\030\002 \001(\0132#" +
-      ".ast.BindingVariableDefinitionBlockH\001\210\001\001" +
-      "\022\"\n\nstatements\030\003 \003(\0132\016.ast.StatementB\023\n\021" +
-      "_at_schema_clauseB$\n\"_binding_variable_d" +
-      "efinition_block\"\020\n\016AtSchemaClauseB\006Z\004/as" +
-      "tb\006proto3"
+      "\n\024procedure_body.proto\022\003ast\032!google/prot" +
+      "obuf/go_features.proto\032\'binding_variable" +
+      "_definition_block.proto\032\017statement.proto" +
+      "\"\262\001\n\rProcedureBody\022-\n\020at_schema_clause\030\001" +
+      " \001(\0132\023.ast.AtSchemaClause\022N\n!binding_var" +
+      "iable_definition_block\030\002 \001(\0132#.ast.Bindi" +
+      "ngVariableDefinitionBlock\022\"\n\nstatements\030" +
+      "\003 \003(\0132\016.ast.Statement\"\020\n\016AtSchemaClauseB" +
+      "\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
           ast.BindingVariableDefinitionBlockOuterClass.getDescriptor(),
           ast.StatementOuterClass.getDescriptor(),
         });
@@ -1586,8 +1586,14 @@ public final class ProcedureBodyOuterClass {
         internal_static_ast_AtSchemaClause_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
     ast.BindingVariableDefinitionBlockOuterClass.getDescriptor();
     ast.StatementOuterClass.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

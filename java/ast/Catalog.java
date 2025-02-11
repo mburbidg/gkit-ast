@@ -148,6 +148,11 @@ public final class Catalog {
 
     /**
      * <code>.ast.CatalogParentAndNameType type = 1;</code>
+     * @return Whether the type field is set.
+     */
+    boolean hasType();
+    /**
+     * <code>.ast.CatalogParentAndNameType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
     int getTypeValue();
@@ -158,17 +163,17 @@ public final class Catalog {
     ast.Catalog.CatalogParentAndNameType getType();
 
     /**
-     * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+     * <code>.ast.CatalogObjectParentReference parent = 2;</code>
      * @return Whether the parent field is set.
      */
     boolean hasParent();
     /**
-     * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+     * <code>.ast.CatalogObjectParentReference parent = 2;</code>
      * @return The parent.
      */
     ast.Catalog.CatalogObjectParentReference getParent();
     /**
-     * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+     * <code>.ast.CatalogObjectParentReference parent = 2;</code>
      */
     ast.Catalog.CatalogObjectParentReferenceOrBuilder getParentOrBuilder();
 
@@ -230,6 +235,13 @@ public final class Catalog {
     private int type_ = 0;
     /**
      * <code>.ast.CatalogParentAndNameType type = 1;</code>
+     * @return Whether the type field is set.
+     */
+    @java.lang.Override public boolean hasType() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.ast.CatalogParentAndNameType type = 1;</code>
      * @return The enum numeric value on the wire for type.
      */
     @java.lang.Override public int getTypeValue() {
@@ -247,15 +259,15 @@ public final class Catalog {
     public static final int PARENT_FIELD_NUMBER = 2;
     private ast.Catalog.CatalogObjectParentReference parent_;
     /**
-     * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+     * <code>.ast.CatalogObjectParentReference parent = 2;</code>
      * @return Whether the parent field is set.
      */
     @java.lang.Override
     public boolean hasParent() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+     * <code>.ast.CatalogObjectParentReference parent = 2;</code>
      * @return The parent.
      */
     @java.lang.Override
@@ -263,7 +275,7 @@ public final class Catalog {
       return parent_ == null ? ast.Catalog.CatalogObjectParentReference.getDefaultInstance() : parent_;
     }
     /**
-     * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+     * <code>.ast.CatalogObjectParentReference parent = 2;</code>
      */
     @java.lang.Override
     public ast.Catalog.CatalogObjectParentReferenceOrBuilder getParentOrBuilder() {
@@ -278,7 +290,7 @@ public final class Catalog {
      */
     @java.lang.Override
     public boolean hasName() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
      * <code>.ast.Identifier name = 3;</code>
@@ -310,13 +322,13 @@ public final class Catalog {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (type_ != ast.Catalog.CatalogParentAndNameType.GRAPH.getNumber()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         output.writeEnum(1, type_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getParent());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getName());
       }
       getUnknownFields().writeTo(output);
@@ -328,15 +340,15 @@ public final class Catalog {
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != ast.Catalog.CatalogParentAndNameType.GRAPH.getNumber()) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
-      if (((bitField0_ & 0x00000001) != 0)) {
+      if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getParent());
       }
-      if (((bitField0_ & 0x00000002) != 0)) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getName());
       }
@@ -355,7 +367,10 @@ public final class Catalog {
       }
       ast.Catalog.CatalogParentAndName other = (ast.Catalog.CatalogParentAndName) obj;
 
-      if (type_ != other.type_) return false;
+      if (hasType() != other.hasType()) return false;
+      if (hasType()) {
+        if (type_ != other.type_) return false;
+      }
       if (hasParent() != other.hasParent()) return false;
       if (hasParent()) {
         if (!getParent()
@@ -377,8 +392,10 @@ public final class Catalog {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + TYPE_FIELD_NUMBER;
-      hash = (53 * hash) + type_;
+      if (hasType()) {
+        hash = (37 * hash) + TYPE_FIELD_NUMBER;
+        hash = (53 * hash) + type_;
+      }
       if (hasParent()) {
         hash = (37 * hash) + PARENT_FIELD_NUMBER;
         hash = (53 * hash) + getParent().hashCode();
@@ -569,21 +586,22 @@ public final class Catalog {
 
       private void buildPartial0(ast.Catalog.CatalogParentAndName result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.type_ = type_;
+          to_bitField0_ |= 0x00000001;
         }
-        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000002) != 0)) {
           result.parent_ = parentBuilder_ == null
               ? parent_
               : parentBuilder_.build();
-          to_bitField0_ |= 0x00000001;
+          to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.name_ = nameBuilder_ == null
               ? name_
               : nameBuilder_.build();
-          to_bitField0_ |= 0x00000002;
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -600,8 +618,8 @@ public final class Catalog {
 
       public Builder mergeFrom(ast.Catalog.CatalogParentAndName other) {
         if (other == ast.Catalog.CatalogParentAndName.getDefaultInstance()) return this;
-        if (other.type_ != 0) {
-          setTypeValue(other.getTypeValue());
+        if (other.hasType()) {
+          setType(other.getType());
         }
         if (other.hasParent()) {
           mergeParent(other.getParent());
@@ -674,6 +692,13 @@ public final class Catalog {
       private int type_ = 0;
       /**
        * <code>.ast.CatalogParentAndNameType type = 1;</code>
+       * @return Whether the type field is set.
+       */
+      @java.lang.Override public boolean hasType() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ast.CatalogParentAndNameType type = 1;</code>
        * @return The enum numeric value on the wire for type.
        */
       @java.lang.Override public int getTypeValue() {
@@ -728,14 +753,14 @@ public final class Catalog {
       private com.google.protobuf.SingleFieldBuilder<
           ast.Catalog.CatalogObjectParentReference, ast.Catalog.CatalogObjectParentReference.Builder, ast.Catalog.CatalogObjectParentReferenceOrBuilder> parentBuilder_;
       /**
-       * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+       * <code>.ast.CatalogObjectParentReference parent = 2;</code>
        * @return Whether the parent field is set.
        */
       public boolean hasParent() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+       * <code>.ast.CatalogObjectParentReference parent = 2;</code>
        * @return The parent.
        */
       public ast.Catalog.CatalogObjectParentReference getParent() {
@@ -746,7 +771,7 @@ public final class Catalog {
         }
       }
       /**
-       * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+       * <code>.ast.CatalogObjectParentReference parent = 2;</code>
        */
       public Builder setParent(ast.Catalog.CatalogObjectParentReference value) {
         if (parentBuilder_ == null) {
@@ -762,7 +787,7 @@ public final class Catalog {
         return this;
       }
       /**
-       * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+       * <code>.ast.CatalogObjectParentReference parent = 2;</code>
        */
       public Builder setParent(
           ast.Catalog.CatalogObjectParentReference.Builder builderForValue) {
@@ -776,7 +801,7 @@ public final class Catalog {
         return this;
       }
       /**
-       * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+       * <code>.ast.CatalogObjectParentReference parent = 2;</code>
        */
       public Builder mergeParent(ast.Catalog.CatalogObjectParentReference value) {
         if (parentBuilder_ == null) {
@@ -797,7 +822,7 @@ public final class Catalog {
         return this;
       }
       /**
-       * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+       * <code>.ast.CatalogObjectParentReference parent = 2;</code>
        */
       public Builder clearParent() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -810,7 +835,7 @@ public final class Catalog {
         return this;
       }
       /**
-       * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+       * <code>.ast.CatalogObjectParentReference parent = 2;</code>
        */
       public ast.Catalog.CatalogObjectParentReference.Builder getParentBuilder() {
         bitField0_ |= 0x00000002;
@@ -818,7 +843,7 @@ public final class Catalog {
         return getParentFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+       * <code>.ast.CatalogObjectParentReference parent = 2;</code>
        */
       public ast.Catalog.CatalogObjectParentReferenceOrBuilder getParentOrBuilder() {
         if (parentBuilder_ != null) {
@@ -829,7 +854,7 @@ public final class Catalog {
         }
       }
       /**
-       * <code>optional .ast.CatalogObjectParentReference parent = 2;</code>
+       * <code>.ast.CatalogObjectParentReference parent = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           ast.Catalog.CatalogObjectParentReference, ast.Catalog.CatalogObjectParentReference.Builder, ast.Catalog.CatalogObjectParentReferenceOrBuilder> 
@@ -3080,6 +3105,11 @@ public final class Catalog {
 
     /**
      * <code>string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>string value = 1;</code>
      * @return The value.
      */
     java.lang.String getValue();
@@ -3128,9 +3158,18 @@ public final class Catalog {
               ast.Catalog.AbsoluteCatalogPath.class, ast.Catalog.AbsoluteCatalogPath.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
     /**
      * <code>string value = 1;</code>
      * @return The value.
@@ -3181,7 +3220,7 @@ public final class Catalog {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, value_);
       }
       getUnknownFields().writeTo(output);
@@ -3193,7 +3232,7 @@ public final class Catalog {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, value_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -3211,8 +3250,11 @@ public final class Catalog {
       }
       ast.Catalog.AbsoluteCatalogPath other = (ast.Catalog.AbsoluteCatalogPath) obj;
 
-      if (!getValue()
-          .equals(other.getValue())) return false;
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3224,8 +3266,10 @@ public final class Catalog {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3391,9 +3435,12 @@ public final class Catalog {
 
       private void buildPartial0(ast.Catalog.AbsoluteCatalogPath result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.value_ = value_;
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3408,7 +3455,7 @@ public final class Catalog {
 
       public Builder mergeFrom(ast.Catalog.AbsoluteCatalogPath other) {
         if (other == ast.Catalog.AbsoluteCatalogPath.getDefaultInstance()) return this;
-        if (!other.getValue().isEmpty()) {
+        if (other.hasValue()) {
           value_ = other.value_;
           bitField0_ |= 0x00000001;
           onChanged();
@@ -3462,6 +3509,13 @@ public final class Catalog {
       private int bitField0_;
 
       private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 1;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
       /**
        * <code>string value = 1;</code>
        * @return The value.
@@ -3590,6 +3644,11 @@ public final class Catalog {
 
     /**
      * <code>string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>string value = 1;</code>
      * @return The value.
      */
     java.lang.String getValue();
@@ -3638,9 +3697,18 @@ public final class Catalog {
               ast.Catalog.RelativeCatalogPath.class, ast.Catalog.RelativeCatalogPath.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
     /**
      * <code>string value = 1;</code>
      * @return The value.
@@ -3691,7 +3759,7 @@ public final class Catalog {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, value_);
       }
       getUnknownFields().writeTo(output);
@@ -3703,7 +3771,7 @@ public final class Catalog {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, value_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -3721,8 +3789,11 @@ public final class Catalog {
       }
       ast.Catalog.RelativeCatalogPath other = (ast.Catalog.RelativeCatalogPath) obj;
 
-      if (!getValue()
-          .equals(other.getValue())) return false;
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -3734,8 +3805,10 @@ public final class Catalog {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3901,9 +3974,12 @@ public final class Catalog {
 
       private void buildPartial0(ast.Catalog.RelativeCatalogPath result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.value_ = value_;
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -3918,7 +3994,7 @@ public final class Catalog {
 
       public Builder mergeFrom(ast.Catalog.RelativeCatalogPath other) {
         if (other == ast.Catalog.RelativeCatalogPath.getDefaultInstance()) return this;
-        if (!other.getValue().isEmpty()) {
+        if (other.hasValue()) {
           value_ = other.value_;
           bitField0_ |= 0x00000001;
           onChanged();
@@ -3972,6 +4048,13 @@ public final class Catalog {
       private int bitField0_;
 
       private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 1;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
       /**
        * <code>string value = 1;</code>
        * @return The value.
@@ -4128,28 +4211,30 @@ public final class Catalog {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\rcatalog.proto\022\003ast\032\016literals.proto\"\245\001\n" +
-      "\024CatalogParentAndName\022+\n\004type\030\001 \001(\0162\035.as" +
-      "t.CatalogParentAndNameType\0226\n\006parent\030\002 \001" +
-      "(\0132!.ast.CatalogObjectParentReferenceH\000\210" +
-      "\001\001\022\035\n\004name\030\003 \001(\0132\017.ast.IdentifierB\t\n\007_pa" +
-      "rent\"s\n\034CatalogObjectParentReference\022-\n\017" +
-      "schemaReference\030\001 \001(\0132\024.ast.SchemaRefere" +
-      "nce\022$\n\013object_name\030\002 \003(\0132\017.ast.Identifie" +
-      "r\"\342\001\n\017SchemaReference\0229\n\025absolute_catalo" +
-      "g_path\030\001 \001(\0132\030.ast.AbsoluteCatalogPathH\000" +
-      "\0229\n\025relative_catalog_path\030\002 \001(\0132\030.ast.Re" +
-      "lativeCatalogPathH\000\022Q\n!reference_paramet" +
-      "er_specification\030\003 \001(\0132$.ast.ReferencePa" +
-      "rameterSpecificationH\000B\006\n\004type\"$\n\023Absolu" +
-      "teCatalogPath\022\r\n\005value\030\001 \001(\t\"$\n\023Relative" +
-      "CatalogPath\022\r\n\005value\030\001 \001(\t*5\n\030CatalogPar" +
-      "entAndNameType\022\t\n\005GRAPH\020\000\022\016\n\nGRAPH_TYPE\020" +
-      "\001B\006Z\004/astb\006proto3"
+      "\n\rcatalog.proto\022\003ast\032!google/protobuf/go" +
+      "_features.proto\032\016literals.proto\"\225\001\n\024Cata" +
+      "logParentAndName\022+\n\004type\030\001 \001(\0162\035.ast.Cat" +
+      "alogParentAndNameType\0221\n\006parent\030\002 \001(\0132!." +
+      "ast.CatalogObjectParentReference\022\035\n\004name" +
+      "\030\003 \001(\0132\017.ast.Identifier\"s\n\034CatalogObject" +
+      "ParentReference\022-\n\017schemaReference\030\001 \001(\013" +
+      "2\024.ast.SchemaReference\022$\n\013object_name\030\002 " +
+      "\003(\0132\017.ast.Identifier\"\342\001\n\017SchemaReference" +
+      "\0229\n\025absolute_catalog_path\030\001 \001(\0132\030.ast.Ab" +
+      "soluteCatalogPathH\000\0229\n\025relative_catalog_" +
+      "path\030\002 \001(\0132\030.ast.RelativeCatalogPathH\000\022Q" +
+      "\n!reference_parameter_specification\030\003 \001(" +
+      "\0132$.ast.ReferenceParameterSpecificationH" +
+      "\000B\006\n\004type\"$\n\023AbsoluteCatalogPath\022\r\n\005valu" +
+      "e\030\001 \001(\t\"$\n\023RelativeCatalogPath\022\r\n\005value\030" +
+      "\001 \001(\t*5\n\030CatalogParentAndNameType\022\t\n\005GRA" +
+      "PH\020\000\022\016\n\nGRAPH_TYPE\020\001B\016Z\004/ast\222\003\005\322>\002\020\003b\010ed" +
+      "itionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
           ast.Literals.getDescriptor(),
         });
     internal_static_ast_CatalogParentAndName_descriptor =
@@ -4183,7 +4268,13 @@ public final class Catalog {
         internal_static_ast_RelativeCatalogPath_descriptor,
         new java.lang.String[] { "Value", });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
     ast.Literals.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

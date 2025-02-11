@@ -2980,25 +2980,27 @@ public final class GraphTypeOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020graph_type.proto\022\003ast\032\rcatalog.proto\032\016" +
-      "literals.proto\032\026graph_expression.proto\"\324" +
-      "\001\n\tGraphType\0228\n\025graph_type_like_graph\030\001 " +
-      "\001(\0132\027.ast.GraphTypeLikeGraphH\000\0227\n\024graph_" +
-      "type_reference\030\002 \001(\0132\027.ast.GraphTypeRefe" +
-      "renceH\000\022L\n\037nested_graph_type_specificati" +
-      "on\030\003 \001(\0132!.ast.NestedGraphTypeSpecificat" +
-      "ionH\000B\006\n\004type\"D\n\022GraphTypeLikeGraph\022.\n\020g" +
-      "raph_expression\030\001 \001(\0132\024.ast.GraphExpress" +
-      "ion\"\036\n\034NestedGraphTypeSpecification\"\245\001\n\022" +
-      "GraphTypeReference\0224\n\017parent_and_name\030\001 " +
-      "\001(\0132\031.ast.CatalogParentAndNameH\000\022Q\n!refe" +
-      "rence_parameter_specification\030\002 \001(\0132$.as" +
-      "t.ReferenceParameterSpecificationH\000B\006\n\004t" +
-      "ypeB\006Z\004/astb\006proto3"
+      "\n\020graph_type.proto\022\003ast\032!google/protobuf" +
+      "/go_features.proto\032\rcatalog.proto\032\016liter" +
+      "als.proto\032\026graph_expression.proto\"\324\001\n\tGr" +
+      "aphType\0228\n\025graph_type_like_graph\030\001 \001(\0132\027" +
+      ".ast.GraphTypeLikeGraphH\000\0227\n\024graph_type_" +
+      "reference\030\002 \001(\0132\027.ast.GraphTypeReference" +
+      "H\000\022L\n\037nested_graph_type_specification\030\003 " +
+      "\001(\0132!.ast.NestedGraphTypeSpecificationH\000" +
+      "B\006\n\004type\"D\n\022GraphTypeLikeGraph\022.\n\020graph_" +
+      "expression\030\001 \001(\0132\024.ast.GraphExpression\"\036" +
+      "\n\034NestedGraphTypeSpecification\"\245\001\n\022Graph" +
+      "TypeReference\0224\n\017parent_and_name\030\001 \001(\0132\031" +
+      ".ast.CatalogParentAndNameH\000\022Q\n!reference" +
+      "_parameter_specification\030\002 \001(\0132$.ast.Ref" +
+      "erenceParameterSpecificationH\000B\006\n\004typeB\016" +
+      "Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
           ast.Catalog.getDescriptor(),
           ast.Literals.getDescriptor(),
           ast.GraphExpressionOuterClass.getDescriptor(),
@@ -3028,9 +3030,15 @@ public final class GraphTypeOuterClass {
         internal_static_ast_GraphTypeReference_descriptor,
         new java.lang.String[] { "ParentAndName", "ReferenceParameterSpecification", "Type", });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
     ast.Catalog.getDescriptor();
     ast.Literals.getDescriptor();
     ast.GraphExpressionOuterClass.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

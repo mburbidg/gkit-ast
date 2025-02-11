@@ -609,14 +609,16 @@ public final class ProcedureSpecificationOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\035procedure_specification.proto\022\003ast\032\024pr" +
-      "ocedure_body.proto\"D\n\026ProcedureSpecifica" +
-      "tion\022*\n\016procedure_body\030\001 \001(\0132\022.ast.Proce" +
-      "dureBodyB\006Z\004/astb\006proto3"
+      "\n\035procedure_specification.proto\022\003ast\032!go" +
+      "ogle/protobuf/go_features.proto\032\024procedu" +
+      "re_body.proto\"D\n\026ProcedureSpecification\022" +
+      "*\n\016procedure_body\030\001 \001(\0132\022.ast.ProcedureB" +
+      "odyB\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
           ast.ProcedureBodyOuterClass.getDescriptor(),
         });
     internal_static_ast_ProcedureSpecification_descriptor =
@@ -626,7 +628,13 @@ public final class ProcedureSpecificationOuterClass {
         internal_static_ast_ProcedureSpecification_descriptor,
         new java.lang.String[] { "ProcedureBody", });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
     ast.ProcedureBodyOuterClass.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

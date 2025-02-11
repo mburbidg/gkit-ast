@@ -1730,19 +1730,21 @@ public final class GraphExpressionOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\026graph_expression.proto\022\003ast\032\025graph_ref" +
-      "erence.proto\032\ntodo.proto\032\016literals.proto" +
-      "\"\322\001\n\017GraphExpression\022.\n\017graph_reference\030" +
-      "\001 \001(\0132\023.ast.GraphReferenceH\000\022\037\n\nexpressi" +
-      "on\030\002 \001(\0132\t.ast.TodoH\000\022:\n\037object_name_or_" +
-      "binding_variable\030\003 \001(\0132\017.ast.IdentifierH" +
-      "\000\022*\n\rcurrent_graph\030\004 \001(\0132\021.ast.CurrentGr" +
-      "aphH\000B\006\n\004type\"\016\n\014CurrentGraphB\006Z\004/astb\006p" +
-      "roto3"
+      "\n\026graph_expression.proto\022\003ast\032!google/pr" +
+      "otobuf/go_features.proto\032\025graph_referenc" +
+      "e.proto\032\ntodo.proto\032\016literals.proto\"\322\001\n\017" +
+      "GraphExpression\022.\n\017graph_reference\030\001 \001(\013" +
+      "2\023.ast.GraphReferenceH\000\022\037\n\nexpression\030\002 " +
+      "\001(\0132\t.ast.TodoH\000\022:\n\037object_name_or_bindi" +
+      "ng_variable\030\003 \001(\0132\017.ast.IdentifierH\000\022*\n\r" +
+      "current_graph\030\004 \001(\0132\021.ast.CurrentGraphH\000" +
+      "B\006\n\004type\"\016\n\014CurrentGraphB\016Z\004/ast\222\003\005\322>\002\020\003" +
+      "b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
           ast.GraphReferenceOuterClass.getDescriptor(),
           ast.TodoOuterClass.getDescriptor(),
           ast.Literals.getDescriptor(),
@@ -1760,9 +1762,15 @@ public final class GraphExpressionOuterClass {
         internal_static_ast_CurrentGraph_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
     ast.GraphReferenceOuterClass.getDescriptor();
     ast.TodoOuterClass.getDescriptor();
     ast.Literals.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

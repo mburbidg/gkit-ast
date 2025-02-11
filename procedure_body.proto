@@ -1,15 +1,17 @@
-syntax = "proto3";
+edition = "2023";
 
 package ast;
 
-option go_package = "/ast";
-
+import "google/protobuf/go_features.proto";
 import "binding_variable_definition_block.proto";
 import "statement.proto";
 
+option features.(pb.go).api_level = API_OPAQUE;
+option go_package = "/ast";
+
 message ProcedureBody {
-  optional AtSchemaClause at_schema_clause = 1;
-  optional BindingVariableDefinitionBlock binding_variable_definition_block = 2;
+  AtSchemaClause at_schema_clause = 1;
+  BindingVariableDefinitionBlock binding_variable_definition_block = 2;
   repeated Statement statements = 3;
 }
 

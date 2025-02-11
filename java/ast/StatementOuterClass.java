@@ -924,16 +924,18 @@ public final class StatementOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017statement.proto\022\003ast\032\030catalog_statemen" +
-      "ts.proto\"\211\001\n\tStatement\022;\n\026create_graph_s" +
-      "tatement\030\001 \001(\0132\031.ast.CreateGraphStatemen" +
-      "tH\000\0227\n\024drop_graph_statement\030\002 \001(\0132\027.ast." +
-      "DropGraphStatementH\000B\006\n\004typeB\006Z\004/astb\006pr" +
-      "oto3"
+      "\n\017statement.proto\022\003ast\032!google/protobuf/" +
+      "go_features.proto\032\030catalog_statements.pr" +
+      "oto\"\211\001\n\tStatement\022;\n\026create_graph_statem" +
+      "ent\030\001 \001(\0132\031.ast.CreateGraphStatementH\000\0227" +
+      "\n\024drop_graph_statement\030\002 \001(\0132\027.ast.DropG" +
+      "raphStatementH\000B\006\n\004typeB\016Z\004/ast\222\003\005\322>\002\020\003b" +
+      "\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
           ast.CatalogStatements.getDescriptor(),
         });
     internal_static_ast_Statement_descriptor =
@@ -943,7 +945,13 @@ public final class StatementOuterClass {
         internal_static_ast_Statement_descriptor,
         new java.lang.String[] { "CreateGraphStatement", "DropGraphStatement", "Type", });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
     ast.CatalogStatements.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

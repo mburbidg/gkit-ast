@@ -31,6 +31,11 @@ public final class Literals {
 
     /**
      * <code>string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>string value = 1;</code>
      * @return The value.
      */
     java.lang.String getValue();
@@ -79,9 +84,18 @@ public final class Literals {
               ast.Literals.Identifier.class, ast.Literals.Identifier.Builder.class);
     }
 
+    private int bitField0_;
     public static final int VALUE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object value_ = "";
+    /**
+     * <code>string value = 1;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
     /**
      * <code>string value = 1;</code>
      * @return The value.
@@ -132,7 +146,7 @@ public final class Literals {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, value_);
       }
       getUnknownFields().writeTo(output);
@@ -144,7 +158,7 @@ public final class Literals {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, value_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -162,8 +176,11 @@ public final class Literals {
       }
       ast.Literals.Identifier other = (ast.Literals.Identifier) obj;
 
-      if (!getValue()
-          .equals(other.getValue())) return false;
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -175,8 +192,10 @@ public final class Literals {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -342,9 +361,12 @@ public final class Literals {
 
       private void buildPartial0(ast.Literals.Identifier result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.value_ = value_;
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -359,7 +381,7 @@ public final class Literals {
 
       public Builder mergeFrom(ast.Literals.Identifier other) {
         if (other == ast.Literals.Identifier.getDefaultInstance()) return this;
-        if (!other.getValue().isEmpty()) {
+        if (other.hasValue()) {
           value_ = other.value_;
           bitField0_ |= 0x00000001;
           onChanged();
@@ -413,6 +435,13 @@ public final class Literals {
       private int bitField0_;
 
       private java.lang.Object value_ = "";
+      /**
+       * <code>string value = 1;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
       /**
        * <code>string value = 1;</code>
        * @return The value.
@@ -541,6 +570,11 @@ public final class Literals {
 
     /**
      * <code>string parameter = 1;</code>
+     * @return Whether the parameter field is set.
+     */
+    boolean hasParameter();
+    /**
+     * <code>string parameter = 1;</code>
      * @return The parameter.
      */
     java.lang.String getParameter();
@@ -589,9 +623,18 @@ public final class Literals {
               ast.Literals.ReferenceParameterSpecification.class, ast.Literals.ReferenceParameterSpecification.Builder.class);
     }
 
+    private int bitField0_;
     public static final int PARAMETER_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
     private volatile java.lang.Object parameter_ = "";
+    /**
+     * <code>string parameter = 1;</code>
+     * @return Whether the parameter field is set.
+     */
+    @java.lang.Override
+    public boolean hasParameter() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
     /**
      * <code>string parameter = 1;</code>
      * @return The parameter.
@@ -642,7 +685,7 @@ public final class Literals {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(parameter_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 1, parameter_);
       }
       getUnknownFields().writeTo(output);
@@ -654,7 +697,7 @@ public final class Literals {
       if (size != -1) return size;
 
       size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(parameter_)) {
+      if (((bitField0_ & 0x00000001) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(1, parameter_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -672,8 +715,11 @@ public final class Literals {
       }
       ast.Literals.ReferenceParameterSpecification other = (ast.Literals.ReferenceParameterSpecification) obj;
 
-      if (!getParameter()
-          .equals(other.getParameter())) return false;
+      if (hasParameter() != other.hasParameter()) return false;
+      if (hasParameter()) {
+        if (!getParameter()
+            .equals(other.getParameter())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -685,8 +731,10 @@ public final class Literals {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + PARAMETER_FIELD_NUMBER;
-      hash = (53 * hash) + getParameter().hashCode();
+      if (hasParameter()) {
+        hash = (37 * hash) + PARAMETER_FIELD_NUMBER;
+        hash = (53 * hash) + getParameter().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -852,9 +900,12 @@ public final class Literals {
 
       private void buildPartial0(ast.Literals.ReferenceParameterSpecification result) {
         int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.parameter_ = parameter_;
+          to_bitField0_ |= 0x00000001;
         }
+        result.bitField0_ |= to_bitField0_;
       }
 
       @java.lang.Override
@@ -869,7 +920,7 @@ public final class Literals {
 
       public Builder mergeFrom(ast.Literals.ReferenceParameterSpecification other) {
         if (other == ast.Literals.ReferenceParameterSpecification.getDefaultInstance()) return this;
-        if (!other.getParameter().isEmpty()) {
+        if (other.hasParameter()) {
           parameter_ = other.parameter_;
           bitField0_ |= 0x00000001;
           onChanged();
@@ -923,6 +974,13 @@ public final class Literals {
       private int bitField0_;
 
       private java.lang.Object parameter_ = "";
+      /**
+       * <code>string parameter = 1;</code>
+       * @return Whether the parameter field is set.
+       */
+      public boolean hasParameter() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
       /**
        * <code>string parameter = 1;</code>
        * @return The parameter.
@@ -1064,13 +1122,16 @@ public final class Literals {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016literals.proto\022\003ast\"\033\n\nIdentifier\022\r\n\005v" +
-      "alue\030\001 \001(\t\"4\n\037ReferenceParameterSpecific" +
-      "ation\022\021\n\tparameter\030\001 \001(\tB\006Z\004/astb\006proto3"
+      "\n\016literals.proto\022\003ast\032!google/protobuf/g" +
+      "o_features.proto\"\033\n\nIdentifier\022\r\n\005value\030" +
+      "\001 \001(\t\"4\n\037ReferenceParameterSpecification" +
+      "\022\021\n\tparameter\030\001 \001(\tB\016Z\004/ast\222\003\005\322>\002\020\003b\010edi" +
+      "tionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
         });
     internal_static_ast_Identifier_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1085,6 +1146,12 @@ public final class Literals {
         internal_static_ast_ReferenceParameterSpecification_descriptor,
         new java.lang.String[] { "Parameter", });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

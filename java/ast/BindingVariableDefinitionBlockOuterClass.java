@@ -403,12 +403,14 @@ public final class BindingVariableDefinitionBlockOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\'binding_variable_definition_block.prot" +
-      "o\022\003ast\" \n\036BindingVariableDefinitionBlock" +
-      "B\006Z\004/astb\006proto3"
+      "o\022\003ast\032!google/protobuf/go_features.prot" +
+      "o\" \n\036BindingVariableDefinitionBlockB\016Z\004/" +
+      "ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
         });
     internal_static_ast_BindingVariableDefinitionBlock_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -417,6 +419,12 @@ public final class BindingVariableDefinitionBlockOuterClass {
         internal_static_ast_BindingVariableDefinitionBlock_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

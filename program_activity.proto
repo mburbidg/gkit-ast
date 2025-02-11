@@ -1,12 +1,14 @@
-syntax = "proto3";
+edition = "2023";
 
 package ast;
 
-option go_package = "/ast";
-
+import "google/protobuf/go_features.proto";
 import "session_commands.proto";
 import "transaction_commands.proto";
 import "procedure_specification.proto";
+
+option features.(pb.go).api_level = API_OPAQUE;
+option go_package = "/ast";
 
 message ProgramActivity {
   oneof type {
@@ -21,9 +23,9 @@ message SessionActivity {
 }
 
 message TransactionActivity {
-  optional StartTransactionCommand startTransactionCommand = 1;
-  optional ProcedureSpecification procedureSpecification = 2;
-  optional EndTransactionCommand endTransactionCommand = 3;
+  StartTransactionCommand startTransactionCommand = 1;
+  ProcedureSpecification procedureSpecification = 2;
+  EndTransactionCommand endTransactionCommand = 3;
 }
 
 

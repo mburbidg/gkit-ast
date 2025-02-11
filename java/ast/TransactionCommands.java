@@ -770,13 +770,15 @@ public final class TransactionCommands {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\032transaction_commands.proto\022\003ast\"\031\n\027Sta" +
-      "rtTransactionCommand\"\027\n\025EndTransactionCo" +
-      "mmandB\006Z\004/astb\006proto3"
+      "\n\032transaction_commands.proto\022\003ast\032!googl" +
+      "e/protobuf/go_features.proto\"\031\n\027StartTra" +
+      "nsactionCommand\"\027\n\025EndTransactionCommand" +
+      "B\016Z\004/ast\222\003\005\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          pb.GoFeaturesOuterClass.getDescriptor(),
         });
     internal_static_ast_StartTransactionCommand_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -791,6 +793,12 @@ public final class TransactionCommands {
         internal_static_ast_EndTransactionCommand_descriptor,
         new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
+    pb.GoFeaturesOuterClass.getDescriptor();
+    com.google.protobuf.ExtensionRegistry registry =
+        com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(pb.GoFeaturesOuterClass.go);
+    com.google.protobuf.Descriptors.FileDescriptor
+        .internalUpdateFileDescriptor(descriptor, registry);
   }
 
   // @@protoc_insertion_point(outer_class_scope)

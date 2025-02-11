@@ -1,10 +1,12 @@
-syntax = "proto3";
+edition = "2023";
 
 package ast;
 
-option go_package = "/ast";
-
+import "google/protobuf/go_features.proto";
 import "procedure_body.proto";
+
+option features.(pb.go).api_level = API_OPAQUE;
+option go_package = "/ast";
 
 message ProcedureSpecification {
   ProcedureBody procedure_body = 1;
