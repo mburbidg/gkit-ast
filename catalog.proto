@@ -21,22 +21,45 @@ message CatalogParentAndName {
 }
 
 message CatalogObjectParentReference {
-  SchemaReference schemaReference = 1;
+  SchemaReference schemaReference = 1 [features.field_presence = EXPLICIT];
   repeated Identifier object_name = 2;
 }
 
 message SchemaReference {
   oneof type {
-    AbsoluteCatalogPath absolute_catalog_path = 1;
-    RelativeCatalogPath relative_catalog_path = 2;
+    AbsoluteCatalogSchemaReference absolute_schema_reference = 1;
+    RelativeCatalogSchemaReference relative_schema_reference = 2;
     ReferenceParameterSpecification reference_parameter_specification = 3;
   }
 }
 
-message AbsoluteCatalogPath {
-  string value = 1;
+message AbsoluteCatalogSchemaReference {
+  oneof type {
+    RootSchema root_schema = 1;
+    CatalogSchemaParentAndName parent_and_name = 2;
+  }
 }
 
-message RelativeCatalogPath {
+message RootSchema {
+}
+
+message CatalogSchemaParentAndName {
+  DirectoryPath directory_path = 1;
+  Identifier schema_name = 2;
+}
+
+message RelativeCatalogSchemaReference {
+  oneof type {
+    PredefinedSchemaReference predefined_schema = 1;
+    CatalogSchemaParentAndName parent_and_name = 2;
+  }
+}
+
+enum PredefinedSchemaReference {
+  HOME_SCHEMA = 0;
+  CURRENT_SCHEMA = 1;
+}
+
+message DirectoryPath {
   string value = 1;
 }

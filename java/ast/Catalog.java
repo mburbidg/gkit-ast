@@ -142,6 +142,123 @@ public final class Catalog {
     // @@protoc_insertion_point(enum_scope:ast.CatalogParentAndNameType)
   }
 
+  /**
+   * Protobuf enum {@code ast.PredefinedSchemaReference}
+   */
+  public enum PredefinedSchemaReference
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>HOME_SCHEMA = 0;</code>
+     */
+    HOME_SCHEMA(0),
+    /**
+     * <code>CURRENT_SCHEMA = 1;</code>
+     */
+    CURRENT_SCHEMA(1),
+    UNRECOGNIZED(-1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        PredefinedSchemaReference.class.getName());
+    }
+    /**
+     * <code>HOME_SCHEMA = 0;</code>
+     */
+    public static final int HOME_SCHEMA_VALUE = 0;
+    /**
+     * <code>CURRENT_SCHEMA = 1;</code>
+     */
+    public static final int CURRENT_SCHEMA_VALUE = 1;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static PredefinedSchemaReference valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static PredefinedSchemaReference forNumber(int value) {
+      switch (value) {
+        case 0: return HOME_SCHEMA;
+        case 1: return CURRENT_SCHEMA;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<PredefinedSchemaReference>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        PredefinedSchemaReference> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<PredefinedSchemaReference>() {
+            public PredefinedSchemaReference findValueByNumber(int number) {
+              return PredefinedSchemaReference.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return ast.Catalog.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final PredefinedSchemaReference[] VALUES = values();
+
+    public static PredefinedSchemaReference valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private PredefinedSchemaReference(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:ast.PredefinedSchemaReference)
+  }
+
   public interface CatalogParentAndNameOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ast.CatalogParentAndName)
       com.google.protobuf.MessageOrBuilder {
@@ -1022,17 +1139,17 @@ public final class Catalog {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ast.SchemaReference schemaReference = 1;</code>
+     * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
      * @return Whether the schemaReference field is set.
      */
     boolean hasSchemaReference();
     /**
-     * <code>.ast.SchemaReference schemaReference = 1;</code>
+     * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
      * @return The schemaReference.
      */
     ast.Catalog.SchemaReference getSchemaReference();
     /**
-     * <code>.ast.SchemaReference schemaReference = 1;</code>
+     * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
      */
     ast.Catalog.SchemaReferenceOrBuilder getSchemaReferenceOrBuilder();
 
@@ -1102,7 +1219,7 @@ public final class Catalog {
     public static final int SCHEMAREFERENCE_FIELD_NUMBER = 1;
     private ast.Catalog.SchemaReference schemaReference_;
     /**
-     * <code>.ast.SchemaReference schemaReference = 1;</code>
+     * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
      * @return Whether the schemaReference field is set.
      */
     @java.lang.Override
@@ -1110,7 +1227,7 @@ public final class Catalog {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.ast.SchemaReference schemaReference = 1;</code>
+     * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
      * @return The schemaReference.
      */
     @java.lang.Override
@@ -1118,7 +1235,7 @@ public final class Catalog {
       return schemaReference_ == null ? ast.Catalog.SchemaReference.getDefaultInstance() : schemaReference_;
     }
     /**
-     * <code>.ast.SchemaReference schemaReference = 1;</code>
+     * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
      */
     @java.lang.Override
     public ast.Catalog.SchemaReferenceOrBuilder getSchemaReferenceOrBuilder() {
@@ -1558,14 +1675,14 @@ public final class Catalog {
       private com.google.protobuf.SingleFieldBuilder<
           ast.Catalog.SchemaReference, ast.Catalog.SchemaReference.Builder, ast.Catalog.SchemaReferenceOrBuilder> schemaReferenceBuilder_;
       /**
-       * <code>.ast.SchemaReference schemaReference = 1;</code>
+       * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
        * @return Whether the schemaReference field is set.
        */
       public boolean hasSchemaReference() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.ast.SchemaReference schemaReference = 1;</code>
+       * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
        * @return The schemaReference.
        */
       public ast.Catalog.SchemaReference getSchemaReference() {
@@ -1576,7 +1693,7 @@ public final class Catalog {
         }
       }
       /**
-       * <code>.ast.SchemaReference schemaReference = 1;</code>
+       * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
        */
       public Builder setSchemaReference(ast.Catalog.SchemaReference value) {
         if (schemaReferenceBuilder_ == null) {
@@ -1592,7 +1709,7 @@ public final class Catalog {
         return this;
       }
       /**
-       * <code>.ast.SchemaReference schemaReference = 1;</code>
+       * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
        */
       public Builder setSchemaReference(
           ast.Catalog.SchemaReference.Builder builderForValue) {
@@ -1606,7 +1723,7 @@ public final class Catalog {
         return this;
       }
       /**
-       * <code>.ast.SchemaReference schemaReference = 1;</code>
+       * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
        */
       public Builder mergeSchemaReference(ast.Catalog.SchemaReference value) {
         if (schemaReferenceBuilder_ == null) {
@@ -1627,7 +1744,7 @@ public final class Catalog {
         return this;
       }
       /**
-       * <code>.ast.SchemaReference schemaReference = 1;</code>
+       * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
        */
       public Builder clearSchemaReference() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -1640,7 +1757,7 @@ public final class Catalog {
         return this;
       }
       /**
-       * <code>.ast.SchemaReference schemaReference = 1;</code>
+       * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
        */
       public ast.Catalog.SchemaReference.Builder getSchemaReferenceBuilder() {
         bitField0_ |= 0x00000001;
@@ -1648,7 +1765,7 @@ public final class Catalog {
         return getSchemaReferenceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.SchemaReference schemaReference = 1;</code>
+       * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
        */
       public ast.Catalog.SchemaReferenceOrBuilder getSchemaReferenceOrBuilder() {
         if (schemaReferenceBuilder_ != null) {
@@ -1659,7 +1776,7 @@ public final class Catalog {
         }
       }
       /**
-       * <code>.ast.SchemaReference schemaReference = 1;</code>
+       * <code>.ast.SchemaReference schemaReference = 1 [features = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           ast.Catalog.SchemaReference, ast.Catalog.SchemaReference.Builder, ast.Catalog.SchemaReferenceOrBuilder> 
@@ -1971,34 +2088,34 @@ public final class Catalog {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
-     * @return Whether the absoluteCatalogPath field is set.
+     * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
+     * @return Whether the absoluteSchemaReference field is set.
      */
-    boolean hasAbsoluteCatalogPath();
+    boolean hasAbsoluteSchemaReference();
     /**
-     * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
-     * @return The absoluteCatalogPath.
+     * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
+     * @return The absoluteSchemaReference.
      */
-    ast.Catalog.AbsoluteCatalogPath getAbsoluteCatalogPath();
+    ast.Catalog.AbsoluteCatalogSchemaReference getAbsoluteSchemaReference();
     /**
-     * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
+     * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
      */
-    ast.Catalog.AbsoluteCatalogPathOrBuilder getAbsoluteCatalogPathOrBuilder();
+    ast.Catalog.AbsoluteCatalogSchemaReferenceOrBuilder getAbsoluteSchemaReferenceOrBuilder();
 
     /**
-     * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
-     * @return Whether the relativeCatalogPath field is set.
+     * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
+     * @return Whether the relativeSchemaReference field is set.
      */
-    boolean hasRelativeCatalogPath();
+    boolean hasRelativeSchemaReference();
     /**
-     * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
-     * @return The relativeCatalogPath.
+     * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
+     * @return The relativeSchemaReference.
      */
-    ast.Catalog.RelativeCatalogPath getRelativeCatalogPath();
+    ast.Catalog.RelativeCatalogSchemaReference getRelativeSchemaReference();
     /**
-     * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
+     * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
      */
-    ast.Catalog.RelativeCatalogPathOrBuilder getRelativeCatalogPathOrBuilder();
+    ast.Catalog.RelativeCatalogSchemaReferenceOrBuilder getRelativeSchemaReferenceOrBuilder();
 
     /**
      * <code>.ast.ReferenceParameterSpecification reference_parameter_specification = 3;</code>
@@ -2060,8 +2177,8 @@ public final class Catalog {
     public enum TypeCase
         implements com.google.protobuf.Internal.EnumLite,
             com.google.protobuf.AbstractMessage.InternalOneOfEnum {
-      ABSOLUTE_CATALOG_PATH(1),
-      RELATIVE_CATALOG_PATH(2),
+      ABSOLUTE_SCHEMA_REFERENCE(1),
+      RELATIVE_SCHEMA_REFERENCE(2),
       REFERENCE_PARAMETER_SPECIFICATION(3),
       TYPE_NOT_SET(0);
       private final int value;
@@ -2080,8 +2197,8 @@ public final class Catalog {
 
       public static TypeCase forNumber(int value) {
         switch (value) {
-          case 1: return ABSOLUTE_CATALOG_PATH;
-          case 2: return RELATIVE_CATALOG_PATH;
+          case 1: return ABSOLUTE_SCHEMA_REFERENCE;
+          case 2: return RELATIVE_SCHEMA_REFERENCE;
           case 3: return REFERENCE_PARAMETER_SPECIFICATION;
           case 0: return TYPE_NOT_SET;
           default: return null;
@@ -2098,66 +2215,66 @@ public final class Catalog {
           typeCase_);
     }
 
-    public static final int ABSOLUTE_CATALOG_PATH_FIELD_NUMBER = 1;
+    public static final int ABSOLUTE_SCHEMA_REFERENCE_FIELD_NUMBER = 1;
     /**
-     * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
-     * @return Whether the absoluteCatalogPath field is set.
+     * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
+     * @return Whether the absoluteSchemaReference field is set.
      */
     @java.lang.Override
-    public boolean hasAbsoluteCatalogPath() {
+    public boolean hasAbsoluteSchemaReference() {
       return typeCase_ == 1;
     }
     /**
-     * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
-     * @return The absoluteCatalogPath.
+     * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
+     * @return The absoluteSchemaReference.
      */
     @java.lang.Override
-    public ast.Catalog.AbsoluteCatalogPath getAbsoluteCatalogPath() {
+    public ast.Catalog.AbsoluteCatalogSchemaReference getAbsoluteSchemaReference() {
       if (typeCase_ == 1) {
-         return (ast.Catalog.AbsoluteCatalogPath) type_;
+         return (ast.Catalog.AbsoluteCatalogSchemaReference) type_;
       }
-      return ast.Catalog.AbsoluteCatalogPath.getDefaultInstance();
+      return ast.Catalog.AbsoluteCatalogSchemaReference.getDefaultInstance();
     }
     /**
-     * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
+     * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
      */
     @java.lang.Override
-    public ast.Catalog.AbsoluteCatalogPathOrBuilder getAbsoluteCatalogPathOrBuilder() {
+    public ast.Catalog.AbsoluteCatalogSchemaReferenceOrBuilder getAbsoluteSchemaReferenceOrBuilder() {
       if (typeCase_ == 1) {
-         return (ast.Catalog.AbsoluteCatalogPath) type_;
+         return (ast.Catalog.AbsoluteCatalogSchemaReference) type_;
       }
-      return ast.Catalog.AbsoluteCatalogPath.getDefaultInstance();
+      return ast.Catalog.AbsoluteCatalogSchemaReference.getDefaultInstance();
     }
 
-    public static final int RELATIVE_CATALOG_PATH_FIELD_NUMBER = 2;
+    public static final int RELATIVE_SCHEMA_REFERENCE_FIELD_NUMBER = 2;
     /**
-     * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
-     * @return Whether the relativeCatalogPath field is set.
+     * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
+     * @return Whether the relativeSchemaReference field is set.
      */
     @java.lang.Override
-    public boolean hasRelativeCatalogPath() {
+    public boolean hasRelativeSchemaReference() {
       return typeCase_ == 2;
     }
     /**
-     * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
-     * @return The relativeCatalogPath.
+     * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
+     * @return The relativeSchemaReference.
      */
     @java.lang.Override
-    public ast.Catalog.RelativeCatalogPath getRelativeCatalogPath() {
+    public ast.Catalog.RelativeCatalogSchemaReference getRelativeSchemaReference() {
       if (typeCase_ == 2) {
-         return (ast.Catalog.RelativeCatalogPath) type_;
+         return (ast.Catalog.RelativeCatalogSchemaReference) type_;
       }
-      return ast.Catalog.RelativeCatalogPath.getDefaultInstance();
+      return ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance();
     }
     /**
-     * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
+     * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
      */
     @java.lang.Override
-    public ast.Catalog.RelativeCatalogPathOrBuilder getRelativeCatalogPathOrBuilder() {
+    public ast.Catalog.RelativeCatalogSchemaReferenceOrBuilder getRelativeSchemaReferenceOrBuilder() {
       if (typeCase_ == 2) {
-         return (ast.Catalog.RelativeCatalogPath) type_;
+         return (ast.Catalog.RelativeCatalogSchemaReference) type_;
       }
-      return ast.Catalog.RelativeCatalogPath.getDefaultInstance();
+      return ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance();
     }
 
     public static final int REFERENCE_PARAMETER_SPECIFICATION_FIELD_NUMBER = 3;
@@ -2206,10 +2323,10 @@ public final class Catalog {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (typeCase_ == 1) {
-        output.writeMessage(1, (ast.Catalog.AbsoluteCatalogPath) type_);
+        output.writeMessage(1, (ast.Catalog.AbsoluteCatalogSchemaReference) type_);
       }
       if (typeCase_ == 2) {
-        output.writeMessage(2, (ast.Catalog.RelativeCatalogPath) type_);
+        output.writeMessage(2, (ast.Catalog.RelativeCatalogSchemaReference) type_);
       }
       if (typeCase_ == 3) {
         output.writeMessage(3, (ast.Literals.ReferenceParameterSpecification) type_);
@@ -2225,11 +2342,11 @@ public final class Catalog {
       size = 0;
       if (typeCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (ast.Catalog.AbsoluteCatalogPath) type_);
+          .computeMessageSize(1, (ast.Catalog.AbsoluteCatalogSchemaReference) type_);
       }
       if (typeCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (ast.Catalog.RelativeCatalogPath) type_);
+          .computeMessageSize(2, (ast.Catalog.RelativeCatalogSchemaReference) type_);
       }
       if (typeCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
@@ -2253,12 +2370,12 @@ public final class Catalog {
       if (!getTypeCase().equals(other.getTypeCase())) return false;
       switch (typeCase_) {
         case 1:
-          if (!getAbsoluteCatalogPath()
-              .equals(other.getAbsoluteCatalogPath())) return false;
+          if (!getAbsoluteSchemaReference()
+              .equals(other.getAbsoluteSchemaReference())) return false;
           break;
         case 2:
-          if (!getRelativeCatalogPath()
-              .equals(other.getRelativeCatalogPath())) return false;
+          if (!getRelativeSchemaReference()
+              .equals(other.getRelativeSchemaReference())) return false;
           break;
         case 3:
           if (!getReferenceParameterSpecification()
@@ -2280,12 +2397,12 @@ public final class Catalog {
       hash = (19 * hash) + getDescriptor().hashCode();
       switch (typeCase_) {
         case 1:
-          hash = (37 * hash) + ABSOLUTE_CATALOG_PATH_FIELD_NUMBER;
-          hash = (53 * hash) + getAbsoluteCatalogPath().hashCode();
+          hash = (37 * hash) + ABSOLUTE_SCHEMA_REFERENCE_FIELD_NUMBER;
+          hash = (53 * hash) + getAbsoluteSchemaReference().hashCode();
           break;
         case 2:
-          hash = (37 * hash) + RELATIVE_CATALOG_PATH_FIELD_NUMBER;
-          hash = (53 * hash) + getRelativeCatalogPath().hashCode();
+          hash = (37 * hash) + RELATIVE_SCHEMA_REFERENCE_FIELD_NUMBER;
+          hash = (53 * hash) + getRelativeSchemaReference().hashCode();
           break;
         case 3:
           hash = (37 * hash) + REFERENCE_PARAMETER_SPECIFICATION_FIELD_NUMBER;
@@ -2425,11 +2542,11 @@ public final class Catalog {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        if (absoluteCatalogPathBuilder_ != null) {
-          absoluteCatalogPathBuilder_.clear();
+        if (absoluteSchemaReferenceBuilder_ != null) {
+          absoluteSchemaReferenceBuilder_.clear();
         }
-        if (relativeCatalogPathBuilder_ != null) {
-          relativeCatalogPathBuilder_.clear();
+        if (relativeSchemaReferenceBuilder_ != null) {
+          relativeSchemaReferenceBuilder_.clear();
         }
         if (referenceParameterSpecificationBuilder_ != null) {
           referenceParameterSpecificationBuilder_.clear();
@@ -2476,12 +2593,12 @@ public final class Catalog {
         result.typeCase_ = typeCase_;
         result.type_ = this.type_;
         if (typeCase_ == 1 &&
-            absoluteCatalogPathBuilder_ != null) {
-          result.type_ = absoluteCatalogPathBuilder_.build();
+            absoluteSchemaReferenceBuilder_ != null) {
+          result.type_ = absoluteSchemaReferenceBuilder_.build();
         }
         if (typeCase_ == 2 &&
-            relativeCatalogPathBuilder_ != null) {
-          result.type_ = relativeCatalogPathBuilder_.build();
+            relativeSchemaReferenceBuilder_ != null) {
+          result.type_ = relativeSchemaReferenceBuilder_.build();
         }
         if (typeCase_ == 3 &&
             referenceParameterSpecificationBuilder_ != null) {
@@ -2502,12 +2619,12 @@ public final class Catalog {
       public Builder mergeFrom(ast.Catalog.SchemaReference other) {
         if (other == ast.Catalog.SchemaReference.getDefaultInstance()) return this;
         switch (other.getTypeCase()) {
-          case ABSOLUTE_CATALOG_PATH: {
-            mergeAbsoluteCatalogPath(other.getAbsoluteCatalogPath());
+          case ABSOLUTE_SCHEMA_REFERENCE: {
+            mergeAbsoluteSchemaReference(other.getAbsoluteSchemaReference());
             break;
           }
-          case RELATIVE_CATALOG_PATH: {
-            mergeRelativeCatalogPath(other.getRelativeCatalogPath());
+          case RELATIVE_SCHEMA_REFERENCE: {
+            mergeRelativeSchemaReference(other.getRelativeSchemaReference());
             break;
           }
           case REFERENCE_PARAMETER_SPECIFICATION: {
@@ -2546,14 +2663,14 @@ public final class Catalog {
                 break;
               case 10: {
                 input.readMessage(
-                    getAbsoluteCatalogPathFieldBuilder().getBuilder(),
+                    getAbsoluteSchemaReferenceFieldBuilder().getBuilder(),
                     extensionRegistry);
                 typeCase_ = 1;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
-                    getRelativeCatalogPathFieldBuilder().getBuilder(),
+                    getRelativeSchemaReferenceFieldBuilder().getBuilder(),
                     extensionRegistry);
                 typeCase_ = 2;
                 break;
@@ -2598,71 +2715,71 @@ public final class Catalog {
       private int bitField0_;
 
       private com.google.protobuf.SingleFieldBuilder<
-          ast.Catalog.AbsoluteCatalogPath, ast.Catalog.AbsoluteCatalogPath.Builder, ast.Catalog.AbsoluteCatalogPathOrBuilder> absoluteCatalogPathBuilder_;
+          ast.Catalog.AbsoluteCatalogSchemaReference, ast.Catalog.AbsoluteCatalogSchemaReference.Builder, ast.Catalog.AbsoluteCatalogSchemaReferenceOrBuilder> absoluteSchemaReferenceBuilder_;
       /**
-       * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
-       * @return Whether the absoluteCatalogPath field is set.
+       * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
+       * @return Whether the absoluteSchemaReference field is set.
        */
       @java.lang.Override
-      public boolean hasAbsoluteCatalogPath() {
+      public boolean hasAbsoluteSchemaReference() {
         return typeCase_ == 1;
       }
       /**
-       * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
-       * @return The absoluteCatalogPath.
+       * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
+       * @return The absoluteSchemaReference.
        */
       @java.lang.Override
-      public ast.Catalog.AbsoluteCatalogPath getAbsoluteCatalogPath() {
-        if (absoluteCatalogPathBuilder_ == null) {
+      public ast.Catalog.AbsoluteCatalogSchemaReference getAbsoluteSchemaReference() {
+        if (absoluteSchemaReferenceBuilder_ == null) {
           if (typeCase_ == 1) {
-            return (ast.Catalog.AbsoluteCatalogPath) type_;
+            return (ast.Catalog.AbsoluteCatalogSchemaReference) type_;
           }
-          return ast.Catalog.AbsoluteCatalogPath.getDefaultInstance();
+          return ast.Catalog.AbsoluteCatalogSchemaReference.getDefaultInstance();
         } else {
           if (typeCase_ == 1) {
-            return absoluteCatalogPathBuilder_.getMessage();
+            return absoluteSchemaReferenceBuilder_.getMessage();
           }
-          return ast.Catalog.AbsoluteCatalogPath.getDefaultInstance();
+          return ast.Catalog.AbsoluteCatalogSchemaReference.getDefaultInstance();
         }
       }
       /**
-       * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
+       * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
        */
-      public Builder setAbsoluteCatalogPath(ast.Catalog.AbsoluteCatalogPath value) {
-        if (absoluteCatalogPathBuilder_ == null) {
+      public Builder setAbsoluteSchemaReference(ast.Catalog.AbsoluteCatalogSchemaReference value) {
+        if (absoluteSchemaReferenceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           type_ = value;
           onChanged();
         } else {
-          absoluteCatalogPathBuilder_.setMessage(value);
+          absoluteSchemaReferenceBuilder_.setMessage(value);
         }
         typeCase_ = 1;
         return this;
       }
       /**
-       * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
+       * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
        */
-      public Builder setAbsoluteCatalogPath(
-          ast.Catalog.AbsoluteCatalogPath.Builder builderForValue) {
-        if (absoluteCatalogPathBuilder_ == null) {
+      public Builder setAbsoluteSchemaReference(
+          ast.Catalog.AbsoluteCatalogSchemaReference.Builder builderForValue) {
+        if (absoluteSchemaReferenceBuilder_ == null) {
           type_ = builderForValue.build();
           onChanged();
         } else {
-          absoluteCatalogPathBuilder_.setMessage(builderForValue.build());
+          absoluteSchemaReferenceBuilder_.setMessage(builderForValue.build());
         }
         typeCase_ = 1;
         return this;
       }
       /**
-       * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
+       * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
        */
-      public Builder mergeAbsoluteCatalogPath(ast.Catalog.AbsoluteCatalogPath value) {
-        if (absoluteCatalogPathBuilder_ == null) {
+      public Builder mergeAbsoluteSchemaReference(ast.Catalog.AbsoluteCatalogSchemaReference value) {
+        if (absoluteSchemaReferenceBuilder_ == null) {
           if (typeCase_ == 1 &&
-              type_ != ast.Catalog.AbsoluteCatalogPath.getDefaultInstance()) {
-            type_ = ast.Catalog.AbsoluteCatalogPath.newBuilder((ast.Catalog.AbsoluteCatalogPath) type_)
+              type_ != ast.Catalog.AbsoluteCatalogSchemaReference.getDefaultInstance()) {
+            type_ = ast.Catalog.AbsoluteCatalogSchemaReference.newBuilder((ast.Catalog.AbsoluteCatalogSchemaReference) type_)
                 .mergeFrom(value).buildPartial();
           } else {
             type_ = value;
@@ -2670,19 +2787,19 @@ public final class Catalog {
           onChanged();
         } else {
           if (typeCase_ == 1) {
-            absoluteCatalogPathBuilder_.mergeFrom(value);
+            absoluteSchemaReferenceBuilder_.mergeFrom(value);
           } else {
-            absoluteCatalogPathBuilder_.setMessage(value);
+            absoluteSchemaReferenceBuilder_.setMessage(value);
           }
         }
         typeCase_ = 1;
         return this;
       }
       /**
-       * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
+       * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
        */
-      public Builder clearAbsoluteCatalogPath() {
-        if (absoluteCatalogPathBuilder_ == null) {
+      public Builder clearAbsoluteSchemaReference() {
+        if (absoluteSchemaReferenceBuilder_ == null) {
           if (typeCase_ == 1) {
             typeCase_ = 0;
             type_ = null;
@@ -2693,118 +2810,118 @@ public final class Catalog {
             typeCase_ = 0;
             type_ = null;
           }
-          absoluteCatalogPathBuilder_.clear();
+          absoluteSchemaReferenceBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
+       * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
        */
-      public ast.Catalog.AbsoluteCatalogPath.Builder getAbsoluteCatalogPathBuilder() {
-        return getAbsoluteCatalogPathFieldBuilder().getBuilder();
+      public ast.Catalog.AbsoluteCatalogSchemaReference.Builder getAbsoluteSchemaReferenceBuilder() {
+        return getAbsoluteSchemaReferenceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
+       * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
        */
       @java.lang.Override
-      public ast.Catalog.AbsoluteCatalogPathOrBuilder getAbsoluteCatalogPathOrBuilder() {
-        if ((typeCase_ == 1) && (absoluteCatalogPathBuilder_ != null)) {
-          return absoluteCatalogPathBuilder_.getMessageOrBuilder();
+      public ast.Catalog.AbsoluteCatalogSchemaReferenceOrBuilder getAbsoluteSchemaReferenceOrBuilder() {
+        if ((typeCase_ == 1) && (absoluteSchemaReferenceBuilder_ != null)) {
+          return absoluteSchemaReferenceBuilder_.getMessageOrBuilder();
         } else {
           if (typeCase_ == 1) {
-            return (ast.Catalog.AbsoluteCatalogPath) type_;
+            return (ast.Catalog.AbsoluteCatalogSchemaReference) type_;
           }
-          return ast.Catalog.AbsoluteCatalogPath.getDefaultInstance();
+          return ast.Catalog.AbsoluteCatalogSchemaReference.getDefaultInstance();
         }
       }
       /**
-       * <code>.ast.AbsoluteCatalogPath absolute_catalog_path = 1;</code>
+       * <code>.ast.AbsoluteCatalogSchemaReference absolute_schema_reference = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          ast.Catalog.AbsoluteCatalogPath, ast.Catalog.AbsoluteCatalogPath.Builder, ast.Catalog.AbsoluteCatalogPathOrBuilder> 
-          getAbsoluteCatalogPathFieldBuilder() {
-        if (absoluteCatalogPathBuilder_ == null) {
+          ast.Catalog.AbsoluteCatalogSchemaReference, ast.Catalog.AbsoluteCatalogSchemaReference.Builder, ast.Catalog.AbsoluteCatalogSchemaReferenceOrBuilder> 
+          getAbsoluteSchemaReferenceFieldBuilder() {
+        if (absoluteSchemaReferenceBuilder_ == null) {
           if (!(typeCase_ == 1)) {
-            type_ = ast.Catalog.AbsoluteCatalogPath.getDefaultInstance();
+            type_ = ast.Catalog.AbsoluteCatalogSchemaReference.getDefaultInstance();
           }
-          absoluteCatalogPathBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              ast.Catalog.AbsoluteCatalogPath, ast.Catalog.AbsoluteCatalogPath.Builder, ast.Catalog.AbsoluteCatalogPathOrBuilder>(
-                  (ast.Catalog.AbsoluteCatalogPath) type_,
+          absoluteSchemaReferenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Catalog.AbsoluteCatalogSchemaReference, ast.Catalog.AbsoluteCatalogSchemaReference.Builder, ast.Catalog.AbsoluteCatalogSchemaReferenceOrBuilder>(
+                  (ast.Catalog.AbsoluteCatalogSchemaReference) type_,
                   getParentForChildren(),
                   isClean());
           type_ = null;
         }
         typeCase_ = 1;
         onChanged();
-        return absoluteCatalogPathBuilder_;
+        return absoluteSchemaReferenceBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilder<
-          ast.Catalog.RelativeCatalogPath, ast.Catalog.RelativeCatalogPath.Builder, ast.Catalog.RelativeCatalogPathOrBuilder> relativeCatalogPathBuilder_;
+          ast.Catalog.RelativeCatalogSchemaReference, ast.Catalog.RelativeCatalogSchemaReference.Builder, ast.Catalog.RelativeCatalogSchemaReferenceOrBuilder> relativeSchemaReferenceBuilder_;
       /**
-       * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
-       * @return Whether the relativeCatalogPath field is set.
+       * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
+       * @return Whether the relativeSchemaReference field is set.
        */
       @java.lang.Override
-      public boolean hasRelativeCatalogPath() {
+      public boolean hasRelativeSchemaReference() {
         return typeCase_ == 2;
       }
       /**
-       * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
-       * @return The relativeCatalogPath.
+       * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
+       * @return The relativeSchemaReference.
        */
       @java.lang.Override
-      public ast.Catalog.RelativeCatalogPath getRelativeCatalogPath() {
-        if (relativeCatalogPathBuilder_ == null) {
+      public ast.Catalog.RelativeCatalogSchemaReference getRelativeSchemaReference() {
+        if (relativeSchemaReferenceBuilder_ == null) {
           if (typeCase_ == 2) {
-            return (ast.Catalog.RelativeCatalogPath) type_;
+            return (ast.Catalog.RelativeCatalogSchemaReference) type_;
           }
-          return ast.Catalog.RelativeCatalogPath.getDefaultInstance();
+          return ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance();
         } else {
           if (typeCase_ == 2) {
-            return relativeCatalogPathBuilder_.getMessage();
+            return relativeSchemaReferenceBuilder_.getMessage();
           }
-          return ast.Catalog.RelativeCatalogPath.getDefaultInstance();
+          return ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance();
         }
       }
       /**
-       * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
+       * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
        */
-      public Builder setRelativeCatalogPath(ast.Catalog.RelativeCatalogPath value) {
-        if (relativeCatalogPathBuilder_ == null) {
+      public Builder setRelativeSchemaReference(ast.Catalog.RelativeCatalogSchemaReference value) {
+        if (relativeSchemaReferenceBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
           type_ = value;
           onChanged();
         } else {
-          relativeCatalogPathBuilder_.setMessage(value);
+          relativeSchemaReferenceBuilder_.setMessage(value);
         }
         typeCase_ = 2;
         return this;
       }
       /**
-       * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
+       * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
        */
-      public Builder setRelativeCatalogPath(
-          ast.Catalog.RelativeCatalogPath.Builder builderForValue) {
-        if (relativeCatalogPathBuilder_ == null) {
+      public Builder setRelativeSchemaReference(
+          ast.Catalog.RelativeCatalogSchemaReference.Builder builderForValue) {
+        if (relativeSchemaReferenceBuilder_ == null) {
           type_ = builderForValue.build();
           onChanged();
         } else {
-          relativeCatalogPathBuilder_.setMessage(builderForValue.build());
+          relativeSchemaReferenceBuilder_.setMessage(builderForValue.build());
         }
         typeCase_ = 2;
         return this;
       }
       /**
-       * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
+       * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
        */
-      public Builder mergeRelativeCatalogPath(ast.Catalog.RelativeCatalogPath value) {
-        if (relativeCatalogPathBuilder_ == null) {
+      public Builder mergeRelativeSchemaReference(ast.Catalog.RelativeCatalogSchemaReference value) {
+        if (relativeSchemaReferenceBuilder_ == null) {
           if (typeCase_ == 2 &&
-              type_ != ast.Catalog.RelativeCatalogPath.getDefaultInstance()) {
-            type_ = ast.Catalog.RelativeCatalogPath.newBuilder((ast.Catalog.RelativeCatalogPath) type_)
+              type_ != ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance()) {
+            type_ = ast.Catalog.RelativeCatalogSchemaReference.newBuilder((ast.Catalog.RelativeCatalogSchemaReference) type_)
                 .mergeFrom(value).buildPartial();
           } else {
             type_ = value;
@@ -2812,19 +2929,19 @@ public final class Catalog {
           onChanged();
         } else {
           if (typeCase_ == 2) {
-            relativeCatalogPathBuilder_.mergeFrom(value);
+            relativeSchemaReferenceBuilder_.mergeFrom(value);
           } else {
-            relativeCatalogPathBuilder_.setMessage(value);
+            relativeSchemaReferenceBuilder_.setMessage(value);
           }
         }
         typeCase_ = 2;
         return this;
       }
       /**
-       * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
+       * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
        */
-      public Builder clearRelativeCatalogPath() {
-        if (relativeCatalogPathBuilder_ == null) {
+      public Builder clearRelativeSchemaReference() {
+        if (relativeSchemaReferenceBuilder_ == null) {
           if (typeCase_ == 2) {
             typeCase_ = 0;
             type_ = null;
@@ -2835,50 +2952,50 @@ public final class Catalog {
             typeCase_ = 0;
             type_ = null;
           }
-          relativeCatalogPathBuilder_.clear();
+          relativeSchemaReferenceBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
+       * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
        */
-      public ast.Catalog.RelativeCatalogPath.Builder getRelativeCatalogPathBuilder() {
-        return getRelativeCatalogPathFieldBuilder().getBuilder();
+      public ast.Catalog.RelativeCatalogSchemaReference.Builder getRelativeSchemaReferenceBuilder() {
+        return getRelativeSchemaReferenceFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
+       * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
        */
       @java.lang.Override
-      public ast.Catalog.RelativeCatalogPathOrBuilder getRelativeCatalogPathOrBuilder() {
-        if ((typeCase_ == 2) && (relativeCatalogPathBuilder_ != null)) {
-          return relativeCatalogPathBuilder_.getMessageOrBuilder();
+      public ast.Catalog.RelativeCatalogSchemaReferenceOrBuilder getRelativeSchemaReferenceOrBuilder() {
+        if ((typeCase_ == 2) && (relativeSchemaReferenceBuilder_ != null)) {
+          return relativeSchemaReferenceBuilder_.getMessageOrBuilder();
         } else {
           if (typeCase_ == 2) {
-            return (ast.Catalog.RelativeCatalogPath) type_;
+            return (ast.Catalog.RelativeCatalogSchemaReference) type_;
           }
-          return ast.Catalog.RelativeCatalogPath.getDefaultInstance();
+          return ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance();
         }
       }
       /**
-       * <code>.ast.RelativeCatalogPath relative_catalog_path = 2;</code>
+       * <code>.ast.RelativeCatalogSchemaReference relative_schema_reference = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          ast.Catalog.RelativeCatalogPath, ast.Catalog.RelativeCatalogPath.Builder, ast.Catalog.RelativeCatalogPathOrBuilder> 
-          getRelativeCatalogPathFieldBuilder() {
-        if (relativeCatalogPathBuilder_ == null) {
+          ast.Catalog.RelativeCatalogSchemaReference, ast.Catalog.RelativeCatalogSchemaReference.Builder, ast.Catalog.RelativeCatalogSchemaReferenceOrBuilder> 
+          getRelativeSchemaReferenceFieldBuilder() {
+        if (relativeSchemaReferenceBuilder_ == null) {
           if (!(typeCase_ == 2)) {
-            type_ = ast.Catalog.RelativeCatalogPath.getDefaultInstance();
+            type_ = ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance();
           }
-          relativeCatalogPathBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              ast.Catalog.RelativeCatalogPath, ast.Catalog.RelativeCatalogPath.Builder, ast.Catalog.RelativeCatalogPathOrBuilder>(
-                  (ast.Catalog.RelativeCatalogPath) type_,
+          relativeSchemaReferenceBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Catalog.RelativeCatalogSchemaReference, ast.Catalog.RelativeCatalogSchemaReference.Builder, ast.Catalog.RelativeCatalogSchemaReferenceOrBuilder>(
+                  (ast.Catalog.RelativeCatalogSchemaReference) type_,
                   getParentForChildren(),
                   isClean());
           type_ = null;
         }
         typeCase_ = 2;
         onChanged();
-        return relativeCatalogPathBuilder_;
+        return relativeSchemaReferenceBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilder<
@@ -3074,8 +3191,2824 @@ public final class Catalog {
 
   }
 
-  public interface AbsoluteCatalogPathOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ast.AbsoluteCatalogPath)
+  public interface AbsoluteCatalogSchemaReferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.AbsoluteCatalogSchemaReference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ast.RootSchema root_schema = 1;</code>
+     * @return Whether the rootSchema field is set.
+     */
+    boolean hasRootSchema();
+    /**
+     * <code>.ast.RootSchema root_schema = 1;</code>
+     * @return The rootSchema.
+     */
+    ast.Catalog.RootSchema getRootSchema();
+    /**
+     * <code>.ast.RootSchema root_schema = 1;</code>
+     */
+    ast.Catalog.RootSchemaOrBuilder getRootSchemaOrBuilder();
+
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     * @return Whether the parentAndName field is set.
+     */
+    boolean hasParentAndName();
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     * @return The parentAndName.
+     */
+    ast.Catalog.CatalogSchemaParentAndName getParentAndName();
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     */
+    ast.Catalog.CatalogSchemaParentAndNameOrBuilder getParentAndNameOrBuilder();
+
+    ast.Catalog.AbsoluteCatalogSchemaReference.TypeCase getTypeCase();
+  }
+  /**
+   * Protobuf type {@code ast.AbsoluteCatalogSchemaReference}
+   */
+  public static final class AbsoluteCatalogSchemaReference extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ast.AbsoluteCatalogSchemaReference)
+      AbsoluteCatalogSchemaReferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        AbsoluteCatalogSchemaReference.class.getName());
+    }
+    // Use AbsoluteCatalogSchemaReference.newBuilder() to construct.
+    private AbsoluteCatalogSchemaReference(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private AbsoluteCatalogSchemaReference() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ast.Catalog.internal_static_ast_AbsoluteCatalogSchemaReference_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ast.Catalog.internal_static_ast_AbsoluteCatalogSchemaReference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ast.Catalog.AbsoluteCatalogSchemaReference.class, ast.Catalog.AbsoluteCatalogSchemaReference.Builder.class);
+    }
+
+    private int typeCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      ROOT_SCHEMA(1),
+      PARENT_AND_NAME(2),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return ROOT_SCHEMA;
+          case 2: return PARENT_AND_NAME;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int ROOT_SCHEMA_FIELD_NUMBER = 1;
+    /**
+     * <code>.ast.RootSchema root_schema = 1;</code>
+     * @return Whether the rootSchema field is set.
+     */
+    @java.lang.Override
+    public boolean hasRootSchema() {
+      return typeCase_ == 1;
+    }
+    /**
+     * <code>.ast.RootSchema root_schema = 1;</code>
+     * @return The rootSchema.
+     */
+    @java.lang.Override
+    public ast.Catalog.RootSchema getRootSchema() {
+      if (typeCase_ == 1) {
+         return (ast.Catalog.RootSchema) type_;
+      }
+      return ast.Catalog.RootSchema.getDefaultInstance();
+    }
+    /**
+     * <code>.ast.RootSchema root_schema = 1;</code>
+     */
+    @java.lang.Override
+    public ast.Catalog.RootSchemaOrBuilder getRootSchemaOrBuilder() {
+      if (typeCase_ == 1) {
+         return (ast.Catalog.RootSchema) type_;
+      }
+      return ast.Catalog.RootSchema.getDefaultInstance();
+    }
+
+    public static final int PARENT_AND_NAME_FIELD_NUMBER = 2;
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     * @return Whether the parentAndName field is set.
+     */
+    @java.lang.Override
+    public boolean hasParentAndName() {
+      return typeCase_ == 2;
+    }
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     * @return The parentAndName.
+     */
+    @java.lang.Override
+    public ast.Catalog.CatalogSchemaParentAndName getParentAndName() {
+      if (typeCase_ == 2) {
+         return (ast.Catalog.CatalogSchemaParentAndName) type_;
+      }
+      return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+    }
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     */
+    @java.lang.Override
+    public ast.Catalog.CatalogSchemaParentAndNameOrBuilder getParentAndNameOrBuilder() {
+      if (typeCase_ == 2) {
+         return (ast.Catalog.CatalogSchemaParentAndName) type_;
+      }
+      return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (typeCase_ == 1) {
+        output.writeMessage(1, (ast.Catalog.RootSchema) type_);
+      }
+      if (typeCase_ == 2) {
+        output.writeMessage(2, (ast.Catalog.CatalogSchemaParentAndName) type_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (typeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (ast.Catalog.RootSchema) type_);
+      }
+      if (typeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (ast.Catalog.CatalogSchemaParentAndName) type_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ast.Catalog.AbsoluteCatalogSchemaReference)) {
+        return super.equals(obj);
+      }
+      ast.Catalog.AbsoluteCatalogSchemaReference other = (ast.Catalog.AbsoluteCatalogSchemaReference) obj;
+
+      if (!getTypeCase().equals(other.getTypeCase())) return false;
+      switch (typeCase_) {
+        case 1:
+          if (!getRootSchema()
+              .equals(other.getRootSchema())) return false;
+          break;
+        case 2:
+          if (!getParentAndName()
+              .equals(other.getParentAndName())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (typeCase_) {
+        case 1:
+          hash = (37 * hash) + ROOT_SCHEMA_FIELD_NUMBER;
+          hash = (53 * hash) + getRootSchema().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + PARENT_AND_NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getParentAndName().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.AbsoluteCatalogSchemaReference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ast.Catalog.AbsoluteCatalogSchemaReference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ast.AbsoluteCatalogSchemaReference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ast.AbsoluteCatalogSchemaReference)
+        ast.Catalog.AbsoluteCatalogSchemaReferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ast.Catalog.internal_static_ast_AbsoluteCatalogSchemaReference_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ast.Catalog.internal_static_ast_AbsoluteCatalogSchemaReference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ast.Catalog.AbsoluteCatalogSchemaReference.class, ast.Catalog.AbsoluteCatalogSchemaReference.Builder.class);
+      }
+
+      // Construct using ast.Catalog.AbsoluteCatalogSchemaReference.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (rootSchemaBuilder_ != null) {
+          rootSchemaBuilder_.clear();
+        }
+        if (parentAndNameBuilder_ != null) {
+          parentAndNameBuilder_.clear();
+        }
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ast.Catalog.internal_static_ast_AbsoluteCatalogSchemaReference_descriptor;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.AbsoluteCatalogSchemaReference getDefaultInstanceForType() {
+        return ast.Catalog.AbsoluteCatalogSchemaReference.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ast.Catalog.AbsoluteCatalogSchemaReference build() {
+        ast.Catalog.AbsoluteCatalogSchemaReference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.AbsoluteCatalogSchemaReference buildPartial() {
+        ast.Catalog.AbsoluteCatalogSchemaReference result = new ast.Catalog.AbsoluteCatalogSchemaReference(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ast.Catalog.AbsoluteCatalogSchemaReference result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(ast.Catalog.AbsoluteCatalogSchemaReference result) {
+        result.typeCase_ = typeCase_;
+        result.type_ = this.type_;
+        if (typeCase_ == 1 &&
+            rootSchemaBuilder_ != null) {
+          result.type_ = rootSchemaBuilder_.build();
+        }
+        if (typeCase_ == 2 &&
+            parentAndNameBuilder_ != null) {
+          result.type_ = parentAndNameBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ast.Catalog.AbsoluteCatalogSchemaReference) {
+          return mergeFrom((ast.Catalog.AbsoluteCatalogSchemaReference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ast.Catalog.AbsoluteCatalogSchemaReference other) {
+        if (other == ast.Catalog.AbsoluteCatalogSchemaReference.getDefaultInstance()) return this;
+        switch (other.getTypeCase()) {
+          case ROOT_SCHEMA: {
+            mergeRootSchema(other.getRootSchema());
+            break;
+          }
+          case PARENT_AND_NAME: {
+            mergeParentAndName(other.getParentAndName());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getRootSchemaFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getParentAndNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 2;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.RootSchema, ast.Catalog.RootSchema.Builder, ast.Catalog.RootSchemaOrBuilder> rootSchemaBuilder_;
+      /**
+       * <code>.ast.RootSchema root_schema = 1;</code>
+       * @return Whether the rootSchema field is set.
+       */
+      @java.lang.Override
+      public boolean hasRootSchema() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <code>.ast.RootSchema root_schema = 1;</code>
+       * @return The rootSchema.
+       */
+      @java.lang.Override
+      public ast.Catalog.RootSchema getRootSchema() {
+        if (rootSchemaBuilder_ == null) {
+          if (typeCase_ == 1) {
+            return (ast.Catalog.RootSchema) type_;
+          }
+          return ast.Catalog.RootSchema.getDefaultInstance();
+        } else {
+          if (typeCase_ == 1) {
+            return rootSchemaBuilder_.getMessage();
+          }
+          return ast.Catalog.RootSchema.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.RootSchema root_schema = 1;</code>
+       */
+      public Builder setRootSchema(ast.Catalog.RootSchema value) {
+        if (rootSchemaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          rootSchemaBuilder_.setMessage(value);
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.ast.RootSchema root_schema = 1;</code>
+       */
+      public Builder setRootSchema(
+          ast.Catalog.RootSchema.Builder builderForValue) {
+        if (rootSchemaBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          rootSchemaBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.ast.RootSchema root_schema = 1;</code>
+       */
+      public Builder mergeRootSchema(ast.Catalog.RootSchema value) {
+        if (rootSchemaBuilder_ == null) {
+          if (typeCase_ == 1 &&
+              type_ != ast.Catalog.RootSchema.getDefaultInstance()) {
+            type_ = ast.Catalog.RootSchema.newBuilder((ast.Catalog.RootSchema) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 1) {
+            rootSchemaBuilder_.mergeFrom(value);
+          } else {
+            rootSchemaBuilder_.setMessage(value);
+          }
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.ast.RootSchema root_schema = 1;</code>
+       */
+      public Builder clearRootSchema() {
+        if (rootSchemaBuilder_ == null) {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          rootSchemaBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.RootSchema root_schema = 1;</code>
+       */
+      public ast.Catalog.RootSchema.Builder getRootSchemaBuilder() {
+        return getRootSchemaFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.RootSchema root_schema = 1;</code>
+       */
+      @java.lang.Override
+      public ast.Catalog.RootSchemaOrBuilder getRootSchemaOrBuilder() {
+        if ((typeCase_ == 1) && (rootSchemaBuilder_ != null)) {
+          return rootSchemaBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 1) {
+            return (ast.Catalog.RootSchema) type_;
+          }
+          return ast.Catalog.RootSchema.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.RootSchema root_schema = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.RootSchema, ast.Catalog.RootSchema.Builder, ast.Catalog.RootSchemaOrBuilder> 
+          getRootSchemaFieldBuilder() {
+        if (rootSchemaBuilder_ == null) {
+          if (!(typeCase_ == 1)) {
+            type_ = ast.Catalog.RootSchema.getDefaultInstance();
+          }
+          rootSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Catalog.RootSchema, ast.Catalog.RootSchema.Builder, ast.Catalog.RootSchemaOrBuilder>(
+                  (ast.Catalog.RootSchema) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 1;
+        onChanged();
+        return rootSchemaBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.CatalogSchemaParentAndName, ast.Catalog.CatalogSchemaParentAndName.Builder, ast.Catalog.CatalogSchemaParentAndNameOrBuilder> parentAndNameBuilder_;
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       * @return Whether the parentAndName field is set.
+       */
+      @java.lang.Override
+      public boolean hasParentAndName() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       * @return The parentAndName.
+       */
+      @java.lang.Override
+      public ast.Catalog.CatalogSchemaParentAndName getParentAndName() {
+        if (parentAndNameBuilder_ == null) {
+          if (typeCase_ == 2) {
+            return (ast.Catalog.CatalogSchemaParentAndName) type_;
+          }
+          return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2) {
+            return parentAndNameBuilder_.getMessage();
+          }
+          return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public Builder setParentAndName(ast.Catalog.CatalogSchemaParentAndName value) {
+        if (parentAndNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          parentAndNameBuilder_.setMessage(value);
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public Builder setParentAndName(
+          ast.Catalog.CatalogSchemaParentAndName.Builder builderForValue) {
+        if (parentAndNameBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          parentAndNameBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public Builder mergeParentAndName(ast.Catalog.CatalogSchemaParentAndName value) {
+        if (parentAndNameBuilder_ == null) {
+          if (typeCase_ == 2 &&
+              type_ != ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance()) {
+            type_ = ast.Catalog.CatalogSchemaParentAndName.newBuilder((ast.Catalog.CatalogSchemaParentAndName) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2) {
+            parentAndNameBuilder_.mergeFrom(value);
+          } else {
+            parentAndNameBuilder_.setMessage(value);
+          }
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public Builder clearParentAndName() {
+        if (parentAndNameBuilder_ == null) {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          parentAndNameBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public ast.Catalog.CatalogSchemaParentAndName.Builder getParentAndNameBuilder() {
+        return getParentAndNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      @java.lang.Override
+      public ast.Catalog.CatalogSchemaParentAndNameOrBuilder getParentAndNameOrBuilder() {
+        if ((typeCase_ == 2) && (parentAndNameBuilder_ != null)) {
+          return parentAndNameBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2) {
+            return (ast.Catalog.CatalogSchemaParentAndName) type_;
+          }
+          return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.CatalogSchemaParentAndName, ast.Catalog.CatalogSchemaParentAndName.Builder, ast.Catalog.CatalogSchemaParentAndNameOrBuilder> 
+          getParentAndNameFieldBuilder() {
+        if (parentAndNameBuilder_ == null) {
+          if (!(typeCase_ == 2)) {
+            type_ = ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+          }
+          parentAndNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Catalog.CatalogSchemaParentAndName, ast.Catalog.CatalogSchemaParentAndName.Builder, ast.Catalog.CatalogSchemaParentAndNameOrBuilder>(
+                  (ast.Catalog.CatalogSchemaParentAndName) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2;
+        onChanged();
+        return parentAndNameBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ast.AbsoluteCatalogSchemaReference)
+    }
+
+    // @@protoc_insertion_point(class_scope:ast.AbsoluteCatalogSchemaReference)
+    private static final ast.Catalog.AbsoluteCatalogSchemaReference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ast.Catalog.AbsoluteCatalogSchemaReference();
+    }
+
+    public static ast.Catalog.AbsoluteCatalogSchemaReference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AbsoluteCatalogSchemaReference>
+        PARSER = new com.google.protobuf.AbstractParser<AbsoluteCatalogSchemaReference>() {
+      @java.lang.Override
+      public AbsoluteCatalogSchemaReference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AbsoluteCatalogSchemaReference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AbsoluteCatalogSchemaReference> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ast.Catalog.AbsoluteCatalogSchemaReference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RootSchemaOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.RootSchema)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * Protobuf type {@code ast.RootSchema}
+   */
+  public static final class RootSchema extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ast.RootSchema)
+      RootSchemaOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        RootSchema.class.getName());
+    }
+    // Use RootSchema.newBuilder() to construct.
+    private RootSchema(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private RootSchema() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ast.Catalog.internal_static_ast_RootSchema_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ast.Catalog.internal_static_ast_RootSchema_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ast.Catalog.RootSchema.class, ast.Catalog.RootSchema.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ast.Catalog.RootSchema)) {
+        return super.equals(obj);
+      }
+      ast.Catalog.RootSchema other = (ast.Catalog.RootSchema) obj;
+
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ast.Catalog.RootSchema parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.RootSchema parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.RootSchema parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.RootSchema parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.RootSchema parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.RootSchema parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.RootSchema parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.RootSchema parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ast.Catalog.RootSchema parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ast.Catalog.RootSchema parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ast.Catalog.RootSchema parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.RootSchema parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ast.Catalog.RootSchema prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ast.RootSchema}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ast.RootSchema)
+        ast.Catalog.RootSchemaOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ast.Catalog.internal_static_ast_RootSchema_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ast.Catalog.internal_static_ast_RootSchema_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ast.Catalog.RootSchema.class, ast.Catalog.RootSchema.Builder.class);
+      }
+
+      // Construct using ast.Catalog.RootSchema.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ast.Catalog.internal_static_ast_RootSchema_descriptor;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.RootSchema getDefaultInstanceForType() {
+        return ast.Catalog.RootSchema.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ast.Catalog.RootSchema build() {
+        ast.Catalog.RootSchema result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.RootSchema buildPartial() {
+        ast.Catalog.RootSchema result = new ast.Catalog.RootSchema(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ast.Catalog.RootSchema) {
+          return mergeFrom((ast.Catalog.RootSchema)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ast.Catalog.RootSchema other) {
+        if (other == ast.Catalog.RootSchema.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ast.RootSchema)
+    }
+
+    // @@protoc_insertion_point(class_scope:ast.RootSchema)
+    private static final ast.Catalog.RootSchema DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ast.Catalog.RootSchema();
+    }
+
+    public static ast.Catalog.RootSchema getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RootSchema>
+        PARSER = new com.google.protobuf.AbstractParser<RootSchema>() {
+      @java.lang.Override
+      public RootSchema parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RootSchema> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RootSchema> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ast.Catalog.RootSchema getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CatalogSchemaParentAndNameOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.CatalogSchemaParentAndName)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ast.DirectoryPath directory_path = 1;</code>
+     * @return Whether the directoryPath field is set.
+     */
+    boolean hasDirectoryPath();
+    /**
+     * <code>.ast.DirectoryPath directory_path = 1;</code>
+     * @return The directoryPath.
+     */
+    ast.Catalog.DirectoryPath getDirectoryPath();
+    /**
+     * <code>.ast.DirectoryPath directory_path = 1;</code>
+     */
+    ast.Catalog.DirectoryPathOrBuilder getDirectoryPathOrBuilder();
+
+    /**
+     * <code>.ast.Identifier schema_name = 2;</code>
+     * @return Whether the schemaName field is set.
+     */
+    boolean hasSchemaName();
+    /**
+     * <code>.ast.Identifier schema_name = 2;</code>
+     * @return The schemaName.
+     */
+    ast.Literals.Identifier getSchemaName();
+    /**
+     * <code>.ast.Identifier schema_name = 2;</code>
+     */
+    ast.Literals.IdentifierOrBuilder getSchemaNameOrBuilder();
+  }
+  /**
+   * Protobuf type {@code ast.CatalogSchemaParentAndName}
+   */
+  public static final class CatalogSchemaParentAndName extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ast.CatalogSchemaParentAndName)
+      CatalogSchemaParentAndNameOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        CatalogSchemaParentAndName.class.getName());
+    }
+    // Use CatalogSchemaParentAndName.newBuilder() to construct.
+    private CatalogSchemaParentAndName(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private CatalogSchemaParentAndName() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ast.Catalog.internal_static_ast_CatalogSchemaParentAndName_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ast.Catalog.internal_static_ast_CatalogSchemaParentAndName_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ast.Catalog.CatalogSchemaParentAndName.class, ast.Catalog.CatalogSchemaParentAndName.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int DIRECTORY_PATH_FIELD_NUMBER = 1;
+    private ast.Catalog.DirectoryPath directoryPath_;
+    /**
+     * <code>.ast.DirectoryPath directory_path = 1;</code>
+     * @return Whether the directoryPath field is set.
+     */
+    @java.lang.Override
+    public boolean hasDirectoryPath() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.ast.DirectoryPath directory_path = 1;</code>
+     * @return The directoryPath.
+     */
+    @java.lang.Override
+    public ast.Catalog.DirectoryPath getDirectoryPath() {
+      return directoryPath_ == null ? ast.Catalog.DirectoryPath.getDefaultInstance() : directoryPath_;
+    }
+    /**
+     * <code>.ast.DirectoryPath directory_path = 1;</code>
+     */
+    @java.lang.Override
+    public ast.Catalog.DirectoryPathOrBuilder getDirectoryPathOrBuilder() {
+      return directoryPath_ == null ? ast.Catalog.DirectoryPath.getDefaultInstance() : directoryPath_;
+    }
+
+    public static final int SCHEMA_NAME_FIELD_NUMBER = 2;
+    private ast.Literals.Identifier schemaName_;
+    /**
+     * <code>.ast.Identifier schema_name = 2;</code>
+     * @return Whether the schemaName field is set.
+     */
+    @java.lang.Override
+    public boolean hasSchemaName() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.ast.Identifier schema_name = 2;</code>
+     * @return The schemaName.
+     */
+    @java.lang.Override
+    public ast.Literals.Identifier getSchemaName() {
+      return schemaName_ == null ? ast.Literals.Identifier.getDefaultInstance() : schemaName_;
+    }
+    /**
+     * <code>.ast.Identifier schema_name = 2;</code>
+     */
+    @java.lang.Override
+    public ast.Literals.IdentifierOrBuilder getSchemaNameOrBuilder() {
+      return schemaName_ == null ? ast.Literals.Identifier.getDefaultInstance() : schemaName_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getDirectoryPath());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getSchemaName());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getDirectoryPath());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getSchemaName());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ast.Catalog.CatalogSchemaParentAndName)) {
+        return super.equals(obj);
+      }
+      ast.Catalog.CatalogSchemaParentAndName other = (ast.Catalog.CatalogSchemaParentAndName) obj;
+
+      if (hasDirectoryPath() != other.hasDirectoryPath()) return false;
+      if (hasDirectoryPath()) {
+        if (!getDirectoryPath()
+            .equals(other.getDirectoryPath())) return false;
+      }
+      if (hasSchemaName() != other.hasSchemaName()) return false;
+      if (hasSchemaName()) {
+        if (!getSchemaName()
+            .equals(other.getSchemaName())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasDirectoryPath()) {
+        hash = (37 * hash) + DIRECTORY_PATH_FIELD_NUMBER;
+        hash = (53 * hash) + getDirectoryPath().hashCode();
+      }
+      if (hasSchemaName()) {
+        hash = (37 * hash) + SCHEMA_NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getSchemaName().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ast.Catalog.CatalogSchemaParentAndName parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ast.Catalog.CatalogSchemaParentAndName parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.CatalogSchemaParentAndName parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ast.Catalog.CatalogSchemaParentAndName prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ast.CatalogSchemaParentAndName}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ast.CatalogSchemaParentAndName)
+        ast.Catalog.CatalogSchemaParentAndNameOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ast.Catalog.internal_static_ast_CatalogSchemaParentAndName_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ast.Catalog.internal_static_ast_CatalogSchemaParentAndName_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ast.Catalog.CatalogSchemaParentAndName.class, ast.Catalog.CatalogSchemaParentAndName.Builder.class);
+      }
+
+      // Construct using ast.Catalog.CatalogSchemaParentAndName.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getDirectoryPathFieldBuilder();
+          getSchemaNameFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        directoryPath_ = null;
+        if (directoryPathBuilder_ != null) {
+          directoryPathBuilder_.dispose();
+          directoryPathBuilder_ = null;
+        }
+        schemaName_ = null;
+        if (schemaNameBuilder_ != null) {
+          schemaNameBuilder_.dispose();
+          schemaNameBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ast.Catalog.internal_static_ast_CatalogSchemaParentAndName_descriptor;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.CatalogSchemaParentAndName getDefaultInstanceForType() {
+        return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ast.Catalog.CatalogSchemaParentAndName build() {
+        ast.Catalog.CatalogSchemaParentAndName result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.CatalogSchemaParentAndName buildPartial() {
+        ast.Catalog.CatalogSchemaParentAndName result = new ast.Catalog.CatalogSchemaParentAndName(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ast.Catalog.CatalogSchemaParentAndName result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.directoryPath_ = directoryPathBuilder_ == null
+              ? directoryPath_
+              : directoryPathBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.schemaName_ = schemaNameBuilder_ == null
+              ? schemaName_
+              : schemaNameBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ast.Catalog.CatalogSchemaParentAndName) {
+          return mergeFrom((ast.Catalog.CatalogSchemaParentAndName)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ast.Catalog.CatalogSchemaParentAndName other) {
+        if (other == ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance()) return this;
+        if (other.hasDirectoryPath()) {
+          mergeDirectoryPath(other.getDirectoryPath());
+        }
+        if (other.hasSchemaName()) {
+          mergeSchemaName(other.getSchemaName());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getDirectoryPathFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getSchemaNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private ast.Catalog.DirectoryPath directoryPath_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.DirectoryPath, ast.Catalog.DirectoryPath.Builder, ast.Catalog.DirectoryPathOrBuilder> directoryPathBuilder_;
+      /**
+       * <code>.ast.DirectoryPath directory_path = 1;</code>
+       * @return Whether the directoryPath field is set.
+       */
+      public boolean hasDirectoryPath() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ast.DirectoryPath directory_path = 1;</code>
+       * @return The directoryPath.
+       */
+      public ast.Catalog.DirectoryPath getDirectoryPath() {
+        if (directoryPathBuilder_ == null) {
+          return directoryPath_ == null ? ast.Catalog.DirectoryPath.getDefaultInstance() : directoryPath_;
+        } else {
+          return directoryPathBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ast.DirectoryPath directory_path = 1;</code>
+       */
+      public Builder setDirectoryPath(ast.Catalog.DirectoryPath value) {
+        if (directoryPathBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          directoryPath_ = value;
+        } else {
+          directoryPathBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.DirectoryPath directory_path = 1;</code>
+       */
+      public Builder setDirectoryPath(
+          ast.Catalog.DirectoryPath.Builder builderForValue) {
+        if (directoryPathBuilder_ == null) {
+          directoryPath_ = builderForValue.build();
+        } else {
+          directoryPathBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.DirectoryPath directory_path = 1;</code>
+       */
+      public Builder mergeDirectoryPath(ast.Catalog.DirectoryPath value) {
+        if (directoryPathBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            directoryPath_ != null &&
+            directoryPath_ != ast.Catalog.DirectoryPath.getDefaultInstance()) {
+            getDirectoryPathBuilder().mergeFrom(value);
+          } else {
+            directoryPath_ = value;
+          }
+        } else {
+          directoryPathBuilder_.mergeFrom(value);
+        }
+        if (directoryPath_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.DirectoryPath directory_path = 1;</code>
+       */
+      public Builder clearDirectoryPath() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        directoryPath_ = null;
+        if (directoryPathBuilder_ != null) {
+          directoryPathBuilder_.dispose();
+          directoryPathBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.DirectoryPath directory_path = 1;</code>
+       */
+      public ast.Catalog.DirectoryPath.Builder getDirectoryPathBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getDirectoryPathFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.DirectoryPath directory_path = 1;</code>
+       */
+      public ast.Catalog.DirectoryPathOrBuilder getDirectoryPathOrBuilder() {
+        if (directoryPathBuilder_ != null) {
+          return directoryPathBuilder_.getMessageOrBuilder();
+        } else {
+          return directoryPath_ == null ?
+              ast.Catalog.DirectoryPath.getDefaultInstance() : directoryPath_;
+        }
+      }
+      /**
+       * <code>.ast.DirectoryPath directory_path = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.DirectoryPath, ast.Catalog.DirectoryPath.Builder, ast.Catalog.DirectoryPathOrBuilder> 
+          getDirectoryPathFieldBuilder() {
+        if (directoryPathBuilder_ == null) {
+          directoryPathBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Catalog.DirectoryPath, ast.Catalog.DirectoryPath.Builder, ast.Catalog.DirectoryPathOrBuilder>(
+                  getDirectoryPath(),
+                  getParentForChildren(),
+                  isClean());
+          directoryPath_ = null;
+        }
+        return directoryPathBuilder_;
+      }
+
+      private ast.Literals.Identifier schemaName_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Literals.Identifier, ast.Literals.Identifier.Builder, ast.Literals.IdentifierOrBuilder> schemaNameBuilder_;
+      /**
+       * <code>.ast.Identifier schema_name = 2;</code>
+       * @return Whether the schemaName field is set.
+       */
+      public boolean hasSchemaName() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.ast.Identifier schema_name = 2;</code>
+       * @return The schemaName.
+       */
+      public ast.Literals.Identifier getSchemaName() {
+        if (schemaNameBuilder_ == null) {
+          return schemaName_ == null ? ast.Literals.Identifier.getDefaultInstance() : schemaName_;
+        } else {
+          return schemaNameBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ast.Identifier schema_name = 2;</code>
+       */
+      public Builder setSchemaName(ast.Literals.Identifier value) {
+        if (schemaNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          schemaName_ = value;
+        } else {
+          schemaNameBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.Identifier schema_name = 2;</code>
+       */
+      public Builder setSchemaName(
+          ast.Literals.Identifier.Builder builderForValue) {
+        if (schemaNameBuilder_ == null) {
+          schemaName_ = builderForValue.build();
+        } else {
+          schemaNameBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.Identifier schema_name = 2;</code>
+       */
+      public Builder mergeSchemaName(ast.Literals.Identifier value) {
+        if (schemaNameBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            schemaName_ != null &&
+            schemaName_ != ast.Literals.Identifier.getDefaultInstance()) {
+            getSchemaNameBuilder().mergeFrom(value);
+          } else {
+            schemaName_ = value;
+          }
+        } else {
+          schemaNameBuilder_.mergeFrom(value);
+        }
+        if (schemaName_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.Identifier schema_name = 2;</code>
+       */
+      public Builder clearSchemaName() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        schemaName_ = null;
+        if (schemaNameBuilder_ != null) {
+          schemaNameBuilder_.dispose();
+          schemaNameBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.Identifier schema_name = 2;</code>
+       */
+      public ast.Literals.Identifier.Builder getSchemaNameBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getSchemaNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.Identifier schema_name = 2;</code>
+       */
+      public ast.Literals.IdentifierOrBuilder getSchemaNameOrBuilder() {
+        if (schemaNameBuilder_ != null) {
+          return schemaNameBuilder_.getMessageOrBuilder();
+        } else {
+          return schemaName_ == null ?
+              ast.Literals.Identifier.getDefaultInstance() : schemaName_;
+        }
+      }
+      /**
+       * <code>.ast.Identifier schema_name = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Literals.Identifier, ast.Literals.Identifier.Builder, ast.Literals.IdentifierOrBuilder> 
+          getSchemaNameFieldBuilder() {
+        if (schemaNameBuilder_ == null) {
+          schemaNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Literals.Identifier, ast.Literals.Identifier.Builder, ast.Literals.IdentifierOrBuilder>(
+                  getSchemaName(),
+                  getParentForChildren(),
+                  isClean());
+          schemaName_ = null;
+        }
+        return schemaNameBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ast.CatalogSchemaParentAndName)
+    }
+
+    // @@protoc_insertion_point(class_scope:ast.CatalogSchemaParentAndName)
+    private static final ast.Catalog.CatalogSchemaParentAndName DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ast.Catalog.CatalogSchemaParentAndName();
+    }
+
+    public static ast.Catalog.CatalogSchemaParentAndName getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<CatalogSchemaParentAndName>
+        PARSER = new com.google.protobuf.AbstractParser<CatalogSchemaParentAndName>() {
+      @java.lang.Override
+      public CatalogSchemaParentAndName parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<CatalogSchemaParentAndName> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<CatalogSchemaParentAndName> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ast.Catalog.CatalogSchemaParentAndName getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface RelativeCatalogSchemaReferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.RelativeCatalogSchemaReference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+     * @return Whether the predefinedSchema field is set.
+     */
+    boolean hasPredefinedSchema();
+    /**
+     * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+     * @return The enum numeric value on the wire for predefinedSchema.
+     */
+    int getPredefinedSchemaValue();
+    /**
+     * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+     * @return The predefinedSchema.
+     */
+    ast.Catalog.PredefinedSchemaReference getPredefinedSchema();
+
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     * @return Whether the parentAndName field is set.
+     */
+    boolean hasParentAndName();
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     * @return The parentAndName.
+     */
+    ast.Catalog.CatalogSchemaParentAndName getParentAndName();
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     */
+    ast.Catalog.CatalogSchemaParentAndNameOrBuilder getParentAndNameOrBuilder();
+
+    ast.Catalog.RelativeCatalogSchemaReference.TypeCase getTypeCase();
+  }
+  /**
+   * Protobuf type {@code ast.RelativeCatalogSchemaReference}
+   */
+  public static final class RelativeCatalogSchemaReference extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ast.RelativeCatalogSchemaReference)
+      RelativeCatalogSchemaReferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        RelativeCatalogSchemaReference.class.getName());
+    }
+    // Use RelativeCatalogSchemaReference.newBuilder() to construct.
+    private RelativeCatalogSchemaReference(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private RelativeCatalogSchemaReference() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ast.Catalog.internal_static_ast_RelativeCatalogSchemaReference_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ast.Catalog.internal_static_ast_RelativeCatalogSchemaReference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ast.Catalog.RelativeCatalogSchemaReference.class, ast.Catalog.RelativeCatalogSchemaReference.Builder.class);
+    }
+
+    private int typeCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      PREDEFINED_SCHEMA(1),
+      PARENT_AND_NAME(2),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return PREDEFINED_SCHEMA;
+          case 2: return PARENT_AND_NAME;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int PREDEFINED_SCHEMA_FIELD_NUMBER = 1;
+    /**
+     * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+     * @return Whether the predefinedSchema field is set.
+     */
+    public boolean hasPredefinedSchema() {
+      return typeCase_ == 1;
+    }
+    /**
+     * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+     * @return The enum numeric value on the wire for predefinedSchema.
+     */
+    public int getPredefinedSchemaValue() {
+      if (typeCase_ == 1) {
+        return (java.lang.Integer) type_;
+      }
+      return 0;
+    }
+    /**
+     * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+     * @return The predefinedSchema.
+     */
+    public ast.Catalog.PredefinedSchemaReference getPredefinedSchema() {
+      if (typeCase_ == 1) {
+        ast.Catalog.PredefinedSchemaReference result = ast.Catalog.PredefinedSchemaReference.forNumber(
+            (java.lang.Integer) type_);
+        return result == null ? ast.Catalog.PredefinedSchemaReference.UNRECOGNIZED : result;
+      }
+      return ast.Catalog.PredefinedSchemaReference.HOME_SCHEMA;
+    }
+
+    public static final int PARENT_AND_NAME_FIELD_NUMBER = 2;
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     * @return Whether the parentAndName field is set.
+     */
+    @java.lang.Override
+    public boolean hasParentAndName() {
+      return typeCase_ == 2;
+    }
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     * @return The parentAndName.
+     */
+    @java.lang.Override
+    public ast.Catalog.CatalogSchemaParentAndName getParentAndName() {
+      if (typeCase_ == 2) {
+         return (ast.Catalog.CatalogSchemaParentAndName) type_;
+      }
+      return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+    }
+    /**
+     * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+     */
+    @java.lang.Override
+    public ast.Catalog.CatalogSchemaParentAndNameOrBuilder getParentAndNameOrBuilder() {
+      if (typeCase_ == 2) {
+         return (ast.Catalog.CatalogSchemaParentAndName) type_;
+      }
+      return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (typeCase_ == 1) {
+        output.writeEnum(1, ((java.lang.Integer) type_));
+      }
+      if (typeCase_ == 2) {
+        output.writeMessage(2, (ast.Catalog.CatalogSchemaParentAndName) type_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (typeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, ((java.lang.Integer) type_));
+      }
+      if (typeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (ast.Catalog.CatalogSchemaParentAndName) type_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ast.Catalog.RelativeCatalogSchemaReference)) {
+        return super.equals(obj);
+      }
+      ast.Catalog.RelativeCatalogSchemaReference other = (ast.Catalog.RelativeCatalogSchemaReference) obj;
+
+      if (!getTypeCase().equals(other.getTypeCase())) return false;
+      switch (typeCase_) {
+        case 1:
+          if (getPredefinedSchemaValue()
+              != other.getPredefinedSchemaValue()) return false;
+          break;
+        case 2:
+          if (!getParentAndName()
+              .equals(other.getParentAndName())) return false;
+          break;
+        case 0:
+        default:
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      switch (typeCase_) {
+        case 1:
+          hash = (37 * hash) + PREDEFINED_SCHEMA_FIELD_NUMBER;
+          hash = (53 * hash) + getPredefinedSchemaValue();
+          break;
+        case 2:
+          hash = (37 * hash) + PARENT_AND_NAME_FIELD_NUMBER;
+          hash = (53 * hash) + getParentAndName().hashCode();
+          break;
+        case 0:
+        default:
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ast.Catalog.RelativeCatalogSchemaReference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ast.Catalog.RelativeCatalogSchemaReference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.RelativeCatalogSchemaReference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ast.Catalog.RelativeCatalogSchemaReference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ast.RelativeCatalogSchemaReference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ast.RelativeCatalogSchemaReference)
+        ast.Catalog.RelativeCatalogSchemaReferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ast.Catalog.internal_static_ast_RelativeCatalogSchemaReference_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ast.Catalog.internal_static_ast_RelativeCatalogSchemaReference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ast.Catalog.RelativeCatalogSchemaReference.class, ast.Catalog.RelativeCatalogSchemaReference.Builder.class);
+      }
+
+      // Construct using ast.Catalog.RelativeCatalogSchemaReference.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (parentAndNameBuilder_ != null) {
+          parentAndNameBuilder_.clear();
+        }
+        typeCase_ = 0;
+        type_ = null;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ast.Catalog.internal_static_ast_RelativeCatalogSchemaReference_descriptor;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.RelativeCatalogSchemaReference getDefaultInstanceForType() {
+        return ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ast.Catalog.RelativeCatalogSchemaReference build() {
+        ast.Catalog.RelativeCatalogSchemaReference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.RelativeCatalogSchemaReference buildPartial() {
+        ast.Catalog.RelativeCatalogSchemaReference result = new ast.Catalog.RelativeCatalogSchemaReference(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ast.Catalog.RelativeCatalogSchemaReference result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(ast.Catalog.RelativeCatalogSchemaReference result) {
+        result.typeCase_ = typeCase_;
+        result.type_ = this.type_;
+        if (typeCase_ == 2 &&
+            parentAndNameBuilder_ != null) {
+          result.type_ = parentAndNameBuilder_.build();
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ast.Catalog.RelativeCatalogSchemaReference) {
+          return mergeFrom((ast.Catalog.RelativeCatalogSchemaReference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ast.Catalog.RelativeCatalogSchemaReference other) {
+        if (other == ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance()) return this;
+        switch (other.getTypeCase()) {
+          case PREDEFINED_SCHEMA: {
+            setPredefinedSchemaValue(other.getPredefinedSchemaValue());
+            break;
+          }
+          case PARENT_AND_NAME: {
+            mergeParentAndName(other.getParentAndName());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int rawValue = input.readEnum();
+                typeCase_ = 1;
+                type_ = rawValue;
+                break;
+              } // case 8
+              case 18: {
+                input.readMessage(
+                    getParentAndNameFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 2;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
+
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       * @return Whether the predefinedSchema field is set.
+       */
+      @java.lang.Override
+      public boolean hasPredefinedSchema() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       * @return The enum numeric value on the wire for predefinedSchema.
+       */
+      @java.lang.Override
+      public int getPredefinedSchemaValue() {
+        if (typeCase_ == 1) {
+          return ((java.lang.Integer) type_).intValue();
+        }
+        return 0;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       * @param value The enum numeric value on the wire for predefinedSchema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPredefinedSchemaValue(int value) {
+        typeCase_ = 1;
+        type_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       * @return The predefinedSchema.
+       */
+      @java.lang.Override
+      public ast.Catalog.PredefinedSchemaReference getPredefinedSchema() {
+        if (typeCase_ == 1) {
+          ast.Catalog.PredefinedSchemaReference result = ast.Catalog.PredefinedSchemaReference.forNumber(
+              (java.lang.Integer) type_);
+          return result == null ? ast.Catalog.PredefinedSchemaReference.UNRECOGNIZED : result;
+        }
+        return ast.Catalog.PredefinedSchemaReference.HOME_SCHEMA;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       * @param value The predefinedSchema to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPredefinedSchema(ast.Catalog.PredefinedSchemaReference value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        typeCase_ = 1;
+        type_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPredefinedSchema() {
+        if (typeCase_ == 1) {
+          typeCase_ = 0;
+          type_ = null;
+          onChanged();
+        }
+        return this;
+      }
+
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.CatalogSchemaParentAndName, ast.Catalog.CatalogSchemaParentAndName.Builder, ast.Catalog.CatalogSchemaParentAndNameOrBuilder> parentAndNameBuilder_;
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       * @return Whether the parentAndName field is set.
+       */
+      @java.lang.Override
+      public boolean hasParentAndName() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       * @return The parentAndName.
+       */
+      @java.lang.Override
+      public ast.Catalog.CatalogSchemaParentAndName getParentAndName() {
+        if (parentAndNameBuilder_ == null) {
+          if (typeCase_ == 2) {
+            return (ast.Catalog.CatalogSchemaParentAndName) type_;
+          }
+          return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2) {
+            return parentAndNameBuilder_.getMessage();
+          }
+          return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public Builder setParentAndName(ast.Catalog.CatalogSchemaParentAndName value) {
+        if (parentAndNameBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          parentAndNameBuilder_.setMessage(value);
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public Builder setParentAndName(
+          ast.Catalog.CatalogSchemaParentAndName.Builder builderForValue) {
+        if (parentAndNameBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          parentAndNameBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public Builder mergeParentAndName(ast.Catalog.CatalogSchemaParentAndName value) {
+        if (parentAndNameBuilder_ == null) {
+          if (typeCase_ == 2 &&
+              type_ != ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance()) {
+            type_ = ast.Catalog.CatalogSchemaParentAndName.newBuilder((ast.Catalog.CatalogSchemaParentAndName) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2) {
+            parentAndNameBuilder_.mergeFrom(value);
+          } else {
+            parentAndNameBuilder_.setMessage(value);
+          }
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public Builder clearParentAndName() {
+        if (parentAndNameBuilder_ == null) {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          parentAndNameBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      public ast.Catalog.CatalogSchemaParentAndName.Builder getParentAndNameBuilder() {
+        return getParentAndNameFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      @java.lang.Override
+      public ast.Catalog.CatalogSchemaParentAndNameOrBuilder getParentAndNameOrBuilder() {
+        if ((typeCase_ == 2) && (parentAndNameBuilder_ != null)) {
+          return parentAndNameBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2) {
+            return (ast.Catalog.CatalogSchemaParentAndName) type_;
+          }
+          return ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.CatalogSchemaParentAndName, ast.Catalog.CatalogSchemaParentAndName.Builder, ast.Catalog.CatalogSchemaParentAndNameOrBuilder> 
+          getParentAndNameFieldBuilder() {
+        if (parentAndNameBuilder_ == null) {
+          if (!(typeCase_ == 2)) {
+            type_ = ast.Catalog.CatalogSchemaParentAndName.getDefaultInstance();
+          }
+          parentAndNameBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Catalog.CatalogSchemaParentAndName, ast.Catalog.CatalogSchemaParentAndName.Builder, ast.Catalog.CatalogSchemaParentAndNameOrBuilder>(
+                  (ast.Catalog.CatalogSchemaParentAndName) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2;
+        onChanged();
+        return parentAndNameBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ast.RelativeCatalogSchemaReference)
+    }
+
+    // @@protoc_insertion_point(class_scope:ast.RelativeCatalogSchemaReference)
+    private static final ast.Catalog.RelativeCatalogSchemaReference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ast.Catalog.RelativeCatalogSchemaReference();
+    }
+
+    public static ast.Catalog.RelativeCatalogSchemaReference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<RelativeCatalogSchemaReference>
+        PARSER = new com.google.protobuf.AbstractParser<RelativeCatalogSchemaReference>() {
+      @java.lang.Override
+      public RelativeCatalogSchemaReference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<RelativeCatalogSchemaReference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<RelativeCatalogSchemaReference> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ast.Catalog.RelativeCatalogSchemaReference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface DirectoryPathOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.DirectoryPath)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -3091,12 +6024,12 @@ public final class Catalog {
         getValueBytes();
   }
   /**
-   * Protobuf type {@code ast.AbsoluteCatalogPath}
+   * Protobuf type {@code ast.DirectoryPath}
    */
-  public static final class AbsoluteCatalogPath extends
+  public static final class DirectoryPath extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:ast.AbsoluteCatalogPath)
-      AbsoluteCatalogPathOrBuilder {
+      // @@protoc_insertion_point(message_implements:ast.DirectoryPath)
+      DirectoryPathOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -3105,27 +6038,27 @@ public final class Catalog {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        AbsoluteCatalogPath.class.getName());
+        DirectoryPath.class.getName());
     }
-    // Use AbsoluteCatalogPath.newBuilder() to construct.
-    private AbsoluteCatalogPath(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use DirectoryPath.newBuilder() to construct.
+    private DirectoryPath(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private AbsoluteCatalogPath() {
+    private DirectoryPath() {
       value_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ast.Catalog.internal_static_ast_AbsoluteCatalogPath_descriptor;
+      return ast.Catalog.internal_static_ast_DirectoryPath_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ast.Catalog.internal_static_ast_AbsoluteCatalogPath_fieldAccessorTable
+      return ast.Catalog.internal_static_ast_DirectoryPath_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ast.Catalog.AbsoluteCatalogPath.class, ast.Catalog.AbsoluteCatalogPath.Builder.class);
+              ast.Catalog.DirectoryPath.class, ast.Catalog.DirectoryPath.Builder.class);
     }
 
     public static final int VALUE_FIELD_NUMBER = 1;
@@ -3206,10 +6139,10 @@ public final class Catalog {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ast.Catalog.AbsoluteCatalogPath)) {
+      if (!(obj instanceof ast.Catalog.DirectoryPath)) {
         return super.equals(obj);
       }
-      ast.Catalog.AbsoluteCatalogPath other = (ast.Catalog.AbsoluteCatalogPath) obj;
+      ast.Catalog.DirectoryPath other = (ast.Catalog.DirectoryPath) obj;
 
       if (!getValue()
           .equals(other.getValue())) return false;
@@ -3231,44 +6164,44 @@ public final class Catalog {
       return hash;
     }
 
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(
+    public static ast.Catalog.DirectoryPath parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(
+    public static ast.Catalog.DirectoryPath parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(
+    public static ast.Catalog.DirectoryPath parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(
+    public static ast.Catalog.DirectoryPath parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(byte[] data)
+    public static ast.Catalog.DirectoryPath parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(
+    public static ast.Catalog.DirectoryPath parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(java.io.InputStream input)
+    public static ast.Catalog.DirectoryPath parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(
+    public static ast.Catalog.DirectoryPath parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3276,26 +6209,26 @@ public final class Catalog {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static ast.Catalog.AbsoluteCatalogPath parseDelimitedFrom(java.io.InputStream input)
+    public static ast.Catalog.DirectoryPath parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static ast.Catalog.AbsoluteCatalogPath parseDelimitedFrom(
+    public static ast.Catalog.DirectoryPath parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(
+    public static ast.Catalog.DirectoryPath parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static ast.Catalog.AbsoluteCatalogPath parseFrom(
+    public static ast.Catalog.DirectoryPath parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3308,7 +6241,7 @@ public final class Catalog {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ast.Catalog.AbsoluteCatalogPath prototype) {
+    public static Builder newBuilder(ast.Catalog.DirectoryPath prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3324,26 +6257,26 @@ public final class Catalog {
       return builder;
     }
     /**
-     * Protobuf type {@code ast.AbsoluteCatalogPath}
+     * Protobuf type {@code ast.DirectoryPath}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ast.AbsoluteCatalogPath)
-        ast.Catalog.AbsoluteCatalogPathOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ast.DirectoryPath)
+        ast.Catalog.DirectoryPathOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ast.Catalog.internal_static_ast_AbsoluteCatalogPath_descriptor;
+        return ast.Catalog.internal_static_ast_DirectoryPath_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ast.Catalog.internal_static_ast_AbsoluteCatalogPath_fieldAccessorTable
+        return ast.Catalog.internal_static_ast_DirectoryPath_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ast.Catalog.AbsoluteCatalogPath.class, ast.Catalog.AbsoluteCatalogPath.Builder.class);
+                ast.Catalog.DirectoryPath.class, ast.Catalog.DirectoryPath.Builder.class);
       }
 
-      // Construct using ast.Catalog.AbsoluteCatalogPath.newBuilder()
+      // Construct using ast.Catalog.DirectoryPath.newBuilder()
       private Builder() {
 
       }
@@ -3364,17 +6297,17 @@ public final class Catalog {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ast.Catalog.internal_static_ast_AbsoluteCatalogPath_descriptor;
+        return ast.Catalog.internal_static_ast_DirectoryPath_descriptor;
       }
 
       @java.lang.Override
-      public ast.Catalog.AbsoluteCatalogPath getDefaultInstanceForType() {
-        return ast.Catalog.AbsoluteCatalogPath.getDefaultInstance();
+      public ast.Catalog.DirectoryPath getDefaultInstanceForType() {
+        return ast.Catalog.DirectoryPath.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ast.Catalog.AbsoluteCatalogPath build() {
-        ast.Catalog.AbsoluteCatalogPath result = buildPartial();
+      public ast.Catalog.DirectoryPath build() {
+        ast.Catalog.DirectoryPath result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3382,14 +6315,14 @@ public final class Catalog {
       }
 
       @java.lang.Override
-      public ast.Catalog.AbsoluteCatalogPath buildPartial() {
-        ast.Catalog.AbsoluteCatalogPath result = new ast.Catalog.AbsoluteCatalogPath(this);
+      public ast.Catalog.DirectoryPath buildPartial() {
+        ast.Catalog.DirectoryPath result = new ast.Catalog.DirectoryPath(this);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartial0(ast.Catalog.AbsoluteCatalogPath result) {
+      private void buildPartial0(ast.Catalog.DirectoryPath result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
           result.value_ = value_;
@@ -3398,16 +6331,16 @@ public final class Catalog {
 
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ast.Catalog.AbsoluteCatalogPath) {
-          return mergeFrom((ast.Catalog.AbsoluteCatalogPath)other);
+        if (other instanceof ast.Catalog.DirectoryPath) {
+          return mergeFrom((ast.Catalog.DirectoryPath)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ast.Catalog.AbsoluteCatalogPath other) {
-        if (other == ast.Catalog.AbsoluteCatalogPath.getDefaultInstance()) return this;
+      public Builder mergeFrom(ast.Catalog.DirectoryPath other) {
+        if (other == ast.Catalog.DirectoryPath.getDefaultInstance()) return this;
         if (!other.getValue().isEmpty()) {
           value_ = other.value_;
           bitField0_ |= 0x00000001;
@@ -3533,23 +6466,23 @@ public final class Catalog {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:ast.AbsoluteCatalogPath)
+      // @@protoc_insertion_point(builder_scope:ast.DirectoryPath)
     }
 
-    // @@protoc_insertion_point(class_scope:ast.AbsoluteCatalogPath)
-    private static final ast.Catalog.AbsoluteCatalogPath DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ast.DirectoryPath)
+    private static final ast.Catalog.DirectoryPath DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ast.Catalog.AbsoluteCatalogPath();
+      DEFAULT_INSTANCE = new ast.Catalog.DirectoryPath();
     }
 
-    public static ast.Catalog.AbsoluteCatalogPath getDefaultInstance() {
+    public static ast.Catalog.DirectoryPath getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AbsoluteCatalogPath>
-        PARSER = new com.google.protobuf.AbstractParser<AbsoluteCatalogPath>() {
+    private static final com.google.protobuf.Parser<DirectoryPath>
+        PARSER = new com.google.protobuf.AbstractParser<DirectoryPath>() {
       @java.lang.Override
-      public AbsoluteCatalogPath parsePartialFrom(
+      public DirectoryPath parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -3568,527 +6501,17 @@ public final class Catalog {
       }
     };
 
-    public static com.google.protobuf.Parser<AbsoluteCatalogPath> parser() {
+    public static com.google.protobuf.Parser<DirectoryPath> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AbsoluteCatalogPath> getParserForType() {
+    public com.google.protobuf.Parser<DirectoryPath> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ast.Catalog.AbsoluteCatalogPath getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface RelativeCatalogPathOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ast.RelativeCatalogPath)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string value = 1;</code>
-     * @return The value.
-     */
-    java.lang.String getValue();
-    /**
-     * <code>string value = 1;</code>
-     * @return The bytes for value.
-     */
-    com.google.protobuf.ByteString
-        getValueBytes();
-  }
-  /**
-   * Protobuf type {@code ast.RelativeCatalogPath}
-   */
-  public static final class RelativeCatalogPath extends
-      com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:ast.RelativeCatalogPath)
-      RelativeCatalogPathOrBuilder {
-  private static final long serialVersionUID = 0L;
-    static {
-      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 29,
-        /* patch= */ 3,
-        /* suffix= */ "",
-        RelativeCatalogPath.class.getName());
-    }
-    // Use RelativeCatalogPath.newBuilder() to construct.
-    private RelativeCatalogPath(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
-      super(builder);
-    }
-    private RelativeCatalogPath() {
-      value_ = "";
-    }
-
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return ast.Catalog.internal_static_ast_RelativeCatalogPath_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return ast.Catalog.internal_static_ast_RelativeCatalogPath_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              ast.Catalog.RelativeCatalogPath.class, ast.Catalog.RelativeCatalogPath.Builder.class);
-    }
-
-    public static final int VALUE_FIELD_NUMBER = 1;
-    @SuppressWarnings("serial")
-    private volatile java.lang.Object value_ = "";
-    /**
-     * <code>string value = 1;</code>
-     * @return The value.
-     */
-    @java.lang.Override
-    public java.lang.String getValue() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        value_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string value = 1;</code>
-     * @return The bytes for value.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = value_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        value_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
-        com.google.protobuf.GeneratedMessage.writeString(output, 1, value_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(value_)) {
-        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, value_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof ast.Catalog.RelativeCatalogPath)) {
-        return super.equals(obj);
-      }
-      ast.Catalog.RelativeCatalogPath other = (ast.Catalog.RelativeCatalogPath) obj;
-
-      if (!getValue()
-          .equals(other.getValue())) return false;
-      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VALUE_FIELD_NUMBER;
-      hash = (53 * hash) + getValue().hashCode();
-      hash = (29 * hash) + getUnknownFields().hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static ast.Catalog.RelativeCatalogPath parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static ast.Catalog.RelativeCatalogPath parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static ast.Catalog.RelativeCatalogPath parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static ast.Catalog.RelativeCatalogPath parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static ast.Catalog.RelativeCatalogPath parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static ast.Catalog.RelativeCatalogPath parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static ast.Catalog.RelativeCatalogPath parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static ast.Catalog.RelativeCatalogPath parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public static ast.Catalog.RelativeCatalogPath parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-
-    public static ast.Catalog.RelativeCatalogPath parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static ast.Catalog.RelativeCatalogPath parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input);
-    }
-    public static ast.Catalog.RelativeCatalogPath parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessage
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(ast.Catalog.RelativeCatalogPath prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code ast.RelativeCatalogPath}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ast.RelativeCatalogPath)
-        ast.Catalog.RelativeCatalogPathOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return ast.Catalog.internal_static_ast_RelativeCatalogPath_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return ast.Catalog.internal_static_ast_RelativeCatalogPath_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                ast.Catalog.RelativeCatalogPath.class, ast.Catalog.RelativeCatalogPath.Builder.class);
-      }
-
-      // Construct using ast.Catalog.RelativeCatalogPath.newBuilder()
-      private Builder() {
-
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-        super(parent);
-
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        bitField0_ = 0;
-        value_ = "";
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return ast.Catalog.internal_static_ast_RelativeCatalogPath_descriptor;
-      }
-
-      @java.lang.Override
-      public ast.Catalog.RelativeCatalogPath getDefaultInstanceForType() {
-        return ast.Catalog.RelativeCatalogPath.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public ast.Catalog.RelativeCatalogPath build() {
-        ast.Catalog.RelativeCatalogPath result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public ast.Catalog.RelativeCatalogPath buildPartial() {
-        ast.Catalog.RelativeCatalogPath result = new ast.Catalog.RelativeCatalogPath(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
-        onBuilt();
-        return result;
-      }
-
-      private void buildPartial0(ast.Catalog.RelativeCatalogPath result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.value_ = value_;
-        }
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ast.Catalog.RelativeCatalogPath) {
-          return mergeFrom((ast.Catalog.RelativeCatalogPath)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(ast.Catalog.RelativeCatalogPath other) {
-        if (other == ast.Catalog.RelativeCatalogPath.getDefaultInstance()) return this;
-        if (!other.getValue().isEmpty()) {
-          value_ = other.value_;
-          bitField0_ |= 0x00000001;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        if (extensionRegistry == null) {
-          throw new java.lang.NullPointerException();
-        }
-        try {
-          boolean done = false;
-          while (!done) {
-            int tag = input.readTag();
-            switch (tag) {
-              case 0:
-                done = true;
-                break;
-              case 10: {
-                value_ = input.readStringRequireUtf8();
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
-              default: {
-                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
-                  done = true; // was an endgroup tag
-                }
-                break;
-              } // default:
-            } // switch (tag)
-          } // while (!done)
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.unwrapIOException();
-        } finally {
-          onChanged();
-        } // finally
-        return this;
-      }
-      private int bitField0_;
-
-      private java.lang.Object value_ = "";
-      /**
-       * <code>string value = 1;</code>
-       * @return The value.
-       */
-      public java.lang.String getValue() {
-        java.lang.Object ref = value_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          value_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string value = 1;</code>
-       * @return The bytes for value.
-       */
-      public com.google.protobuf.ByteString
-          getValueBytes() {
-        java.lang.Object ref = value_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          value_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string value = 1;</code>
-       * @param value The value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValue(
-          java.lang.String value) {
-        if (value == null) { throw new NullPointerException(); }
-        value_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string value = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearValue() {
-        value_ = getDefaultInstance().getValue();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string value = 1;</code>
-       * @param value The bytes for value to set.
-       * @return This builder for chaining.
-       */
-      public Builder setValueBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) { throw new NullPointerException(); }
-        checkByteStringIsUtf8(value);
-        value_ = value;
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-
-      // @@protoc_insertion_point(builder_scope:ast.RelativeCatalogPath)
-    }
-
-    // @@protoc_insertion_point(class_scope:ast.RelativeCatalogPath)
-    private static final ast.Catalog.RelativeCatalogPath DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new ast.Catalog.RelativeCatalogPath();
-    }
-
-    public static ast.Catalog.RelativeCatalogPath getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<RelativeCatalogPath>
-        PARSER = new com.google.protobuf.AbstractParser<RelativeCatalogPath>() {
-      @java.lang.Override
-      public RelativeCatalogPath parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        Builder builder = newBuilder();
-        try {
-          builder.mergeFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          throw e.setUnfinishedMessage(builder.buildPartial());
-        } catch (com.google.protobuf.UninitializedMessageException e) {
-          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
-        } catch (java.io.IOException e) {
-          throw new com.google.protobuf.InvalidProtocolBufferException(e)
-              .setUnfinishedMessage(builder.buildPartial());
-        }
-        return builder.buildPartial();
-      }
-    };
-
-    public static com.google.protobuf.Parser<RelativeCatalogPath> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<RelativeCatalogPath> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public ast.Catalog.RelativeCatalogPath getDefaultInstanceForType() {
+    public ast.Catalog.DirectoryPath getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4110,15 +6533,30 @@ public final class Catalog {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ast_SchemaReference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ast_AbsoluteCatalogPath_descriptor;
+    internal_static_ast_AbsoluteCatalogSchemaReference_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ast_AbsoluteCatalogPath_fieldAccessorTable;
+      internal_static_ast_AbsoluteCatalogSchemaReference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ast_RelativeCatalogPath_descriptor;
+    internal_static_ast_RootSchema_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ast_RelativeCatalogPath_fieldAccessorTable;
+      internal_static_ast_RootSchema_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ast_CatalogSchemaParentAndName_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ast_CatalogSchemaParentAndName_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ast_RelativeCatalogSchemaReference_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ast_RelativeCatalogSchemaReference_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ast_DirectoryPath_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ast_DirectoryPath_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4133,20 +6571,32 @@ public final class Catalog {
       "logParentAndName\022+\n\004type\030\001 \001(\0162\035.ast.Cat" +
       "alogParentAndNameType\0228\n\006parent\030\002 \001(\0132!." +
       "ast.CatalogObjectParentReferenceB\005\252\001\002\010\001\022" +
-      "\035\n\004name\030\003 \001(\0132\017.ast.Identifier\"s\n\034Catalo" +
-      "gObjectParentReference\022-\n\017schemaReferenc" +
-      "e\030\001 \001(\0132\024.ast.SchemaReference\022$\n\013object_" +
-      "name\030\002 \003(\0132\017.ast.Identifier\"\342\001\n\017SchemaRe" +
-      "ference\0229\n\025absolute_catalog_path\030\001 \001(\0132\030" +
-      ".ast.AbsoluteCatalogPathH\000\0229\n\025relative_c" +
-      "atalog_path\030\002 \001(\0132\030.ast.RelativeCatalogP" +
-      "athH\000\022Q\n!reference_parameter_specificati" +
-      "on\030\003 \001(\0132$.ast.ReferenceParameterSpecifi" +
-      "cationH\000B\006\n\004type\"$\n\023AbsoluteCatalogPath\022" +
-      "\r\n\005value\030\001 \001(\t\"$\n\023RelativeCatalogPath\022\r\n" +
-      "\005value\030\001 \001(\t*5\n\030CatalogParentAndNameType" +
-      "\022\t\n\005GRAPH\020\000\022\016\n\nGRAPH_TYPE\020\001B\020Z\004/ast\222\003\007\010\002" +
-      "\322>\002\020\003b\010editionsp\350\007"
+      "\035\n\004name\030\003 \001(\0132\017.ast.Identifier\"z\n\034Catalo" +
+      "gObjectParentReference\0224\n\017schemaReferenc" +
+      "e\030\001 \001(\0132\024.ast.SchemaReferenceB\005\252\001\002\010\001\022$\n\013" +
+      "object_name\030\002 \003(\0132\017.ast.Identifier\"\200\002\n\017S" +
+      "chemaReference\022H\n\031absolute_schema_refere" +
+      "nce\030\001 \001(\0132#.ast.AbsoluteCatalogSchemaRef" +
+      "erenceH\000\022H\n\031relative_schema_reference\030\002 " +
+      "\001(\0132#.ast.RelativeCatalogSchemaReference" +
+      "H\000\022Q\n!reference_parameter_specification\030" +
+      "\003 \001(\0132$.ast.ReferenceParameterSpecificat" +
+      "ionH\000B\006\n\004type\"\214\001\n\036AbsoluteCatalogSchemaR" +
+      "eference\022&\n\013root_schema\030\001 \001(\0132\017.ast.Root" +
+      "SchemaH\000\022:\n\017parent_and_name\030\002 \001(\0132\037.ast." +
+      "CatalogSchemaParentAndNameH\000B\006\n\004type\"\014\n\n" +
+      "RootSchema\"n\n\032CatalogSchemaParentAndName" +
+      "\022*\n\016directory_path\030\001 \001(\0132\022.ast.Directory" +
+      "Path\022$\n\013schema_name\030\002 \001(\0132\017.ast.Identifi" +
+      "er\"\241\001\n\036RelativeCatalogSchemaReference\022;\n" +
+      "\021predefined_schema\030\001 \001(\0162\036.ast.Predefine" +
+      "dSchemaReferenceH\000\022:\n\017parent_and_name\030\002 " +
+      "\001(\0132\037.ast.CatalogSchemaParentAndNameH\000B\006" +
+      "\n\004type\"\036\n\rDirectoryPath\022\r\n\005value\030\001 \001(\t*5" +
+      "\n\030CatalogParentAndNameType\022\t\n\005GRAPH\020\000\022\016\n" +
+      "\nGRAPH_TYPE\020\001*@\n\031PredefinedSchemaReferen" +
+      "ce\022\017\n\013HOME_SCHEMA\020\000\022\022\n\016CURRENT_SCHEMA\020\001B" +
+      "\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -4171,18 +6621,36 @@ public final class Catalog {
     internal_static_ast_SchemaReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_SchemaReference_descriptor,
-        new java.lang.String[] { "AbsoluteCatalogPath", "RelativeCatalogPath", "ReferenceParameterSpecification", "Type", });
-    internal_static_ast_AbsoluteCatalogPath_descriptor =
+        new java.lang.String[] { "AbsoluteSchemaReference", "RelativeSchemaReference", "ReferenceParameterSpecification", "Type", });
+    internal_static_ast_AbsoluteCatalogSchemaReference_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_ast_AbsoluteCatalogPath_fieldAccessorTable = new
+    internal_static_ast_AbsoluteCatalogSchemaReference_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ast_AbsoluteCatalogPath_descriptor,
-        new java.lang.String[] { "Value", });
-    internal_static_ast_RelativeCatalogPath_descriptor =
+        internal_static_ast_AbsoluteCatalogSchemaReference_descriptor,
+        new java.lang.String[] { "RootSchema", "ParentAndName", "Type", });
+    internal_static_ast_RootSchema_descriptor =
       getDescriptor().getMessageTypes().get(4);
-    internal_static_ast_RelativeCatalogPath_fieldAccessorTable = new
+    internal_static_ast_RootSchema_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ast_RelativeCatalogPath_descriptor,
+        internal_static_ast_RootSchema_descriptor,
+        new java.lang.String[] { });
+    internal_static_ast_CatalogSchemaParentAndName_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_ast_CatalogSchemaParentAndName_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ast_CatalogSchemaParentAndName_descriptor,
+        new java.lang.String[] { "DirectoryPath", "SchemaName", });
+    internal_static_ast_RelativeCatalogSchemaReference_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_ast_RelativeCatalogSchemaReference_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ast_RelativeCatalogSchemaReference_descriptor,
+        new java.lang.String[] { "PredefinedSchema", "ParentAndName", "Type", });
+    internal_static_ast_DirectoryPath_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_ast_DirectoryPath_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ast_DirectoryPath_descriptor,
         new java.lang.String[] { "Value", });
     descriptor.resolveAllFeaturesImmutable();
     pb.GoFeaturesOuterClass.getDescriptor();
