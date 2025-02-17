@@ -142,123 +142,6 @@ public final class Catalog {
     // @@protoc_insertion_point(enum_scope:ast.CatalogParentAndNameType)
   }
 
-  /**
-   * Protobuf enum {@code ast.PredefinedSchemaReference}
-   */
-  public enum PredefinedSchemaReference
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>HOME_SCHEMA = 0;</code>
-     */
-    HOME_SCHEMA(0),
-    /**
-     * <code>CURRENT_SCHEMA = 1;</code>
-     */
-    CURRENT_SCHEMA(1),
-    UNRECOGNIZED(-1),
-    ;
-
-    static {
-      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
-        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
-        /* major= */ 4,
-        /* minor= */ 29,
-        /* patch= */ 3,
-        /* suffix= */ "",
-        PredefinedSchemaReference.class.getName());
-    }
-    /**
-     * <code>HOME_SCHEMA = 0;</code>
-     */
-    public static final int HOME_SCHEMA_VALUE = 0;
-    /**
-     * <code>CURRENT_SCHEMA = 1;</code>
-     */
-    public static final int CURRENT_SCHEMA_VALUE = 1;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static PredefinedSchemaReference valueOf(int value) {
-      return forNumber(value);
-    }
-
-    /**
-     * @param value The numeric wire value of the corresponding enum entry.
-     * @return The enum associated with the given numeric wire value.
-     */
-    public static PredefinedSchemaReference forNumber(int value) {
-      switch (value) {
-        case 0: return HOME_SCHEMA;
-        case 1: return CURRENT_SCHEMA;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<PredefinedSchemaReference>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        PredefinedSchemaReference> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<PredefinedSchemaReference>() {
-            public PredefinedSchemaReference findValueByNumber(int number) {
-              return PredefinedSchemaReference.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return ast.Catalog.getDescriptor().getEnumTypes().get(1);
-    }
-
-    private static final PredefinedSchemaReference[] VALUES = values();
-
-    public static PredefinedSchemaReference valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private PredefinedSchemaReference(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:ast.PredefinedSchemaReference)
-  }
-
   public interface CatalogParentAndNameOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ast.CatalogParentAndName)
       com.google.protobuf.MessageOrBuilder {
@@ -5212,14 +5095,13 @@ public final class Catalog {
     boolean hasPredefinedSchema();
     /**
      * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
-     * @return The enum numeric value on the wire for predefinedSchema.
-     */
-    int getPredefinedSchemaValue();
-    /**
-     * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
      * @return The predefinedSchema.
      */
     ast.Catalog.PredefinedSchemaReference getPredefinedSchema();
+    /**
+     * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+     */
+    ast.Catalog.PredefinedSchemaReferenceOrBuilder getPredefinedSchemaOrBuilder();
 
     /**
      * <code>.ast.CatalogSchemaParentAndName parent_and_name = 2;</code>
@@ -5322,30 +5204,30 @@ public final class Catalog {
      * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
      * @return Whether the predefinedSchema field is set.
      */
+    @java.lang.Override
     public boolean hasPredefinedSchema() {
       return typeCase_ == 1;
     }
     /**
      * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
-     * @return The enum numeric value on the wire for predefinedSchema.
+     * @return The predefinedSchema.
      */
-    public int getPredefinedSchemaValue() {
+    @java.lang.Override
+    public ast.Catalog.PredefinedSchemaReference getPredefinedSchema() {
       if (typeCase_ == 1) {
-        return (java.lang.Integer) type_;
+         return (ast.Catalog.PredefinedSchemaReference) type_;
       }
-      return 0;
+      return ast.Catalog.PredefinedSchemaReference.getDefaultInstance();
     }
     /**
      * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
-     * @return The predefinedSchema.
      */
-    public ast.Catalog.PredefinedSchemaReference getPredefinedSchema() {
+    @java.lang.Override
+    public ast.Catalog.PredefinedSchemaReferenceOrBuilder getPredefinedSchemaOrBuilder() {
       if (typeCase_ == 1) {
-        ast.Catalog.PredefinedSchemaReference result = ast.Catalog.PredefinedSchemaReference.forNumber(
-            (java.lang.Integer) type_);
-        return result == null ? ast.Catalog.PredefinedSchemaReference.UNRECOGNIZED : result;
+         return (ast.Catalog.PredefinedSchemaReference) type_;
       }
-      return ast.Catalog.PredefinedSchemaReference.HOME_SCHEMA;
+      return ast.Catalog.PredefinedSchemaReference.getDefaultInstance();
     }
 
     public static final int PARENT_AND_NAME_FIELD_NUMBER = 2;
@@ -5394,7 +5276,7 @@ public final class Catalog {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (typeCase_ == 1) {
-        output.writeEnum(1, ((java.lang.Integer) type_));
+        output.writeMessage(1, (ast.Catalog.PredefinedSchemaReference) type_);
       }
       if (typeCase_ == 2) {
         output.writeMessage(2, (ast.Catalog.CatalogSchemaParentAndName) type_);
@@ -5410,7 +5292,7 @@ public final class Catalog {
       size = 0;
       if (typeCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(1, ((java.lang.Integer) type_));
+          .computeMessageSize(1, (ast.Catalog.PredefinedSchemaReference) type_);
       }
       if (typeCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
@@ -5434,8 +5316,8 @@ public final class Catalog {
       if (!getTypeCase().equals(other.getTypeCase())) return false;
       switch (typeCase_) {
         case 1:
-          if (getPredefinedSchemaValue()
-              != other.getPredefinedSchemaValue()) return false;
+          if (!getPredefinedSchema()
+              .equals(other.getPredefinedSchema())) return false;
           break;
         case 2:
           if (!getParentAndName()
@@ -5458,7 +5340,7 @@ public final class Catalog {
       switch (typeCase_) {
         case 1:
           hash = (37 * hash) + PREDEFINED_SCHEMA_FIELD_NUMBER;
-          hash = (53 * hash) + getPredefinedSchemaValue();
+          hash = (53 * hash) + getPredefinedSchema().hashCode();
           break;
         case 2:
           hash = (37 * hash) + PARENT_AND_NAME_FIELD_NUMBER;
@@ -5598,6 +5480,9 @@ public final class Catalog {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
+        if (predefinedSchemaBuilder_ != null) {
+          predefinedSchemaBuilder_.clear();
+        }
         if (parentAndNameBuilder_ != null) {
           parentAndNameBuilder_.clear();
         }
@@ -5642,6 +5527,10 @@ public final class Catalog {
       private void buildPartialOneofs(ast.Catalog.RelativeCatalogSchemaReference result) {
         result.typeCase_ = typeCase_;
         result.type_ = this.type_;
+        if (typeCase_ == 1 &&
+            predefinedSchemaBuilder_ != null) {
+          result.type_ = predefinedSchemaBuilder_.build();
+        }
         if (typeCase_ == 2 &&
             parentAndNameBuilder_ != null) {
           result.type_ = parentAndNameBuilder_.build();
@@ -5662,7 +5551,7 @@ public final class Catalog {
         if (other == ast.Catalog.RelativeCatalogSchemaReference.getDefaultInstance()) return this;
         switch (other.getTypeCase()) {
           case PREDEFINED_SCHEMA: {
-            setPredefinedSchemaValue(other.getPredefinedSchemaValue());
+            mergePredefinedSchema(other.getPredefinedSchema());
             break;
           }
           case PARENT_AND_NAME: {
@@ -5699,12 +5588,13 @@ public final class Catalog {
               case 0:
                 done = true;
                 break;
-              case 8: {
-                int rawValue = input.readEnum();
+              case 10: {
+                input.readMessage(
+                    getPredefinedSchemaFieldBuilder().getBuilder(),
+                    extensionRegistry);
                 typeCase_ = 1;
-                type_ = rawValue;
                 break;
-              } // case 8
+              } // case 10
               case 18: {
                 input.readMessage(
                     getParentAndNameFieldBuilder().getBuilder(),
@@ -5744,6 +5634,8 @@ public final class Catalog {
 
       private int bitField0_;
 
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.PredefinedSchemaReference, ast.Catalog.PredefinedSchemaReference.Builder, ast.Catalog.PredefinedSchemaReferenceOrBuilder> predefinedSchemaBuilder_;
       /**
        * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
        * @return Whether the predefinedSchema field is set.
@@ -5754,64 +5646,134 @@ public final class Catalog {
       }
       /**
        * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
-       * @return The enum numeric value on the wire for predefinedSchema.
-       */
-      @java.lang.Override
-      public int getPredefinedSchemaValue() {
-        if (typeCase_ == 1) {
-          return ((java.lang.Integer) type_).intValue();
-        }
-        return 0;
-      }
-      /**
-       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
-       * @param value The enum numeric value on the wire for predefinedSchema to set.
-       * @return This builder for chaining.
-       */
-      public Builder setPredefinedSchemaValue(int value) {
-        typeCase_ = 1;
-        type_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
        * @return The predefinedSchema.
        */
       @java.lang.Override
       public ast.Catalog.PredefinedSchemaReference getPredefinedSchema() {
-        if (typeCase_ == 1) {
-          ast.Catalog.PredefinedSchemaReference result = ast.Catalog.PredefinedSchemaReference.forNumber(
-              (java.lang.Integer) type_);
-          return result == null ? ast.Catalog.PredefinedSchemaReference.UNRECOGNIZED : result;
+        if (predefinedSchemaBuilder_ == null) {
+          if (typeCase_ == 1) {
+            return (ast.Catalog.PredefinedSchemaReference) type_;
+          }
+          return ast.Catalog.PredefinedSchemaReference.getDefaultInstance();
+        } else {
+          if (typeCase_ == 1) {
+            return predefinedSchemaBuilder_.getMessage();
+          }
+          return ast.Catalog.PredefinedSchemaReference.getDefaultInstance();
         }
-        return ast.Catalog.PredefinedSchemaReference.HOME_SCHEMA;
       }
       /**
        * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
-       * @param value The predefinedSchema to set.
-       * @return This builder for chaining.
        */
       public Builder setPredefinedSchema(ast.Catalog.PredefinedSchemaReference value) {
-        if (value == null) {
-          throw new NullPointerException();
+        if (predefinedSchemaBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          predefinedSchemaBuilder_.setMessage(value);
         }
         typeCase_ = 1;
-        type_ = value.getNumber();
-        onChanged();
         return this;
       }
       /**
        * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
-       * @return This builder for chaining.
+       */
+      public Builder setPredefinedSchema(
+          ast.Catalog.PredefinedSchemaReference.Builder builderForValue) {
+        if (predefinedSchemaBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          predefinedSchemaBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       */
+      public Builder mergePredefinedSchema(ast.Catalog.PredefinedSchemaReference value) {
+        if (predefinedSchemaBuilder_ == null) {
+          if (typeCase_ == 1 &&
+              type_ != ast.Catalog.PredefinedSchemaReference.getDefaultInstance()) {
+            type_ = ast.Catalog.PredefinedSchemaReference.newBuilder((ast.Catalog.PredefinedSchemaReference) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 1) {
+            predefinedSchemaBuilder_.mergeFrom(value);
+          } else {
+            predefinedSchemaBuilder_.setMessage(value);
+          }
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
        */
       public Builder clearPredefinedSchema() {
-        if (typeCase_ == 1) {
-          typeCase_ = 0;
-          type_ = null;
-          onChanged();
+        if (predefinedSchemaBuilder_ == null) {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          predefinedSchemaBuilder_.clear();
         }
         return this;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       */
+      public ast.Catalog.PredefinedSchemaReference.Builder getPredefinedSchemaBuilder() {
+        return getPredefinedSchemaFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       */
+      @java.lang.Override
+      public ast.Catalog.PredefinedSchemaReferenceOrBuilder getPredefinedSchemaOrBuilder() {
+        if ((typeCase_ == 1) && (predefinedSchemaBuilder_ != null)) {
+          return predefinedSchemaBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 1) {
+            return (ast.Catalog.PredefinedSchemaReference) type_;
+          }
+          return ast.Catalog.PredefinedSchemaReference.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference predefined_schema = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.Catalog.PredefinedSchemaReference, ast.Catalog.PredefinedSchemaReference.Builder, ast.Catalog.PredefinedSchemaReferenceOrBuilder> 
+          getPredefinedSchemaFieldBuilder() {
+        if (predefinedSchemaBuilder_ == null) {
+          if (!(typeCase_ == 1)) {
+            type_ = ast.Catalog.PredefinedSchemaReference.getDefaultInstance();
+          }
+          predefinedSchemaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.Catalog.PredefinedSchemaReference, ast.Catalog.PredefinedSchemaReference.Builder, ast.Catalog.PredefinedSchemaReferenceOrBuilder>(
+                  (ast.Catalog.PredefinedSchemaReference) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 1;
+        onChanged();
+        return predefinedSchemaBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilder<
@@ -6002,6 +5964,590 @@ public final class Catalog {
 
     @java.lang.Override
     public ast.Catalog.RelativeCatalogSchemaReference getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface PredefinedSchemaReferenceOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.PredefinedSchemaReference)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ast.PredefinedSchemaReference.PredefinedType value = 1;</code>
+     * @return The enum numeric value on the wire for value.
+     */
+    int getValueValue();
+    /**
+     * <code>.ast.PredefinedSchemaReference.PredefinedType value = 1;</code>
+     * @return The value.
+     */
+    ast.Catalog.PredefinedSchemaReference.PredefinedType getValue();
+  }
+  /**
+   * Protobuf type {@code ast.PredefinedSchemaReference}
+   */
+  public static final class PredefinedSchemaReference extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ast.PredefinedSchemaReference)
+      PredefinedSchemaReferenceOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        PredefinedSchemaReference.class.getName());
+    }
+    // Use PredefinedSchemaReference.newBuilder() to construct.
+    private PredefinedSchemaReference(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private PredefinedSchemaReference() {
+      value_ = 0;
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ast.Catalog.internal_static_ast_PredefinedSchemaReference_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ast.Catalog.internal_static_ast_PredefinedSchemaReference_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ast.Catalog.PredefinedSchemaReference.class, ast.Catalog.PredefinedSchemaReference.Builder.class);
+    }
+
+    /**
+     * Protobuf enum {@code ast.PredefinedSchemaReference.PredefinedType}
+     */
+    public enum PredefinedType
+        implements com.google.protobuf.ProtocolMessageEnum {
+      /**
+       * <code>HOME_SCHEMA = 0;</code>
+       */
+      HOME_SCHEMA(0),
+      /**
+       * <code>CURRENT_SCHEMA = 1;</code>
+       */
+      CURRENT_SCHEMA(1),
+      UNRECOGNIZED(-1),
+      ;
+
+      static {
+        com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+          com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+          /* major= */ 4,
+          /* minor= */ 29,
+          /* patch= */ 3,
+          /* suffix= */ "",
+          PredefinedType.class.getName());
+      }
+      /**
+       * <code>HOME_SCHEMA = 0;</code>
+       */
+      public static final int HOME_SCHEMA_VALUE = 0;
+      /**
+       * <code>CURRENT_SCHEMA = 1;</code>
+       */
+      public static final int CURRENT_SCHEMA_VALUE = 1;
+
+
+      public final int getNumber() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalArgumentException(
+              "Can't get the number of an unknown enum value.");
+        }
+        return value;
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static PredefinedType valueOf(int value) {
+        return forNumber(value);
+      }
+
+      /**
+       * @param value The numeric wire value of the corresponding enum entry.
+       * @return The enum associated with the given numeric wire value.
+       */
+      public static PredefinedType forNumber(int value) {
+        switch (value) {
+          case 0: return HOME_SCHEMA;
+          case 1: return CURRENT_SCHEMA;
+          default: return null;
+        }
+      }
+
+      public static com.google.protobuf.Internal.EnumLiteMap<PredefinedType>
+          internalGetValueMap() {
+        return internalValueMap;
+      }
+      private static final com.google.protobuf.Internal.EnumLiteMap<
+          PredefinedType> internalValueMap =
+            new com.google.protobuf.Internal.EnumLiteMap<PredefinedType>() {
+              public PredefinedType findValueByNumber(int number) {
+                return PredefinedType.forNumber(number);
+              }
+            };
+
+      public final com.google.protobuf.Descriptors.EnumValueDescriptor
+          getValueDescriptor() {
+        if (this == UNRECOGNIZED) {
+          throw new java.lang.IllegalStateException(
+              "Can't get the descriptor of an unrecognized enum value.");
+        }
+        return getDescriptor().getValues().get(ordinal());
+      }
+      public final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptorForType() {
+        return getDescriptor();
+      }
+      public static final com.google.protobuf.Descriptors.EnumDescriptor
+          getDescriptor() {
+        return ast.Catalog.PredefinedSchemaReference.getDescriptor().getEnumTypes().get(0);
+      }
+
+      private static final PredefinedType[] VALUES = values();
+
+      public static PredefinedType valueOf(
+          com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        if (desc.getType() != getDescriptor()) {
+          throw new java.lang.IllegalArgumentException(
+            "EnumValueDescriptor is not for this type.");
+        }
+        if (desc.getIndex() == -1) {
+          return UNRECOGNIZED;
+        }
+        return VALUES[desc.getIndex()];
+      }
+
+      private final int value;
+
+      private PredefinedType(int value) {
+        this.value = value;
+      }
+
+      // @@protoc_insertion_point(enum_scope:ast.PredefinedSchemaReference.PredefinedType)
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 1;
+    private int value_ = 0;
+    /**
+     * <code>.ast.PredefinedSchemaReference.PredefinedType value = 1;</code>
+     * @return The enum numeric value on the wire for value.
+     */
+    @java.lang.Override public int getValueValue() {
+      return value_;
+    }
+    /**
+     * <code>.ast.PredefinedSchemaReference.PredefinedType value = 1;</code>
+     * @return The value.
+     */
+    @java.lang.Override public ast.Catalog.PredefinedSchemaReference.PredefinedType getValue() {
+      ast.Catalog.PredefinedSchemaReference.PredefinedType result = ast.Catalog.PredefinedSchemaReference.PredefinedType.forNumber(value_);
+      return result == null ? ast.Catalog.PredefinedSchemaReference.PredefinedType.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (value_ != ast.Catalog.PredefinedSchemaReference.PredefinedType.HOME_SCHEMA.getNumber()) {
+        output.writeEnum(1, value_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (value_ != ast.Catalog.PredefinedSchemaReference.PredefinedType.HOME_SCHEMA.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(1, value_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ast.Catalog.PredefinedSchemaReference)) {
+        return super.equals(obj);
+      }
+      ast.Catalog.PredefinedSchemaReference other = (ast.Catalog.PredefinedSchemaReference) obj;
+
+      if (value_ != other.value_) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + VALUE_FIELD_NUMBER;
+      hash = (53 * hash) + value_;
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ast.Catalog.PredefinedSchemaReference parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ast.Catalog.PredefinedSchemaReference parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.Catalog.PredefinedSchemaReference parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ast.Catalog.PredefinedSchemaReference prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ast.PredefinedSchemaReference}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ast.PredefinedSchemaReference)
+        ast.Catalog.PredefinedSchemaReferenceOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ast.Catalog.internal_static_ast_PredefinedSchemaReference_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ast.Catalog.internal_static_ast_PredefinedSchemaReference_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ast.Catalog.PredefinedSchemaReference.class, ast.Catalog.PredefinedSchemaReference.Builder.class);
+      }
+
+      // Construct using ast.Catalog.PredefinedSchemaReference.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        value_ = 0;
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ast.Catalog.internal_static_ast_PredefinedSchemaReference_descriptor;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.PredefinedSchemaReference getDefaultInstanceForType() {
+        return ast.Catalog.PredefinedSchemaReference.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ast.Catalog.PredefinedSchemaReference build() {
+        ast.Catalog.PredefinedSchemaReference result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ast.Catalog.PredefinedSchemaReference buildPartial() {
+        ast.Catalog.PredefinedSchemaReference result = new ast.Catalog.PredefinedSchemaReference(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ast.Catalog.PredefinedSchemaReference result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = value_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ast.Catalog.PredefinedSchemaReference) {
+          return mergeFrom((ast.Catalog.PredefinedSchemaReference)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ast.Catalog.PredefinedSchemaReference other) {
+        if (other == ast.Catalog.PredefinedSchemaReference.getDefaultInstance()) return this;
+        if (other.value_ != 0) {
+          setValueValue(other.getValueValue());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                value_ = input.readEnum();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 8
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private int value_ = 0;
+      /**
+       * <code>.ast.PredefinedSchemaReference.PredefinedType value = 1;</code>
+       * @return The enum numeric value on the wire for value.
+       */
+      @java.lang.Override public int getValueValue() {
+        return value_;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference.PredefinedType value = 1;</code>
+       * @param value The enum numeric value on the wire for value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValueValue(int value) {
+        value_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference.PredefinedType value = 1;</code>
+       * @return The value.
+       */
+      @java.lang.Override
+      public ast.Catalog.PredefinedSchemaReference.PredefinedType getValue() {
+        ast.Catalog.PredefinedSchemaReference.PredefinedType result = ast.Catalog.PredefinedSchemaReference.PredefinedType.forNumber(value_);
+        return result == null ? ast.Catalog.PredefinedSchemaReference.PredefinedType.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference.PredefinedType value = 1;</code>
+       * @param value The value to set.
+       * @return This builder for chaining.
+       */
+      public Builder setValue(ast.Catalog.PredefinedSchemaReference.PredefinedType value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        bitField0_ |= 0x00000001;
+        value_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.PredefinedSchemaReference.PredefinedType value = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearValue() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        value_ = 0;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ast.PredefinedSchemaReference)
+    }
+
+    // @@protoc_insertion_point(class_scope:ast.PredefinedSchemaReference)
+    private static final ast.Catalog.PredefinedSchemaReference DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ast.Catalog.PredefinedSchemaReference();
+    }
+
+    public static ast.Catalog.PredefinedSchemaReference getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PredefinedSchemaReference>
+        PARSER = new com.google.protobuf.AbstractParser<PredefinedSchemaReference>() {
+      @java.lang.Override
+      public PredefinedSchemaReference parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<PredefinedSchemaReference> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PredefinedSchemaReference> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ast.Catalog.PredefinedSchemaReference getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -6553,6 +7099,11 @@ public final class Catalog {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ast_RelativeCatalogSchemaReference_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ast_PredefinedSchemaReference_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ast_PredefinedSchemaReference_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ast_DirectoryPath_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -6589,14 +7140,16 @@ public final class Catalog {
       "\022*\n\016directory_path\030\001 \001(\0132\022.ast.Directory" +
       "Path\022$\n\013schema_name\030\002 \001(\0132\017.ast.Identifi" +
       "er\"\241\001\n\036RelativeCatalogSchemaReference\022;\n" +
-      "\021predefined_schema\030\001 \001(\0162\036.ast.Predefine" +
+      "\021predefined_schema\030\001 \001(\0132\036.ast.Predefine" +
       "dSchemaReferenceH\000\022:\n\017parent_and_name\030\002 " +
       "\001(\0132\037.ast.CatalogSchemaParentAndNameH\000B\006" +
-      "\n\004type\"\036\n\rDirectoryPath\022\r\n\005value\030\001 \001(\t*5" +
-      "\n\030CatalogParentAndNameType\022\t\n\005GRAPH\020\000\022\016\n" +
-      "\nGRAPH_TYPE\020\001*@\n\031PredefinedSchemaReferen" +
-      "ce\022\017\n\013HOME_SCHEMA\020\000\022\022\n\016CURRENT_SCHEMA\020\001B" +
-      "\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
+      "\n\004type\"\220\001\n\031PredefinedSchemaReference\022<\n\005" +
+      "value\030\001 \001(\0162-.ast.PredefinedSchemaRefere" +
+      "nce.PredefinedType\"5\n\016PredefinedType\022\017\n\013" +
+      "HOME_SCHEMA\020\000\022\022\n\016CURRENT_SCHEMA\020\001\"\036\n\rDir" +
+      "ectoryPath\022\r\n\005value\030\001 \001(\t*5\n\030CatalogPare" +
+      "ntAndNameType\022\t\n\005GRAPH\020\000\022\016\n\nGRAPH_TYPE\020\001" +
+      "B\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -6646,8 +7199,14 @@ public final class Catalog {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_RelativeCatalogSchemaReference_descriptor,
         new java.lang.String[] { "PredefinedSchema", "ParentAndName", "Type", });
-    internal_static_ast_DirectoryPath_descriptor =
+    internal_static_ast_PredefinedSchemaReference_descriptor =
       getDescriptor().getMessageTypes().get(7);
+    internal_static_ast_PredefinedSchemaReference_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ast_PredefinedSchemaReference_descriptor,
+        new java.lang.String[] { "Value", });
+    internal_static_ast_DirectoryPath_descriptor =
+      getDescriptor().getMessageTypes().get(8);
     internal_static_ast_DirectoryPath_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_DirectoryPath_descriptor,

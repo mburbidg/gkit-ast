@@ -55,9 +55,12 @@ message RelativeCatalogSchemaReference {
   }
 }
 
-enum PredefinedSchemaReference {
-  HOME_SCHEMA = 0;
-  CURRENT_SCHEMA = 1;
+message PredefinedSchemaReference {
+  enum PredefinedType {
+    HOME_SCHEMA = 0;
+    CURRENT_SCHEMA = 1;
+  }
+  PredefinedType value = 1;
 }
 
 message DirectoryPath {

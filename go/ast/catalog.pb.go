@@ -62,44 +62,44 @@ func (x CatalogParentAndNameType) Number() protoreflect.EnumNumber {
 	return protoreflect.EnumNumber(x)
 }
 
-type PredefinedSchemaReference int32
+type PredefinedSchemaReference_PredefinedType int32
 
 const (
-	PredefinedSchemaReference_HOME_SCHEMA    PredefinedSchemaReference = 0
-	PredefinedSchemaReference_CURRENT_SCHEMA PredefinedSchemaReference = 1
+	PredefinedSchemaReference_HOME_SCHEMA    PredefinedSchemaReference_PredefinedType = 0
+	PredefinedSchemaReference_CURRENT_SCHEMA PredefinedSchemaReference_PredefinedType = 1
 )
 
-// Enum value maps for PredefinedSchemaReference.
+// Enum value maps for PredefinedSchemaReference_PredefinedType.
 var (
-	PredefinedSchemaReference_name = map[int32]string{
+	PredefinedSchemaReference_PredefinedType_name = map[int32]string{
 		0: "HOME_SCHEMA",
 		1: "CURRENT_SCHEMA",
 	}
-	PredefinedSchemaReference_value = map[string]int32{
+	PredefinedSchemaReference_PredefinedType_value = map[string]int32{
 		"HOME_SCHEMA":    0,
 		"CURRENT_SCHEMA": 1,
 	}
 )
 
-func (x PredefinedSchemaReference) Enum() *PredefinedSchemaReference {
-	p := new(PredefinedSchemaReference)
+func (x PredefinedSchemaReference_PredefinedType) Enum() *PredefinedSchemaReference_PredefinedType {
+	p := new(PredefinedSchemaReference_PredefinedType)
 	*p = x
 	return p
 }
 
-func (x PredefinedSchemaReference) String() string {
+func (x PredefinedSchemaReference_PredefinedType) String() string {
 	return protoimpl.X.EnumStringOf(x.Descriptor(), protoreflect.EnumNumber(x))
 }
 
-func (PredefinedSchemaReference) Descriptor() protoreflect.EnumDescriptor {
+func (PredefinedSchemaReference_PredefinedType) Descriptor() protoreflect.EnumDescriptor {
 	return file_catalog_proto_enumTypes[1].Descriptor()
 }
 
-func (PredefinedSchemaReference) Type() protoreflect.EnumType {
+func (PredefinedSchemaReference_PredefinedType) Type() protoreflect.EnumType {
 	return &file_catalog_proto_enumTypes[1]
 }
 
-func (x PredefinedSchemaReference) Number() protoreflect.EnumNumber {
+func (x PredefinedSchemaReference_PredefinedType) Number() protoreflect.EnumNumber {
 	return protoreflect.EnumNumber(x)
 }
 
@@ -848,13 +848,13 @@ func (x *RelativeCatalogSchemaReference) ProtoReflect() protoreflect.Message {
 	return mi.MessageOf(x)
 }
 
-func (x *RelativeCatalogSchemaReference) GetPredefinedSchema() PredefinedSchemaReference {
+func (x *RelativeCatalogSchemaReference) GetPredefinedSchema() *PredefinedSchemaReference {
 	if x != nil {
 		if x, ok := x.xxx_hidden_Type.(*relativeCatalogSchemaReference_PredefinedSchema); ok {
 			return x.PredefinedSchema
 		}
 	}
-	return PredefinedSchemaReference_HOME_SCHEMA
+	return nil
 }
 
 func (x *RelativeCatalogSchemaReference) GetParentAndName() *CatalogSchemaParentAndName {
@@ -866,7 +866,11 @@ func (x *RelativeCatalogSchemaReference) GetParentAndName() *CatalogSchemaParent
 	return nil
 }
 
-func (x *RelativeCatalogSchemaReference) SetPredefinedSchema(v PredefinedSchemaReference) {
+func (x *RelativeCatalogSchemaReference) SetPredefinedSchema(v *PredefinedSchemaReference) {
+	if v == nil {
+		x.xxx_hidden_Type = nil
+		return
+	}
 	x.xxx_hidden_Type = &relativeCatalogSchemaReference_PredefinedSchema{v}
 }
 
@@ -949,7 +953,7 @@ func (b0 RelativeCatalogSchemaReference_builder) Build() *RelativeCatalogSchemaR
 	b, x := &b0, m0
 	_, _ = b, x
 	if b.PredefinedSchema != nil {
-		x.xxx_hidden_Type = &relativeCatalogSchemaReference_PredefinedSchema{*b.PredefinedSchema}
+		x.xxx_hidden_Type = &relativeCatalogSchemaReference_PredefinedSchema{b.PredefinedSchema}
 	}
 	if b.ParentAndName != nil {
 		x.xxx_hidden_Type = &relativeCatalogSchemaReference_ParentAndName{b.ParentAndName}
@@ -972,7 +976,7 @@ type isRelativeCatalogSchemaReference_Type interface {
 }
 
 type relativeCatalogSchemaReference_PredefinedSchema struct {
-	PredefinedSchema PredefinedSchemaReference `protobuf:"varint,1,opt,name=predefined_schema,json=predefinedSchema,enum=ast.PredefinedSchemaReference,oneof"`
+	PredefinedSchema *PredefinedSchemaReference `protobuf:"bytes,1,opt,name=predefined_schema,json=predefinedSchema,oneof"`
 }
 
 type relativeCatalogSchemaReference_ParentAndName struct {
@@ -983,6 +987,63 @@ func (*relativeCatalogSchemaReference_PredefinedSchema) isRelativeCatalogSchemaR
 
 func (*relativeCatalogSchemaReference_ParentAndName) isRelativeCatalogSchemaReference_Type() {}
 
+type PredefinedSchemaReference struct {
+	state            protoimpl.MessageState                   `protogen:"opaque.v1"`
+	xxx_hidden_Value PredefinedSchemaReference_PredefinedType `protobuf:"varint,1,opt,name=value,enum=ast.PredefinedSchemaReference_PredefinedType"`
+	unknownFields    protoimpl.UnknownFields
+	sizeCache        protoimpl.SizeCache
+}
+
+func (x *PredefinedSchemaReference) Reset() {
+	*x = PredefinedSchemaReference{}
+	mi := &file_catalog_proto_msgTypes[7]
+	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+	ms.StoreMessageInfo(mi)
+}
+
+func (x *PredefinedSchemaReference) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*PredefinedSchemaReference) ProtoMessage() {}
+
+func (x *PredefinedSchemaReference) ProtoReflect() protoreflect.Message {
+	mi := &file_catalog_proto_msgTypes[7]
+	if x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+func (x *PredefinedSchemaReference) GetValue() PredefinedSchemaReference_PredefinedType {
+	if x != nil {
+		return x.xxx_hidden_Value
+	}
+	return PredefinedSchemaReference_HOME_SCHEMA
+}
+
+func (x *PredefinedSchemaReference) SetValue(v PredefinedSchemaReference_PredefinedType) {
+	x.xxx_hidden_Value = v
+}
+
+type PredefinedSchemaReference_builder struct {
+	_ [0]func() // Prevents comparability and use of unkeyed literals for the builder.
+
+	Value PredefinedSchemaReference_PredefinedType
+}
+
+func (b0 PredefinedSchemaReference_builder) Build() *PredefinedSchemaReference {
+	m0 := &PredefinedSchemaReference{}
+	b, x := &b0, m0
+	_, _ = b, x
+	x.xxx_hidden_Value = b.Value
+	return m0
+}
+
 type DirectoryPath struct {
 	state            protoimpl.MessageState `protogen:"opaque.v1"`
 	xxx_hidden_Value string                 `protobuf:"bytes,1,opt,name=value"`
@@ -992,7 +1053,7 @@ type DirectoryPath struct {
 
 func (x *DirectoryPath) Reset() {
 	*x = DirectoryPath{}
-	mi := &file_catalog_proto_msgTypes[7]
+	mi := &file_catalog_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1004,7 +1065,7 @@ func (x *DirectoryPath) String() string {
 func (*DirectoryPath) ProtoMessage() {}
 
 func (x *DirectoryPath) ProtoReflect() protoreflect.Message {
-	mi := &file_catalog_proto_msgTypes[7]
+	mi := &file_catalog_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1113,7 +1174,7 @@ var file_catalog_proto_rawDesc = string([]byte{
 	0x01, 0x0a, 0x1e, 0x52, 0x65, 0x6c, 0x61, 0x74, 0x69, 0x76, 0x65, 0x43, 0x61, 0x74, 0x61, 0x6c,
 	0x6f, 0x67, 0x53, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x52, 0x65, 0x66, 0x65, 0x72, 0x65, 0x6e, 0x63,
 	0x65, 0x12, 0x4d, 0x0a, 0x11, 0x70, 0x72, 0x65, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x65, 0x64, 0x5f,
-	0x73, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e, 0x32, 0x1e, 0x2e, 0x61,
+	0x73, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1e, 0x2e, 0x61,
 	0x73, 0x74, 0x2e, 0x50, 0x72, 0x65, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x65, 0x64, 0x53, 0x63, 0x68,
 	0x65, 0x6d, 0x61, 0x52, 0x65, 0x66, 0x65, 0x72, 0x65, 0x6e, 0x63, 0x65, 0x48, 0x00, 0x52, 0x10,
 	0x70, 0x72, 0x65, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x65, 0x64, 0x53, 0x63, 0x68, 0x65, 0x6d, 0x61,
@@ -1122,57 +1183,64 @@ var file_catalog_proto_rawDesc = string([]byte{
 	0x43, 0x61, 0x74, 0x61, 0x6c, 0x6f, 0x67, 0x53, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x50, 0x61, 0x72,
 	0x65, 0x6e, 0x74, 0x41, 0x6e, 0x64, 0x4e, 0x61, 0x6d, 0x65, 0x48, 0x00, 0x52, 0x0d, 0x70, 0x61,
 	0x72, 0x65, 0x6e, 0x74, 0x41, 0x6e, 0x64, 0x4e, 0x61, 0x6d, 0x65, 0x42, 0x06, 0x0a, 0x04, 0x74,
-	0x79, 0x70, 0x65, 0x22, 0x25, 0x0a, 0x0d, 0x44, 0x69, 0x72, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x79,
-	0x50, 0x61, 0x74, 0x68, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20,
-	0x01, 0x28, 0x09, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x2a, 0x35, 0x0a, 0x18, 0x43, 0x61,
-	0x74, 0x61, 0x6c, 0x6f, 0x67, 0x50, 0x61, 0x72, 0x65, 0x6e, 0x74, 0x41, 0x6e, 0x64, 0x4e, 0x61,
-	0x6d, 0x65, 0x54, 0x79, 0x70, 0x65, 0x12, 0x09, 0x0a, 0x05, 0x47, 0x52, 0x41, 0x50, 0x48, 0x10,
-	0x00, 0x12, 0x0e, 0x0a, 0x0a, 0x47, 0x52, 0x41, 0x50, 0x48, 0x5f, 0x54, 0x59, 0x50, 0x45, 0x10,
-	0x01, 0x2a, 0x40, 0x0a, 0x19, 0x50, 0x72, 0x65, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x65, 0x64, 0x53,
-	0x63, 0x68, 0x65, 0x6d, 0x61, 0x52, 0x65, 0x66, 0x65, 0x72, 0x65, 0x6e, 0x63, 0x65, 0x12, 0x0f,
-	0x0a, 0x0b, 0x48, 0x4f, 0x4d, 0x45, 0x5f, 0x53, 0x43, 0x48, 0x45, 0x4d, 0x41, 0x10, 0x00, 0x12,
-	0x12, 0x0a, 0x0e, 0x43, 0x55, 0x52, 0x52, 0x45, 0x4e, 0x54, 0x5f, 0x53, 0x43, 0x48, 0x45, 0x4d,
-	0x41, 0x10, 0x01, 0x42, 0x10, 0x5a, 0x04, 0x2f, 0x61, 0x73, 0x74, 0x92, 0x03, 0x07, 0xd2, 0x3e,
-	0x02, 0x10, 0x03, 0x08, 0x02, 0x62, 0x08, 0x65, 0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x70,
-	0xe8, 0x07,
+	0x79, 0x70, 0x65, 0x22, 0x97, 0x01, 0x0a, 0x19, 0x50, 0x72, 0x65, 0x64, 0x65, 0x66, 0x69, 0x6e,
+	0x65, 0x64, 0x53, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x52, 0x65, 0x66, 0x65, 0x72, 0x65, 0x6e, 0x63,
+	0x65, 0x12, 0x43, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0e,
+	0x32, 0x2d, 0x2e, 0x61, 0x73, 0x74, 0x2e, 0x50, 0x72, 0x65, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x65,
+	0x64, 0x53, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x52, 0x65, 0x66, 0x65, 0x72, 0x65, 0x6e, 0x63, 0x65,
+	0x2e, 0x50, 0x72, 0x65, 0x64, 0x65, 0x66, 0x69, 0x6e, 0x65, 0x64, 0x54, 0x79, 0x70, 0x65, 0x52,
+	0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x22, 0x35, 0x0a, 0x0e, 0x50, 0x72, 0x65, 0x64, 0x65, 0x66,
+	0x69, 0x6e, 0x65, 0x64, 0x54, 0x79, 0x70, 0x65, 0x12, 0x0f, 0x0a, 0x0b, 0x48, 0x4f, 0x4d, 0x45,
+	0x5f, 0x53, 0x43, 0x48, 0x45, 0x4d, 0x41, 0x10, 0x00, 0x12, 0x12, 0x0a, 0x0e, 0x43, 0x55, 0x52,
+	0x52, 0x45, 0x4e, 0x54, 0x5f, 0x53, 0x43, 0x48, 0x45, 0x4d, 0x41, 0x10, 0x01, 0x22, 0x25, 0x0a,
+	0x0d, 0x44, 0x69, 0x72, 0x65, 0x63, 0x74, 0x6f, 0x72, 0x79, 0x50, 0x61, 0x74, 0x68, 0x12, 0x14,
+	0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x76,
+	0x61, 0x6c, 0x75, 0x65, 0x2a, 0x35, 0x0a, 0x18, 0x43, 0x61, 0x74, 0x61, 0x6c, 0x6f, 0x67, 0x50,
+	0x61, 0x72, 0x65, 0x6e, 0x74, 0x41, 0x6e, 0x64, 0x4e, 0x61, 0x6d, 0x65, 0x54, 0x79, 0x70, 0x65,
+	0x12, 0x09, 0x0a, 0x05, 0x47, 0x52, 0x41, 0x50, 0x48, 0x10, 0x00, 0x12, 0x0e, 0x0a, 0x0a, 0x47,
+	0x52, 0x41, 0x50, 0x48, 0x5f, 0x54, 0x59, 0x50, 0x45, 0x10, 0x01, 0x42, 0x10, 0x5a, 0x04, 0x2f,
+	0x61, 0x73, 0x74, 0x92, 0x03, 0x07, 0xd2, 0x3e, 0x02, 0x10, 0x03, 0x08, 0x02, 0x62, 0x08, 0x65,
+	0x64, 0x69, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x70, 0xe8, 0x07,
 })
 
 var file_catalog_proto_enumTypes = make([]protoimpl.EnumInfo, 2)
-var file_catalog_proto_msgTypes = make([]protoimpl.MessageInfo, 8)
+var file_catalog_proto_msgTypes = make([]protoimpl.MessageInfo, 9)
 var file_catalog_proto_goTypes = []any{
-	(CatalogParentAndNameType)(0),           // 0: ast.CatalogParentAndNameType
-	(PredefinedSchemaReference)(0),          // 1: ast.PredefinedSchemaReference
-	(*CatalogParentAndName)(nil),            // 2: ast.CatalogParentAndName
-	(*CatalogObjectParentReference)(nil),    // 3: ast.CatalogObjectParentReference
-	(*SchemaReference)(nil),                 // 4: ast.SchemaReference
-	(*AbsoluteCatalogSchemaReference)(nil),  // 5: ast.AbsoluteCatalogSchemaReference
-	(*RootSchema)(nil),                      // 6: ast.RootSchema
-	(*CatalogSchemaParentAndName)(nil),      // 7: ast.CatalogSchemaParentAndName
-	(*RelativeCatalogSchemaReference)(nil),  // 8: ast.RelativeCatalogSchemaReference
-	(*DirectoryPath)(nil),                   // 9: ast.DirectoryPath
-	(*Identifier)(nil),                      // 10: ast.Identifier
-	(*ReferenceParameterSpecification)(nil), // 11: ast.ReferenceParameterSpecification
+	(CatalogParentAndNameType)(0),                 // 0: ast.CatalogParentAndNameType
+	(PredefinedSchemaReference_PredefinedType)(0), // 1: ast.PredefinedSchemaReference.PredefinedType
+	(*CatalogParentAndName)(nil),                  // 2: ast.CatalogParentAndName
+	(*CatalogObjectParentReference)(nil),          // 3: ast.CatalogObjectParentReference
+	(*SchemaReference)(nil),                       // 4: ast.SchemaReference
+	(*AbsoluteCatalogSchemaReference)(nil),        // 5: ast.AbsoluteCatalogSchemaReference
+	(*RootSchema)(nil),                            // 6: ast.RootSchema
+	(*CatalogSchemaParentAndName)(nil),            // 7: ast.CatalogSchemaParentAndName
+	(*RelativeCatalogSchemaReference)(nil),        // 8: ast.RelativeCatalogSchemaReference
+	(*PredefinedSchemaReference)(nil),             // 9: ast.PredefinedSchemaReference
+	(*DirectoryPath)(nil),                         // 10: ast.DirectoryPath
+	(*Identifier)(nil),                            // 11: ast.Identifier
+	(*ReferenceParameterSpecification)(nil),       // 12: ast.ReferenceParameterSpecification
 }
 var file_catalog_proto_depIdxs = []int32{
 	0,  // 0: ast.CatalogParentAndName.type:type_name -> ast.CatalogParentAndNameType
 	3,  // 1: ast.CatalogParentAndName.parent:type_name -> ast.CatalogObjectParentReference
-	10, // 2: ast.CatalogParentAndName.name:type_name -> ast.Identifier
+	11, // 2: ast.CatalogParentAndName.name:type_name -> ast.Identifier
 	4,  // 3: ast.CatalogObjectParentReference.schemaReference:type_name -> ast.SchemaReference
-	10, // 4: ast.CatalogObjectParentReference.object_name:type_name -> ast.Identifier
+	11, // 4: ast.CatalogObjectParentReference.object_name:type_name -> ast.Identifier
 	5,  // 5: ast.SchemaReference.absolute_schema_reference:type_name -> ast.AbsoluteCatalogSchemaReference
 	8,  // 6: ast.SchemaReference.relative_schema_reference:type_name -> ast.RelativeCatalogSchemaReference
-	11, // 7: ast.SchemaReference.reference_parameter_specification:type_name -> ast.ReferenceParameterSpecification
+	12, // 7: ast.SchemaReference.reference_parameter_specification:type_name -> ast.ReferenceParameterSpecification
 	6,  // 8: ast.AbsoluteCatalogSchemaReference.root_schema:type_name -> ast.RootSchema
 	7,  // 9: ast.AbsoluteCatalogSchemaReference.parent_and_name:type_name -> ast.CatalogSchemaParentAndName
-	9,  // 10: ast.CatalogSchemaParentAndName.directory_path:type_name -> ast.DirectoryPath
-	10, // 11: ast.CatalogSchemaParentAndName.schema_name:type_name -> ast.Identifier
-	1,  // 12: ast.RelativeCatalogSchemaReference.predefined_schema:type_name -> ast.PredefinedSchemaReference
+	10, // 10: ast.CatalogSchemaParentAndName.directory_path:type_name -> ast.DirectoryPath
+	11, // 11: ast.CatalogSchemaParentAndName.schema_name:type_name -> ast.Identifier
+	9,  // 12: ast.RelativeCatalogSchemaReference.predefined_schema:type_name -> ast.PredefinedSchemaReference
 	7,  // 13: ast.RelativeCatalogSchemaReference.parent_and_name:type_name -> ast.CatalogSchemaParentAndName
-	14, // [14:14] is the sub-list for method output_type
-	14, // [14:14] is the sub-list for method input_type
-	14, // [14:14] is the sub-list for extension type_name
-	14, // [14:14] is the sub-list for extension extendee
-	0,  // [0:14] is the sub-list for field type_name
+	1,  // 14: ast.PredefinedSchemaReference.value:type_name -> ast.PredefinedSchemaReference.PredefinedType
+	15, // [15:15] is the sub-list for method output_type
+	15, // [15:15] is the sub-list for method input_type
+	15, // [15:15] is the sub-list for extension type_name
+	15, // [15:15] is the sub-list for extension extendee
+	0,  // [0:15] is the sub-list for field type_name
 }
 
 func init() { file_catalog_proto_init() }
@@ -1200,7 +1268,7 @@ func file_catalog_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: unsafe.Slice(unsafe.StringData(file_catalog_proto_rawDesc), len(file_catalog_proto_rawDesc)),
 			NumEnums:      2,
-			NumMessages:   8,
+			NumMessages:   9,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
