@@ -6,6 +6,7 @@ import "google/protobuf/go_features.proto";
 import "catalog_modifying_statement.proto";
 import "data_modifying_statement.proto";
 import "composite_query_statement.proto";
+import "yield_clause.proto";
 
 option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
@@ -17,4 +18,14 @@ message Statement {
     LinearDataModifyingStatement linear_data_modifying_statement = 2;
     CompositeQueryStatement composite_query_statement = 3;
   }
+}
+
+message StatementBlock {
+  Statement statement = 1;
+  repeated NextStatement next_statement_list = 2;
+}
+
+message NextStatement {
+  YieldClause yieldClause = 1 [features.field_presence = EXPLICIT];
+  Statement statement = 2;
 }

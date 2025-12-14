@@ -1,0 +1,19 @@
+edition = "2023";
+
+package ast;
+
+import "google/protobuf/go_features.proto";
+import "literals.proto";
+
+option features.field_presence = IMPLICIT;
+option features.(pb.go).api_level = API_OPAQUE;
+option go_package = "/ast";
+
+message YieldClause {
+  repeated YieldItem yield_item_list = 1;
+}
+
+message YieldItem {
+  Identifier name = 1;
+  Identifier alias = 2 [features.field_presence = EXPLICIT];
+}
