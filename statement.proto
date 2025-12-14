@@ -3,20 +3,18 @@ edition = "2023";
 package ast;
 
 import "google/protobuf/go_features.proto";
-import "catalog_statements.proto";
+import "catalog_modifying_statement.proto";
+import "data_modifying_statement.proto";
+import "composite_query_statement.proto";
 
 option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 
 message Statement {
-    oneof type {
-        CreateGraphStatement create_graph_statement = 1;
-        DropGraphStatement drop_graph_statement = 2;
-        LinearCatalogModifyingStatement linear_catalog_modifying_statement = 3;
-    }
-}
-
-message LinearCatalogModifyingStatement {
-    repeated Statement statements = 1;
+  oneof type {
+    LinearCatalogModifyingStatement linear_catalog_modifying_statement = 1;
+    LinearDataModifyingStatement linear_data_modifying_statement = 2;
+    CompositeQueryStatement composite_query_statement = 3;
+  }
 }

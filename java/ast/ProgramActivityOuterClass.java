@@ -2044,19 +2044,19 @@ public final class ProgramActivityOuterClass {
     ast.TransactionCommands.StartTransactionCommandOrBuilder getStartTransactionCommandOrBuilder();
 
     /**
-     * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
-     * @return Whether the procedureSpecification field is set.
+     * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
+     * @return Whether the procedureSpec field is set.
      */
-    boolean hasProcedureSpecification();
+    boolean hasProcedureSpec();
     /**
-     * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
-     * @return The procedureSpecification.
+     * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
+     * @return The procedureSpec.
      */
-    ast.ProcedureSpecificationOuterClass.ProcedureSpecification getProcedureSpecification();
+    ast.ProcedureSpecOuterClass.ProcedureSpec getProcedureSpec();
     /**
-     * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
+     * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
      */
-    ast.ProcedureSpecificationOuterClass.ProcedureSpecificationOrBuilder getProcedureSpecificationOrBuilder();
+    ast.ProcedureSpecOuterClass.ProcedureSpecOrBuilder getProcedureSpecOrBuilder();
 
     /**
      * <code>.ast.EndTransactionCommand endTransactionCommand = 3 [features = { ... }</code>
@@ -2137,30 +2137,30 @@ public final class ProgramActivityOuterClass {
       return startTransactionCommand_ == null ? ast.TransactionCommands.StartTransactionCommand.getDefaultInstance() : startTransactionCommand_;
     }
 
-    public static final int PROCEDURESPECIFICATION_FIELD_NUMBER = 2;
-    private ast.ProcedureSpecificationOuterClass.ProcedureSpecification procedureSpecification_;
+    public static final int PROCEDURESPEC_FIELD_NUMBER = 2;
+    private ast.ProcedureSpecOuterClass.ProcedureSpec procedureSpec_;
     /**
-     * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
-     * @return Whether the procedureSpecification field is set.
+     * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
+     * @return Whether the procedureSpec field is set.
      */
     @java.lang.Override
-    public boolean hasProcedureSpecification() {
+    public boolean hasProcedureSpec() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
-     * @return The procedureSpecification.
+     * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
+     * @return The procedureSpec.
      */
     @java.lang.Override
-    public ast.ProcedureSpecificationOuterClass.ProcedureSpecification getProcedureSpecification() {
-      return procedureSpecification_ == null ? ast.ProcedureSpecificationOuterClass.ProcedureSpecification.getDefaultInstance() : procedureSpecification_;
+    public ast.ProcedureSpecOuterClass.ProcedureSpec getProcedureSpec() {
+      return procedureSpec_ == null ? ast.ProcedureSpecOuterClass.ProcedureSpec.getDefaultInstance() : procedureSpec_;
     }
     /**
-     * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
+     * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
      */
     @java.lang.Override
-    public ast.ProcedureSpecificationOuterClass.ProcedureSpecificationOrBuilder getProcedureSpecificationOrBuilder() {
-      return procedureSpecification_ == null ? ast.ProcedureSpecificationOuterClass.ProcedureSpecification.getDefaultInstance() : procedureSpecification_;
+    public ast.ProcedureSpecOuterClass.ProcedureSpecOrBuilder getProcedureSpecOrBuilder() {
+      return procedureSpec_ == null ? ast.ProcedureSpecOuterClass.ProcedureSpec.getDefaultInstance() : procedureSpec_;
     }
 
     public static final int ENDTRANSACTIONCOMMAND_FIELD_NUMBER = 3;
@@ -2207,7 +2207,7 @@ public final class ProgramActivityOuterClass {
         output.writeMessage(1, getStartTransactionCommand());
       }
       if (((bitField0_ & 0x00000002) != 0)) {
-        output.writeMessage(2, getProcedureSpecification());
+        output.writeMessage(2, getProcedureSpec());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         output.writeMessage(3, getEndTransactionCommand());
@@ -2227,7 +2227,7 @@ public final class ProgramActivityOuterClass {
       }
       if (((bitField0_ & 0x00000002) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getProcedureSpecification());
+          .computeMessageSize(2, getProcedureSpec());
       }
       if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
@@ -2253,10 +2253,10 @@ public final class ProgramActivityOuterClass {
         if (!getStartTransactionCommand()
             .equals(other.getStartTransactionCommand())) return false;
       }
-      if (hasProcedureSpecification() != other.hasProcedureSpecification()) return false;
-      if (hasProcedureSpecification()) {
-        if (!getProcedureSpecification()
-            .equals(other.getProcedureSpecification())) return false;
+      if (hasProcedureSpec() != other.hasProcedureSpec()) return false;
+      if (hasProcedureSpec()) {
+        if (!getProcedureSpec()
+            .equals(other.getProcedureSpec())) return false;
       }
       if (hasEndTransactionCommand() != other.hasEndTransactionCommand()) return false;
       if (hasEndTransactionCommand()) {
@@ -2278,9 +2278,9 @@ public final class ProgramActivityOuterClass {
         hash = (37 * hash) + STARTTRANSACTIONCOMMAND_FIELD_NUMBER;
         hash = (53 * hash) + getStartTransactionCommand().hashCode();
       }
-      if (hasProcedureSpecification()) {
-        hash = (37 * hash) + PROCEDURESPECIFICATION_FIELD_NUMBER;
-        hash = (53 * hash) + getProcedureSpecification().hashCode();
+      if (hasProcedureSpec()) {
+        hash = (37 * hash) + PROCEDURESPEC_FIELD_NUMBER;
+        hash = (53 * hash) + getProcedureSpec().hashCode();
       }
       if (hasEndTransactionCommand()) {
         hash = (37 * hash) + ENDTRANSACTIONCOMMAND_FIELD_NUMBER;
@@ -2417,7 +2417,7 @@ public final class ProgramActivityOuterClass {
         if (com.google.protobuf.GeneratedMessage
                 .alwaysUseFieldBuilders) {
           getStartTransactionCommandFieldBuilder();
-          getProcedureSpecificationFieldBuilder();
+          getProcedureSpecFieldBuilder();
           getEndTransactionCommandFieldBuilder();
         }
       }
@@ -2430,10 +2430,10 @@ public final class ProgramActivityOuterClass {
           startTransactionCommandBuilder_.dispose();
           startTransactionCommandBuilder_ = null;
         }
-        procedureSpecification_ = null;
-        if (procedureSpecificationBuilder_ != null) {
-          procedureSpecificationBuilder_.dispose();
-          procedureSpecificationBuilder_ = null;
+        procedureSpec_ = null;
+        if (procedureSpecBuilder_ != null) {
+          procedureSpecBuilder_.dispose();
+          procedureSpecBuilder_ = null;
         }
         endTransactionCommand_ = null;
         if (endTransactionCommandBuilder_ != null) {
@@ -2481,9 +2481,9 @@ public final class ProgramActivityOuterClass {
           to_bitField0_ |= 0x00000001;
         }
         if (((from_bitField0_ & 0x00000002) != 0)) {
-          result.procedureSpecification_ = procedureSpecificationBuilder_ == null
-              ? procedureSpecification_
-              : procedureSpecificationBuilder_.build();
+          result.procedureSpec_ = procedureSpecBuilder_ == null
+              ? procedureSpec_
+              : procedureSpecBuilder_.build();
           to_bitField0_ |= 0x00000002;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
@@ -2510,8 +2510,8 @@ public final class ProgramActivityOuterClass {
         if (other.hasStartTransactionCommand()) {
           mergeStartTransactionCommand(other.getStartTransactionCommand());
         }
-        if (other.hasProcedureSpecification()) {
-          mergeProcedureSpecification(other.getProcedureSpecification());
+        if (other.hasProcedureSpec()) {
+          mergeProcedureSpec(other.getProcedureSpec());
         }
         if (other.hasEndTransactionCommand()) {
           mergeEndTransactionCommand(other.getEndTransactionCommand());
@@ -2551,7 +2551,7 @@ public final class ProgramActivityOuterClass {
               } // case 10
               case 18: {
                 input.readMessage(
-                    getProcedureSpecificationFieldBuilder().getBuilder(),
+                    getProcedureSpecFieldBuilder().getBuilder(),
                     extensionRegistry);
                 bitField0_ |= 0x00000002;
                 break;
@@ -2701,125 +2701,125 @@ public final class ProgramActivityOuterClass {
         return startTransactionCommandBuilder_;
       }
 
-      private ast.ProcedureSpecificationOuterClass.ProcedureSpecification procedureSpecification_;
+      private ast.ProcedureSpecOuterClass.ProcedureSpec procedureSpec_;
       private com.google.protobuf.SingleFieldBuilder<
-          ast.ProcedureSpecificationOuterClass.ProcedureSpecification, ast.ProcedureSpecificationOuterClass.ProcedureSpecification.Builder, ast.ProcedureSpecificationOuterClass.ProcedureSpecificationOrBuilder> procedureSpecificationBuilder_;
+          ast.ProcedureSpecOuterClass.ProcedureSpec, ast.ProcedureSpecOuterClass.ProcedureSpec.Builder, ast.ProcedureSpecOuterClass.ProcedureSpecOrBuilder> procedureSpecBuilder_;
       /**
-       * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
-       * @return Whether the procedureSpecification field is set.
+       * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
+       * @return Whether the procedureSpec field is set.
        */
-      public boolean hasProcedureSpecification() {
+      public boolean hasProcedureSpec() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
-       * @return The procedureSpecification.
+       * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
+       * @return The procedureSpec.
        */
-      public ast.ProcedureSpecificationOuterClass.ProcedureSpecification getProcedureSpecification() {
-        if (procedureSpecificationBuilder_ == null) {
-          return procedureSpecification_ == null ? ast.ProcedureSpecificationOuterClass.ProcedureSpecification.getDefaultInstance() : procedureSpecification_;
+      public ast.ProcedureSpecOuterClass.ProcedureSpec getProcedureSpec() {
+        if (procedureSpecBuilder_ == null) {
+          return procedureSpec_ == null ? ast.ProcedureSpecOuterClass.ProcedureSpec.getDefaultInstance() : procedureSpec_;
         } else {
-          return procedureSpecificationBuilder_.getMessage();
+          return procedureSpecBuilder_.getMessage();
         }
       }
       /**
-       * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
+       * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
        */
-      public Builder setProcedureSpecification(ast.ProcedureSpecificationOuterClass.ProcedureSpecification value) {
-        if (procedureSpecificationBuilder_ == null) {
+      public Builder setProcedureSpec(ast.ProcedureSpecOuterClass.ProcedureSpec value) {
+        if (procedureSpecBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          procedureSpecification_ = value;
+          procedureSpec_ = value;
         } else {
-          procedureSpecificationBuilder_.setMessage(value);
+          procedureSpecBuilder_.setMessage(value);
         }
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
+       * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
        */
-      public Builder setProcedureSpecification(
-          ast.ProcedureSpecificationOuterClass.ProcedureSpecification.Builder builderForValue) {
-        if (procedureSpecificationBuilder_ == null) {
-          procedureSpecification_ = builderForValue.build();
+      public Builder setProcedureSpec(
+          ast.ProcedureSpecOuterClass.ProcedureSpec.Builder builderForValue) {
+        if (procedureSpecBuilder_ == null) {
+          procedureSpec_ = builderForValue.build();
         } else {
-          procedureSpecificationBuilder_.setMessage(builderForValue.build());
+          procedureSpecBuilder_.setMessage(builderForValue.build());
         }
         bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
+       * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
        */
-      public Builder mergeProcedureSpecification(ast.ProcedureSpecificationOuterClass.ProcedureSpecification value) {
-        if (procedureSpecificationBuilder_ == null) {
+      public Builder mergeProcedureSpec(ast.ProcedureSpecOuterClass.ProcedureSpec value) {
+        if (procedureSpecBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
-            procedureSpecification_ != null &&
-            procedureSpecification_ != ast.ProcedureSpecificationOuterClass.ProcedureSpecification.getDefaultInstance()) {
-            getProcedureSpecificationBuilder().mergeFrom(value);
+            procedureSpec_ != null &&
+            procedureSpec_ != ast.ProcedureSpecOuterClass.ProcedureSpec.getDefaultInstance()) {
+            getProcedureSpecBuilder().mergeFrom(value);
           } else {
-            procedureSpecification_ = value;
+            procedureSpec_ = value;
           }
         } else {
-          procedureSpecificationBuilder_.mergeFrom(value);
+          procedureSpecBuilder_.mergeFrom(value);
         }
-        if (procedureSpecification_ != null) {
+        if (procedureSpec_ != null) {
           bitField0_ |= 0x00000002;
           onChanged();
         }
         return this;
       }
       /**
-       * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
+       * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
        */
-      public Builder clearProcedureSpecification() {
+      public Builder clearProcedureSpec() {
         bitField0_ = (bitField0_ & ~0x00000002);
-        procedureSpecification_ = null;
-        if (procedureSpecificationBuilder_ != null) {
-          procedureSpecificationBuilder_.dispose();
-          procedureSpecificationBuilder_ = null;
+        procedureSpec_ = null;
+        if (procedureSpecBuilder_ != null) {
+          procedureSpecBuilder_.dispose();
+          procedureSpecBuilder_ = null;
         }
         onChanged();
         return this;
       }
       /**
-       * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
+       * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
        */
-      public ast.ProcedureSpecificationOuterClass.ProcedureSpecification.Builder getProcedureSpecificationBuilder() {
+      public ast.ProcedureSpecOuterClass.ProcedureSpec.Builder getProcedureSpecBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
-        return getProcedureSpecificationFieldBuilder().getBuilder();
+        return getProcedureSpecFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
+       * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
        */
-      public ast.ProcedureSpecificationOuterClass.ProcedureSpecificationOrBuilder getProcedureSpecificationOrBuilder() {
-        if (procedureSpecificationBuilder_ != null) {
-          return procedureSpecificationBuilder_.getMessageOrBuilder();
+      public ast.ProcedureSpecOuterClass.ProcedureSpecOrBuilder getProcedureSpecOrBuilder() {
+        if (procedureSpecBuilder_ != null) {
+          return procedureSpecBuilder_.getMessageOrBuilder();
         } else {
-          return procedureSpecification_ == null ?
-              ast.ProcedureSpecificationOuterClass.ProcedureSpecification.getDefaultInstance() : procedureSpecification_;
+          return procedureSpec_ == null ?
+              ast.ProcedureSpecOuterClass.ProcedureSpec.getDefaultInstance() : procedureSpec_;
         }
       }
       /**
-       * <code>.ast.ProcedureSpecification procedureSpecification = 2;</code>
+       * <code>.ast.ProcedureSpec procedureSpec = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          ast.ProcedureSpecificationOuterClass.ProcedureSpecification, ast.ProcedureSpecificationOuterClass.ProcedureSpecification.Builder, ast.ProcedureSpecificationOuterClass.ProcedureSpecificationOrBuilder> 
-          getProcedureSpecificationFieldBuilder() {
-        if (procedureSpecificationBuilder_ == null) {
-          procedureSpecificationBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              ast.ProcedureSpecificationOuterClass.ProcedureSpecification, ast.ProcedureSpecificationOuterClass.ProcedureSpecification.Builder, ast.ProcedureSpecificationOuterClass.ProcedureSpecificationOrBuilder>(
-                  getProcedureSpecification(),
+          ast.ProcedureSpecOuterClass.ProcedureSpec, ast.ProcedureSpecOuterClass.ProcedureSpec.Builder, ast.ProcedureSpecOuterClass.ProcedureSpecOrBuilder> 
+          getProcedureSpecFieldBuilder() {
+        if (procedureSpecBuilder_ == null) {
+          procedureSpecBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.ProcedureSpecOuterClass.ProcedureSpec, ast.ProcedureSpecOuterClass.ProcedureSpec.Builder, ast.ProcedureSpecOuterClass.ProcedureSpecOrBuilder>(
+                  getProcedureSpec(),
                   getParentForChildren(),
                   isClean());
-          procedureSpecification_ = null;
+          procedureSpec_ = null;
         }
-        return procedureSpecificationBuilder_;
+        return procedureSpecBuilder_;
       }
 
       private ast.TransactionCommands.EndTransactionCommand endTransactionCommand_;
@@ -3020,21 +3020,20 @@ public final class ProgramActivityOuterClass {
     java.lang.String[] descriptorData = {
       "\n\026program_activity.proto\022\003ast\032!google/pr" +
       "otobuf/go_features.proto\032\026session_comman" +
-      "ds.proto\032\032transaction_commands.proto\032\035pr" +
-      "ocedure_specification.proto\"\205\001\n\017ProgramA" +
-      "ctivity\0220\n\020session_activity\030\001 \001(\0132\024.ast." +
-      "SessionActivityH\000\0228\n\024transaction_activit" +
-      "y\030\002 \001(\0132\030.ast.TransactionActivityH\000B\006\n\004t" +
-      "ype\"\201\001\n\017SessionActivity\0224\n\024session_set_c" +
-      "ommands\030\001 \003(\0132\026.ast.SessionSetCommand\0228\n" +
-      "\026session_reset_commands\030\002 \003(\0132\030.ast.Sess" +
-      "ionResetCommand\"\332\001\n\023TransactionActivity\022" +
-      "D\n\027startTransactionCommand\030\001 \001(\0132\034.ast.S" +
-      "tartTransactionCommandB\005\252\001\002\010\001\022;\n\026procedu" +
-      "reSpecification\030\002 \001(\0132\033.ast.ProcedureSpe" +
-      "cification\022@\n\025endTransactionCommand\030\003 \001(" +
-      "\0132\032.ast.EndTransactionCommandB\005\252\001\002\010\001B\020Z\004" +
-      "/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
+      "ds.proto\032\032transaction_commands.proto\032\024pr" +
+      "ocedure_spec.proto\"\205\001\n\017ProgramActivity\0220" +
+      "\n\020session_activity\030\001 \001(\0132\024.ast.SessionAc" +
+      "tivityH\000\0228\n\024transaction_activity\030\002 \001(\0132\030" +
+      ".ast.TransactionActivityH\000B\006\n\004type\"\201\001\n\017S" +
+      "essionActivity\0224\n\024session_set_commands\030\001" +
+      " \003(\0132\026.ast.SessionSetCommand\0228\n\026session_" +
+      "reset_commands\030\002 \003(\0132\030.ast.SessionResetC" +
+      "ommand\"\310\001\n\023TransactionActivity\022D\n\027startT" +
+      "ransactionCommand\030\001 \001(\0132\034.ast.StartTrans" +
+      "actionCommandB\005\252\001\002\010\001\022)\n\rprocedureSpec\030\002 " +
+      "\001(\0132\022.ast.ProcedureSpec\022@\n\025endTransactio" +
+      "nCommand\030\003 \001(\0132\032.ast.EndTransactionComma" +
+      "ndB\005\252\001\002\010\001B\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -3042,7 +3041,7 @@ public final class ProgramActivityOuterClass {
           pb.GoFeaturesOuterClass.getDescriptor(),
           ast.SessionCommands.getDescriptor(),
           ast.TransactionCommands.getDescriptor(),
-          ast.ProcedureSpecificationOuterClass.getDescriptor(),
+          ast.ProcedureSpecOuterClass.getDescriptor(),
         });
     internal_static_ast_ProgramActivity_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -3061,12 +3060,12 @@ public final class ProgramActivityOuterClass {
     internal_static_ast_TransactionActivity_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_TransactionActivity_descriptor,
-        new java.lang.String[] { "StartTransactionCommand", "ProcedureSpecification", "EndTransactionCommand", });
+        new java.lang.String[] { "StartTransactionCommand", "ProcedureSpec", "EndTransactionCommand", });
     descriptor.resolveAllFeaturesImmutable();
     pb.GoFeaturesOuterClass.getDescriptor();
     ast.SessionCommands.getDescriptor();
     ast.TransactionCommands.getDescriptor();
-    ast.ProcedureSpecificationOuterClass.getDescriptor();
+    ast.ProcedureSpecOuterClass.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(pb.GoFeaturesOuterClass.go);

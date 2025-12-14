@@ -5,7 +5,7 @@ package ast;
 import "google/protobuf/go_features.proto";
 import "session_commands.proto";
 import "transaction_commands.proto";
-import "procedure_specification.proto";
+import "procedure_spec.proto";
 
 option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
@@ -25,7 +25,7 @@ message SessionActivity {
 
 message TransactionActivity {
   StartTransactionCommand startTransactionCommand = 1 [features.field_presence = EXPLICIT];
-  ProcedureSpecification procedureSpecification = 2;
+  ProcedureSpec procedureSpec = 2;
   EndTransactionCommand endTransactionCommand = 3     [features.field_presence = EXPLICIT];
 }
 

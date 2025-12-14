@@ -11,6 +11,17 @@ option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 
+message LinearCatalogModifyingStatement {
+  repeated CatalogModifyingStatement statements = 1;
+}
+
+message CatalogModifyingStatement {
+  oneof type {
+    CreateGraphStatement create_graph_statement = 1;
+    DropGraphStatement drop_graph_statement = 2;
+  }
+}
+
 message CreateGraphStatement {
     bool if_not_exists = 1;
     bool replace_graph = 2;
