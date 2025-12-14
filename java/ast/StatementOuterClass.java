@@ -1133,11 +1133,1740 @@ public final class StatementOuterClass {
 
   }
 
+  public interface StatementBlockOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.StatementBlock)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ast.Statement statement = 1;</code>
+     * @return Whether the statement field is set.
+     */
+    boolean hasStatement();
+    /**
+     * <code>.ast.Statement statement = 1;</code>
+     * @return The statement.
+     */
+    ast.StatementOuterClass.Statement getStatement();
+    /**
+     * <code>.ast.Statement statement = 1;</code>
+     */
+    ast.StatementOuterClass.StatementOrBuilder getStatementOrBuilder();
+
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    java.util.List<ast.StatementOuterClass.NextStatement> 
+        getNextStatementListList();
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    ast.StatementOuterClass.NextStatement getNextStatementList(int index);
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    int getNextStatementListCount();
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    java.util.List<? extends ast.StatementOuterClass.NextStatementOrBuilder> 
+        getNextStatementListOrBuilderList();
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    ast.StatementOuterClass.NextStatementOrBuilder getNextStatementListOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code ast.StatementBlock}
+   */
+  public static final class StatementBlock extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ast.StatementBlock)
+      StatementBlockOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        StatementBlock.class.getName());
+    }
+    // Use StatementBlock.newBuilder() to construct.
+    private StatementBlock(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private StatementBlock() {
+      nextStatementList_ = java.util.Collections.emptyList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ast.StatementOuterClass.internal_static_ast_StatementBlock_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ast.StatementOuterClass.internal_static_ast_StatementBlock_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ast.StatementOuterClass.StatementBlock.class, ast.StatementOuterClass.StatementBlock.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int STATEMENT_FIELD_NUMBER = 1;
+    private ast.StatementOuterClass.Statement statement_;
+    /**
+     * <code>.ast.Statement statement = 1;</code>
+     * @return Whether the statement field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatement() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.ast.Statement statement = 1;</code>
+     * @return The statement.
+     */
+    @java.lang.Override
+    public ast.StatementOuterClass.Statement getStatement() {
+      return statement_ == null ? ast.StatementOuterClass.Statement.getDefaultInstance() : statement_;
+    }
+    /**
+     * <code>.ast.Statement statement = 1;</code>
+     */
+    @java.lang.Override
+    public ast.StatementOuterClass.StatementOrBuilder getStatementOrBuilder() {
+      return statement_ == null ? ast.StatementOuterClass.Statement.getDefaultInstance() : statement_;
+    }
+
+    public static final int NEXT_STATEMENT_LIST_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private java.util.List<ast.StatementOuterClass.NextStatement> nextStatementList_;
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<ast.StatementOuterClass.NextStatement> getNextStatementListList() {
+      return nextStatementList_;
+    }
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ast.StatementOuterClass.NextStatementOrBuilder> 
+        getNextStatementListOrBuilderList() {
+      return nextStatementList_;
+    }
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    @java.lang.Override
+    public int getNextStatementListCount() {
+      return nextStatementList_.size();
+    }
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    @java.lang.Override
+    public ast.StatementOuterClass.NextStatement getNextStatementList(int index) {
+      return nextStatementList_.get(index);
+    }
+    /**
+     * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+     */
+    @java.lang.Override
+    public ast.StatementOuterClass.NextStatementOrBuilder getNextStatementListOrBuilder(
+        int index) {
+      return nextStatementList_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getStatement());
+      }
+      for (int i = 0; i < nextStatementList_.size(); i++) {
+        output.writeMessage(2, nextStatementList_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getStatement());
+      }
+      for (int i = 0; i < nextStatementList_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, nextStatementList_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ast.StatementOuterClass.StatementBlock)) {
+        return super.equals(obj);
+      }
+      ast.StatementOuterClass.StatementBlock other = (ast.StatementOuterClass.StatementBlock) obj;
+
+      if (hasStatement() != other.hasStatement()) return false;
+      if (hasStatement()) {
+        if (!getStatement()
+            .equals(other.getStatement())) return false;
+      }
+      if (!getNextStatementListList()
+          .equals(other.getNextStatementListList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasStatement()) {
+        hash = (37 * hash) + STATEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getStatement().hashCode();
+      }
+      if (getNextStatementListCount() > 0) {
+        hash = (37 * hash) + NEXT_STATEMENT_LIST_FIELD_NUMBER;
+        hash = (53 * hash) + getNextStatementListList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ast.StatementOuterClass.StatementBlock parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.StatementOuterClass.StatementBlock parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.StatementOuterClass.StatementBlock parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.StatementOuterClass.StatementBlock parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.StatementOuterClass.StatementBlock parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.StatementOuterClass.StatementBlock parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.StatementOuterClass.StatementBlock parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.StatementOuterClass.StatementBlock parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ast.StatementOuterClass.StatementBlock parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ast.StatementOuterClass.StatementBlock parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ast.StatementOuterClass.StatementBlock parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.StatementOuterClass.StatementBlock parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ast.StatementOuterClass.StatementBlock prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ast.StatementBlock}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ast.StatementBlock)
+        ast.StatementOuterClass.StatementBlockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ast.StatementOuterClass.internal_static_ast_StatementBlock_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ast.StatementOuterClass.internal_static_ast_StatementBlock_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ast.StatementOuterClass.StatementBlock.class, ast.StatementOuterClass.StatementBlock.Builder.class);
+      }
+
+      // Construct using ast.StatementOuterClass.StatementBlock.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getStatementFieldBuilder();
+          getNextStatementListFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        statement_ = null;
+        if (statementBuilder_ != null) {
+          statementBuilder_.dispose();
+          statementBuilder_ = null;
+        }
+        if (nextStatementListBuilder_ == null) {
+          nextStatementList_ = java.util.Collections.emptyList();
+        } else {
+          nextStatementList_ = null;
+          nextStatementListBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000002);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ast.StatementOuterClass.internal_static_ast_StatementBlock_descriptor;
+      }
+
+      @java.lang.Override
+      public ast.StatementOuterClass.StatementBlock getDefaultInstanceForType() {
+        return ast.StatementOuterClass.StatementBlock.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ast.StatementOuterClass.StatementBlock build() {
+        ast.StatementOuterClass.StatementBlock result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ast.StatementOuterClass.StatementBlock buildPartial() {
+        ast.StatementOuterClass.StatementBlock result = new ast.StatementOuterClass.StatementBlock(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ast.StatementOuterClass.StatementBlock result) {
+        if (nextStatementListBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            nextStatementList_ = java.util.Collections.unmodifiableList(nextStatementList_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.nextStatementList_ = nextStatementList_;
+        } else {
+          result.nextStatementList_ = nextStatementListBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(ast.StatementOuterClass.StatementBlock result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.statement_ = statementBuilder_ == null
+              ? statement_
+              : statementBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ast.StatementOuterClass.StatementBlock) {
+          return mergeFrom((ast.StatementOuterClass.StatementBlock)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ast.StatementOuterClass.StatementBlock other) {
+        if (other == ast.StatementOuterClass.StatementBlock.getDefaultInstance()) return this;
+        if (other.hasStatement()) {
+          mergeStatement(other.getStatement());
+        }
+        if (nextStatementListBuilder_ == null) {
+          if (!other.nextStatementList_.isEmpty()) {
+            if (nextStatementList_.isEmpty()) {
+              nextStatementList_ = other.nextStatementList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureNextStatementListIsMutable();
+              nextStatementList_.addAll(other.nextStatementList_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.nextStatementList_.isEmpty()) {
+            if (nextStatementListBuilder_.isEmpty()) {
+              nextStatementListBuilder_.dispose();
+              nextStatementListBuilder_ = null;
+              nextStatementList_ = other.nextStatementList_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              nextStatementListBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getNextStatementListFieldBuilder() : null;
+            } else {
+              nextStatementListBuilder_.addAllMessages(other.nextStatementList_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getStatementFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                ast.StatementOuterClass.NextStatement m =
+                    input.readMessage(
+                        ast.StatementOuterClass.NextStatement.parser(),
+                        extensionRegistry);
+                if (nextStatementListBuilder_ == null) {
+                  ensureNextStatementListIsMutable();
+                  nextStatementList_.add(m);
+                } else {
+                  nextStatementListBuilder_.addMessage(m);
+                }
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private ast.StatementOuterClass.Statement statement_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.StatementOuterClass.Statement, ast.StatementOuterClass.Statement.Builder, ast.StatementOuterClass.StatementOrBuilder> statementBuilder_;
+      /**
+       * <code>.ast.Statement statement = 1;</code>
+       * @return Whether the statement field is set.
+       */
+      public boolean hasStatement() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ast.Statement statement = 1;</code>
+       * @return The statement.
+       */
+      public ast.StatementOuterClass.Statement getStatement() {
+        if (statementBuilder_ == null) {
+          return statement_ == null ? ast.StatementOuterClass.Statement.getDefaultInstance() : statement_;
+        } else {
+          return statementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ast.Statement statement = 1;</code>
+       */
+      public Builder setStatement(ast.StatementOuterClass.Statement value) {
+        if (statementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          statement_ = value;
+        } else {
+          statementBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.Statement statement = 1;</code>
+       */
+      public Builder setStatement(
+          ast.StatementOuterClass.Statement.Builder builderForValue) {
+        if (statementBuilder_ == null) {
+          statement_ = builderForValue.build();
+        } else {
+          statementBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.Statement statement = 1;</code>
+       */
+      public Builder mergeStatement(ast.StatementOuterClass.Statement value) {
+        if (statementBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            statement_ != null &&
+            statement_ != ast.StatementOuterClass.Statement.getDefaultInstance()) {
+            getStatementBuilder().mergeFrom(value);
+          } else {
+            statement_ = value;
+          }
+        } else {
+          statementBuilder_.mergeFrom(value);
+        }
+        if (statement_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.Statement statement = 1;</code>
+       */
+      public Builder clearStatement() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        statement_ = null;
+        if (statementBuilder_ != null) {
+          statementBuilder_.dispose();
+          statementBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.Statement statement = 1;</code>
+       */
+      public ast.StatementOuterClass.Statement.Builder getStatementBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getStatementFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.Statement statement = 1;</code>
+       */
+      public ast.StatementOuterClass.StatementOrBuilder getStatementOrBuilder() {
+        if (statementBuilder_ != null) {
+          return statementBuilder_.getMessageOrBuilder();
+        } else {
+          return statement_ == null ?
+              ast.StatementOuterClass.Statement.getDefaultInstance() : statement_;
+        }
+      }
+      /**
+       * <code>.ast.Statement statement = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.StatementOuterClass.Statement, ast.StatementOuterClass.Statement.Builder, ast.StatementOuterClass.StatementOrBuilder> 
+          getStatementFieldBuilder() {
+        if (statementBuilder_ == null) {
+          statementBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.StatementOuterClass.Statement, ast.StatementOuterClass.Statement.Builder, ast.StatementOuterClass.StatementOrBuilder>(
+                  getStatement(),
+                  getParentForChildren(),
+                  isClean());
+          statement_ = null;
+        }
+        return statementBuilder_;
+      }
+
+      private java.util.List<ast.StatementOuterClass.NextStatement> nextStatementList_ =
+        java.util.Collections.emptyList();
+      private void ensureNextStatementListIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          nextStatementList_ = new java.util.ArrayList<ast.StatementOuterClass.NextStatement>(nextStatementList_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilder<
+          ast.StatementOuterClass.NextStatement, ast.StatementOuterClass.NextStatement.Builder, ast.StatementOuterClass.NextStatementOrBuilder> nextStatementListBuilder_;
+
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public java.util.List<ast.StatementOuterClass.NextStatement> getNextStatementListList() {
+        if (nextStatementListBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(nextStatementList_);
+        } else {
+          return nextStatementListBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public int getNextStatementListCount() {
+        if (nextStatementListBuilder_ == null) {
+          return nextStatementList_.size();
+        } else {
+          return nextStatementListBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public ast.StatementOuterClass.NextStatement getNextStatementList(int index) {
+        if (nextStatementListBuilder_ == null) {
+          return nextStatementList_.get(index);
+        } else {
+          return nextStatementListBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public Builder setNextStatementList(
+          int index, ast.StatementOuterClass.NextStatement value) {
+        if (nextStatementListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNextStatementListIsMutable();
+          nextStatementList_.set(index, value);
+          onChanged();
+        } else {
+          nextStatementListBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public Builder setNextStatementList(
+          int index, ast.StatementOuterClass.NextStatement.Builder builderForValue) {
+        if (nextStatementListBuilder_ == null) {
+          ensureNextStatementListIsMutable();
+          nextStatementList_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          nextStatementListBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public Builder addNextStatementList(ast.StatementOuterClass.NextStatement value) {
+        if (nextStatementListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNextStatementListIsMutable();
+          nextStatementList_.add(value);
+          onChanged();
+        } else {
+          nextStatementListBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public Builder addNextStatementList(
+          int index, ast.StatementOuterClass.NextStatement value) {
+        if (nextStatementListBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureNextStatementListIsMutable();
+          nextStatementList_.add(index, value);
+          onChanged();
+        } else {
+          nextStatementListBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public Builder addNextStatementList(
+          ast.StatementOuterClass.NextStatement.Builder builderForValue) {
+        if (nextStatementListBuilder_ == null) {
+          ensureNextStatementListIsMutable();
+          nextStatementList_.add(builderForValue.build());
+          onChanged();
+        } else {
+          nextStatementListBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public Builder addNextStatementList(
+          int index, ast.StatementOuterClass.NextStatement.Builder builderForValue) {
+        if (nextStatementListBuilder_ == null) {
+          ensureNextStatementListIsMutable();
+          nextStatementList_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          nextStatementListBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public Builder addAllNextStatementList(
+          java.lang.Iterable<? extends ast.StatementOuterClass.NextStatement> values) {
+        if (nextStatementListBuilder_ == null) {
+          ensureNextStatementListIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, nextStatementList_);
+          onChanged();
+        } else {
+          nextStatementListBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public Builder clearNextStatementList() {
+        if (nextStatementListBuilder_ == null) {
+          nextStatementList_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          nextStatementListBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public Builder removeNextStatementList(int index) {
+        if (nextStatementListBuilder_ == null) {
+          ensureNextStatementListIsMutable();
+          nextStatementList_.remove(index);
+          onChanged();
+        } else {
+          nextStatementListBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public ast.StatementOuterClass.NextStatement.Builder getNextStatementListBuilder(
+          int index) {
+        return getNextStatementListFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public ast.StatementOuterClass.NextStatementOrBuilder getNextStatementListOrBuilder(
+          int index) {
+        if (nextStatementListBuilder_ == null) {
+          return nextStatementList_.get(index);  } else {
+          return nextStatementListBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public java.util.List<? extends ast.StatementOuterClass.NextStatementOrBuilder> 
+           getNextStatementListOrBuilderList() {
+        if (nextStatementListBuilder_ != null) {
+          return nextStatementListBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(nextStatementList_);
+        }
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public ast.StatementOuterClass.NextStatement.Builder addNextStatementListBuilder() {
+        return getNextStatementListFieldBuilder().addBuilder(
+            ast.StatementOuterClass.NextStatement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public ast.StatementOuterClass.NextStatement.Builder addNextStatementListBuilder(
+          int index) {
+        return getNextStatementListFieldBuilder().addBuilder(
+            index, ast.StatementOuterClass.NextStatement.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ast.NextStatement next_statement_list = 2;</code>
+       */
+      public java.util.List<ast.StatementOuterClass.NextStatement.Builder> 
+           getNextStatementListBuilderList() {
+        return getNextStatementListFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          ast.StatementOuterClass.NextStatement, ast.StatementOuterClass.NextStatement.Builder, ast.StatementOuterClass.NextStatementOrBuilder> 
+          getNextStatementListFieldBuilder() {
+        if (nextStatementListBuilder_ == null) {
+          nextStatementListBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              ast.StatementOuterClass.NextStatement, ast.StatementOuterClass.NextStatement.Builder, ast.StatementOuterClass.NextStatementOrBuilder>(
+                  nextStatementList_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          nextStatementList_ = null;
+        }
+        return nextStatementListBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ast.StatementBlock)
+    }
+
+    // @@protoc_insertion_point(class_scope:ast.StatementBlock)
+    private static final ast.StatementOuterClass.StatementBlock DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ast.StatementOuterClass.StatementBlock();
+    }
+
+    public static ast.StatementOuterClass.StatementBlock getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StatementBlock>
+        PARSER = new com.google.protobuf.AbstractParser<StatementBlock>() {
+      @java.lang.Override
+      public StatementBlock parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<StatementBlock> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StatementBlock> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ast.StatementOuterClass.StatementBlock getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface NextStatementOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.NextStatement)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+     * @return Whether the yieldClause field is set.
+     */
+    boolean hasYieldClause();
+    /**
+     * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+     * @return The yieldClause.
+     */
+    ast.YieldClauseOuterClass.YieldClause getYieldClause();
+    /**
+     * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+     */
+    ast.YieldClauseOuterClass.YieldClauseOrBuilder getYieldClauseOrBuilder();
+
+    /**
+     * <code>.ast.Statement statement = 2;</code>
+     * @return Whether the statement field is set.
+     */
+    boolean hasStatement();
+    /**
+     * <code>.ast.Statement statement = 2;</code>
+     * @return The statement.
+     */
+    ast.StatementOuterClass.Statement getStatement();
+    /**
+     * <code>.ast.Statement statement = 2;</code>
+     */
+    ast.StatementOuterClass.StatementOrBuilder getStatementOrBuilder();
+  }
+  /**
+   * Protobuf type {@code ast.NextStatement}
+   */
+  public static final class NextStatement extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:ast.NextStatement)
+      NextStatementOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 29,
+        /* patch= */ 3,
+        /* suffix= */ "",
+        NextStatement.class.getName());
+    }
+    // Use NextStatement.newBuilder() to construct.
+    private NextStatement(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private NextStatement() {
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ast.StatementOuterClass.internal_static_ast_NextStatement_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ast.StatementOuterClass.internal_static_ast_NextStatement_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ast.StatementOuterClass.NextStatement.class, ast.StatementOuterClass.NextStatement.Builder.class);
+    }
+
+    private int bitField0_;
+    public static final int YIELDCLAUSE_FIELD_NUMBER = 1;
+    private ast.YieldClauseOuterClass.YieldClause yieldClause_;
+    /**
+     * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+     * @return Whether the yieldClause field is set.
+     */
+    @java.lang.Override
+    public boolean hasYieldClause() {
+      return ((bitField0_ & 0x00000001) != 0);
+    }
+    /**
+     * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+     * @return The yieldClause.
+     */
+    @java.lang.Override
+    public ast.YieldClauseOuterClass.YieldClause getYieldClause() {
+      return yieldClause_ == null ? ast.YieldClauseOuterClass.YieldClause.getDefaultInstance() : yieldClause_;
+    }
+    /**
+     * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+     */
+    @java.lang.Override
+    public ast.YieldClauseOuterClass.YieldClauseOrBuilder getYieldClauseOrBuilder() {
+      return yieldClause_ == null ? ast.YieldClauseOuterClass.YieldClause.getDefaultInstance() : yieldClause_;
+    }
+
+    public static final int STATEMENT_FIELD_NUMBER = 2;
+    private ast.StatementOuterClass.Statement statement_;
+    /**
+     * <code>.ast.Statement statement = 2;</code>
+     * @return Whether the statement field is set.
+     */
+    @java.lang.Override
+    public boolean hasStatement() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <code>.ast.Statement statement = 2;</code>
+     * @return The statement.
+     */
+    @java.lang.Override
+    public ast.StatementOuterClass.Statement getStatement() {
+      return statement_ == null ? ast.StatementOuterClass.Statement.getDefaultInstance() : statement_;
+    }
+    /**
+     * <code>.ast.Statement statement = 2;</code>
+     */
+    @java.lang.Override
+    public ast.StatementOuterClass.StatementOrBuilder getStatementOrBuilder() {
+      return statement_ == null ? ast.StatementOuterClass.Statement.getDefaultInstance() : statement_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (((bitField0_ & 0x00000001) != 0)) {
+        output.writeMessage(1, getYieldClause());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        output.writeMessage(2, getStatement());
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (((bitField0_ & 0x00000001) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getYieldClause());
+      }
+      if (((bitField0_ & 0x00000002) != 0)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getStatement());
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ast.StatementOuterClass.NextStatement)) {
+        return super.equals(obj);
+      }
+      ast.StatementOuterClass.NextStatement other = (ast.StatementOuterClass.NextStatement) obj;
+
+      if (hasYieldClause() != other.hasYieldClause()) return false;
+      if (hasYieldClause()) {
+        if (!getYieldClause()
+            .equals(other.getYieldClause())) return false;
+      }
+      if (hasStatement() != other.hasStatement()) return false;
+      if (hasStatement()) {
+        if (!getStatement()
+            .equals(other.getStatement())) return false;
+      }
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasYieldClause()) {
+        hash = (37 * hash) + YIELDCLAUSE_FIELD_NUMBER;
+        hash = (53 * hash) + getYieldClause().hashCode();
+      }
+      if (hasStatement()) {
+        hash = (37 * hash) + STATEMENT_FIELD_NUMBER;
+        hash = (53 * hash) + getStatement().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ast.StatementOuterClass.NextStatement parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.StatementOuterClass.NextStatement parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.StatementOuterClass.NextStatement parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.StatementOuterClass.NextStatement parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.StatementOuterClass.NextStatement parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ast.StatementOuterClass.NextStatement parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ast.StatementOuterClass.NextStatement parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.StatementOuterClass.NextStatement parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ast.StatementOuterClass.NextStatement parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ast.StatementOuterClass.NextStatement parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ast.StatementOuterClass.NextStatement parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static ast.StatementOuterClass.NextStatement parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ast.StatementOuterClass.NextStatement prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code ast.NextStatement}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:ast.NextStatement)
+        ast.StatementOuterClass.NextStatementOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ast.StatementOuterClass.internal_static_ast_NextStatement_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ast.StatementOuterClass.internal_static_ast_NextStatement_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ast.StatementOuterClass.NextStatement.class, ast.StatementOuterClass.NextStatement.Builder.class);
+      }
+
+      // Construct using ast.StatementOuterClass.NextStatement.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessage
+                .alwaysUseFieldBuilders) {
+          getYieldClauseFieldBuilder();
+          getStatementFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        yieldClause_ = null;
+        if (yieldClauseBuilder_ != null) {
+          yieldClauseBuilder_.dispose();
+          yieldClauseBuilder_ = null;
+        }
+        statement_ = null;
+        if (statementBuilder_ != null) {
+          statementBuilder_.dispose();
+          statementBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ast.StatementOuterClass.internal_static_ast_NextStatement_descriptor;
+      }
+
+      @java.lang.Override
+      public ast.StatementOuterClass.NextStatement getDefaultInstanceForType() {
+        return ast.StatementOuterClass.NextStatement.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ast.StatementOuterClass.NextStatement build() {
+        ast.StatementOuterClass.NextStatement result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ast.StatementOuterClass.NextStatement buildPartial() {
+        ast.StatementOuterClass.NextStatement result = new ast.StatementOuterClass.NextStatement(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ast.StatementOuterClass.NextStatement result) {
+        int from_bitField0_ = bitField0_;
+        int to_bitField0_ = 0;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.yieldClause_ = yieldClauseBuilder_ == null
+              ? yieldClause_
+              : yieldClauseBuilder_.build();
+          to_bitField0_ |= 0x00000001;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.statement_ = statementBuilder_ == null
+              ? statement_
+              : statementBuilder_.build();
+          to_bitField0_ |= 0x00000002;
+        }
+        result.bitField0_ |= to_bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ast.StatementOuterClass.NextStatement) {
+          return mergeFrom((ast.StatementOuterClass.NextStatement)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ast.StatementOuterClass.NextStatement other) {
+        if (other == ast.StatementOuterClass.NextStatement.getDefaultInstance()) return this;
+        if (other.hasYieldClause()) {
+          mergeYieldClause(other.getYieldClause());
+        }
+        if (other.hasStatement()) {
+          mergeStatement(other.getStatement());
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                input.readMessage(
+                    getYieldClauseFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getStatementFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private ast.YieldClauseOuterClass.YieldClause yieldClause_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.YieldClauseOuterClass.YieldClause, ast.YieldClauseOuterClass.YieldClause.Builder, ast.YieldClauseOuterClass.YieldClauseOrBuilder> yieldClauseBuilder_;
+      /**
+       * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+       * @return Whether the yieldClause field is set.
+       */
+      public boolean hasYieldClause() {
+        return ((bitField0_ & 0x00000001) != 0);
+      }
+      /**
+       * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+       * @return The yieldClause.
+       */
+      public ast.YieldClauseOuterClass.YieldClause getYieldClause() {
+        if (yieldClauseBuilder_ == null) {
+          return yieldClause_ == null ? ast.YieldClauseOuterClass.YieldClause.getDefaultInstance() : yieldClause_;
+        } else {
+          return yieldClauseBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+       */
+      public Builder setYieldClause(ast.YieldClauseOuterClass.YieldClause value) {
+        if (yieldClauseBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          yieldClause_ = value;
+        } else {
+          yieldClauseBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+       */
+      public Builder setYieldClause(
+          ast.YieldClauseOuterClass.YieldClause.Builder builderForValue) {
+        if (yieldClauseBuilder_ == null) {
+          yieldClause_ = builderForValue.build();
+        } else {
+          yieldClauseBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+       */
+      public Builder mergeYieldClause(ast.YieldClauseOuterClass.YieldClause value) {
+        if (yieldClauseBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0) &&
+            yieldClause_ != null &&
+            yieldClause_ != ast.YieldClauseOuterClass.YieldClause.getDefaultInstance()) {
+            getYieldClauseBuilder().mergeFrom(value);
+          } else {
+            yieldClause_ = value;
+          }
+        } else {
+          yieldClauseBuilder_.mergeFrom(value);
+        }
+        if (yieldClause_ != null) {
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+       */
+      public Builder clearYieldClause() {
+        bitField0_ = (bitField0_ & ~0x00000001);
+        yieldClause_ = null;
+        if (yieldClauseBuilder_ != null) {
+          yieldClauseBuilder_.dispose();
+          yieldClauseBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+       */
+      public ast.YieldClauseOuterClass.YieldClause.Builder getYieldClauseBuilder() {
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return getYieldClauseFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+       */
+      public ast.YieldClauseOuterClass.YieldClauseOrBuilder getYieldClauseOrBuilder() {
+        if (yieldClauseBuilder_ != null) {
+          return yieldClauseBuilder_.getMessageOrBuilder();
+        } else {
+          return yieldClause_ == null ?
+              ast.YieldClauseOuterClass.YieldClause.getDefaultInstance() : yieldClause_;
+        }
+      }
+      /**
+       * <code>.ast.YieldClause yieldClause = 1 [features = { ... }</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.YieldClauseOuterClass.YieldClause, ast.YieldClauseOuterClass.YieldClause.Builder, ast.YieldClauseOuterClass.YieldClauseOrBuilder> 
+          getYieldClauseFieldBuilder() {
+        if (yieldClauseBuilder_ == null) {
+          yieldClauseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.YieldClauseOuterClass.YieldClause, ast.YieldClauseOuterClass.YieldClause.Builder, ast.YieldClauseOuterClass.YieldClauseOrBuilder>(
+                  getYieldClause(),
+                  getParentForChildren(),
+                  isClean());
+          yieldClause_ = null;
+        }
+        return yieldClauseBuilder_;
+      }
+
+      private ast.StatementOuterClass.Statement statement_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.StatementOuterClass.Statement, ast.StatementOuterClass.Statement.Builder, ast.StatementOuterClass.StatementOrBuilder> statementBuilder_;
+      /**
+       * <code>.ast.Statement statement = 2;</code>
+       * @return Whether the statement field is set.
+       */
+      public boolean hasStatement() {
+        return ((bitField0_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.ast.Statement statement = 2;</code>
+       * @return The statement.
+       */
+      public ast.StatementOuterClass.Statement getStatement() {
+        if (statementBuilder_ == null) {
+          return statement_ == null ? ast.StatementOuterClass.Statement.getDefaultInstance() : statement_;
+        } else {
+          return statementBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ast.Statement statement = 2;</code>
+       */
+      public Builder setStatement(ast.StatementOuterClass.Statement value) {
+        if (statementBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          statement_ = value;
+        } else {
+          statementBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.Statement statement = 2;</code>
+       */
+      public Builder setStatement(
+          ast.StatementOuterClass.Statement.Builder builderForValue) {
+        if (statementBuilder_ == null) {
+          statement_ = builderForValue.build();
+        } else {
+          statementBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.Statement statement = 2;</code>
+       */
+      public Builder mergeStatement(ast.StatementOuterClass.Statement value) {
+        if (statementBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0) &&
+            statement_ != null &&
+            statement_ != ast.StatementOuterClass.Statement.getDefaultInstance()) {
+            getStatementBuilder().mergeFrom(value);
+          } else {
+            statement_ = value;
+          }
+        } else {
+          statementBuilder_.mergeFrom(value);
+        }
+        if (statement_ != null) {
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.Statement statement = 2;</code>
+       */
+      public Builder clearStatement() {
+        bitField0_ = (bitField0_ & ~0x00000002);
+        statement_ = null;
+        if (statementBuilder_ != null) {
+          statementBuilder_.dispose();
+          statementBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.Statement statement = 2;</code>
+       */
+      public ast.StatementOuterClass.Statement.Builder getStatementBuilder() {
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return getStatementFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.Statement statement = 2;</code>
+       */
+      public ast.StatementOuterClass.StatementOrBuilder getStatementOrBuilder() {
+        if (statementBuilder_ != null) {
+          return statementBuilder_.getMessageOrBuilder();
+        } else {
+          return statement_ == null ?
+              ast.StatementOuterClass.Statement.getDefaultInstance() : statement_;
+        }
+      }
+      /**
+       * <code>.ast.Statement statement = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.StatementOuterClass.Statement, ast.StatementOuterClass.Statement.Builder, ast.StatementOuterClass.StatementOrBuilder> 
+          getStatementFieldBuilder() {
+        if (statementBuilder_ == null) {
+          statementBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.StatementOuterClass.Statement, ast.StatementOuterClass.Statement.Builder, ast.StatementOuterClass.StatementOrBuilder>(
+                  getStatement(),
+                  getParentForChildren(),
+                  isClean());
+          statement_ = null;
+        }
+        return statementBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ast.NextStatement)
+    }
+
+    // @@protoc_insertion_point(class_scope:ast.NextStatement)
+    private static final ast.StatementOuterClass.NextStatement DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ast.StatementOuterClass.NextStatement();
+    }
+
+    public static ast.StatementOuterClass.NextStatement getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<NextStatement>
+        PARSER = new com.google.protobuf.AbstractParser<NextStatement>() {
+      @java.lang.Override
+      public NextStatement parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<NextStatement> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<NextStatement> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ast.StatementOuterClass.NextStatement getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ast_Statement_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ast_Statement_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ast_StatementBlock_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ast_StatementBlock_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ast_NextStatement_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_ast_NextStatement_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1150,14 +2879,20 @@ public final class StatementOuterClass {
       "\n\017statement.proto\022\003ast\032!google/protobuf/" +
       "go_features.proto\032!catalog_modifying_sta" +
       "tement.proto\032\036data_modifying_statement.p" +
-      "roto\032\037composite_query_statement.proto\"\370\001" +
-      "\n\tStatement\022R\n\"linear_catalog_modifying_" +
-      "statement\030\001 \001(\0132$.ast.LinearCatalogModif" +
-      "yingStatementH\000\022L\n\037linear_data_modifying" +
-      "_statement\030\002 \001(\0132!.ast.LinearDataModifyi" +
-      "ngStatementH\000\022A\n\031composite_query_stateme" +
-      "nt\030\003 \001(\0132\034.ast.CompositeQueryStatementH\000" +
-      "B\006\n\004typeB\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010editionsp\350\007"
+      "roto\032\037composite_query_statement.proto\032\022y" +
+      "ield_clause.proto\"\370\001\n\tStatement\022R\n\"linea" +
+      "r_catalog_modifying_statement\030\001 \001(\0132$.as" +
+      "t.LinearCatalogModifyingStatementH\000\022L\n\037l" +
+      "inear_data_modifying_statement\030\002 \001(\0132!.a" +
+      "st.LinearDataModifyingStatementH\000\022A\n\031com" +
+      "posite_query_statement\030\003 \001(\0132\034.ast.Compo" +
+      "siteQueryStatementH\000B\006\n\004type\"d\n\016Statemen" +
+      "tBlock\022!\n\tstatement\030\001 \001(\0132\016.ast.Statemen" +
+      "t\022/\n\023next_statement_list\030\002 \003(\0132\022.ast.Nex" +
+      "tStatement\"`\n\rNextStatement\022,\n\013yieldClau" +
+      "se\030\001 \001(\0132\020.ast.YieldClauseB\005\252\001\002\010\001\022!\n\tsta" +
+      "tement\030\002 \001(\0132\016.ast.StatementB\020Z\004/ast\222\003\007\010" +
+      "\002\322>\002\020\003b\010editionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1166,6 +2901,7 @@ public final class StatementOuterClass {
           ast.CatalogModifyingStatementOuterClass.getDescriptor(),
           ast.DataModifyingStatementOuterClass.getDescriptor(),
           ast.CompositeQueryStatementOuterClass.getDescriptor(),
+          ast.YieldClauseOuterClass.getDescriptor(),
         });
     internal_static_ast_Statement_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -1173,11 +2909,24 @@ public final class StatementOuterClass {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_Statement_descriptor,
         new java.lang.String[] { "LinearCatalogModifyingStatement", "LinearDataModifyingStatement", "CompositeQueryStatement", "Type", });
+    internal_static_ast_StatementBlock_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_ast_StatementBlock_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ast_StatementBlock_descriptor,
+        new java.lang.String[] { "Statement", "NextStatementList", });
+    internal_static_ast_NextStatement_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_ast_NextStatement_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_ast_NextStatement_descriptor,
+        new java.lang.String[] { "YieldClause", "Statement", });
     descriptor.resolveAllFeaturesImmutable();
     pb.GoFeaturesOuterClass.getDescriptor();
     ast.CatalogModifyingStatementOuterClass.getDescriptor();
     ast.DataModifyingStatementOuterClass.getDescriptor();
     ast.CompositeQueryStatementOuterClass.getDescriptor();
+    ast.YieldClauseOuterClass.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(pb.GoFeaturesOuterClass.go);

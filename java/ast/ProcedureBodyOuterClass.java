@@ -30,58 +30,49 @@ public final class ProcedureBodyOuterClass {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+     * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
      * @return Whether the atSchemaClause field is set.
      */
     boolean hasAtSchemaClause();
     /**
-     * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+     * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
      * @return The atSchemaClause.
      */
-    ast.ProcedureBodyOuterClass.AtSchemaClause getAtSchemaClause();
+    ast.Catalog.SchemaReference getAtSchemaClause();
     /**
-     * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+     * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
      */
-    ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder getAtSchemaClauseOrBuilder();
+    ast.Catalog.SchemaReferenceOrBuilder getAtSchemaClauseOrBuilder();
 
     /**
-     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+     * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
      * @return Whether the bindingVariableDefinitionBlock field is set.
      */
     boolean hasBindingVariableDefinitionBlock();
     /**
-     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+     * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
      * @return The bindingVariableDefinitionBlock.
      */
-    ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock getBindingVariableDefinitionBlock();
+    ast.ProcedureBodyOuterClass.BindingVariableDef getBindingVariableDefinitionBlock();
     /**
-     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+     * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
      */
-    ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder getBindingVariableDefinitionBlockOrBuilder();
+    ast.ProcedureBodyOuterClass.BindingVariableDefOrBuilder getBindingVariableDefinitionBlockOrBuilder();
 
     /**
-     * <code>repeated .ast.Statement statements = 3;</code>
+     * <code>.ast.StatementBlock statement_block = 3;</code>
+     * @return Whether the statementBlock field is set.
      */
-    java.util.List<ast.StatementOuterClass.Statement> 
-        getStatementsList();
+    boolean hasStatementBlock();
     /**
-     * <code>repeated .ast.Statement statements = 3;</code>
+     * <code>.ast.StatementBlock statement_block = 3;</code>
+     * @return The statementBlock.
      */
-    ast.StatementOuterClass.Statement getStatements(int index);
+    ast.StatementOuterClass.StatementBlock getStatementBlock();
     /**
-     * <code>repeated .ast.Statement statements = 3;</code>
+     * <code>.ast.StatementBlock statement_block = 3;</code>
      */
-    int getStatementsCount();
-    /**
-     * <code>repeated .ast.Statement statements = 3;</code>
-     */
-    java.util.List<? extends ast.StatementOuterClass.StatementOrBuilder> 
-        getStatementsOrBuilderList();
-    /**
-     * <code>repeated .ast.Statement statements = 3;</code>
-     */
-    ast.StatementOuterClass.StatementOrBuilder getStatementsOrBuilder(
-        int index);
+    ast.StatementOuterClass.StatementBlockOrBuilder getStatementBlockOrBuilder();
   }
   /**
    * Protobuf type {@code ast.ProcedureBody}
@@ -105,7 +96,6 @@ public final class ProcedureBodyOuterClass {
       super(builder);
     }
     private ProcedureBody() {
-      statements_ = java.util.Collections.emptyList();
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -123,9 +113,9 @@ public final class ProcedureBodyOuterClass {
 
     private int bitField0_;
     public static final int AT_SCHEMA_CLAUSE_FIELD_NUMBER = 1;
-    private ast.ProcedureBodyOuterClass.AtSchemaClause atSchemaClause_;
+    private ast.Catalog.SchemaReference atSchemaClause_;
     /**
-     * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+     * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
      * @return Whether the atSchemaClause field is set.
      */
     @java.lang.Override
@@ -133,25 +123,25 @@ public final class ProcedureBodyOuterClass {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+     * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
      * @return The atSchemaClause.
      */
     @java.lang.Override
-    public ast.ProcedureBodyOuterClass.AtSchemaClause getAtSchemaClause() {
-      return atSchemaClause_ == null ? ast.ProcedureBodyOuterClass.AtSchemaClause.getDefaultInstance() : atSchemaClause_;
+    public ast.Catalog.SchemaReference getAtSchemaClause() {
+      return atSchemaClause_ == null ? ast.Catalog.SchemaReference.getDefaultInstance() : atSchemaClause_;
     }
     /**
-     * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+     * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
      */
     @java.lang.Override
-    public ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder getAtSchemaClauseOrBuilder() {
-      return atSchemaClause_ == null ? ast.ProcedureBodyOuterClass.AtSchemaClause.getDefaultInstance() : atSchemaClause_;
+    public ast.Catalog.SchemaReferenceOrBuilder getAtSchemaClauseOrBuilder() {
+      return atSchemaClause_ == null ? ast.Catalog.SchemaReference.getDefaultInstance() : atSchemaClause_;
     }
 
     public static final int BINDING_VARIABLE_DEFINITION_BLOCK_FIELD_NUMBER = 2;
-    private ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock bindingVariableDefinitionBlock_;
+    private ast.ProcedureBodyOuterClass.BindingVariableDef bindingVariableDefinitionBlock_;
     /**
-     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+     * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
      * @return Whether the bindingVariableDefinitionBlock field is set.
      */
     @java.lang.Override
@@ -159,60 +149,45 @@ public final class ProcedureBodyOuterClass {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+     * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
      * @return The bindingVariableDefinitionBlock.
      */
     @java.lang.Override
-    public ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock getBindingVariableDefinitionBlock() {
-      return bindingVariableDefinitionBlock_ == null ? ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.getDefaultInstance() : bindingVariableDefinitionBlock_;
+    public ast.ProcedureBodyOuterClass.BindingVariableDef getBindingVariableDefinitionBlock() {
+      return bindingVariableDefinitionBlock_ == null ? ast.ProcedureBodyOuterClass.BindingVariableDef.getDefaultInstance() : bindingVariableDefinitionBlock_;
     }
     /**
-     * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+     * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
      */
     @java.lang.Override
-    public ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder getBindingVariableDefinitionBlockOrBuilder() {
-      return bindingVariableDefinitionBlock_ == null ? ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.getDefaultInstance() : bindingVariableDefinitionBlock_;
+    public ast.ProcedureBodyOuterClass.BindingVariableDefOrBuilder getBindingVariableDefinitionBlockOrBuilder() {
+      return bindingVariableDefinitionBlock_ == null ? ast.ProcedureBodyOuterClass.BindingVariableDef.getDefaultInstance() : bindingVariableDefinitionBlock_;
     }
 
-    public static final int STATEMENTS_FIELD_NUMBER = 3;
-    @SuppressWarnings("serial")
-    private java.util.List<ast.StatementOuterClass.Statement> statements_;
+    public static final int STATEMENT_BLOCK_FIELD_NUMBER = 3;
+    private ast.StatementOuterClass.StatementBlock statementBlock_;
     /**
-     * <code>repeated .ast.Statement statements = 3;</code>
+     * <code>.ast.StatementBlock statement_block = 3;</code>
+     * @return Whether the statementBlock field is set.
      */
     @java.lang.Override
-    public java.util.List<ast.StatementOuterClass.Statement> getStatementsList() {
-      return statements_;
+    public boolean hasStatementBlock() {
+      return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>repeated .ast.Statement statements = 3;</code>
+     * <code>.ast.StatementBlock statement_block = 3;</code>
+     * @return The statementBlock.
      */
     @java.lang.Override
-    public java.util.List<? extends ast.StatementOuterClass.StatementOrBuilder> 
-        getStatementsOrBuilderList() {
-      return statements_;
+    public ast.StatementOuterClass.StatementBlock getStatementBlock() {
+      return statementBlock_ == null ? ast.StatementOuterClass.StatementBlock.getDefaultInstance() : statementBlock_;
     }
     /**
-     * <code>repeated .ast.Statement statements = 3;</code>
+     * <code>.ast.StatementBlock statement_block = 3;</code>
      */
     @java.lang.Override
-    public int getStatementsCount() {
-      return statements_.size();
-    }
-    /**
-     * <code>repeated .ast.Statement statements = 3;</code>
-     */
-    @java.lang.Override
-    public ast.StatementOuterClass.Statement getStatements(int index) {
-      return statements_.get(index);
-    }
-    /**
-     * <code>repeated .ast.Statement statements = 3;</code>
-     */
-    @java.lang.Override
-    public ast.StatementOuterClass.StatementOrBuilder getStatementsOrBuilder(
-        int index) {
-      return statements_.get(index);
+    public ast.StatementOuterClass.StatementBlockOrBuilder getStatementBlockOrBuilder() {
+      return statementBlock_ == null ? ast.StatementOuterClass.StatementBlock.getDefaultInstance() : statementBlock_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -235,8 +210,8 @@ public final class ProcedureBodyOuterClass {
       if (((bitField0_ & 0x00000002) != 0)) {
         output.writeMessage(2, getBindingVariableDefinitionBlock());
       }
-      for (int i = 0; i < statements_.size(); i++) {
-        output.writeMessage(3, statements_.get(i));
+      if (((bitField0_ & 0x00000004) != 0)) {
+        output.writeMessage(3, getStatementBlock());
       }
       getUnknownFields().writeTo(output);
     }
@@ -255,9 +230,9 @@ public final class ProcedureBodyOuterClass {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, getBindingVariableDefinitionBlock());
       }
-      for (int i = 0; i < statements_.size(); i++) {
+      if (((bitField0_ & 0x00000004) != 0)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, statements_.get(i));
+          .computeMessageSize(3, getStatementBlock());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -284,8 +259,11 @@ public final class ProcedureBodyOuterClass {
         if (!getBindingVariableDefinitionBlock()
             .equals(other.getBindingVariableDefinitionBlock())) return false;
       }
-      if (!getStatementsList()
-          .equals(other.getStatementsList())) return false;
+      if (hasStatementBlock() != other.hasStatementBlock()) return false;
+      if (hasStatementBlock()) {
+        if (!getStatementBlock()
+            .equals(other.getStatementBlock())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -305,9 +283,9 @@ public final class ProcedureBodyOuterClass {
         hash = (37 * hash) + BINDING_VARIABLE_DEFINITION_BLOCK_FIELD_NUMBER;
         hash = (53 * hash) + getBindingVariableDefinitionBlock().hashCode();
       }
-      if (getStatementsCount() > 0) {
-        hash = (37 * hash) + STATEMENTS_FIELD_NUMBER;
-        hash = (53 * hash) + getStatementsList().hashCode();
+      if (hasStatementBlock()) {
+        hash = (37 * hash) + STATEMENT_BLOCK_FIELD_NUMBER;
+        hash = (53 * hash) + getStatementBlock().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -441,7 +419,7 @@ public final class ProcedureBodyOuterClass {
                 .alwaysUseFieldBuilders) {
           getAtSchemaClauseFieldBuilder();
           getBindingVariableDefinitionBlockFieldBuilder();
-          getStatementsFieldBuilder();
+          getStatementBlockFieldBuilder();
         }
       }
       @java.lang.Override
@@ -458,13 +436,11 @@ public final class ProcedureBodyOuterClass {
           bindingVariableDefinitionBlockBuilder_.dispose();
           bindingVariableDefinitionBlockBuilder_ = null;
         }
-        if (statementsBuilder_ == null) {
-          statements_ = java.util.Collections.emptyList();
-        } else {
-          statements_ = null;
-          statementsBuilder_.clear();
+        statementBlock_ = null;
+        if (statementBlockBuilder_ != null) {
+          statementBlockBuilder_.dispose();
+          statementBlockBuilder_ = null;
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -491,22 +467,9 @@ public final class ProcedureBodyOuterClass {
       @java.lang.Override
       public ast.ProcedureBodyOuterClass.ProcedureBody buildPartial() {
         ast.ProcedureBodyOuterClass.ProcedureBody result = new ast.ProcedureBodyOuterClass.ProcedureBody(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartialRepeatedFields(ast.ProcedureBodyOuterClass.ProcedureBody result) {
-        if (statementsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
-            statements_ = java.util.Collections.unmodifiableList(statements_);
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.statements_ = statements_;
-        } else {
-          result.statements_ = statementsBuilder_.build();
-        }
       }
 
       private void buildPartial0(ast.ProcedureBodyOuterClass.ProcedureBody result) {
@@ -523,6 +486,12 @@ public final class ProcedureBodyOuterClass {
               ? bindingVariableDefinitionBlock_
               : bindingVariableDefinitionBlockBuilder_.build();
           to_bitField0_ |= 0x00000002;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.statementBlock_ = statementBlockBuilder_ == null
+              ? statementBlock_
+              : statementBlockBuilder_.build();
+          to_bitField0_ |= 0x00000004;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -545,31 +514,8 @@ public final class ProcedureBodyOuterClass {
         if (other.hasBindingVariableDefinitionBlock()) {
           mergeBindingVariableDefinitionBlock(other.getBindingVariableDefinitionBlock());
         }
-        if (statementsBuilder_ == null) {
-          if (!other.statements_.isEmpty()) {
-            if (statements_.isEmpty()) {
-              statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-            } else {
-              ensureStatementsIsMutable();
-              statements_.addAll(other.statements_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.statements_.isEmpty()) {
-            if (statementsBuilder_.isEmpty()) {
-              statementsBuilder_.dispose();
-              statementsBuilder_ = null;
-              statements_ = other.statements_;
-              bitField0_ = (bitField0_ & ~0x00000004);
-              statementsBuilder_ = 
-                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                   getStatementsFieldBuilder() : null;
-            } else {
-              statementsBuilder_.addAllMessages(other.statements_);
-            }
-          }
+        if (other.hasStatementBlock()) {
+          mergeStatementBlock(other.getStatementBlock());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -612,16 +558,10 @@ public final class ProcedureBodyOuterClass {
                 break;
               } // case 18
               case 26: {
-                ast.StatementOuterClass.Statement m =
-                    input.readMessage(
-                        ast.StatementOuterClass.Statement.parser(),
-                        extensionRegistry);
-                if (statementsBuilder_ == null) {
-                  ensureStatementsIsMutable();
-                  statements_.add(m);
-                } else {
-                  statementsBuilder_.addMessage(m);
-                }
+                input.readMessage(
+                    getStatementBlockFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -641,31 +581,31 @@ public final class ProcedureBodyOuterClass {
       }
       private int bitField0_;
 
-      private ast.ProcedureBodyOuterClass.AtSchemaClause atSchemaClause_;
+      private ast.Catalog.SchemaReference atSchemaClause_;
       private com.google.protobuf.SingleFieldBuilder<
-          ast.ProcedureBodyOuterClass.AtSchemaClause, ast.ProcedureBodyOuterClass.AtSchemaClause.Builder, ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder> atSchemaClauseBuilder_;
+          ast.Catalog.SchemaReference, ast.Catalog.SchemaReference.Builder, ast.Catalog.SchemaReferenceOrBuilder> atSchemaClauseBuilder_;
       /**
-       * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+       * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
        * @return Whether the atSchemaClause field is set.
        */
       public boolean hasAtSchemaClause() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+       * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
        * @return The atSchemaClause.
        */
-      public ast.ProcedureBodyOuterClass.AtSchemaClause getAtSchemaClause() {
+      public ast.Catalog.SchemaReference getAtSchemaClause() {
         if (atSchemaClauseBuilder_ == null) {
-          return atSchemaClause_ == null ? ast.ProcedureBodyOuterClass.AtSchemaClause.getDefaultInstance() : atSchemaClause_;
+          return atSchemaClause_ == null ? ast.Catalog.SchemaReference.getDefaultInstance() : atSchemaClause_;
         } else {
           return atSchemaClauseBuilder_.getMessage();
         }
       }
       /**
-       * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+       * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
        */
-      public Builder setAtSchemaClause(ast.ProcedureBodyOuterClass.AtSchemaClause value) {
+      public Builder setAtSchemaClause(ast.Catalog.SchemaReference value) {
         if (atSchemaClauseBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -679,10 +619,10 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+       * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
        */
       public Builder setAtSchemaClause(
-          ast.ProcedureBodyOuterClass.AtSchemaClause.Builder builderForValue) {
+          ast.Catalog.SchemaReference.Builder builderForValue) {
         if (atSchemaClauseBuilder_ == null) {
           atSchemaClause_ = builderForValue.build();
         } else {
@@ -693,13 +633,13 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+       * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
        */
-      public Builder mergeAtSchemaClause(ast.ProcedureBodyOuterClass.AtSchemaClause value) {
+      public Builder mergeAtSchemaClause(ast.Catalog.SchemaReference value) {
         if (atSchemaClauseBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0) &&
             atSchemaClause_ != null &&
-            atSchemaClause_ != ast.ProcedureBodyOuterClass.AtSchemaClause.getDefaultInstance()) {
+            atSchemaClause_ != ast.Catalog.SchemaReference.getDefaultInstance()) {
             getAtSchemaClauseBuilder().mergeFrom(value);
           } else {
             atSchemaClause_ = value;
@@ -714,7 +654,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+       * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
        */
       public Builder clearAtSchemaClause() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -727,33 +667,33 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+       * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
        */
-      public ast.ProcedureBodyOuterClass.AtSchemaClause.Builder getAtSchemaClauseBuilder() {
+      public ast.Catalog.SchemaReference.Builder getAtSchemaClauseBuilder() {
         bitField0_ |= 0x00000001;
         onChanged();
         return getAtSchemaClauseFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+       * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
        */
-      public ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder getAtSchemaClauseOrBuilder() {
+      public ast.Catalog.SchemaReferenceOrBuilder getAtSchemaClauseOrBuilder() {
         if (atSchemaClauseBuilder_ != null) {
           return atSchemaClauseBuilder_.getMessageOrBuilder();
         } else {
           return atSchemaClause_ == null ?
-              ast.ProcedureBodyOuterClass.AtSchemaClause.getDefaultInstance() : atSchemaClause_;
+              ast.Catalog.SchemaReference.getDefaultInstance() : atSchemaClause_;
         }
       }
       /**
-       * <code>.ast.AtSchemaClause at_schema_clause = 1 [features = { ... }</code>
+       * <code>.ast.SchemaReference at_schema_clause = 1 [features = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          ast.ProcedureBodyOuterClass.AtSchemaClause, ast.ProcedureBodyOuterClass.AtSchemaClause.Builder, ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder> 
+          ast.Catalog.SchemaReference, ast.Catalog.SchemaReference.Builder, ast.Catalog.SchemaReferenceOrBuilder> 
           getAtSchemaClauseFieldBuilder() {
         if (atSchemaClauseBuilder_ == null) {
           atSchemaClauseBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              ast.ProcedureBodyOuterClass.AtSchemaClause, ast.ProcedureBodyOuterClass.AtSchemaClause.Builder, ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder>(
+              ast.Catalog.SchemaReference, ast.Catalog.SchemaReference.Builder, ast.Catalog.SchemaReferenceOrBuilder>(
                   getAtSchemaClause(),
                   getParentForChildren(),
                   isClean());
@@ -762,31 +702,31 @@ public final class ProcedureBodyOuterClass {
         return atSchemaClauseBuilder_;
       }
 
-      private ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock bindingVariableDefinitionBlock_;
+      private ast.ProcedureBodyOuterClass.BindingVariableDef bindingVariableDefinitionBlock_;
       private com.google.protobuf.SingleFieldBuilder<
-          ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.Builder, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder> bindingVariableDefinitionBlockBuilder_;
+          ast.ProcedureBodyOuterClass.BindingVariableDef, ast.ProcedureBodyOuterClass.BindingVariableDef.Builder, ast.ProcedureBodyOuterClass.BindingVariableDefOrBuilder> bindingVariableDefinitionBlockBuilder_;
       /**
-       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+       * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
        * @return Whether the bindingVariableDefinitionBlock field is set.
        */
       public boolean hasBindingVariableDefinitionBlock() {
         return ((bitField0_ & 0x00000002) != 0);
       }
       /**
-       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+       * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
        * @return The bindingVariableDefinitionBlock.
        */
-      public ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock getBindingVariableDefinitionBlock() {
+      public ast.ProcedureBodyOuterClass.BindingVariableDef getBindingVariableDefinitionBlock() {
         if (bindingVariableDefinitionBlockBuilder_ == null) {
-          return bindingVariableDefinitionBlock_ == null ? ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.getDefaultInstance() : bindingVariableDefinitionBlock_;
+          return bindingVariableDefinitionBlock_ == null ? ast.ProcedureBodyOuterClass.BindingVariableDef.getDefaultInstance() : bindingVariableDefinitionBlock_;
         } else {
           return bindingVariableDefinitionBlockBuilder_.getMessage();
         }
       }
       /**
-       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+       * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
        */
-      public Builder setBindingVariableDefinitionBlock(ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock value) {
+      public Builder setBindingVariableDefinitionBlock(ast.ProcedureBodyOuterClass.BindingVariableDef value) {
         if (bindingVariableDefinitionBlockBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -800,10 +740,10 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+       * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
        */
       public Builder setBindingVariableDefinitionBlock(
-          ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.Builder builderForValue) {
+          ast.ProcedureBodyOuterClass.BindingVariableDef.Builder builderForValue) {
         if (bindingVariableDefinitionBlockBuilder_ == null) {
           bindingVariableDefinitionBlock_ = builderForValue.build();
         } else {
@@ -814,13 +754,13 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+       * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
        */
-      public Builder mergeBindingVariableDefinitionBlock(ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock value) {
+      public Builder mergeBindingVariableDefinitionBlock(ast.ProcedureBodyOuterClass.BindingVariableDef value) {
         if (bindingVariableDefinitionBlockBuilder_ == null) {
           if (((bitField0_ & 0x00000002) != 0) &&
             bindingVariableDefinitionBlock_ != null &&
-            bindingVariableDefinitionBlock_ != ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.getDefaultInstance()) {
+            bindingVariableDefinitionBlock_ != ast.ProcedureBodyOuterClass.BindingVariableDef.getDefaultInstance()) {
             getBindingVariableDefinitionBlockBuilder().mergeFrom(value);
           } else {
             bindingVariableDefinitionBlock_ = value;
@@ -835,7 +775,7 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+       * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
        */
       public Builder clearBindingVariableDefinitionBlock() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -848,33 +788,33 @@ public final class ProcedureBodyOuterClass {
         return this;
       }
       /**
-       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+       * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
        */
-      public ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.Builder getBindingVariableDefinitionBlockBuilder() {
+      public ast.ProcedureBodyOuterClass.BindingVariableDef.Builder getBindingVariableDefinitionBlockBuilder() {
         bitField0_ |= 0x00000002;
         onChanged();
         return getBindingVariableDefinitionBlockFieldBuilder().getBuilder();
       }
       /**
-       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+       * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
        */
-      public ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder getBindingVariableDefinitionBlockOrBuilder() {
+      public ast.ProcedureBodyOuterClass.BindingVariableDefOrBuilder getBindingVariableDefinitionBlockOrBuilder() {
         if (bindingVariableDefinitionBlockBuilder_ != null) {
           return bindingVariableDefinitionBlockBuilder_.getMessageOrBuilder();
         } else {
           return bindingVariableDefinitionBlock_ == null ?
-              ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.getDefaultInstance() : bindingVariableDefinitionBlock_;
+              ast.ProcedureBodyOuterClass.BindingVariableDef.getDefaultInstance() : bindingVariableDefinitionBlock_;
         }
       }
       /**
-       * <code>.ast.BindingVariableDefinitionBlock binding_variable_definition_block = 2 [features = { ... }</code>
+       * <code>.ast.BindingVariableDef binding_variable_definition_block = 2 [features = { ... }</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
-          ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.Builder, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder> 
+          ast.ProcedureBodyOuterClass.BindingVariableDef, ast.ProcedureBodyOuterClass.BindingVariableDef.Builder, ast.ProcedureBodyOuterClass.BindingVariableDefOrBuilder> 
           getBindingVariableDefinitionBlockFieldBuilder() {
         if (bindingVariableDefinitionBlockBuilder_ == null) {
           bindingVariableDefinitionBlockBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-              ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlock.Builder, ast.BindingVariableDefinitionBlockOuterClass.BindingVariableDefinitionBlockOrBuilder>(
+              ast.ProcedureBodyOuterClass.BindingVariableDef, ast.ProcedureBodyOuterClass.BindingVariableDef.Builder, ast.ProcedureBodyOuterClass.BindingVariableDefOrBuilder>(
                   getBindingVariableDefinitionBlock(),
                   getParentForChildren(),
                   isClean());
@@ -883,244 +823,125 @@ public final class ProcedureBodyOuterClass {
         return bindingVariableDefinitionBlockBuilder_;
       }
 
-      private java.util.List<ast.StatementOuterClass.Statement> statements_ =
-        java.util.Collections.emptyList();
-      private void ensureStatementsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
-          statements_ = new java.util.ArrayList<ast.StatementOuterClass.Statement>(statements_);
+      private ast.StatementOuterClass.StatementBlock statementBlock_;
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.StatementOuterClass.StatementBlock, ast.StatementOuterClass.StatementBlock.Builder, ast.StatementOuterClass.StatementBlockOrBuilder> statementBlockBuilder_;
+      /**
+       * <code>.ast.StatementBlock statement_block = 3;</code>
+       * @return Whether the statementBlock field is set.
+       */
+      public boolean hasStatementBlock() {
+        return ((bitField0_ & 0x00000004) != 0);
+      }
+      /**
+       * <code>.ast.StatementBlock statement_block = 3;</code>
+       * @return The statementBlock.
+       */
+      public ast.StatementOuterClass.StatementBlock getStatementBlock() {
+        if (statementBlockBuilder_ == null) {
+          return statementBlock_ == null ? ast.StatementOuterClass.StatementBlock.getDefaultInstance() : statementBlock_;
+        } else {
+          return statementBlockBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.ast.StatementBlock statement_block = 3;</code>
+       */
+      public Builder setStatementBlock(ast.StatementOuterClass.StatementBlock value) {
+        if (statementBlockBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          statementBlock_ = value;
+        } else {
+          statementBlockBuilder_.setMessage(value);
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.StatementBlock statement_block = 3;</code>
+       */
+      public Builder setStatementBlock(
+          ast.StatementOuterClass.StatementBlock.Builder builderForValue) {
+        if (statementBlockBuilder_ == null) {
+          statementBlock_ = builderForValue.build();
+        } else {
+          statementBlockBuilder_.setMessage(builderForValue.build());
+        }
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.ast.StatementBlock statement_block = 3;</code>
+       */
+      public Builder mergeStatementBlock(ast.StatementOuterClass.StatementBlock value) {
+        if (statementBlockBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0) &&
+            statementBlock_ != null &&
+            statementBlock_ != ast.StatementOuterClass.StatementBlock.getDefaultInstance()) {
+            getStatementBlockBuilder().mergeFrom(value);
+          } else {
+            statementBlock_ = value;
+          }
+        } else {
+          statementBlockBuilder_.mergeFrom(value);
+        }
+        if (statementBlock_ != null) {
           bitField0_ |= 0x00000004;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilder<
-          ast.StatementOuterClass.Statement, ast.StatementOuterClass.Statement.Builder, ast.StatementOuterClass.StatementOrBuilder> statementsBuilder_;
-
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public java.util.List<ast.StatementOuterClass.Statement> getStatementsList() {
-        if (statementsBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(statements_);
-        } else {
-          return statementsBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public int getStatementsCount() {
-        if (statementsBuilder_ == null) {
-          return statements_.size();
-        } else {
-          return statementsBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public ast.StatementOuterClass.Statement getStatements(int index) {
-        if (statementsBuilder_ == null) {
-          return statements_.get(index);
-        } else {
-          return statementsBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public Builder setStatements(
-          int index, ast.StatementOuterClass.Statement value) {
-        if (statementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStatementsIsMutable();
-          statements_.set(index, value);
           onChanged();
-        } else {
-          statementsBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .ast.Statement statements = 3;</code>
+       * <code>.ast.StatementBlock statement_block = 3;</code>
        */
-      public Builder setStatements(
-          int index, ast.StatementOuterClass.Statement.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          statementsBuilder_.setMessage(index, builderForValue.build());
+      public Builder clearStatementBlock() {
+        bitField0_ = (bitField0_ & ~0x00000004);
+        statementBlock_ = null;
+        if (statementBlockBuilder_ != null) {
+          statementBlockBuilder_.dispose();
+          statementBlockBuilder_ = null;
         }
+        onChanged();
         return this;
       }
       /**
-       * <code>repeated .ast.Statement statements = 3;</code>
+       * <code>.ast.StatementBlock statement_block = 3;</code>
        */
-      public Builder addStatements(ast.StatementOuterClass.Statement value) {
-        if (statementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStatementsIsMutable();
-          statements_.add(value);
-          onChanged();
+      public ast.StatementOuterClass.StatementBlock.Builder getStatementBlockBuilder() {
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return getStatementBlockFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.StatementBlock statement_block = 3;</code>
+       */
+      public ast.StatementOuterClass.StatementBlockOrBuilder getStatementBlockOrBuilder() {
+        if (statementBlockBuilder_ != null) {
+          return statementBlockBuilder_.getMessageOrBuilder();
         } else {
-          statementsBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public Builder addStatements(
-          int index, ast.StatementOuterClass.Statement value) {
-        if (statementsBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureStatementsIsMutable();
-          statements_.add(index, value);
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public Builder addStatements(
-          ast.StatementOuterClass.Statement.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.add(builderForValue.build());
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public Builder addStatements(
-          int index, ast.StatementOuterClass.Statement.Builder builderForValue) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          statementsBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public Builder addAllStatements(
-          java.lang.Iterable<? extends ast.StatementOuterClass.Statement> values) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, statements_);
-          onChanged();
-        } else {
-          statementsBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public Builder clearStatements() {
-        if (statementsBuilder_ == null) {
-          statements_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
-          onChanged();
-        } else {
-          statementsBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public Builder removeStatements(int index) {
-        if (statementsBuilder_ == null) {
-          ensureStatementsIsMutable();
-          statements_.remove(index);
-          onChanged();
-        } else {
-          statementsBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public ast.StatementOuterClass.Statement.Builder getStatementsBuilder(
-          int index) {
-        return getStatementsFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public ast.StatementOuterClass.StatementOrBuilder getStatementsOrBuilder(
-          int index) {
-        if (statementsBuilder_ == null) {
-          return statements_.get(index);  } else {
-          return statementsBuilder_.getMessageOrBuilder(index);
+          return statementBlock_ == null ?
+              ast.StatementOuterClass.StatementBlock.getDefaultInstance() : statementBlock_;
         }
       }
       /**
-       * <code>repeated .ast.Statement statements = 3;</code>
+       * <code>.ast.StatementBlock statement_block = 3;</code>
        */
-      public java.util.List<? extends ast.StatementOuterClass.StatementOrBuilder> 
-           getStatementsOrBuilderList() {
-        if (statementsBuilder_ != null) {
-          return statementsBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(statements_);
-        }
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public ast.StatementOuterClass.Statement.Builder addStatementsBuilder() {
-        return getStatementsFieldBuilder().addBuilder(
-            ast.StatementOuterClass.Statement.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public ast.StatementOuterClass.Statement.Builder addStatementsBuilder(
-          int index) {
-        return getStatementsFieldBuilder().addBuilder(
-            index, ast.StatementOuterClass.Statement.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .ast.Statement statements = 3;</code>
-       */
-      public java.util.List<ast.StatementOuterClass.Statement.Builder> 
-           getStatementsBuilderList() {
-        return getStatementsFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilder<
-          ast.StatementOuterClass.Statement, ast.StatementOuterClass.Statement.Builder, ast.StatementOuterClass.StatementOrBuilder> 
-          getStatementsFieldBuilder() {
-        if (statementsBuilder_ == null) {
-          statementsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-              ast.StatementOuterClass.Statement, ast.StatementOuterClass.Statement.Builder, ast.StatementOuterClass.StatementOrBuilder>(
-                  statements_,
-                  ((bitField0_ & 0x00000004) != 0),
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.StatementOuterClass.StatementBlock, ast.StatementOuterClass.StatementBlock.Builder, ast.StatementOuterClass.StatementBlockOrBuilder> 
+          getStatementBlockFieldBuilder() {
+        if (statementBlockBuilder_ == null) {
+          statementBlockBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.StatementOuterClass.StatementBlock, ast.StatementOuterClass.StatementBlock.Builder, ast.StatementOuterClass.StatementBlockOrBuilder>(
+                  getStatementBlock(),
                   getParentForChildren(),
                   isClean());
-          statements_ = null;
+          statementBlock_ = null;
         }
-        return statementsBuilder_;
+        return statementBlockBuilder_;
       }
 
       // @@protoc_insertion_point(builder_scope:ast.ProcedureBody)
@@ -1174,21 +995,64 @@ public final class ProcedureBodyOuterClass {
 
   }
 
-  public interface AtSchemaClauseOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:ast.AtSchemaClause)
+  public interface BindingVariableDefOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:ast.BindingVariableDef)
       com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+     * @return Whether the graphVariableDef field is set.
+     */
+    boolean hasGraphVariableDef();
+    /**
+     * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+     * @return The graphVariableDef.
+     */
+    ast.GraphVariableDefOuterClass.GraphVariableDef getGraphVariableDef();
+    /**
+     * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+     */
+    ast.GraphVariableDefOuterClass.GraphVariableDefOrBuilder getGraphVariableDefOrBuilder();
+
+    /**
+     * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+     * @return Whether the bindingTableVariableDef field is set.
+     */
+    boolean hasBindingTableVariableDef();
+    /**
+     * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+     * @return The bindingTableVariableDef.
+     */
+    ast.BindingTableVariableDefOuterClass.BindingTableVariableDef getBindingTableVariableDef();
+    /**
+     * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+     */
+    ast.BindingTableVariableDefOuterClass.BindingTableVariableDefOrBuilder getBindingTableVariableDefOrBuilder();
+
+    /**
+     * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+     * @return Whether the valueVariableDef field is set.
+     */
+    boolean hasValueVariableDef();
+    /**
+     * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+     * @return The valueVariableDef.
+     */
+    ast.ValueVariableDefOuterClass.ValueVariableDef getValueVariableDef();
+    /**
+     * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+     */
+    ast.ValueVariableDefOuterClass.ValueVariableDefOrBuilder getValueVariableDefOrBuilder();
+
+    ast.ProcedureBodyOuterClass.BindingVariableDef.TypeCase getTypeCase();
   }
   /**
-   * <pre>
-   * Todo
-   * </pre>
-   *
-   * Protobuf type {@code ast.AtSchemaClause}
+   * Protobuf type {@code ast.BindingVariableDef}
    */
-  public static final class AtSchemaClause extends
+  public static final class BindingVariableDef extends
       com.google.protobuf.GeneratedMessage implements
-      // @@protoc_insertion_point(message_implements:ast.AtSchemaClause)
-      AtSchemaClauseOrBuilder {
+      // @@protoc_insertion_point(message_implements:ast.BindingVariableDef)
+      BindingVariableDefOrBuilder {
   private static final long serialVersionUID = 0L;
     static {
       com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -1197,26 +1061,163 @@ public final class ProcedureBodyOuterClass {
         /* minor= */ 29,
         /* patch= */ 3,
         /* suffix= */ "",
-        AtSchemaClause.class.getName());
+        BindingVariableDef.class.getName());
     }
-    // Use AtSchemaClause.newBuilder() to construct.
-    private AtSchemaClause(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+    // Use BindingVariableDef.newBuilder() to construct.
+    private BindingVariableDef(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
       super(builder);
     }
-    private AtSchemaClause() {
+    private BindingVariableDef() {
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ast.ProcedureBodyOuterClass.internal_static_ast_AtSchemaClause_descriptor;
+      return ast.ProcedureBodyOuterClass.internal_static_ast_BindingVariableDef_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ast.ProcedureBodyOuterClass.internal_static_ast_AtSchemaClause_fieldAccessorTable
+      return ast.ProcedureBodyOuterClass.internal_static_ast_BindingVariableDef_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ast.ProcedureBodyOuterClass.AtSchemaClause.class, ast.ProcedureBodyOuterClass.AtSchemaClause.Builder.class);
+              ast.ProcedureBodyOuterClass.BindingVariableDef.class, ast.ProcedureBodyOuterClass.BindingVariableDef.Builder.class);
+    }
+
+    private int typeCase_ = 0;
+    @SuppressWarnings("serial")
+    private java.lang.Object type_;
+    public enum TypeCase
+        implements com.google.protobuf.Internal.EnumLite,
+            com.google.protobuf.AbstractMessage.InternalOneOfEnum {
+      GRAPH_VARIABLE_DEF(1),
+      BINDING_TABLE_VARIABLE_DEF(2),
+      VALUE_VARIABLE_DEF(3),
+      TYPE_NOT_SET(0);
+      private final int value;
+      private TypeCase(int value) {
+        this.value = value;
+      }
+      /**
+       * @param value The number of the enum to look for.
+       * @return The enum associated with the given number.
+       * @deprecated Use {@link #forNumber(int)} instead.
+       */
+      @java.lang.Deprecated
+      public static TypeCase valueOf(int value) {
+        return forNumber(value);
+      }
+
+      public static TypeCase forNumber(int value) {
+        switch (value) {
+          case 1: return GRAPH_VARIABLE_DEF;
+          case 2: return BINDING_TABLE_VARIABLE_DEF;
+          case 3: return VALUE_VARIABLE_DEF;
+          case 0: return TYPE_NOT_SET;
+          default: return null;
+        }
+      }
+      public int getNumber() {
+        return this.value;
+      }
+    };
+
+    public TypeCase
+    getTypeCase() {
+      return TypeCase.forNumber(
+          typeCase_);
+    }
+
+    public static final int GRAPH_VARIABLE_DEF_FIELD_NUMBER = 1;
+    /**
+     * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+     * @return Whether the graphVariableDef field is set.
+     */
+    @java.lang.Override
+    public boolean hasGraphVariableDef() {
+      return typeCase_ == 1;
+    }
+    /**
+     * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+     * @return The graphVariableDef.
+     */
+    @java.lang.Override
+    public ast.GraphVariableDefOuterClass.GraphVariableDef getGraphVariableDef() {
+      if (typeCase_ == 1) {
+         return (ast.GraphVariableDefOuterClass.GraphVariableDef) type_;
+      }
+      return ast.GraphVariableDefOuterClass.GraphVariableDef.getDefaultInstance();
+    }
+    /**
+     * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+     */
+    @java.lang.Override
+    public ast.GraphVariableDefOuterClass.GraphVariableDefOrBuilder getGraphVariableDefOrBuilder() {
+      if (typeCase_ == 1) {
+         return (ast.GraphVariableDefOuterClass.GraphVariableDef) type_;
+      }
+      return ast.GraphVariableDefOuterClass.GraphVariableDef.getDefaultInstance();
+    }
+
+    public static final int BINDING_TABLE_VARIABLE_DEF_FIELD_NUMBER = 2;
+    /**
+     * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+     * @return Whether the bindingTableVariableDef field is set.
+     */
+    @java.lang.Override
+    public boolean hasBindingTableVariableDef() {
+      return typeCase_ == 2;
+    }
+    /**
+     * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+     * @return The bindingTableVariableDef.
+     */
+    @java.lang.Override
+    public ast.BindingTableVariableDefOuterClass.BindingTableVariableDef getBindingTableVariableDef() {
+      if (typeCase_ == 2) {
+         return (ast.BindingTableVariableDefOuterClass.BindingTableVariableDef) type_;
+      }
+      return ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.getDefaultInstance();
+    }
+    /**
+     * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+     */
+    @java.lang.Override
+    public ast.BindingTableVariableDefOuterClass.BindingTableVariableDefOrBuilder getBindingTableVariableDefOrBuilder() {
+      if (typeCase_ == 2) {
+         return (ast.BindingTableVariableDefOuterClass.BindingTableVariableDef) type_;
+      }
+      return ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.getDefaultInstance();
+    }
+
+    public static final int VALUE_VARIABLE_DEF_FIELD_NUMBER = 3;
+    /**
+     * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+     * @return Whether the valueVariableDef field is set.
+     */
+    @java.lang.Override
+    public boolean hasValueVariableDef() {
+      return typeCase_ == 3;
+    }
+    /**
+     * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+     * @return The valueVariableDef.
+     */
+    @java.lang.Override
+    public ast.ValueVariableDefOuterClass.ValueVariableDef getValueVariableDef() {
+      if (typeCase_ == 3) {
+         return (ast.ValueVariableDefOuterClass.ValueVariableDef) type_;
+      }
+      return ast.ValueVariableDefOuterClass.ValueVariableDef.getDefaultInstance();
+    }
+    /**
+     * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+     */
+    @java.lang.Override
+    public ast.ValueVariableDefOuterClass.ValueVariableDefOrBuilder getValueVariableDefOrBuilder() {
+      if (typeCase_ == 3) {
+         return (ast.ValueVariableDefOuterClass.ValueVariableDef) type_;
+      }
+      return ast.ValueVariableDefOuterClass.ValueVariableDef.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1233,6 +1234,15 @@ public final class ProcedureBodyOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (typeCase_ == 1) {
+        output.writeMessage(1, (ast.GraphVariableDefOuterClass.GraphVariableDef) type_);
+      }
+      if (typeCase_ == 2) {
+        output.writeMessage(2, (ast.BindingTableVariableDefOuterClass.BindingTableVariableDef) type_);
+      }
+      if (typeCase_ == 3) {
+        output.writeMessage(3, (ast.ValueVariableDefOuterClass.ValueVariableDef) type_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1242,6 +1252,18 @@ public final class ProcedureBodyOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (typeCase_ == 1) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, (ast.GraphVariableDefOuterClass.GraphVariableDef) type_);
+      }
+      if (typeCase_ == 2) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, (ast.BindingTableVariableDefOuterClass.BindingTableVariableDef) type_);
+      }
+      if (typeCase_ == 3) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, (ast.ValueVariableDefOuterClass.ValueVariableDef) type_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -1252,11 +1274,28 @@ public final class ProcedureBodyOuterClass {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof ast.ProcedureBodyOuterClass.AtSchemaClause)) {
+      if (!(obj instanceof ast.ProcedureBodyOuterClass.BindingVariableDef)) {
         return super.equals(obj);
       }
-      ast.ProcedureBodyOuterClass.AtSchemaClause other = (ast.ProcedureBodyOuterClass.AtSchemaClause) obj;
+      ast.ProcedureBodyOuterClass.BindingVariableDef other = (ast.ProcedureBodyOuterClass.BindingVariableDef) obj;
 
+      if (!getTypeCase().equals(other.getTypeCase())) return false;
+      switch (typeCase_) {
+        case 1:
+          if (!getGraphVariableDef()
+              .equals(other.getGraphVariableDef())) return false;
+          break;
+        case 2:
+          if (!getBindingTableVariableDef()
+              .equals(other.getBindingTableVariableDef())) return false;
+          break;
+        case 3:
+          if (!getValueVariableDef()
+              .equals(other.getValueVariableDef())) return false;
+          break;
+        case 0:
+        default:
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1268,49 +1307,65 @@ public final class ProcedureBodyOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      switch (typeCase_) {
+        case 1:
+          hash = (37 * hash) + GRAPH_VARIABLE_DEF_FIELD_NUMBER;
+          hash = (53 * hash) + getGraphVariableDef().hashCode();
+          break;
+        case 2:
+          hash = (37 * hash) + BINDING_TABLE_VARIABLE_DEF_FIELD_NUMBER;
+          hash = (53 * hash) + getBindingTableVariableDef().hashCode();
+          break;
+        case 3:
+          hash = (37 * hash) + VALUE_VARIABLE_DEF_FIELD_NUMBER;
+          hash = (53 * hash) + getValueVariableDef().hashCode();
+          break;
+        case 0:
+        default:
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
 
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(byte[] data)
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(java.io.InputStream input)
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1318,26 +1373,26 @@ public final class ProcedureBodyOuterClass {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseDelimitedFrom(java.io.InputStream input)
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input);
     }
 
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseDelimitedFrom(
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessage
           .parseWithIOException(PARSER, input);
     }
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause parseFrom(
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1350,7 +1405,7 @@ public final class ProcedureBodyOuterClass {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(ast.ProcedureBodyOuterClass.AtSchemaClause prototype) {
+    public static Builder newBuilder(ast.ProcedureBodyOuterClass.BindingVariableDef prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -1366,30 +1421,26 @@ public final class ProcedureBodyOuterClass {
       return builder;
     }
     /**
-     * <pre>
-     * Todo
-     * </pre>
-     *
-     * Protobuf type {@code ast.AtSchemaClause}
+     * Protobuf type {@code ast.BindingVariableDef}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:ast.AtSchemaClause)
-        ast.ProcedureBodyOuterClass.AtSchemaClauseOrBuilder {
+        // @@protoc_insertion_point(builder_implements:ast.BindingVariableDef)
+        ast.ProcedureBodyOuterClass.BindingVariableDefOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return ast.ProcedureBodyOuterClass.internal_static_ast_AtSchemaClause_descriptor;
+        return ast.ProcedureBodyOuterClass.internal_static_ast_BindingVariableDef_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return ast.ProcedureBodyOuterClass.internal_static_ast_AtSchemaClause_fieldAccessorTable
+        return ast.ProcedureBodyOuterClass.internal_static_ast_BindingVariableDef_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                ast.ProcedureBodyOuterClass.AtSchemaClause.class, ast.ProcedureBodyOuterClass.AtSchemaClause.Builder.class);
+                ast.ProcedureBodyOuterClass.BindingVariableDef.class, ast.ProcedureBodyOuterClass.BindingVariableDef.Builder.class);
       }
 
-      // Construct using ast.ProcedureBodyOuterClass.AtSchemaClause.newBuilder()
+      // Construct using ast.ProcedureBodyOuterClass.BindingVariableDef.newBuilder()
       private Builder() {
 
       }
@@ -1402,23 +1453,35 @@ public final class ProcedureBodyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        if (graphVariableDefBuilder_ != null) {
+          graphVariableDefBuilder_.clear();
+        }
+        if (bindingTableVariableDefBuilder_ != null) {
+          bindingTableVariableDefBuilder_.clear();
+        }
+        if (valueVariableDefBuilder_ != null) {
+          valueVariableDefBuilder_.clear();
+        }
+        typeCase_ = 0;
+        type_ = null;
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return ast.ProcedureBodyOuterClass.internal_static_ast_AtSchemaClause_descriptor;
+        return ast.ProcedureBodyOuterClass.internal_static_ast_BindingVariableDef_descriptor;
       }
 
       @java.lang.Override
-      public ast.ProcedureBodyOuterClass.AtSchemaClause getDefaultInstanceForType() {
-        return ast.ProcedureBodyOuterClass.AtSchemaClause.getDefaultInstance();
+      public ast.ProcedureBodyOuterClass.BindingVariableDef getDefaultInstanceForType() {
+        return ast.ProcedureBodyOuterClass.BindingVariableDef.getDefaultInstance();
       }
 
       @java.lang.Override
-      public ast.ProcedureBodyOuterClass.AtSchemaClause build() {
-        ast.ProcedureBodyOuterClass.AtSchemaClause result = buildPartial();
+      public ast.ProcedureBodyOuterClass.BindingVariableDef build() {
+        ast.ProcedureBodyOuterClass.BindingVariableDef result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -1426,24 +1489,64 @@ public final class ProcedureBodyOuterClass {
       }
 
       @java.lang.Override
-      public ast.ProcedureBodyOuterClass.AtSchemaClause buildPartial() {
-        ast.ProcedureBodyOuterClass.AtSchemaClause result = new ast.ProcedureBodyOuterClass.AtSchemaClause(this);
+      public ast.ProcedureBodyOuterClass.BindingVariableDef buildPartial() {
+        ast.ProcedureBodyOuterClass.BindingVariableDef result = new ast.ProcedureBodyOuterClass.BindingVariableDef(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
       }
 
+      private void buildPartial0(ast.ProcedureBodyOuterClass.BindingVariableDef result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(ast.ProcedureBodyOuterClass.BindingVariableDef result) {
+        result.typeCase_ = typeCase_;
+        result.type_ = this.type_;
+        if (typeCase_ == 1 &&
+            graphVariableDefBuilder_ != null) {
+          result.type_ = graphVariableDefBuilder_.build();
+        }
+        if (typeCase_ == 2 &&
+            bindingTableVariableDefBuilder_ != null) {
+          result.type_ = bindingTableVariableDefBuilder_.build();
+        }
+        if (typeCase_ == 3 &&
+            valueVariableDefBuilder_ != null) {
+          result.type_ = valueVariableDefBuilder_.build();
+        }
+      }
+
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof ast.ProcedureBodyOuterClass.AtSchemaClause) {
-          return mergeFrom((ast.ProcedureBodyOuterClass.AtSchemaClause)other);
+        if (other instanceof ast.ProcedureBodyOuterClass.BindingVariableDef) {
+          return mergeFrom((ast.ProcedureBodyOuterClass.BindingVariableDef)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(ast.ProcedureBodyOuterClass.AtSchemaClause other) {
-        if (other == ast.ProcedureBodyOuterClass.AtSchemaClause.getDefaultInstance()) return this;
+      public Builder mergeFrom(ast.ProcedureBodyOuterClass.BindingVariableDef other) {
+        if (other == ast.ProcedureBodyOuterClass.BindingVariableDef.getDefaultInstance()) return this;
+        switch (other.getTypeCase()) {
+          case GRAPH_VARIABLE_DEF: {
+            mergeGraphVariableDef(other.getGraphVariableDef());
+            break;
+          }
+          case BINDING_TABLE_VARIABLE_DEF: {
+            mergeBindingTableVariableDef(other.getBindingTableVariableDef());
+            break;
+          }
+          case VALUE_VARIABLE_DEF: {
+            mergeValueVariableDef(other.getValueVariableDef());
+            break;
+          }
+          case TYPE_NOT_SET: {
+            break;
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1470,6 +1573,27 @@ public final class ProcedureBodyOuterClass {
               case 0:
                 done = true;
                 break;
+              case 10: {
+                input.readMessage(
+                    getGraphVariableDefFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 1;
+                break;
+              } // case 10
+              case 18: {
+                input.readMessage(
+                    getBindingTableVariableDefFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 2;
+                break;
+              } // case 18
+              case 26: {
+                input.readMessage(
+                    getValueVariableDefFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                typeCase_ = 3;
+                break;
+              } // case 26
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1485,24 +1609,466 @@ public final class ProcedureBodyOuterClass {
         } // finally
         return this;
       }
+      private int typeCase_ = 0;
+      private java.lang.Object type_;
+      public TypeCase
+          getTypeCase() {
+        return TypeCase.forNumber(
+            typeCase_);
+      }
 
-      // @@protoc_insertion_point(builder_scope:ast.AtSchemaClause)
+      public Builder clearType() {
+        typeCase_ = 0;
+        type_ = null;
+        onChanged();
+        return this;
+      }
+
+      private int bitField0_;
+
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.GraphVariableDefOuterClass.GraphVariableDef, ast.GraphVariableDefOuterClass.GraphVariableDef.Builder, ast.GraphVariableDefOuterClass.GraphVariableDefOrBuilder> graphVariableDefBuilder_;
+      /**
+       * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+       * @return Whether the graphVariableDef field is set.
+       */
+      @java.lang.Override
+      public boolean hasGraphVariableDef() {
+        return typeCase_ == 1;
+      }
+      /**
+       * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+       * @return The graphVariableDef.
+       */
+      @java.lang.Override
+      public ast.GraphVariableDefOuterClass.GraphVariableDef getGraphVariableDef() {
+        if (graphVariableDefBuilder_ == null) {
+          if (typeCase_ == 1) {
+            return (ast.GraphVariableDefOuterClass.GraphVariableDef) type_;
+          }
+          return ast.GraphVariableDefOuterClass.GraphVariableDef.getDefaultInstance();
+        } else {
+          if (typeCase_ == 1) {
+            return graphVariableDefBuilder_.getMessage();
+          }
+          return ast.GraphVariableDefOuterClass.GraphVariableDef.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+       */
+      public Builder setGraphVariableDef(ast.GraphVariableDefOuterClass.GraphVariableDef value) {
+        if (graphVariableDefBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          graphVariableDefBuilder_.setMessage(value);
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+       */
+      public Builder setGraphVariableDef(
+          ast.GraphVariableDefOuterClass.GraphVariableDef.Builder builderForValue) {
+        if (graphVariableDefBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          graphVariableDefBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+       */
+      public Builder mergeGraphVariableDef(ast.GraphVariableDefOuterClass.GraphVariableDef value) {
+        if (graphVariableDefBuilder_ == null) {
+          if (typeCase_ == 1 &&
+              type_ != ast.GraphVariableDefOuterClass.GraphVariableDef.getDefaultInstance()) {
+            type_ = ast.GraphVariableDefOuterClass.GraphVariableDef.newBuilder((ast.GraphVariableDefOuterClass.GraphVariableDef) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 1) {
+            graphVariableDefBuilder_.mergeFrom(value);
+          } else {
+            graphVariableDefBuilder_.setMessage(value);
+          }
+        }
+        typeCase_ = 1;
+        return this;
+      }
+      /**
+       * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+       */
+      public Builder clearGraphVariableDef() {
+        if (graphVariableDefBuilder_ == null) {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 1) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          graphVariableDefBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+       */
+      public ast.GraphVariableDefOuterClass.GraphVariableDef.Builder getGraphVariableDefBuilder() {
+        return getGraphVariableDefFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+       */
+      @java.lang.Override
+      public ast.GraphVariableDefOuterClass.GraphVariableDefOrBuilder getGraphVariableDefOrBuilder() {
+        if ((typeCase_ == 1) && (graphVariableDefBuilder_ != null)) {
+          return graphVariableDefBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 1) {
+            return (ast.GraphVariableDefOuterClass.GraphVariableDef) type_;
+          }
+          return ast.GraphVariableDefOuterClass.GraphVariableDef.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.GraphVariableDef graph_variable_def = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.GraphVariableDefOuterClass.GraphVariableDef, ast.GraphVariableDefOuterClass.GraphVariableDef.Builder, ast.GraphVariableDefOuterClass.GraphVariableDefOrBuilder> 
+          getGraphVariableDefFieldBuilder() {
+        if (graphVariableDefBuilder_ == null) {
+          if (!(typeCase_ == 1)) {
+            type_ = ast.GraphVariableDefOuterClass.GraphVariableDef.getDefaultInstance();
+          }
+          graphVariableDefBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.GraphVariableDefOuterClass.GraphVariableDef, ast.GraphVariableDefOuterClass.GraphVariableDef.Builder, ast.GraphVariableDefOuterClass.GraphVariableDefOrBuilder>(
+                  (ast.GraphVariableDefOuterClass.GraphVariableDef) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 1;
+        onChanged();
+        return graphVariableDefBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.BindingTableVariableDefOuterClass.BindingTableVariableDef, ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.Builder, ast.BindingTableVariableDefOuterClass.BindingTableVariableDefOrBuilder> bindingTableVariableDefBuilder_;
+      /**
+       * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+       * @return Whether the bindingTableVariableDef field is set.
+       */
+      @java.lang.Override
+      public boolean hasBindingTableVariableDef() {
+        return typeCase_ == 2;
+      }
+      /**
+       * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+       * @return The bindingTableVariableDef.
+       */
+      @java.lang.Override
+      public ast.BindingTableVariableDefOuterClass.BindingTableVariableDef getBindingTableVariableDef() {
+        if (bindingTableVariableDefBuilder_ == null) {
+          if (typeCase_ == 2) {
+            return (ast.BindingTableVariableDefOuterClass.BindingTableVariableDef) type_;
+          }
+          return ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.getDefaultInstance();
+        } else {
+          if (typeCase_ == 2) {
+            return bindingTableVariableDefBuilder_.getMessage();
+          }
+          return ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+       */
+      public Builder setBindingTableVariableDef(ast.BindingTableVariableDefOuterClass.BindingTableVariableDef value) {
+        if (bindingTableVariableDefBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          bindingTableVariableDefBuilder_.setMessage(value);
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+       */
+      public Builder setBindingTableVariableDef(
+          ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.Builder builderForValue) {
+        if (bindingTableVariableDefBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          bindingTableVariableDefBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+       */
+      public Builder mergeBindingTableVariableDef(ast.BindingTableVariableDefOuterClass.BindingTableVariableDef value) {
+        if (bindingTableVariableDefBuilder_ == null) {
+          if (typeCase_ == 2 &&
+              type_ != ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.getDefaultInstance()) {
+            type_ = ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.newBuilder((ast.BindingTableVariableDefOuterClass.BindingTableVariableDef) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 2) {
+            bindingTableVariableDefBuilder_.mergeFrom(value);
+          } else {
+            bindingTableVariableDefBuilder_.setMessage(value);
+          }
+        }
+        typeCase_ = 2;
+        return this;
+      }
+      /**
+       * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+       */
+      public Builder clearBindingTableVariableDef() {
+        if (bindingTableVariableDefBuilder_ == null) {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 2) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          bindingTableVariableDefBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+       */
+      public ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.Builder getBindingTableVariableDefBuilder() {
+        return getBindingTableVariableDefFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+       */
+      @java.lang.Override
+      public ast.BindingTableVariableDefOuterClass.BindingTableVariableDefOrBuilder getBindingTableVariableDefOrBuilder() {
+        if ((typeCase_ == 2) && (bindingTableVariableDefBuilder_ != null)) {
+          return bindingTableVariableDefBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 2) {
+            return (ast.BindingTableVariableDefOuterClass.BindingTableVariableDef) type_;
+          }
+          return ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.BindingTableVariableDef binding_table_variable_def = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.BindingTableVariableDefOuterClass.BindingTableVariableDef, ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.Builder, ast.BindingTableVariableDefOuterClass.BindingTableVariableDefOrBuilder> 
+          getBindingTableVariableDefFieldBuilder() {
+        if (bindingTableVariableDefBuilder_ == null) {
+          if (!(typeCase_ == 2)) {
+            type_ = ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.getDefaultInstance();
+          }
+          bindingTableVariableDefBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.BindingTableVariableDefOuterClass.BindingTableVariableDef, ast.BindingTableVariableDefOuterClass.BindingTableVariableDef.Builder, ast.BindingTableVariableDefOuterClass.BindingTableVariableDefOrBuilder>(
+                  (ast.BindingTableVariableDefOuterClass.BindingTableVariableDef) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 2;
+        onChanged();
+        return bindingTableVariableDefBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.ValueVariableDefOuterClass.ValueVariableDef, ast.ValueVariableDefOuterClass.ValueVariableDef.Builder, ast.ValueVariableDefOuterClass.ValueVariableDefOrBuilder> valueVariableDefBuilder_;
+      /**
+       * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+       * @return Whether the valueVariableDef field is set.
+       */
+      @java.lang.Override
+      public boolean hasValueVariableDef() {
+        return typeCase_ == 3;
+      }
+      /**
+       * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+       * @return The valueVariableDef.
+       */
+      @java.lang.Override
+      public ast.ValueVariableDefOuterClass.ValueVariableDef getValueVariableDef() {
+        if (valueVariableDefBuilder_ == null) {
+          if (typeCase_ == 3) {
+            return (ast.ValueVariableDefOuterClass.ValueVariableDef) type_;
+          }
+          return ast.ValueVariableDefOuterClass.ValueVariableDef.getDefaultInstance();
+        } else {
+          if (typeCase_ == 3) {
+            return valueVariableDefBuilder_.getMessage();
+          }
+          return ast.ValueVariableDefOuterClass.ValueVariableDef.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+       */
+      public Builder setValueVariableDef(ast.ValueVariableDefOuterClass.ValueVariableDef value) {
+        if (valueVariableDefBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          type_ = value;
+          onChanged();
+        } else {
+          valueVariableDefBuilder_.setMessage(value);
+        }
+        typeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+       */
+      public Builder setValueVariableDef(
+          ast.ValueVariableDefOuterClass.ValueVariableDef.Builder builderForValue) {
+        if (valueVariableDefBuilder_ == null) {
+          type_ = builderForValue.build();
+          onChanged();
+        } else {
+          valueVariableDefBuilder_.setMessage(builderForValue.build());
+        }
+        typeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+       */
+      public Builder mergeValueVariableDef(ast.ValueVariableDefOuterClass.ValueVariableDef value) {
+        if (valueVariableDefBuilder_ == null) {
+          if (typeCase_ == 3 &&
+              type_ != ast.ValueVariableDefOuterClass.ValueVariableDef.getDefaultInstance()) {
+            type_ = ast.ValueVariableDefOuterClass.ValueVariableDef.newBuilder((ast.ValueVariableDefOuterClass.ValueVariableDef) type_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            type_ = value;
+          }
+          onChanged();
+        } else {
+          if (typeCase_ == 3) {
+            valueVariableDefBuilder_.mergeFrom(value);
+          } else {
+            valueVariableDefBuilder_.setMessage(value);
+          }
+        }
+        typeCase_ = 3;
+        return this;
+      }
+      /**
+       * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+       */
+      public Builder clearValueVariableDef() {
+        if (valueVariableDefBuilder_ == null) {
+          if (typeCase_ == 3) {
+            typeCase_ = 0;
+            type_ = null;
+            onChanged();
+          }
+        } else {
+          if (typeCase_ == 3) {
+            typeCase_ = 0;
+            type_ = null;
+          }
+          valueVariableDefBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+       */
+      public ast.ValueVariableDefOuterClass.ValueVariableDef.Builder getValueVariableDefBuilder() {
+        return getValueVariableDefFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+       */
+      @java.lang.Override
+      public ast.ValueVariableDefOuterClass.ValueVariableDefOrBuilder getValueVariableDefOrBuilder() {
+        if ((typeCase_ == 3) && (valueVariableDefBuilder_ != null)) {
+          return valueVariableDefBuilder_.getMessageOrBuilder();
+        } else {
+          if (typeCase_ == 3) {
+            return (ast.ValueVariableDefOuterClass.ValueVariableDef) type_;
+          }
+          return ast.ValueVariableDefOuterClass.ValueVariableDef.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.ast.ValueVariableDef value_variable_def = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilder<
+          ast.ValueVariableDefOuterClass.ValueVariableDef, ast.ValueVariableDefOuterClass.ValueVariableDef.Builder, ast.ValueVariableDefOuterClass.ValueVariableDefOrBuilder> 
+          getValueVariableDefFieldBuilder() {
+        if (valueVariableDefBuilder_ == null) {
+          if (!(typeCase_ == 3)) {
+            type_ = ast.ValueVariableDefOuterClass.ValueVariableDef.getDefaultInstance();
+          }
+          valueVariableDefBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+              ast.ValueVariableDefOuterClass.ValueVariableDef, ast.ValueVariableDefOuterClass.ValueVariableDef.Builder, ast.ValueVariableDefOuterClass.ValueVariableDefOrBuilder>(
+                  (ast.ValueVariableDefOuterClass.ValueVariableDef) type_,
+                  getParentForChildren(),
+                  isClean());
+          type_ = null;
+        }
+        typeCase_ = 3;
+        onChanged();
+        return valueVariableDefBuilder_;
+      }
+
+      // @@protoc_insertion_point(builder_scope:ast.BindingVariableDef)
     }
 
-    // @@protoc_insertion_point(class_scope:ast.AtSchemaClause)
-    private static final ast.ProcedureBodyOuterClass.AtSchemaClause DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:ast.BindingVariableDef)
+    private static final ast.ProcedureBodyOuterClass.BindingVariableDef DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new ast.ProcedureBodyOuterClass.AtSchemaClause();
+      DEFAULT_INSTANCE = new ast.ProcedureBodyOuterClass.BindingVariableDef();
     }
 
-    public static ast.ProcedureBodyOuterClass.AtSchemaClause getDefaultInstance() {
+    public static ast.ProcedureBodyOuterClass.BindingVariableDef getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<AtSchemaClause>
-        PARSER = new com.google.protobuf.AbstractParser<AtSchemaClause>() {
+    private static final com.google.protobuf.Parser<BindingVariableDef>
+        PARSER = new com.google.protobuf.AbstractParser<BindingVariableDef>() {
       @java.lang.Override
-      public AtSchemaClause parsePartialFrom(
+      public BindingVariableDef parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1521,17 +2087,17 @@ public final class ProcedureBodyOuterClass {
       }
     };
 
-    public static com.google.protobuf.Parser<AtSchemaClause> parser() {
+    public static com.google.protobuf.Parser<BindingVariableDef> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<AtSchemaClause> getParserForType() {
+    public com.google.protobuf.Parser<BindingVariableDef> getParserForType() {
       return PARSER;
     }
 
     @java.lang.Override
-    public ast.ProcedureBodyOuterClass.AtSchemaClause getDefaultInstanceForType() {
+    public ast.ProcedureBodyOuterClass.BindingVariableDef getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1543,10 +2109,10 @@ public final class ProcedureBodyOuterClass {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ast_ProcedureBody_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ast_AtSchemaClause_descriptor;
+    internal_static_ast_BindingVariableDef_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ast_AtSchemaClause_fieldAccessorTable;
+      internal_static_ast_BindingVariableDef_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1557,39 +2123,51 @@ public final class ProcedureBodyOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024procedure_body.proto\022\003ast\032!google/prot" +
-      "obuf/go_features.proto\032\'binding_variable" +
-      "_definition_block.proto\032\017statement.proto" +
-      "\"\300\001\n\rProcedureBody\0224\n\020at_schema_clause\030\001" +
-      " \001(\0132\023.ast.AtSchemaClauseB\005\252\001\002\010\001\022U\n!bind" +
-      "ing_variable_definition_block\030\002 \001(\0132#.as" +
-      "t.BindingVariableDefinitionBlockB\005\252\001\002\010\001\022" +
-      "\"\n\nstatements\030\003 \003(\0132\016.ast.Statement\"\020\n\016A" +
-      "tSchemaClauseB\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010edition" +
-      "sp\350\007"
+      "obuf/go_features.proto\032\017statement.proto\032" +
+      "\rcatalog.proto\032\030graph_variable_def.proto" +
+      "\032 binding_table_variable_def.proto\032\030valu" +
+      "e_variable_def.proto\"\277\001\n\rProcedureBody\0225" +
+      "\n\020at_schema_clause\030\001 \001(\0132\024.ast.SchemaRef" +
+      "erenceB\005\252\001\002\010\001\022I\n!binding_variable_defini" +
+      "tion_block\030\002 \001(\0132\027.ast.BindingVariableDe" +
+      "fB\005\252\001\002\010\001\022,\n\017statement_block\030\003 \001(\0132\023.ast." +
+      "StatementBlock\"\312\001\n\022BindingVariableDef\0223\n" +
+      "\022graph_variable_def\030\001 \001(\0132\025.ast.GraphVar" +
+      "iableDefH\000\022B\n\032binding_table_variable_def" +
+      "\030\002 \001(\0132\034.ast.BindingTableVariableDefH\000\0223" +
+      "\n\022value_variable_def\030\003 \001(\0132\025.ast.ValueVa" +
+      "riableDefH\000B\006\n\004typeB\020Z\004/ast\222\003\007\010\002\322>\002\020\003b\010e" +
+      "ditionsp\350\007"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           pb.GoFeaturesOuterClass.getDescriptor(),
-          ast.BindingVariableDefinitionBlockOuterClass.getDescriptor(),
           ast.StatementOuterClass.getDescriptor(),
+          ast.Catalog.getDescriptor(),
+          ast.GraphVariableDefOuterClass.getDescriptor(),
+          ast.BindingTableVariableDefOuterClass.getDescriptor(),
+          ast.ValueVariableDefOuterClass.getDescriptor(),
         });
     internal_static_ast_ProcedureBody_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_ast_ProcedureBody_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ast_ProcedureBody_descriptor,
-        new java.lang.String[] { "AtSchemaClause", "BindingVariableDefinitionBlock", "Statements", });
-    internal_static_ast_AtSchemaClause_descriptor =
+        new java.lang.String[] { "AtSchemaClause", "BindingVariableDefinitionBlock", "StatementBlock", });
+    internal_static_ast_BindingVariableDef_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_ast_AtSchemaClause_fieldAccessorTable = new
+    internal_static_ast_BindingVariableDef_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ast_AtSchemaClause_descriptor,
-        new java.lang.String[] { });
+        internal_static_ast_BindingVariableDef_descriptor,
+        new java.lang.String[] { "GraphVariableDef", "BindingTableVariableDef", "ValueVariableDef", "Type", });
     descriptor.resolveAllFeaturesImmutable();
     pb.GoFeaturesOuterClass.getDescriptor();
-    ast.BindingVariableDefinitionBlockOuterClass.getDescriptor();
     ast.StatementOuterClass.getDescriptor();
+    ast.Catalog.getDescriptor();
+    ast.GraphVariableDefOuterClass.getDescriptor();
+    ast.BindingTableVariableDefOuterClass.getDescriptor();
+    ast.ValueVariableDefOuterClass.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(pb.GoFeaturesOuterClass.go);
