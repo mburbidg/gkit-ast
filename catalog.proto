@@ -53,6 +53,11 @@ message CatalogGraphTypeParentAndName {
   Identifier name = 2;
 }
 
+message CatalogProcedureParentAndName {
+  CatalogObjectParentReference parent_ref = 1 [features.field_presence = EXPLICIT];
+  Identifier name = 2;
+}
+
 message RelativeCatalogSchemaReference {
   oneof type {
     PredefinedSchemaReference predefined_schema = 1;
