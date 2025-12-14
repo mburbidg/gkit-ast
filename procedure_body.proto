@@ -5,17 +5,14 @@ package ast;
 import "google/protobuf/go_features.proto";
 import "binding_variable_definition_block.proto";
 import "statement.proto";
+import "catalog.proto";
 
 option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 
 message ProcedureBody {
-  AtSchemaClause at_schema_clause = 1                                   [features.field_presence = EXPLICIT];
+  SchemaReference at_schema_clause = 1                                  [features.field_presence = EXPLICIT];
   BindingVariableDefinitionBlock binding_variable_definition_block = 2  [features.field_presence = EXPLICIT];
-  repeated Statement statements = 3;
-}
-
-message AtSchemaClause {
-  // Todo
+  StatementBlock statement_block = 3;
 }
