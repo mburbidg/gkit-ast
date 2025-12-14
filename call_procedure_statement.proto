@@ -1,0 +1,25 @@
+edition = "2023";
+
+package ast;
+
+import "google/protobuf/go_features.proto";
+import "todo.proto";
+
+option features.field_presence = IMPLICIT;
+option features.(pb.go).api_level = API_OPAQUE;
+option go_package = "/ast";
+
+message CallProcedureStatement {
+  oneof type {
+    InlineProcedureCall inline_call = 1;
+    NamedProcedureCall named_call = 2;
+  }
+}
+
+message InlineProcedureCall {
+  Todo todo = 1;
+}
+
+message NamedProcedureCall {
+  Todo todo = 1;
+}

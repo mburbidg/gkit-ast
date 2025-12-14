@@ -6,6 +6,7 @@ import "google/protobuf/go_features.proto";
 import "catalog.proto";
 import "graph_type.proto";
 import "graph_expression.proto";
+import "call_procedure_statement.proto";
 
 option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
@@ -17,9 +18,24 @@ message LinearCatalogModifyingStatement {
 
 message CatalogModifyingStatement {
   oneof type {
-    CreateGraphStatement create_graph_statement = 1;
-    DropGraphStatement drop_graph_statement = 2;
+    CreateSchemaStatement create_schema_statement = 1;
+    DropSchemaStatement drop_schema_statement = 2;
+    CreateGraphStatement create_graph_statement = 3;
+    DropGraphStatement drop_graph_statement = 4;
+    CreateGraphTypeStatement create_graph_type_statement = 5;
+    DropGraphTypeStatement drop_graph_type_statement = 6;
+    CallProcedureStatement call_procedure_statement = 7;
   }
+}
+
+message CreateSchemaStatement {
+  bool if_not_exists = 1;
+  CatalogSchemaParentAndName parent_name = 2;
+}
+
+message DropSchemaStatement {
+  bool if_exists = 1;
+  CatalogSchemaParentAndName parent_name = 2;
 }
 
 message CreateGraphStatement {
@@ -33,4 +49,15 @@ message CreateGraphStatement {
 message DropGraphStatement {
     bool if_exists = 1;
     CatalogParentAndName parent_and_name = 2;
+}
+
+message CreateGraphTypeStatement {
+  bool if_exists = 1;
+  bool replace = 2;
+  CatalogGraphTypeParentAndName parent_and_name = 3;
+}
+
+message DropGraphTypeStatement {
+  bool if_exists = 1;
+  CatalogGraphTypeParentAndName parent_and_name = 2;
 }
