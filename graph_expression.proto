@@ -12,13 +12,10 @@ option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 
 message GraphExpression {
-  oneof type {
+  oneof expr {
     GraphReference graph_reference = 1;
-    Todo expression = 2;
+    Todo object_expression = 2;
     Identifier object_name_or_binding_variable = 3;
-    CurrentGraph current_graph = 4;
+    bool current_graph = 4;
   }
-}
-
-message CurrentGraph {
 }

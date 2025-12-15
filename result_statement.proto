@@ -1,0 +1,33 @@
+edition = "2023";
+
+package ast;
+
+import "google/protobuf/go_features.proto";
+import "value_expr.proto";
+import "aggregate_function.proto";
+import "order_by_and_page_statement.proto";
+import "literals.proto";
+import "todo.proto";
+
+option features.field_presence = IMPLICIT;
+option features.(pb.go).api_level = API_OPAQUE;
+option go_package = "/ast";
+
+message PrimitiveResultStatement {
+  ReturnStatement return_statement = 1;
+  OrderByAndPageStatement order_by_and_page_statement = 2 [features.field_presence = EXPLICIT];
+}
+
+message ReturnStatement {
+  ReturnStatementBody body = 1 [features.field_presence = EXPLICIT];
+}
+
+message ReturnStatementBody {
+  SetQuantifier set_quantifier = 1 [features.field_presence = EXPLICIT];
+  repeated ReturnItem return_item_list = 2;
+}
+
+message ReturnItem {
+  AggregatingValueExpr expression = 1;
+  Identifier alias = 2 [features.field_presence = EXPLICIT];
+}

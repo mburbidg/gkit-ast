@@ -3,16 +3,12 @@ edition = "2023";
 package ast;
 
 import "google/protobuf/go_features.proto";
-import "todo.proto";
+import "sort_spec.proto";
 
 option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 
-message ValueExpr {
-  Todo todo = 1;
-}
-
-message AggregatingValueExpr {
-  Todo todo = 1;
+message OrderByClause {
+  repeated SortSpec sort_spec_list = 1;
 }

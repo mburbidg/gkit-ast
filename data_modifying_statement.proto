@@ -3,19 +3,41 @@ edition = "2023";
 package ast;
 
 import "google/protobuf/go_features.proto";
+import "graph_expression.proto";
+import "result_statement.proto";
+import "todo.proto";
 
 option features.field_presence = IMPLICIT;
 option features.(pb.go).api_level = API_OPAQUE;
 option go_package = "/ast";
 
 message LinearDataModifyingStatement {
+  GraphExpression use_graph_clause = 1                               [features.field_presence = EXPLICIT];
+  repeated DataModifyingStatement data_modifying_statement_list = 2;
+  PrimitiveResultStatement result_statement = 3                     [features.field_presence = EXPLICIT];
 }
 
 message DataModifyingStatement {
   oneof type {
     InsertStatement insert_statement = 1;
+    SetStatement set_statement = 2;
+    RemoveStatement remove_statement = 3;
+    DeleteStatement delete_statement = 4;
   }
 }
 
 message InsertStatement {
+  Todo todo = 1;
+}
+
+message SetStatement {
+  Todo todo = 1;
+}
+
+message RemoveStatement {
+  Todo todo = 1;
+}
+
+message DeleteStatement {
+  Todo todo = 1;
 }

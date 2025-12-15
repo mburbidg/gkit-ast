@@ -1,0 +1,26 @@
+edition = "2023";
+
+package ast;
+
+import "google/protobuf/go_features.proto";
+import "value_expr.proto";
+
+option features.field_presence = IMPLICIT;
+option features.(pb.go).api_level = API_OPAQUE;
+option go_package = "/ast";
+
+message SortSpec {
+  AggregatingValueExpr sort_key = 1;
+  OrderingSpec ordering_spec = 2      [features.field_presence = EXPLICIT];
+  NullOrdering null_ordering = 3      [features.field_presence = EXPLICIT];
+}
+
+enum OrderingSpec {
+  ASCENDING = 1;
+  DESCENDING = 2;
+}
+
+enum NullOrdering {
+  NullsFirst = 1;
+  NullsLast = 2;
+}

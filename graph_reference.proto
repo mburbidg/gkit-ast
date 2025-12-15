@@ -14,10 +14,7 @@ message GraphReference {
   oneof which {
     CatalogParentAndName parent_and_name = 1;
     Identifier delimited_graph_name = 2;
-    HomeGraph home_graph = 3;
-    ReferenceParameterSpecification reference_parameter_specification = 4;
+    bool home_graph = 3;
+    Identifier reference_parameter_spec = 4;
   }
-}
-
-message HomeGraph {
 }
